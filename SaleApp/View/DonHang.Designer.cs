@@ -43,8 +43,6 @@ namespace SaleApp
             label13 = new Label();
             label11 = new Label();
             label10 = new Label();
-            groupBox1 = new GroupBox();
-            pbHinhSP = new PictureBox();
             txtTTKhachHang = new GroupBox();
             btnThem = new Button();
             label9 = new Label();
@@ -69,19 +67,16 @@ namespace SaleApp
             btnHuyDon = new Button();
             gbTTSP.SuspendLayout();
             panel1.SuspendLayout();
-            groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pbHinhSP).BeginInit();
             txtTTKhachHang.SuspendLayout();
             SuspendLayout();
             // 
             // gbTTSP
             // 
             gbTTSP.Controls.Add(panel1);
-            gbTTSP.Controls.Add(groupBox1);
             gbTTSP.Font = new Font("Century Gothic", 10F, FontStyle.Bold, GraphicsUnit.Point);
             gbTTSP.Location = new Point(30, 298);
             gbTTSP.Name = "gbTTSP";
-            gbTTSP.Size = new Size(1370, 291);
+            gbTTSP.Size = new Size(1059, 334);
             gbTTSP.TabIndex = 1;
             gbTTSP.TabStop = false;
             gbTTSP.Text = "Thông tin Sản phẩm";
@@ -100,7 +95,7 @@ namespace SaleApp
             panel1.Controls.Add(label13);
             panel1.Controls.Add(label11);
             panel1.Controls.Add(label10);
-            panel1.Location = new Point(357, 24);
+            panel1.Location = new Point(27, 47);
             panel1.Name = "panel1";
             panel1.Size = new Size(989, 261);
             panel1.TabIndex = 1;
@@ -110,9 +105,9 @@ namespace SaleApp
             btnSua.BackColor = Color.FromArgb(0, 122, 204);
             btnSua.FlatStyle = FlatStyle.Flat;
             btnSua.ForeColor = Color.White;
-            btnSua.Location = new Point(582, 108);
+            btnSua.Location = new Point(525, 83);
             btnSua.Name = "btnSua";
-            btnSua.Size = new Size(124, 53);
+            btnSua.Size = new Size(181, 53);
             btnSua.TabIndex = 13;
             btnSua.Text = "Sửa";
             btnSua.UseVisualStyleBackColor = false;
@@ -122,9 +117,9 @@ namespace SaleApp
             btnReset.BackColor = Color.FromArgb(0, 122, 204);
             btnReset.FlatStyle = FlatStyle.Flat;
             btnReset.ForeColor = Color.White;
-            btnReset.Location = new Point(771, 108);
+            btnReset.Location = new Point(525, 202);
             btnReset.Name = "btnReset";
-            btnReset.Size = new Size(124, 53);
+            btnReset.Size = new Size(181, 53);
             btnReset.TabIndex = 12;
             btnReset.Text = "Reset";
             btnReset.UseVisualStyleBackColor = false;
@@ -134,12 +129,13 @@ namespace SaleApp
             btnXoa.BackColor = Color.FromArgb(0, 122, 204);
             btnXoa.FlatStyle = FlatStyle.Flat;
             btnXoa.ForeColor = Color.White;
-            btnXoa.Location = new Point(771, 23);
+            btnXoa.Location = new Point(525, 142);
             btnXoa.Name = "btnXoa";
-            btnXoa.Size = new Size(124, 54);
+            btnXoa.Size = new Size(181, 54);
             btnXoa.TabIndex = 10;
             btnXoa.Text = "Xóa";
             btnXoa.UseVisualStyleBackColor = false;
+            btnXoa.Click += btnXoa_Click;
             // 
             // btnThemDS
             // 
@@ -220,24 +216,6 @@ namespace SaleApp
             label10.Size = new Size(143, 23);
             label10.TabIndex = 0;
             label10.Text = "Mã Sản Phẩm:";
-            // 
-            // groupBox1
-            // 
-            groupBox1.Controls.Add(pbHinhSP);
-            groupBox1.Location = new Point(19, 37);
-            groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(313, 215);
-            groupBox1.TabIndex = 0;
-            groupBox1.TabStop = false;
-            groupBox1.Text = "Hình ảnh";
-            // 
-            // pbHinhSP
-            // 
-            pbHinhSP.Location = new Point(0, 39);
-            pbHinhSP.Name = "pbHinhSP";
-            pbHinhSP.Size = new Size(313, 176);
-            pbHinhSP.TabIndex = 0;
-            pbHinhSP.TabStop = false;
             // 
             // txtTTKhachHang
             // 
@@ -449,7 +427,7 @@ namespace SaleApp
             btnInDon.FlatStyle = FlatStyle.Flat;
             btnInDon.Font = new Font("Century Gothic", 11F, FontStyle.Bold, GraphicsUnit.Point);
             btnInDon.ForeColor = Color.White;
-            btnInDon.Location = new Point(857, 638);
+            btnInDon.Location = new Point(272, 645);
             btnInDon.Name = "btnInDon";
             btnInDon.Size = new Size(244, 63);
             btnInDon.TabIndex = 11;
@@ -462,7 +440,7 @@ namespace SaleApp
             btnHuyDon.FlatStyle = FlatStyle.Flat;
             btnHuyDon.Font = new Font("Century Gothic", 11F, FontStyle.Bold, GraphicsUnit.Point);
             btnHuyDon.ForeColor = Color.White;
-            btnHuyDon.Location = new Point(1139, 638);
+            btnHuyDon.Location = new Point(549, 645);
             btnHuyDon.Name = "btnHuyDon";
             btnHuyDon.Size = new Size(160, 63);
             btnHuyDon.TabIndex = 14;
@@ -485,8 +463,6 @@ namespace SaleApp
             gbTTSP.ResumeLayout(false);
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pbHinhSP).EndInit();
             txtTTKhachHang.ResumeLayout(false);
             txtTTKhachHang.PerformLayout();
             ResumeLayout(false);
@@ -515,8 +491,6 @@ namespace SaleApp
         private Label label1;
         private Button btnThem;
         private Panel panel1;
-        private GroupBox groupBox1;
-        private PictureBox pbHinhSP;
         private TextBox txtDonGia;
         private TextBox txtTenSP;
         private TextBox txtSoLuong;

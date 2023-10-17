@@ -10,13 +10,16 @@ using System.Windows.Forms;
 
 namespace SaleApp
 {
-    public partial class ChiTietDon : Form
+    public partial class frmChiTietDon : Form
     {
-        public ChiTietDon()
+        public frmChiTietDon()
         {
             InitializeComponent();
         }
 
+        private void label5_Click(object sender, EventArgs e)
+        {
 
+        }
     }
 }

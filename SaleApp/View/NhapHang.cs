@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SaleApp.View
 {
-    public partial class NhaCC : Form
+    public partial class frmNhapHang : Form
     {
-        public NhaCC()
+        public frmNhapHang()
         {
             InitializeComponent();
         }

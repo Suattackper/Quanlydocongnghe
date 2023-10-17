@@ -8,18 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SaleApp
+namespace SaleApp.View
 {
-    public partial class Signin : Form
+    public partial class frmNhaCungCap : Form
     {
-        public Signin()
+        public frmNhaCungCap()
         {
             InitializeComponent();
         }
 
-        private void btnClose_Click(object sender, EventArgs e)
+        private void btnThem_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+
         }
     }
 }

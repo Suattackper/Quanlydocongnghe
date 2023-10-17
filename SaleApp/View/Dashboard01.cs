@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SaleApp
+namespace SaleApp.View
 {
-    public partial class Dashboard : Form
+    public partial class frmHome : Form
     {
-        public Dashboard()
+        public frmHome()
         {
             InitializeComponent();
         }
@@ -22,6 +22,9 @@ namespace SaleApp
             Application.Exit();
         }
 
-       
+        private void btnThongKe_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
