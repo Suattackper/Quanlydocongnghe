@@ -40,3 +40,5 @@ C:\Users\alice\source\repos\Quanlydocongnghe\SaleApp\obj\Debug\net6.0-windows\Sa
 C:\Users\alice\source\repos\Quanlydocongnghe\SaleApp\obj\Debug\net6.0-windows\SaleApp.frmNhanVien.resources
 C:\Users\alice\source\repos\Quanlydocongnghe\SaleApp\obj\Debug\net6.0-windows\SaleApp.View.frmKhoHang.resources
 C:\Users\alice\source\repos\Quanlydocongnghe\SaleApp\obj\Debug\net6.0-windows\SaleApp.View.frmNhapHang.resources
+C:\Users\alice\source\repos\Quanlydocongnghe\SaleApp\obj\Debug\net6.0-windows\SaleApp.View.frmHangTon.resources
+C:\Users\alice\source\repos\Quanlydocongnghe\SaleApp\obj\Debug\net6.0-windows\SaleApp.View.XuatKho.resources

@@ -30,9 +30,9 @@
         {
             toolStrip1 = new ToolStrip();
             tsdbtnKhoHang = new ToolStripDropDownButton();
-            tsitemDSHangTon = new ToolStripMenuItem();
-            tsitemDSHangNhap = new ToolStripMenuItem();
-            tsitemDSHangXuat = new ToolStripMenuItem();
+            itemDSHangTon = new ToolStripMenuItem();
+            itemDSHangNhap = new ToolStripMenuItem();
+            itemDSHangXuat = new ToolStripMenuItem();
             toolStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -50,7 +50,7 @@
             // tsdbtnKhoHang
             // 
             tsdbtnKhoHang.DisplayStyle = ToolStripItemDisplayStyle.Text;
-            tsdbtnKhoHang.DropDownItems.AddRange(new ToolStripItem[] { tsitemDSHangTon, tsitemDSHangNhap, tsitemDSHangXuat });
+            tsdbtnKhoHang.DropDownItems.AddRange(new ToolStripItem[] { itemDSHangTon, itemDSHangNhap, itemDSHangXuat });
             tsdbtnKhoHang.Font = new Font("Cascadia Code", 10F, FontStyle.Bold, GraphicsUnit.Point);
             tsdbtnKhoHang.ForeColor = SystemColors.ControlText;
             tsdbtnKhoHang.ImageTransparentColor = Color.Magenta;
@@ -58,26 +58,26 @@
             tsdbtnKhoHang.Size = new Size(126, 31);
             tsdbtnKhoHang.Text = "Kho Hàng";
             // 
-            // tsitemDSHangTon
+            // itemDSHangTon
             // 
-            tsitemDSHangTon.ForeColor = SystemColors.ControlText;
-            tsitemDSHangTon.Name = "tsitemDSHangTon";
-            tsitemDSHangTon.Size = new Size(330, 36);
-            tsitemDSHangTon.Text = "Danh Sách Hàng Tồn";
+            itemDSHangTon.ForeColor = SystemColors.ControlText;
+            itemDSHangTon.Name = "itemDSHangTon";
+            itemDSHangTon.Size = new Size(330, 36);
+            itemDSHangTon.Text = "Danh Sách Hàng Tồn";
             // 
-            // tsitemDSHangNhap
+            // itemDSHangNhap
             // 
-            tsitemDSHangNhap.ForeColor = SystemColors.ControlText;
-            tsitemDSHangNhap.Name = "tsitemDSHangNhap";
-            tsitemDSHangNhap.Size = new Size(330, 36);
-            tsitemDSHangNhap.Text = "Nhập Kho";
+            itemDSHangNhap.ForeColor = SystemColors.ControlText;
+            itemDSHangNhap.Name = "itemDSHangNhap";
+            itemDSHangNhap.Size = new Size(330, 36);
+            itemDSHangNhap.Text = "Nhập Kho";
             // 
-            // tsitemDSHangXuat
+            // itemDSHangXuat
             // 
-            tsitemDSHangXuat.ForeColor = SystemColors.ControlText;
-            tsitemDSHangXuat.Name = "tsitemDSHangXuat";
-            tsitemDSHangXuat.Size = new Size(330, 36);
-            tsitemDSHangXuat.Text = "Xuất Kho";
+            itemDSHangXuat.ForeColor = SystemColors.ControlText;
+            itemDSHangXuat.Name = "itemDSHangXuat";
+            itemDSHangXuat.Size = new Size(330, 36);
+            itemDSHangXuat.Text = "Xuất Kho";
             // 
             // frmKhoHang
             // 
@@ -101,8 +101,8 @@
 
         private ToolStrip toolStrip1;
         private ToolStripDropDownButton tsdbtnKhoHang;
-        private ToolStripMenuItem tsitemDSHangTon;
-        private ToolStripMenuItem tsitemDSHangNhap;
-        private ToolStripMenuItem tsitemDSHangXuat;
+        private ToolStripMenuItem itemDSHangTon;
+        private ToolStripMenuItem itemDSHangNhap;
+        private ToolStripMenuItem itemDSHangXuat;
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace SaleApp.View
 {
-    partial class frmNhapHang
+    partial class XuatKho
     {
         /// <summary>
         /// Required designer variable.
@@ -28,32 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
             gbTTNhapHang = new GroupBox();
-            btnSua = new Button();
-            btnXoa = new Button();
-            btnReset = new Button();
-            btnThem = new Button();
+            dtpNgayXuat = new DateTimePicker();
             gbTTSP = new GroupBox();
             cbLoaiHang = new ComboBox();
             txtMaSP = new TextBox();
             txtTenSP = new TextBox();
             txtSoLuong = new TextBox();
-            txtGiaNhap = new TextBox();
+            txtGiaTien = new TextBox();
             label12 = new Label();
             label10 = new Label();
             label9 = new Label();
             label8 = new Label();
             label7 = new Label();
-            dtpNgayNhap = new DateTimePicker();
-            txtMaNCC = new TextBox();
+            txtLiDo = new TextBox();
+            btnSua = new Button();
+            btnXoa = new Button();
+            btnReset = new Button();
+            btnThem = new Button();
             txtMaNV = new TextBox();
-            txtTamUng = new TextBox();
-            txtSoPhieuNhap = new TextBox();
             label6 = new Label();
             label5 = new Label();
             label4 = new Label();
-            label3 = new Label();
             label2 = new Label();
             gbDSSPNhap = new GroupBox();
             dtgvDSSPNhap = new DataGridView();
@@ -61,102 +57,48 @@
             clMaSP = new DataGridViewTextBoxColumn();
             clTenSP = new DataGridViewTextBoxColumn();
             clLoaiSP = new DataGridViewTextBoxColumn();
-            clNhaCC = new DataGridViewTextBoxColumn();
+            clMaNV = new DataGridViewTextBoxColumn();
+            clLiDo = new DataGridViewTextBoxColumn();
             clSoLuong = new DataGridViewTextBoxColumn();
             clDonGia = new DataGridViewTextBoxColumn();
-            clThanhTien = new DataGridViewTextBoxColumn();
+            txtSoPhieuXuat = new TextBox();
             gbTTNhapHang.SuspendLayout();
             gbTTSP.SuspendLayout();
             gbDSSPNhap.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dtgvDSSPNhap).BeginInit();
             SuspendLayout();
             // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Cascadia Code", 16F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(627, 9);
-            label1.Name = "label1";
-            label1.Size = new Size(209, 43);
-            label1.TabIndex = 0;
-            label1.Text = "Nhập Hàng ";
-            // 
             // gbTTNhapHang
             // 
+            gbTTNhapHang.Controls.Add(txtSoPhieuXuat);
+            gbTTNhapHang.Controls.Add(dtpNgayXuat);
+            gbTTNhapHang.Controls.Add(gbTTSP);
+            gbTTNhapHang.Controls.Add(txtLiDo);
             gbTTNhapHang.Controls.Add(btnSua);
             gbTTNhapHang.Controls.Add(btnXoa);
             gbTTNhapHang.Controls.Add(btnReset);
             gbTTNhapHang.Controls.Add(btnThem);
-            gbTTNhapHang.Controls.Add(gbTTSP);
-            gbTTNhapHang.Controls.Add(dtpNgayNhap);
-            gbTTNhapHang.Controls.Add(txtMaNCC);
             gbTTNhapHang.Controls.Add(txtMaNV);
-            gbTTNhapHang.Controls.Add(txtTamUng);
-            gbTTNhapHang.Controls.Add(txtSoPhieuNhap);
             gbTTNhapHang.Controls.Add(label6);
             gbTTNhapHang.Controls.Add(label5);
             gbTTNhapHang.Controls.Add(label4);
-            gbTTNhapHang.Controls.Add(label3);
             gbTTNhapHang.Controls.Add(label2);
             gbTTNhapHang.Font = new Font("Cascadia Code", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            gbTTNhapHang.Location = new Point(28, 55);
+            gbTTNhapHang.Location = new Point(30, 45);
             gbTTNhapHang.Name = "gbTTNhapHang";
-            gbTTNhapHang.Size = new Size(1393, 477);
-            gbTTNhapHang.TabIndex = 1;
+            gbTTNhapHang.Size = new Size(1302, 477);
+            gbTTNhapHang.TabIndex = 2;
             gbTTNhapHang.TabStop = false;
-            gbTTNhapHang.Text = "Thông tin Nhập Hàng ";
+            gbTTNhapHang.Text = "Thông tin Xuất kho ";
             // 
-            // btnSua
+            // dtpNgayXuat
             // 
-            btnSua.BackColor = Color.FromArgb(0, 122, 204);
-            btnSua.FlatAppearance.BorderSize = 0;
-            btnSua.FlatStyle = FlatStyle.Flat;
-            btnSua.ForeColor = Color.White;
-            btnSua.Location = new Point(530, 410);
-            btnSua.Name = "btnSua";
-            btnSua.Size = new Size(112, 46);
-            btnSua.TabIndex = 15;
-            btnSua.Text = "Sửa";
-            btnSua.UseVisualStyleBackColor = false;
-            // 
-            // btnXoa
-            // 
-            btnXoa.BackColor = Color.FromArgb(0, 122, 204);
-            btnXoa.FlatAppearance.BorderSize = 0;
-            btnXoa.FlatStyle = FlatStyle.Flat;
-            btnXoa.ForeColor = Color.White;
-            btnXoa.Location = new Point(682, 410);
-            btnXoa.Name = "btnXoa";
-            btnXoa.Size = new Size(112, 46);
-            btnXoa.TabIndex = 14;
-            btnXoa.Text = "Xóa";
-            btnXoa.UseVisualStyleBackColor = false;
-            // 
-            // btnReset
-            // 
-            btnReset.BackColor = Color.FromArgb(0, 122, 204);
-            btnReset.FlatAppearance.BorderSize = 0;
-            btnReset.FlatStyle = FlatStyle.Flat;
-            btnReset.ForeColor = Color.White;
-            btnReset.Location = new Point(832, 410);
-            btnReset.Name = "btnReset";
-            btnReset.Size = new Size(119, 46);
-            btnReset.TabIndex = 13;
-            btnReset.Text = "Reset";
-            btnReset.UseVisualStyleBackColor = false;
-            // 
-            // btnThem
-            // 
-            btnThem.BackColor = Color.FromArgb(0, 122, 204);
-            btnThem.FlatAppearance.BorderSize = 0;
-            btnThem.FlatStyle = FlatStyle.Flat;
-            btnThem.ForeColor = Color.White;
-            btnThem.Location = new Point(388, 410);
-            btnThem.Name = "btnThem";
-            btnThem.Size = new Size(112, 46);
-            btnThem.TabIndex = 11;
-            btnThem.Text = "Thêm";
-            btnThem.UseVisualStyleBackColor = false;
+            dtpNgayXuat.Font = new Font("Cascadia Code", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dtpNgayXuat.Format = DateTimePickerFormat.Short;
+            dtpNgayXuat.Location = new Point(157, 119);
+            dtpNgayXuat.Name = "dtpNgayXuat";
+            dtpNgayXuat.Size = new Size(225, 28);
+            dtpNgayXuat.TabIndex = 18;
             // 
             // gbTTSP
             // 
@@ -164,16 +106,16 @@
             gbTTSP.Controls.Add(txtMaSP);
             gbTTSP.Controls.Add(txtTenSP);
             gbTTSP.Controls.Add(txtSoLuong);
-            gbTTSP.Controls.Add(txtGiaNhap);
+            gbTTSP.Controls.Add(txtGiaTien);
             gbTTSP.Controls.Add(label12);
             gbTTSP.Controls.Add(label10);
             gbTTSP.Controls.Add(label9);
             gbTTSP.Controls.Add(label8);
             gbTTSP.Controls.Add(label7);
-            gbTTSP.Location = new Point(388, 14);
+            gbTTSP.Location = new Point(401, 30);
             gbTTSP.Name = "gbTTSP";
-            gbTTSP.Size = new Size(999, 370);
-            gbTTSP.TabIndex = 10;
+            gbTTSP.Size = new Size(584, 370);
+            gbTTSP.TabIndex = 17;
             gbTTSP.TabStop = false;
             gbTTSP.Text = "Thông tin Sản phẩm";
             // 
@@ -207,12 +149,12 @@
             txtSoLuong.Size = new Size(191, 31);
             txtSoLuong.TabIndex = 8;
             // 
-            // txtGiaNhap
+            // txtGiaTien
             // 
-            txtGiaNhap.Location = new Point(167, 231);
-            txtGiaNhap.Name = "txtGiaNhap";
-            txtGiaNhap.Size = new Size(191, 31);
-            txtGiaNhap.TabIndex = 7;
+            txtGiaTien.Location = new Point(167, 231);
+            txtGiaTien.Name = "txtGiaTien";
+            txtGiaTien.Size = new Size(191, 31);
+            txtGiaTien.TabIndex = 7;
             // 
             // label12
             // 
@@ -244,11 +186,11 @@
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(41, 231);
+            label8.Location = new Point(53, 231);
             label8.Name = "label8";
-            label8.Size = new Size(120, 27);
+            label8.Size = new Size(108, 27);
             label8.TabIndex = 2;
-            label8.Text = "Giá nhập:";
+            label8.Text = "Đơn giá:";
             // 
             // label7
             // 
@@ -259,51 +201,81 @@
             label7.TabIndex = 1;
             label7.Text = "Mã SP:";
             // 
-            // dtpNgayNhap
+            // txtLiDo
             // 
-            dtpNgayNhap.Font = new Font("Cascadia Code", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dtpNgayNhap.Format = DateTimePickerFormat.Short;
-            dtpNgayNhap.Location = new Point(154, 121);
-            dtpNgayNhap.Name = "dtpNgayNhap";
-            dtpNgayNhap.Size = new Size(200, 28);
-            dtpNgayNhap.TabIndex = 9;
+            txtLiDo.Location = new Point(109, 245);
+            txtLiDo.Multiline = true;
+            txtLiDo.Name = "txtLiDo";
+            txtLiDo.Size = new Size(273, 181);
+            txtLiDo.TabIndex = 16;
             // 
-            // txtMaNCC
+            // btnSua
             // 
-            txtMaNCC.Location = new Point(145, 188);
-            txtMaNCC.Name = "txtMaNCC";
-            txtMaNCC.Size = new Size(191, 31);
-            txtMaNCC.TabIndex = 8;
+            btnSua.BackColor = Color.FromArgb(0, 122, 204);
+            btnSua.FlatAppearance.BorderSize = 0;
+            btnSua.FlatStyle = FlatStyle.Flat;
+            btnSua.ForeColor = Color.White;
+            btnSua.Location = new Point(611, 410);
+            btnSua.Name = "btnSua";
+            btnSua.Size = new Size(112, 46);
+            btnSua.TabIndex = 15;
+            btnSua.Text = "Sửa";
+            btnSua.UseVisualStyleBackColor = false;
+            // 
+            // btnXoa
+            // 
+            btnXoa.BackColor = Color.FromArgb(0, 122, 204);
+            btnXoa.FlatAppearance.BorderSize = 0;
+            btnXoa.FlatStyle = FlatStyle.Flat;
+            btnXoa.ForeColor = Color.White;
+            btnXoa.Location = new Point(738, 410);
+            btnXoa.Name = "btnXoa";
+            btnXoa.Size = new Size(112, 46);
+            btnXoa.TabIndex = 14;
+            btnXoa.Text = "Xóa";
+            btnXoa.UseVisualStyleBackColor = false;
+            // 
+            // btnReset
+            // 
+            btnReset.BackColor = Color.FromArgb(0, 122, 204);
+            btnReset.FlatAppearance.BorderSize = 0;
+            btnReset.FlatStyle = FlatStyle.Flat;
+            btnReset.ForeColor = Color.White;
+            btnReset.Location = new Point(866, 410);
+            btnReset.Name = "btnReset";
+            btnReset.Size = new Size(119, 46);
+            btnReset.TabIndex = 13;
+            btnReset.Text = "Reset";
+            btnReset.UseVisualStyleBackColor = false;
+            // 
+            // btnThem
+            // 
+            btnThem.BackColor = Color.FromArgb(0, 122, 204);
+            btnThem.FlatAppearance.BorderSize = 0;
+            btnThem.FlatStyle = FlatStyle.Flat;
+            btnThem.ForeColor = Color.White;
+            btnThem.Location = new Point(482, 410);
+            btnThem.Name = "btnThem";
+            btnThem.Size = new Size(112, 46);
+            btnThem.TabIndex = 11;
+            btnThem.Text = "Thêm";
+            btnThem.UseVisualStyleBackColor = false;
             // 
             // txtMaNV
             // 
-            txtMaNV.Location = new Point(175, 242);
+            txtMaNV.Location = new Point(191, 184);
             txtMaNV.Name = "txtMaNV";
             txtMaNV.Size = new Size(191, 31);
-            txtMaNV.TabIndex = 7;
-            // 
-            // txtTamUng
-            // 
-            txtTamUng.Location = new Point(145, 296);
-            txtTamUng.Name = "txtTamUng";
-            txtTamUng.Size = new Size(191, 31);
-            txtTamUng.TabIndex = 6;
-            // 
-            // txtSoPhieuNhap
-            // 
-            txtSoPhieuNhap.Location = new Point(145, 57);
-            txtSoPhieuNhap.Name = "txtSoPhieuNhap";
-            txtSoPhieuNhap.Size = new Size(191, 31);
-            txtSoPhieuNhap.TabIndex = 5;
+            txtMaNV.TabIndex = 8;
             // 
             // label6
             // 
             label6.AutoSize = true;
             label6.Location = new Point(19, 299);
             label6.Name = "label6";
-            label6.Size = new Size(108, 27);
+            label6.Size = new Size(84, 27);
             label6.TabIndex = 4;
-            label6.Text = "Tạm ứng:";
+            label6.Text = "Lí Do:";
             // 
             // label5
             // 
@@ -312,56 +284,47 @@
             label5.Name = "label5";
             label5.Size = new Size(132, 27);
             label5.TabIndex = 3;
-            label5.Text = "Ngày nhập:";
+            label5.Text = "Ngày xuất:";
             // 
             // label4
             // 
             label4.AutoSize = true;
             label4.Location = new Point(19, 182);
             label4.Name = "label4";
-            label4.Size = new Size(96, 27);
+            label4.Size = new Size(168, 27);
             label4.TabIndex = 2;
-            label4.Text = "Mã NCC:";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(19, 242);
-            label3.Name = "label3";
-            label3.Size = new Size(168, 27);
-            label3.TabIndex = 1;
-            label3.Text = "Mã NV xử lí: ";
+            label4.Text = "Mã Nhân Viên:";
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Location = new Point(19, 57);
             label2.Name = "label2";
-            label2.Size = new Size(120, 27);
+            label2.Size = new Size(180, 27);
             label2.TabIndex = 0;
-            label2.Text = "Số Phiếu:";
+            label2.Text = "Số Phiếu Xuất:";
             // 
             // gbDSSPNhap
             // 
             gbDSSPNhap.Controls.Add(dtgvDSSPNhap);
             gbDSSPNhap.Font = new Font("Cascadia Code", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            gbDSSPNhap.Location = new Point(28, 550);
+            gbDSSPNhap.Location = new Point(30, 539);
             gbDSSPNhap.Name = "gbDSSPNhap";
-            gbDSSPNhap.Size = new Size(1393, 292);
-            gbDSSPNhap.TabIndex = 2;
+            gbDSSPNhap.Size = new Size(1337, 251);
+            gbDSSPNhap.TabIndex = 3;
             gbDSSPNhap.TabStop = false;
-            gbDSSPNhap.Text = "Danh sách Sản phẩm nhập";
+            gbDSSPNhap.Text = "Danh sách Sản phẩm xuất ";
             // 
             // dtgvDSSPNhap
             // 
             dtgvDSSPNhap.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dtgvDSSPNhap.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dtgvDSSPNhap.Columns.AddRange(new DataGridViewColumn[] { clSTT, clMaSP, clTenSP, clLoaiSP, clNhaCC, clSoLuong, clDonGia, clThanhTien });
+            dtgvDSSPNhap.Columns.AddRange(new DataGridViewColumn[] { clSTT, clMaSP, clTenSP, clLoaiSP, clMaNV, clLiDo, clSoLuong, clDonGia });
             dtgvDSSPNhap.Location = new Point(6, 36);
             dtgvDSSPNhap.Name = "dtgvDSSPNhap";
             dtgvDSSPNhap.RowHeadersWidth = 62;
             dtgvDSSPNhap.RowTemplate.Height = 33;
-            dtgvDSSPNhap.Size = new Size(1381, 250);
+            dtgvDSSPNhap.Size = new Size(1310, 209);
             dtgvDSSPNhap.TabIndex = 0;
             // 
             // clSTT
@@ -388,11 +351,17 @@
             clLoaiSP.MinimumWidth = 8;
             clLoaiSP.Name = "clLoaiSP";
             // 
-            // clNhaCC
+            // clMaNV
             // 
-            clNhaCC.HeaderText = "Nhà CC";
-            clNhaCC.MinimumWidth = 8;
-            clNhaCC.Name = "clNhaCC";
+            clMaNV.HeaderText = "Mã NV";
+            clMaNV.MinimumWidth = 8;
+            clMaNV.Name = "clMaNV";
+            // 
+            // clLiDo
+            // 
+            clLiDo.HeaderText = "Lí Do";
+            clLiDo.MinimumWidth = 8;
+            clLiDo.Name = "clLiDo";
             // 
             // clSoLuong
             // 
@@ -406,23 +375,22 @@
             clDonGia.MinimumWidth = 8;
             clDonGia.Name = "clDonGia";
             // 
-            // clThanhTien
+            // txtSoPhieuXuat
             // 
-            clThanhTien.HeaderText = "Thành Tiền ";
-            clThanhTien.MinimumWidth = 8;
-            clThanhTien.Name = "clThanhTien";
+            txtSoPhieuXuat.Location = new Point(205, 57);
+            txtSoPhieuXuat.Name = "txtSoPhieuXuat";
+            txtSoPhieuXuat.Size = new Size(177, 31);
+            txtSoPhieuXuat.TabIndex = 19;
             // 
-            // frmNhapHang
+            // XuatKho
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1447, 854);
+            ClientSize = new Size(1379, 802);
             Controls.Add(gbDSSPNhap);
             Controls.Add(gbTTNhapHang);
-            Controls.Add(label1);
-            Name = "frmNhapHang";
-            StartPosition = FormStartPosition.CenterScreen;
-            Text = "Nhập Hàng ";
+            Name = "XuatKho";
+            Text = "XuatKho";
             gbTTNhapHang.ResumeLayout(false);
             gbTTNhapHang.PerformLayout();
             gbTTSP.ResumeLayout(false);
@@ -430,47 +398,43 @@
             gbDSSPNhap.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dtgvDSSPNhap).EndInit();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
 
-        private Label label1;
         private GroupBox gbTTNhapHang;
+        private Button btnSua;
+        private Button btnXoa;
+        private Button btnReset;
+        private Button btnThem;
+        private TextBox txtMaNV;
         private Label label6;
         private Label label5;
         private Label label4;
-        private Label label3;
+        private GroupBox gbDSSPNhap;
+        private DataGridView dtgvDSSPNhap;
+        private TextBox txtLiDo;
         private Label label2;
-        private DateTimePicker dtpNgayNhap;
-        private TextBox txtMaNCC;
-        private TextBox txtMaNV;
-        private TextBox txtTamUng;
-        private TextBox txtSoPhieuNhap;
         private GroupBox gbTTSP;
+        private ComboBox cbLoaiHang;
+        private TextBox txtMaSP;
+        private TextBox txtTenSP;
+        private TextBox txtSoLuong;
+        private TextBox txtGiaTien;
         private Label label12;
         private Label label10;
         private Label label9;
         private Label label8;
         private Label label7;
-        private Button btnSua;
-        private Button btnXoa;
-        private Button btnReset;
-        private Button btnThem;
-        private ComboBox cbLoaiHang;
-        private TextBox txtMaSP;
-        private TextBox txtTenSP;
-        private TextBox txtSoLuong;
-        private TextBox txtGiaNhap;
-        private GroupBox gbDSSPNhap;
-        private DataGridView dtgvDSSPNhap;
         private DataGridViewTextBoxColumn clSTT;
         private DataGridViewTextBoxColumn clMaSP;
         private DataGridViewTextBoxColumn clTenSP;
         private DataGridViewTextBoxColumn clLoaiSP;
-        private DataGridViewTextBoxColumn clNhaCC;
+        private DataGridViewTextBoxColumn clMaNV;
+        private DataGridViewTextBoxColumn clLiDo;
         private DataGridViewTextBoxColumn clSoLuong;
         private DataGridViewTextBoxColumn clDonGia;
-        private DataGridViewTextBoxColumn clThanhTien;
+        private DateTimePicker dtpNgayXuat;
+        private TextBox txtSoPhieuXuat;
     }
 }
