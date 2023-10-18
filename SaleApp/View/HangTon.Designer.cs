@@ -28,90 +28,100 @@
         /// </summary>
         private void InitializeComponent()
         {
-            gbDSHangTon = new GroupBox();
-            dtgvDSHangTon = new DataGridView();
-            clMaSP = new DataGridViewTextBoxColumn();
-            clTenSP = new DataGridViewTextBoxColumn();
-            clSoLuongTon = new DataGridViewTextBoxColumn();
-            clNgayNhap = new DataGridViewTextBoxColumn();
-            btnXuatFile = new Button();
-            gbDSHangTon.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dtgvDSHangTon).BeginInit();
-            SuspendLayout();
+            this.gbDSHangTon = new System.Windows.Forms.GroupBox();
+            this.dtgvDSHangTon = new System.Windows.Forms.DataGridView();
+            this.clMaSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clTenSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clSoLuongTon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clNgayNhap = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnXuatFile = new System.Windows.Forms.Button();
+            this.gbDSHangTon.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvDSHangTon)).BeginInit();
+            this.SuspendLayout();
             // 
             // gbDSHangTon
             // 
-            gbDSHangTon.Controls.Add(dtgvDSHangTon);
-            gbDSHangTon.Font = new Font("Cascadia Code", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            gbDSHangTon.Location = new Point(34, 60);
-            gbDSHangTon.Name = "gbDSHangTon";
-            gbDSHangTon.Size = new Size(1299, 566);
-            gbDSHangTon.TabIndex = 0;
-            gbDSHangTon.TabStop = false;
-            gbDSHangTon.Text = "Danh sách hàng tồn";
+            this.gbDSHangTon.Controls.Add(this.dtgvDSHangTon);
+            this.gbDSHangTon.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.gbDSHangTon.Location = new System.Drawing.Point(27, 48);
+            this.gbDSHangTon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbDSHangTon.Name = "gbDSHangTon";
+            this.gbDSHangTon.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbDSHangTon.Size = new System.Drawing.Size(954, 453);
+            this.gbDSHangTon.TabIndex = 0;
+            this.gbDSHangTon.TabStop = false;
+            this.gbDSHangTon.Text = "Danh sách hàng tồn";
             // 
             // dtgvDSHangTon
             // 
-            dtgvDSHangTon.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dtgvDSHangTon.BackgroundColor = SystemColors.ButtonFace;
-            dtgvDSHangTon.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dtgvDSHangTon.Columns.AddRange(new DataGridViewColumn[] { clMaSP, clTenSP, clSoLuongTon, clNgayNhap });
-            dtgvDSHangTon.Location = new Point(6, 34);
-            dtgvDSHangTon.Name = "dtgvDSHangTon";
-            dtgvDSHangTon.RowHeadersWidth = 62;
-            dtgvDSHangTon.RowTemplate.Height = 33;
-            dtgvDSHangTon.Size = new Size(1287, 526);
-            dtgvDSHangTon.TabIndex = 0;
+            this.dtgvDSHangTon.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtgvDSHangTon.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.dtgvDSHangTon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvDSHangTon.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.clMaSP,
+            this.clTenSP,
+            this.clSoLuongTon,
+            this.clNgayNhap});
+            this.dtgvDSHangTon.Location = new System.Drawing.Point(5, 27);
+            this.dtgvDSHangTon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtgvDSHangTon.Name = "dtgvDSHangTon";
+            this.dtgvDSHangTon.RowHeadersWidth = 62;
+            this.dtgvDSHangTon.RowTemplate.Height = 33;
+            this.dtgvDSHangTon.Size = new System.Drawing.Size(934, 421);
+            this.dtgvDSHangTon.TabIndex = 0;
             // 
             // clMaSP
             // 
-            clMaSP.HeaderText = "Mã Sản Phẩm ";
-            clMaSP.MinimumWidth = 8;
-            clMaSP.Name = "clMaSP";
+            this.clMaSP.HeaderText = "Mã Sản Phẩm ";
+            this.clMaSP.MinimumWidth = 8;
+            this.clMaSP.Name = "clMaSP";
             // 
             // clTenSP
             // 
-            clTenSP.HeaderText = "Tên Sản Phẩm ";
-            clTenSP.MinimumWidth = 8;
-            clTenSP.Name = "clTenSP";
+            this.clTenSP.HeaderText = "Tên Sản Phẩm ";
+            this.clTenSP.MinimumWidth = 8;
+            this.clTenSP.Name = "clTenSP";
             // 
             // clSoLuongTon
             // 
-            clSoLuongTon.HeaderText = "Số lượng tồn ";
-            clSoLuongTon.MinimumWidth = 8;
-            clSoLuongTon.Name = "clSoLuongTon";
+            this.clSoLuongTon.HeaderText = "Số lượng tồn ";
+            this.clSoLuongTon.MinimumWidth = 8;
+            this.clSoLuongTon.Name = "clSoLuongTon";
             // 
             // clNgayNhap
             // 
-            clNgayNhap.HeaderText = "Ngày nhập ";
-            clNgayNhap.MinimumWidth = 8;
-            clNgayNhap.Name = "clNgayNhap";
+            this.clNgayNhap.HeaderText = "Ngày nhập ";
+            this.clNgayNhap.MinimumWidth = 8;
+            this.clNgayNhap.Name = "clNgayNhap";
             // 
             // btnXuatFile
             // 
-            btnXuatFile.BackColor = Color.FromArgb(0, 122, 204);
-            btnXuatFile.FlatStyle = FlatStyle.Flat;
-            btnXuatFile.Font = new Font("Cascadia Code", 11F, FontStyle.Bold, GraphicsUnit.Point);
-            btnXuatFile.ForeColor = Color.White;
-            btnXuatFile.Location = new Point(570, 663);
-            btnXuatFile.Name = "btnXuatFile";
-            btnXuatFile.Size = new Size(207, 64);
-            btnXuatFile.TabIndex = 1;
-            btnXuatFile.Text = "Xuất File ";
-            btnXuatFile.UseVisualStyleBackColor = false;
+            this.btnXuatFile.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.btnXuatFile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnXuatFile.Font = new System.Drawing.Font("Cascadia Code", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnXuatFile.ForeColor = System.Drawing.Color.White;
+            this.btnXuatFile.Location = new System.Drawing.Point(456, 530);
+            this.btnXuatFile.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnXuatFile.Name = "btnXuatFile";
+            this.btnXuatFile.Size = new System.Drawing.Size(166, 51);
+            this.btnXuatFile.TabIndex = 1;
+            this.btnXuatFile.Text = "Xuất File ";
+            this.btnXuatFile.UseVisualStyleBackColor = false;
             // 
             // frmHangTon
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1379, 802);
-            Controls.Add(btnXuatFile);
-            Controls.Add(gbDSHangTon);
-            Name = "frmHangTon";
-            Text = "Hàng tồn ";
-            gbDSHangTon.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dtgvDSHangTon).EndInit();
-            ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(992, 601);
+            this.Controls.Add(this.btnXuatFile);
+            this.Controls.Add(this.gbDSHangTon);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Name = "frmHangTon";
+            this.Text = "Hàng tồn ";
+            this.gbDSHangTon.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvDSHangTon)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         #endregion

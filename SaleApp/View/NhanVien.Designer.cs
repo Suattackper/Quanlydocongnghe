@@ -29,450 +29,437 @@ namespace SaleApp
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNhanVien));
-            btnXuatExel = new Button();
-            btnXoa = new Button();
-            btnSua = new Button();
-            btnThem = new Button();
-            btnReset = new Button();
-            btnLuu = new Button();
-            txtMaNV = new TextBox();
-            label6 = new Label();
-            txtSDT = new TextBox();
-            txtMaQuyen = new TextBox();
-            txtHoTen = new TextBox();
-            txtEmail = new TextBox();
-            txtDiaChi = new TextBox();
-            txtCCCD = new TextBox();
-            dtpNgayVao = new DateTimePicker();
-            label8 = new Label();
-            label7 = new Label();
-            label5 = new Label();
-            pbClose = new PictureBox();
-            label4 = new Label();
-            label3 = new Label();
-            label2 = new Label();
-            label1 = new Label();
-            btnUpload = new Button();
-            pbAvatar = new PictureBox();
-            panel1 = new Panel();
-            gbThongTinNV = new GroupBox();
-            dtgvNhanVien = new DataGridView();
-            clMaNv = new DataGridViewTextBoxColumn();
-            clMaQuyen = new DataGridViewTextBoxColumn();
-            clHoten = new DataGridViewTextBoxColumn();
-            clSDT = new DataGridViewTextBoxColumn();
-            clDiaChi = new DataGridViewTextBoxColumn();
-            clEmail = new DataGridViewTextBoxColumn();
-            clCCCD = new DataGridViewTextBoxColumn();
-            clNgayVao = new DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)pbClose).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pbAvatar).BeginInit();
-            panel1.SuspendLayout();
-            gbThongTinNV.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dtgvNhanVien).BeginInit();
-            SuspendLayout();
+            this.btnXuatExel = new System.Windows.Forms.Button();
+            this.btnXoa = new System.Windows.Forms.Button();
+            this.btnSua = new System.Windows.Forms.Button();
+            this.btnThem = new System.Windows.Forms.Button();
+            this.btnReset = new System.Windows.Forms.Button();
+            this.btnLuu = new System.Windows.Forms.Button();
+            this.txtMaNV = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtSDT = new System.Windows.Forms.TextBox();
+            this.txtMaQuyen = new System.Windows.Forms.TextBox();
+            this.txtHoTen = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtDiaChi = new System.Windows.Forms.TextBox();
+            this.txtCCCD = new System.Windows.Forms.TextBox();
+            this.dtpNgayVao = new System.Windows.Forms.DateTimePicker();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnUpload = new System.Windows.Forms.Button();
+            this.pbAvatar = new System.Windows.Forms.PictureBox();
+            this.gbThongTinNV = new System.Windows.Forms.GroupBox();
+            this.dtgvNhanVien = new System.Windows.Forms.DataGridView();
+            this.clMaNv = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clMaQuyen = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clHoten = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clSDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clDiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clEmail = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clCCCD = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clNgayVao = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).BeginInit();
+            this.gbThongTinNV.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvNhanVien)).BeginInit();
+            this.SuspendLayout();
             // 
             // btnXuatExel
             // 
-            btnXuatExel.BackColor = Color.FromArgb(0, 122, 204);
-            btnXuatExel.FlatStyle = FlatStyle.Flat;
-            btnXuatExel.Font = new Font("Cascadia Code", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            btnXuatExel.ForeColor = Color.White;
-            btnXuatExel.Location = new Point(1192, 948);
-            btnXuatExel.Margin = new Padding(3, 4, 3, 4);
-            btnXuatExel.Name = "btnXuatExel";
-            btnXuatExel.Size = new Size(156, 56);
-            btnXuatExel.TabIndex = 58;
-            btnXuatExel.Text = "Xuất Exel";
-            btnXuatExel.UseVisualStyleBackColor = false;
+            this.btnXuatExel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.btnXuatExel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnXuatExel.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnXuatExel.ForeColor = System.Drawing.Color.White;
+            this.btnXuatExel.Location = new System.Drawing.Point(496, 591);
+            this.btnXuatExel.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.btnXuatExel.Name = "btnXuatExel";
+            this.btnXuatExel.Size = new System.Drawing.Size(125, 45);
+            this.btnXuatExel.TabIndex = 58;
+            this.btnXuatExel.Text = "Xuất Exel";
+            this.btnXuatExel.UseVisualStyleBackColor = false;
             // 
             // btnXoa
             // 
-            btnXoa.BackColor = Color.FromArgb(0, 122, 204);
-            btnXoa.FlatStyle = FlatStyle.Flat;
-            btnXoa.Font = new Font("Cascadia Code", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            btnXoa.ForeColor = Color.White;
-            btnXoa.Location = new Point(1363, 948);
-            btnXoa.Margin = new Padding(3, 4, 3, 4);
-            btnXoa.Name = "btnXoa";
-            btnXoa.Size = new Size(156, 56);
-            btnXoa.TabIndex = 57;
-            btnXoa.Text = "Xóa";
-            btnXoa.UseVisualStyleBackColor = false;
+            this.btnXoa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnXoa.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnXoa.ForeColor = System.Drawing.Color.White;
+            this.btnXoa.Location = new System.Drawing.Point(632, 591);
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(125, 45);
+            this.btnXoa.TabIndex = 57;
+            this.btnXoa.Text = "Xóa";
+            this.btnXoa.UseVisualStyleBackColor = false;
             // 
             // btnSua
             // 
-            btnSua.BackColor = Color.FromArgb(0, 122, 204);
-            btnSua.FlatStyle = FlatStyle.Flat;
-            btnSua.Font = new Font("Cascadia Code", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            btnSua.ForeColor = Color.White;
-            btnSua.Location = new Point(1021, 948);
-            btnSua.Margin = new Padding(3, 4, 3, 4);
-            btnSua.Name = "btnSua";
-            btnSua.Size = new Size(156, 56);
-            btnSua.TabIndex = 56;
-            btnSua.Text = "Sửa";
-            btnSua.UseVisualStyleBackColor = false;
+            this.btnSua.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.btnSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSua.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnSua.ForeColor = System.Drawing.Color.White;
+            this.btnSua.Location = new System.Drawing.Point(359, 591);
+            this.btnSua.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(125, 45);
+            this.btnSua.TabIndex = 56;
+            this.btnSua.Text = "Sửa";
+            this.btnSua.UseVisualStyleBackColor = false;
             // 
             // btnThem
             // 
-            btnThem.BackColor = Color.FromArgb(0, 122, 204);
-            btnThem.FlatStyle = FlatStyle.Flat;
-            btnThem.Font = new Font("Cascadia Code", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            btnThem.ForeColor = Color.White;
-            btnThem.Location = new Point(847, 948);
-            btnThem.Margin = new Padding(3, 4, 3, 4);
-            btnThem.Name = "btnThem";
-            btnThem.Size = new Size(156, 56);
-            btnThem.TabIndex = 55;
-            btnThem.Text = "Thêm";
-            btnThem.UseVisualStyleBackColor = false;
+            this.btnThem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThem.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnThem.ForeColor = System.Drawing.Color.White;
+            this.btnThem.Location = new System.Drawing.Point(220, 591);
+            this.btnThem.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(125, 45);
+            this.btnThem.TabIndex = 55;
+            this.btnThem.Text = "Thêm";
+            this.btnThem.UseVisualStyleBackColor = false;
             // 
             // btnReset
             // 
-            btnReset.BackColor = Color.FromArgb(0, 122, 204);
-            btnReset.FlatStyle = FlatStyle.Flat;
-            btnReset.Font = new Font("Cascadia Code", 14F, FontStyle.Bold, GraphicsUnit.Point);
-            btnReset.ForeColor = Color.White;
-            btnReset.Location = new Point(658, 453);
-            btnReset.Margin = new Padding(3, 4, 3, 4);
-            btnReset.Name = "btnReset";
-            btnReset.Size = new Size(156, 66);
-            btnReset.TabIndex = 54;
-            btnReset.Text = "Reset";
-            btnReset.UseVisualStyleBackColor = false;
+            this.btnReset.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.btnReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReset.Font = new System.Drawing.Font("Cascadia Code", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnReset.ForeColor = System.Drawing.Color.White;
+            this.btnReset.Location = new System.Drawing.Point(407, 245);
+            this.btnReset.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(125, 45);
+            this.btnReset.TabIndex = 54;
+            this.btnReset.Text = "Reset";
+            this.btnReset.UseVisualStyleBackColor = false;
             // 
             // btnLuu
             // 
-            btnLuu.BackColor = Color.FromArgb(0, 122, 204);
-            btnLuu.FlatStyle = FlatStyle.Flat;
-            btnLuu.Font = new Font("Cascadia Code", 14F, FontStyle.Bold, GraphicsUnit.Point);
-            btnLuu.ForeColor = Color.White;
-            btnLuu.Location = new Point(466, 453);
-            btnLuu.Margin = new Padding(3, 4, 3, 4);
-            btnLuu.Name = "btnLuu";
-            btnLuu.Size = new Size(156, 66);
-            btnLuu.TabIndex = 53;
-            btnLuu.Text = "Lưu";
-            btnLuu.UseVisualStyleBackColor = false;
+            this.btnLuu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.btnLuu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLuu.Font = new System.Drawing.Font("Cascadia Code", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnLuu.ForeColor = System.Drawing.Color.White;
+            this.btnLuu.Location = new System.Drawing.Point(254, 245);
+            this.btnLuu.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.btnLuu.Name = "btnLuu";
+            this.btnLuu.Size = new System.Drawing.Size(125, 45);
+            this.btnLuu.TabIndex = 53;
+            this.btnLuu.Text = "Lưu";
+            this.btnLuu.UseVisualStyleBackColor = false;
             // 
             // txtMaNV
             // 
-            txtMaNV.Location = new Point(238, 175);
-            txtMaNV.Margin = new Padding(3, 4, 3, 4);
-            txtMaNV.Multiline = true;
-            txtMaNV.Name = "txtMaNV";
-            txtMaNV.Size = new Size(264, 46);
-            txtMaNV.TabIndex = 51;
+            this.txtMaNV.Location = new System.Drawing.Point(159, 13);
+            this.txtMaNV.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtMaNV.Multiline = true;
+            this.txtMaNV.Name = "txtMaNV";
+            this.txtMaNV.Size = new System.Drawing.Size(212, 38);
+            this.txtMaNV.TabIndex = 51;
             // 
             // label6
             // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Cascadia Code", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            label6.Location = new Point(773, 245);
-            label6.Name = "label6";
-            label6.Size = new Size(84, 27);
-            label6.TabIndex = 50;
-            label6.Text = "Email:";
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Cascadia Code", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label6.Location = new System.Drawing.Point(472, 80);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(70, 22);
+            this.label6.TabIndex = 50;
+            this.label6.Text = "Email:";
             // 
             // txtSDT
             // 
-            txtSDT.Location = new Point(238, 367);
-            txtSDT.Margin = new Padding(3, 4, 3, 4);
-            txtSDT.Multiline = true;
-            txtSDT.Name = "txtSDT";
-            txtSDT.Size = new Size(264, 50);
-            txtSDT.TabIndex = 49;
+            this.txtSDT.Location = new System.Drawing.Point(159, 167);
+            this.txtSDT.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtSDT.Multiline = true;
+            this.txtSDT.Name = "txtSDT";
+            this.txtSDT.Size = new System.Drawing.Size(212, 38);
+            this.txtSDT.TabIndex = 49;
             // 
             // txtMaQuyen
             // 
-            txtMaQuyen.Location = new Point(238, 239);
-            txtMaQuyen.Margin = new Padding(3, 4, 3, 4);
-            txtMaQuyen.Multiline = true;
-            txtMaQuyen.Name = "txtMaQuyen";
-            txtMaQuyen.Size = new Size(264, 44);
-            txtMaQuyen.TabIndex = 48;
+            this.txtMaQuyen.Location = new System.Drawing.Point(159, 64);
+            this.txtMaQuyen.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtMaQuyen.Multiline = true;
+            this.txtMaQuyen.Name = "txtMaQuyen";
+            this.txtMaQuyen.Size = new System.Drawing.Size(212, 38);
+            this.txtMaQuyen.TabIndex = 48;
             // 
             // txtHoTen
             // 
-            txtHoTen.Location = new Point(238, 302);
-            txtHoTen.Margin = new Padding(3, 4, 3, 4);
-            txtHoTen.Multiline = true;
-            txtHoTen.Name = "txtHoTen";
-            txtHoTen.Size = new Size(348, 48);
-            txtHoTen.TabIndex = 47;
+            this.txtHoTen.Location = new System.Drawing.Point(159, 115);
+            this.txtHoTen.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtHoTen.Multiline = true;
+            this.txtHoTen.Name = "txtHoTen";
+            this.txtHoTen.Size = new System.Drawing.Size(212, 38);
+            this.txtHoTen.TabIndex = 47;
             // 
             // txtEmail
             // 
-            txtEmail.Location = new Point(863, 228);
-            txtEmail.Margin = new Padding(3, 4, 3, 4);
-            txtEmail.Multiline = true;
-            txtEmail.Name = "txtEmail";
-            txtEmail.Size = new Size(373, 44);
-            txtEmail.TabIndex = 46;
+            this.txtEmail.Location = new System.Drawing.Point(546, 64);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtEmail.Multiline = true;
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(212, 38);
+            this.txtEmail.TabIndex = 46;
             // 
             // txtDiaChi
             // 
-            txtDiaChi.Location = new Point(863, 152);
-            txtDiaChi.Margin = new Padding(3, 4, 3, 4);
-            txtDiaChi.Multiline = true;
-            txtDiaChi.Name = "txtDiaChi";
-            txtDiaChi.Size = new Size(373, 51);
-            txtDiaChi.TabIndex = 45;
+            this.txtDiaChi.Location = new System.Drawing.Point(546, 13);
+            this.txtDiaChi.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtDiaChi.Multiline = true;
+            this.txtDiaChi.Name = "txtDiaChi";
+            this.txtDiaChi.Size = new System.Drawing.Size(212, 38);
+            this.txtDiaChi.TabIndex = 45;
             // 
             // txtCCCD
             // 
-            txtCCCD.Location = new Point(863, 301);
-            txtCCCD.Margin = new Padding(3, 4, 3, 4);
-            txtCCCD.Multiline = true;
-            txtCCCD.Name = "txtCCCD";
-            txtCCCD.Size = new Size(265, 42);
-            txtCCCD.TabIndex = 44;
+            this.txtCCCD.Location = new System.Drawing.Point(546, 115);
+            this.txtCCCD.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtCCCD.Multiline = true;
+            this.txtCCCD.Name = "txtCCCD";
+            this.txtCCCD.Size = new System.Drawing.Size(212, 38);
+            this.txtCCCD.TabIndex = 44;
             // 
             // dtpNgayVao
             // 
-            dtpNgayVao.Font = new Font("Century Gothic", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dtpNgayVao.Format = DateTimePickerFormat.Short;
-            dtpNgayVao.Location = new Point(863, 379);
-            dtpNgayVao.Margin = new Padding(3, 4, 3, 4);
-            dtpNgayVao.Name = "dtpNgayVao";
-            dtpNgayVao.Size = new Size(245, 30);
-            dtpNgayVao.TabIndex = 43;
+            this.dtpNgayVao.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.dtpNgayVao.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpNgayVao.Location = new System.Drawing.Point(551, 183);
+            this.dtpNgayVao.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.dtpNgayVao.Name = "dtpNgayVao";
+            this.dtpNgayVao.Size = new System.Drawing.Size(207, 26);
+            this.dtpNgayVao.TabIndex = 43;
             // 
             // label8
             // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Cascadia Code", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            label8.Location = new Point(737, 367);
-            label8.Name = "label8";
-            label8.Size = new Size(120, 27);
-            label8.TabIndex = 42;
-            label8.Text = "Ngày Vào:";
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Cascadia Code", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label8.Location = new System.Drawing.Point(447, 183);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(100, 22);
+            this.label8.TabIndex = 42;
+            this.label8.Text = "Ngày Vào:";
             // 
             // label7
             // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Cascadia Code", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            label7.Location = new Point(725, 302);
-            label7.Name = "label7";
-            label7.Size = new Size(132, 27);
-            label7.TabIndex = 41;
-            label7.Text = "CCCD/CMND:";
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Cascadia Code", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label7.Location = new System.Drawing.Point(437, 131);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(110, 22);
+            this.label7.TabIndex = 41;
+            this.label7.Text = "CCCD/CMND:";
             // 
             // label5
             // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Cascadia Code", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            label5.Location = new Point(103, 245);
-            label5.Name = "label5";
-            label5.Size = new Size(120, 27);
-            label5.TabIndex = 40;
-            label5.Text = "Mã Quyền:";
-            // 
-            // pbClose
-            // 
-            pbClose.Image = (Image)resources.GetObject("pbClose.Image");
-            pbClose.Location = new Point(1587, 0);
-            pbClose.Margin = new Padding(3, 4, 3, 4);
-            pbClose.Name = "pbClose";
-            pbClose.Size = new Size(62, 69);
-            pbClose.SizeMode = PictureBoxSizeMode.StretchImage;
-            pbClose.TabIndex = 0;
-            pbClose.TabStop = false;
-            pbClose.Click += pbClose_Click_1;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Cascadia Code", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label5.Location = new System.Drawing.Point(53, 80);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(100, 22);
+            this.label5.TabIndex = 40;
+            this.label5.Text = "Mã Quyền:";
             // 
             // label4
             // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Cascadia Code", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.Location = new Point(127, 323);
-            label4.Name = "label4";
-            label4.Size = new Size(96, 27);
-            label4.TabIndex = 39;
-            label4.Text = "Họ Tên:";
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Cascadia Code", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label4.Location = new System.Drawing.Point(73, 131);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(80, 22);
+            this.label4.TabIndex = 39;
+            this.label4.Text = "Họ Tên:";
             // 
             // label3
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Cascadia Code", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.Location = new Point(43, 379);
-            label3.Name = "label3";
-            label3.Size = new Size(180, 27);
-            label3.TabIndex = 38;
-            label3.Text = "Số Điện Thoại:";
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Cascadia Code", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label3.Location = new System.Drawing.Point(3, 183);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(150, 22);
+            this.label3.TabIndex = 38;
+            this.label3.Text = "Số Điện Thoại:";
             // 
             // label2
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Cascadia Code", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(749, 175);
-            label2.Name = "label2";
-            label2.Size = new Size(108, 27);
-            label2.TabIndex = 37;
-            label2.Text = "Địa chỉ:";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Cascadia Code", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(452, 29);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(90, 22);
+            this.label2.TabIndex = 37;
+            this.label2.Text = "Địa chỉ:";
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Cascadia Code", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(55, 176);
-            label1.Name = "label1";
-            label1.Size = new Size(168, 27);
-            label1.TabIndex = 36;
-            label1.Text = "Mã Nhân Viên:";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Cascadia Code", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(13, 29);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(140, 22);
+            this.label1.TabIndex = 36;
+            this.label1.Text = "Mã Nhân Viên:";
             // 
             // btnUpload
             // 
-            btnUpload.BackColor = Color.FromArgb(0, 122, 204);
-            btnUpload.FlatStyle = FlatStyle.Flat;
-            btnUpload.Font = new Font("Cascadia Code", 14F, FontStyle.Bold, GraphicsUnit.Point);
-            btnUpload.ForeColor = Color.White;
-            btnUpload.Location = new Point(1414, 416);
-            btnUpload.Margin = new Padding(3, 4, 3, 4);
-            btnUpload.Name = "btnUpload";
-            btnUpload.Size = new Size(156, 66);
-            btnUpload.TabIndex = 35;
-            btnUpload.Text = "Upload";
-            btnUpload.UseVisualStyleBackColor = false;
+            this.btnUpload.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.btnUpload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpload.Font = new System.Drawing.Font("Cascadia Code", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnUpload.ForeColor = System.Drawing.Color.White;
+            this.btnUpload.Location = new System.Drawing.Point(835, 246);
+            this.btnUpload.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.btnUpload.Name = "btnUpload";
+            this.btnUpload.Size = new System.Drawing.Size(125, 45);
+            this.btnUpload.TabIndex = 35;
+            this.btnUpload.Text = "Upload";
+            this.btnUpload.UseVisualStyleBackColor = false;
             // 
             // pbAvatar
             // 
-            pbAvatar.Location = new Point(1354, 110);
-            pbAvatar.Margin = new Padding(3, 4, 3, 4);
-            pbAvatar.Name = "pbAvatar";
-            pbAvatar.Size = new Size(260, 285);
-            pbAvatar.TabIndex = 34;
-            pbAvatar.TabStop = false;
-            // 
-            // panel1
-            // 
-            panel1.BackColor = Color.FromArgb(0, 122, 204);
-            panel1.Controls.Add(pbClose);
-            panel1.Dock = DockStyle.Top;
-            panel1.Location = new Point(0, 0);
-            panel1.Margin = new Padding(3, 4, 3, 4);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(1649, 65);
-            panel1.TabIndex = 33;
+            this.pbAvatar.Location = new System.Drawing.Point(814, 13);
+            this.pbAvatar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.pbAvatar.Name = "pbAvatar";
+            this.pbAvatar.Size = new System.Drawing.Size(163, 197);
+            this.pbAvatar.TabIndex = 34;
+            this.pbAvatar.TabStop = false;
             // 
             // gbThongTinNV
             // 
-            gbThongTinNV.Controls.Add(dtgvNhanVien);
-            gbThongTinNV.Font = new Font("Cascadia Code", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            gbThongTinNV.Location = new Point(31, 544);
-            gbThongTinNV.Name = "gbThongTinNV";
-            gbThongTinNV.Size = new Size(1583, 397);
-            gbThongTinNV.TabIndex = 59;
-            gbThongTinNV.TabStop = false;
-            gbThongTinNV.Text = "Thông Tin Nhân Viên";
+            this.gbThongTinNV.Controls.Add(this.dtgvNhanVien);
+            this.gbThongTinNV.Font = new System.Drawing.Font("Cascadia Code", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.gbThongTinNV.Location = new System.Drawing.Point(13, 305);
+            this.gbThongTinNV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbThongTinNV.Name = "gbThongTinNV";
+            this.gbThongTinNV.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbThongTinNV.Size = new System.Drawing.Size(988, 269);
+            this.gbThongTinNV.TabIndex = 59;
+            this.gbThongTinNV.TabStop = false;
+            this.gbThongTinNV.Text = "Thông Tin Nhân Viên";
             // 
             // dtgvNhanVien
             // 
-            dtgvNhanVien.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dtgvNhanVien.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dtgvNhanVien.Columns.AddRange(new DataGridViewColumn[] { clMaNv, clMaQuyen, clHoten, clSDT, clDiaChi, clEmail, clCCCD, clNgayVao });
-            dtgvNhanVien.Location = new Point(3, 28);
-            dtgvNhanVien.Margin = new Padding(3, 4, 3, 4);
-            dtgvNhanVien.Name = "dtgvNhanVien";
-            dtgvNhanVien.RowHeadersWidth = 62;
-            dtgvNhanVien.RowTemplate.Height = 28;
-            dtgvNhanVien.Size = new Size(1574, 362);
-            dtgvNhanVien.TabIndex = 53;
+            this.dtgvNhanVien.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtgvNhanVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvNhanVien.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.clMaNv,
+            this.clMaQuyen,
+            this.clHoten,
+            this.clSDT,
+            this.clDiaChi,
+            this.clEmail,
+            this.clCCCD,
+            this.clNgayVao});
+            this.dtgvNhanVien.Location = new System.Drawing.Point(2, 22);
+            this.dtgvNhanVien.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.dtgvNhanVien.Name = "dtgvNhanVien";
+            this.dtgvNhanVien.RowHeadersWidth = 62;
+            this.dtgvNhanVien.RowTemplate.Height = 28;
+            this.dtgvNhanVien.Size = new System.Drawing.Size(982, 243);
+            this.dtgvNhanVien.TabIndex = 53;
             // 
             // clMaNv
             // 
-            clMaNv.HeaderText = "Mã NV";
-            clMaNv.MinimumWidth = 8;
-            clMaNv.Name = "clMaNv";
+            this.clMaNv.HeaderText = "Mã NV";
+            this.clMaNv.MinimumWidth = 8;
+            this.clMaNv.Name = "clMaNv";
             // 
             // clMaQuyen
             // 
-            clMaQuyen.HeaderText = "Mã Quyền ";
-            clMaQuyen.MinimumWidth = 8;
-            clMaQuyen.Name = "clMaQuyen";
+            this.clMaQuyen.HeaderText = "Mã Quyền ";
+            this.clMaQuyen.MinimumWidth = 8;
+            this.clMaQuyen.Name = "clMaQuyen";
             // 
             // clHoten
             // 
-            clHoten.HeaderText = "Họ Tên";
-            clHoten.MinimumWidth = 8;
-            clHoten.Name = "clHoten";
+            this.clHoten.HeaderText = "Họ Tên";
+            this.clHoten.MinimumWidth = 8;
+            this.clHoten.Name = "clHoten";
             // 
             // clSDT
             // 
-            clSDT.HeaderText = "SDT";
-            clSDT.MinimumWidth = 8;
-            clSDT.Name = "clSDT";
+            this.clSDT.HeaderText = "SDT";
+            this.clSDT.MinimumWidth = 8;
+            this.clSDT.Name = "clSDT";
             // 
             // clDiaChi
             // 
-            clDiaChi.HeaderText = "Địa Chỉ";
-            clDiaChi.MinimumWidth = 8;
-            clDiaChi.Name = "clDiaChi";
+            this.clDiaChi.HeaderText = "Địa Chỉ";
+            this.clDiaChi.MinimumWidth = 8;
+            this.clDiaChi.Name = "clDiaChi";
             // 
             // clEmail
             // 
-            clEmail.HeaderText = "Email";
-            clEmail.MinimumWidth = 8;
-            clEmail.Name = "clEmail";
+            this.clEmail.HeaderText = "Email";
+            this.clEmail.MinimumWidth = 8;
+            this.clEmail.Name = "clEmail";
             // 
             // clCCCD
             // 
-            clCCCD.HeaderText = "CCCD/CMND";
-            clCCCD.MinimumWidth = 8;
-            clCCCD.Name = "clCCCD";
+            this.clCCCD.HeaderText = "CCCD/CMND";
+            this.clCCCD.MinimumWidth = 8;
+            this.clCCCD.Name = "clCCCD";
             // 
             // clNgayVao
             // 
-            clNgayVao.HeaderText = "Ngày Vào";
-            clNgayVao.MinimumWidth = 8;
-            clNgayVao.Name = "clNgayVao";
+            this.clNgayVao.HeaderText = "Ngày Vào";
+            this.clNgayVao.MinimumWidth = 8;
+            this.clNgayVao.Name = "clNgayVao";
             // 
             // frmNhanVien
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
-            AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.ButtonFace;
-            ClientSize = new Size(1649, 1011);
-            Controls.Add(gbThongTinNV);
-            Controls.Add(btnXuatExel);
-            Controls.Add(btnXoa);
-            Controls.Add(btnSua);
-            Controls.Add(btnThem);
-            Controls.Add(btnReset);
-            Controls.Add(btnLuu);
-            Controls.Add(txtMaNV);
-            Controls.Add(label6);
-            Controls.Add(txtSDT);
-            Controls.Add(txtMaQuyen);
-            Controls.Add(txtHoTen);
-            Controls.Add(txtEmail);
-            Controls.Add(txtDiaChi);
-            Controls.Add(txtCCCD);
-            Controls.Add(dtpNgayVao);
-            Controls.Add(label8);
-            Controls.Add(label7);
-            Controls.Add(label5);
-            Controls.Add(label4);
-            Controls.Add(label3);
-            Controls.Add(label2);
-            Controls.Add(label1);
-            Controls.Add(btnUpload);
-            Controls.Add(pbAvatar);
-            Controls.Add(panel1);
-            FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(3, 4, 3, 4);
-            Name = "frmNhanVien";
-            StartPosition = FormStartPosition.CenterScreen;
-            Text = "Nhân Viên";
-            Load += NhanVien_Load;
-            ((System.ComponentModel.ISupportInitialize)pbClose).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pbAvatar).EndInit();
-            panel1.ResumeLayout(false);
-            gbThongTinNV.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dtgvNhanVien).EndInit();
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.ClientSize = new System.Drawing.Size(1010, 648);
+            this.Controls.Add(this.gbThongTinNV);
+            this.Controls.Add(this.btnXuatExel);
+            this.Controls.Add(this.btnXoa);
+            this.Controls.Add(this.btnSua);
+            this.Controls.Add(this.btnThem);
+            this.Controls.Add(this.btnReset);
+            this.Controls.Add(this.btnLuu);
+            this.Controls.Add(this.txtMaNV);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.txtSDT);
+            this.Controls.Add(this.txtMaQuyen);
+            this.Controls.Add(this.txtHoTen);
+            this.Controls.Add(this.txtEmail);
+            this.Controls.Add(this.txtDiaChi);
+            this.Controls.Add(this.txtCCCD);
+            this.Controls.Add(this.dtpNgayVao);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnUpload);
+            this.Controls.Add(this.pbAvatar);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.Name = "frmNhanVien";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Nhân Viên";
+            ((System.ComponentModel.ISupportInitialize)(this.pbAvatar)).EndInit();
+            this.gbThongTinNV.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvNhanVien)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
@@ -494,14 +481,12 @@ namespace SaleApp
         private Label label8;
         private Label label7;
         private Label label5;
-        private PictureBox pbClose;
         private Label label4;
         private Label label3;
         private Label label2;
         private Label label1;
         private Button btnUpload;
         private PictureBox pbAvatar;
-        private Panel panel1;
         private GroupBox gbThongTinNV;
         private DataGridView dtgvNhanVien;
         private DataGridViewTextBoxColumn clMaNv;

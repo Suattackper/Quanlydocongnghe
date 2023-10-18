@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SaleApp
 {
-    public partial class DonHang : Form
+    public partial class frmDonHang : Form
     {
-        public DonHang()
+        public frmDonHang()
         {
             InitializeComponent();
         }

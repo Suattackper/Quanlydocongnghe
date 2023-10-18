@@ -17,7 +17,7 @@ namespace SaleApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmHangTon());
+            Application.Run(new frmHome());
         }
     }
 }

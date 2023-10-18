@@ -1,64 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<root>
-  <!--
-    Microsoft ResX Schema 
-
-    Version 2.0
-
-    The primary goals of this format is to allow a simple XML format
-    that is mostly human readable. The generation and parsing of the
-    various data types are done through the TypeConverter classes
-    associated with the data types.
-
-    Example:
-
-    ... ado.net/XML headers & schema ...
-    <resheader name="resmimetype">text/microsoft-resx</resheader>
-    <resheader name="version">2.0</resheader>
-    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
-    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
-    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
-    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
-    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
-        <value>[base64 mime encoded serialized .NET Framework object]</value>
-    </data>
-    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
-        <comment>This is a comment</comment>
-    </data>
-
-    There are any number of "resheader" rows that contain simple
-    name/value pairs.
-
-    Each data row contains a name, and value. The row also contains a
-    type or mimetype. Type corresponds to a .NET class that support
-    text/value conversion through the TypeConverter architecture.
-    Classes that don't support this are serialized and stored with the
-    mimetype set.
-
-    The mimetype is used for serialized objects, and tells the
-    ResXResourceReader how to depersist the object. This is currently not
-    extensible. For a given mimetype the value must be set accordingly:
-
-    Note - application/x-microsoft.net.object.binary.base64 is the format
-    that the ResXResourceWriter will generate, however the reader can
-    read any of the formats listed below.
-
-    mimetype: application/x-microsoft.net.object.binary.base64
-    value   : The object must be serialized with
-            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
-            : and then encoded with base64 encoding.
-    
-    mimetype: application/x-microsoft.net.object.soap.base64
-    value   : The object must be serialized with
-            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
-            : and then encoded with base64 encoding.
-
-    mimetype: application/x-microsoft.net.object.bytearray.base64
-    value   : The object must be serialized into a byte array
-            : using a System.ComponentModel.TypeConverter
-            : and then encoded with base64 encoding.
-    -->
+﻿<root>
   <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
     <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
     <xsd:element name="root" msdata:IsDataSet="true">
@@ -117,42 +57,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="pbClose.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        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
-</value>
-  </data>
   <metadata name="clMaNv.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>

@@ -28,73 +28,78 @@
         /// </summary>
         private void InitializeComponent()
         {
-            toolStrip1 = new ToolStrip();
-            tsdbtnKhoHang = new ToolStripDropDownButton();
-            itemDSHangTon = new ToolStripMenuItem();
-            itemDSHangNhap = new ToolStripMenuItem();
-            itemDSHangXuat = new ToolStripMenuItem();
-            toolStrip1.SuspendLayout();
-            SuspendLayout();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.tsdbtnKhoHang = new System.Windows.Forms.ToolStripDropDownButton();
+            this.itemDSHangTon = new System.Windows.Forms.ToolStripMenuItem();
+            this.itemDSHangNhap = new System.Windows.Forms.ToolStripMenuItem();
+            this.itemDSHangXuat = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStrip1.SuspendLayout();
+            this.SuspendLayout();
             // 
             // toolStrip1
             // 
-            toolStrip1.ImageScalingSize = new Size(24, 24);
-            toolStrip1.Items.AddRange(new ToolStripItem[] { tsdbtnKhoHang });
-            toolStrip1.Location = new Point(0, 0);
-            toolStrip1.Name = "toolStrip1";
-            toolStrip1.Padding = new Padding(0, 0, 3, 0);
-            toolStrip1.Size = new Size(1129, 36);
-            toolStrip1.TabIndex = 0;
-            toolStrip1.Text = "toolStrip1";
+            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsdbtnKhoHang});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Padding = new System.Windows.Forms.Padding(0, 0, 3, 0);
+            this.toolStrip1.Size = new System.Drawing.Size(992, 29);
+            this.toolStrip1.TabIndex = 0;
+            this.toolStrip1.Text = "toolStrip1";
             // 
             // tsdbtnKhoHang
             // 
-            tsdbtnKhoHang.DisplayStyle = ToolStripItemDisplayStyle.Text;
-            tsdbtnKhoHang.DropDownItems.AddRange(new ToolStripItem[] { itemDSHangTon, itemDSHangNhap, itemDSHangXuat });
-            tsdbtnKhoHang.Font = new Font("Cascadia Code", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            tsdbtnKhoHang.ForeColor = SystemColors.ControlText;
-            tsdbtnKhoHang.ImageTransparentColor = Color.Magenta;
-            tsdbtnKhoHang.Name = "tsdbtnKhoHang";
-            tsdbtnKhoHang.Size = new Size(126, 31);
-            tsdbtnKhoHang.Text = "Kho Hàng";
+            this.tsdbtnKhoHang.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.tsdbtnKhoHang.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.itemDSHangTon,
+            this.itemDSHangNhap,
+            this.itemDSHangXuat});
+            this.tsdbtnKhoHang.Font = new System.Drawing.Font("Cascadia Code", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.tsdbtnKhoHang.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.tsdbtnKhoHang.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsdbtnKhoHang.Name = "tsdbtnKhoHang";
+            this.tsdbtnKhoHang.Size = new System.Drawing.Size(104, 26);
+            this.tsdbtnKhoHang.Text = "Kho Hàng";
             // 
             // itemDSHangTon
             // 
-            itemDSHangTon.ForeColor = SystemColors.ControlText;
-            itemDSHangTon.Name = "itemDSHangTon";
-            itemDSHangTon.Size = new Size(330, 36);
-            itemDSHangTon.Text = "Danh Sách Hàng Tồn";
+            this.itemDSHangTon.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.itemDSHangTon.Name = "itemDSHangTon";
+            this.itemDSHangTon.Size = new System.Drawing.Size(274, 26);
+            this.itemDSHangTon.Text = "Danh Sách Hàng Tồn";
             // 
             // itemDSHangNhap
             // 
-            itemDSHangNhap.ForeColor = SystemColors.ControlText;
-            itemDSHangNhap.Name = "itemDSHangNhap";
-            itemDSHangNhap.Size = new Size(330, 36);
-            itemDSHangNhap.Text = "Nhập Kho";
+            this.itemDSHangNhap.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.itemDSHangNhap.Name = "itemDSHangNhap";
+            this.itemDSHangNhap.Size = new System.Drawing.Size(274, 26);
+            this.itemDSHangNhap.Text = "Nhập Kho";
             // 
             // itemDSHangXuat
             // 
-            itemDSHangXuat.ForeColor = SystemColors.ControlText;
-            itemDSHangXuat.Name = "itemDSHangXuat";
-            itemDSHangXuat.Size = new Size(330, 36);
-            itemDSHangXuat.Text = "Xuất Kho";
+            this.itemDSHangXuat.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.itemDSHangXuat.Name = "itemDSHangXuat";
+            this.itemDSHangXuat.Size = new System.Drawing.Size(274, 26);
+            this.itemDSHangXuat.Text = "Xuất Kho";
             // 
             // frmKhoHang
             // 
-            AutoScaleDimensions = new SizeF(13F, 29F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1129, 580);
-            Controls.Add(toolStrip1);
-            Font = new Font("Cascadia Code", 11F, FontStyle.Regular, GraphicsUnit.Point);
-            ForeColor = Color.Black;
-            Margin = new Padding(4, 3, 4, 3);
-            Name = "frmKhoHang";
-            StartPosition = FormStartPosition.CenterScreen;
-            Text = "KhoHang";
-            toolStrip1.ResumeLayout(false);
-            toolStrip1.PerformLayout();
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(992, 601);
+            this.Controls.Add(this.toolStrip1);
+            this.Font = new System.Drawing.Font("Cascadia Code", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ForeColor = System.Drawing.Color.Black;
+            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.Name = "frmKhoHang";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "KhoHang";
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion

@@ -29,294 +29,312 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNhaCungCap));
-            gbThongTinNCC = new GroupBox();
-            btnXuatE = new Button();
-            btnSua = new Button();
-            btnXoa = new Button();
-            btnReset = new Button();
-            btnThem = new Button();
-            btnTimKiem = new Button();
-            txtTimKiem = new TextBox();
-            txtTenNCC = new TextBox();
-            txtSDTNCC = new TextBox();
-            txtDiaChiNCC = new TextBox();
-            txtMaNCC = new TextBox();
-            label4 = new Label();
-            label3 = new Label();
-            label2 = new Label();
-            label1 = new Label();
-            gbDanhSachNCC = new GroupBox();
-            dtgrDSNCC = new DataGridView();
-            clMaNCC = new DataGridViewTextBoxColumn();
-            clTenNCC = new DataGridViewTextBoxColumn();
-            clSDTNCC = new DataGridViewTextBoxColumn();
-            clDiaChiNCC = new DataGridViewTextBoxColumn();
-            gbThongTinNCC.SuspendLayout();
-            gbDanhSachNCC.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dtgrDSNCC).BeginInit();
-            SuspendLayout();
+            this.gbThongTinNCC = new System.Windows.Forms.GroupBox();
+            this.btnXuatE = new System.Windows.Forms.Button();
+            this.btnSua = new System.Windows.Forms.Button();
+            this.btnXoa = new System.Windows.Forms.Button();
+            this.btnReset = new System.Windows.Forms.Button();
+            this.btnThem = new System.Windows.Forms.Button();
+            this.btnTimKiem = new System.Windows.Forms.Button();
+            this.txtTimKiem = new System.Windows.Forms.TextBox();
+            this.txtTenNCC = new System.Windows.Forms.TextBox();
+            this.txtSDTNCC = new System.Windows.Forms.TextBox();
+            this.txtDiaChiNCC = new System.Windows.Forms.TextBox();
+            this.txtMaNCC = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.gbDanhSachNCC = new System.Windows.Forms.GroupBox();
+            this.dtgrDSNCC = new System.Windows.Forms.DataGridView();
+            this.clMaNCC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clTenNCC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clSDTNCC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clDiaChiNCC = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gbThongTinNCC.SuspendLayout();
+            this.gbDanhSachNCC.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgrDSNCC)).BeginInit();
+            this.SuspendLayout();
             // 
             // gbThongTinNCC
             // 
-            gbThongTinNCC.Controls.Add(btnXuatE);
-            gbThongTinNCC.Controls.Add(btnSua);
-            gbThongTinNCC.Controls.Add(btnXoa);
-            gbThongTinNCC.Controls.Add(btnReset);
-            gbThongTinNCC.Controls.Add(btnThem);
-            gbThongTinNCC.Controls.Add(btnTimKiem);
-            gbThongTinNCC.Controls.Add(txtTimKiem);
-            gbThongTinNCC.Controls.Add(txtTenNCC);
-            gbThongTinNCC.Controls.Add(txtSDTNCC);
-            gbThongTinNCC.Controls.Add(txtDiaChiNCC);
-            gbThongTinNCC.Controls.Add(txtMaNCC);
-            gbThongTinNCC.Controls.Add(label4);
-            gbThongTinNCC.Controls.Add(label3);
-            gbThongTinNCC.Controls.Add(label2);
-            gbThongTinNCC.Controls.Add(label1);
-            gbThongTinNCC.Font = new Font("Cascadia Code", 11F, FontStyle.Bold, GraphicsUnit.Point);
-            gbThongTinNCC.Location = new Point(13, 41);
-            gbThongTinNCC.Margin = new Padding(4, 2, 4, 2);
-            gbThongTinNCC.Name = "gbThongTinNCC";
-            gbThongTinNCC.Padding = new Padding(4, 2, 4, 2);
-            gbThongTinNCC.Size = new Size(1279, 379);
-            gbThongTinNCC.TabIndex = 1;
-            gbThongTinNCC.TabStop = false;
-            gbThongTinNCC.Text = "Thông tin Nhà Cung Cấp";
+            this.gbThongTinNCC.Controls.Add(this.btnXuatE);
+            this.gbThongTinNCC.Controls.Add(this.btnSua);
+            this.gbThongTinNCC.Controls.Add(this.btnXoa);
+            this.gbThongTinNCC.Controls.Add(this.btnReset);
+            this.gbThongTinNCC.Controls.Add(this.btnThem);
+            this.gbThongTinNCC.Controls.Add(this.btnTimKiem);
+            this.gbThongTinNCC.Controls.Add(this.txtTimKiem);
+            this.gbThongTinNCC.Controls.Add(this.txtTenNCC);
+            this.gbThongTinNCC.Controls.Add(this.txtSDTNCC);
+            this.gbThongTinNCC.Controls.Add(this.txtDiaChiNCC);
+            this.gbThongTinNCC.Controls.Add(this.txtMaNCC);
+            this.gbThongTinNCC.Controls.Add(this.label4);
+            this.gbThongTinNCC.Controls.Add(this.label3);
+            this.gbThongTinNCC.Controls.Add(this.label2);
+            this.gbThongTinNCC.Controls.Add(this.label1);
+            this.gbThongTinNCC.Font = new System.Drawing.Font("Cascadia Code", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.gbThongTinNCC.Location = new System.Drawing.Point(10, 33);
+            this.gbThongTinNCC.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.gbThongTinNCC.Name = "gbThongTinNCC";
+            this.gbThongTinNCC.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.gbThongTinNCC.Size = new System.Drawing.Size(971, 303);
+            this.gbThongTinNCC.TabIndex = 1;
+            this.gbThongTinNCC.TabStop = false;
+            this.gbThongTinNCC.Text = "Thông tin Nhà Cung Cấp";
             // 
             // btnXuatE
             // 
-            btnXuatE.BackColor = Color.FromArgb(0, 122, 204);
-            btnXuatE.FlatAppearance.BorderSize = 0;
-            btnXuatE.FlatStyle = FlatStyle.Flat;
-            btnXuatE.Font = new Font("Cascadia Code", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            btnXuatE.ForeColor = Color.White;
-            btnXuatE.Location = new Point(991, 293);
-            btnXuatE.Name = "btnXuatE";
-            btnXuatE.Size = new Size(150, 50);
-            btnXuatE.TabIndex = 14;
-            btnXuatE.Text = "Xuất Excel";
-            btnXuatE.UseVisualStyleBackColor = false;
+            this.btnXuatE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.btnXuatE.FlatAppearance.BorderSize = 0;
+            this.btnXuatE.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnXuatE.Font = new System.Drawing.Font("Cascadia Code", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnXuatE.ForeColor = System.Drawing.Color.White;
+            this.btnXuatE.Location = new System.Drawing.Point(793, 234);
+            this.btnXuatE.Margin = new System.Windows.Forms.Padding(2);
+            this.btnXuatE.Name = "btnXuatE";
+            this.btnXuatE.Size = new System.Drawing.Size(120, 40);
+            this.btnXuatE.TabIndex = 14;
+            this.btnXuatE.Text = "Xuất Excel";
+            this.btnXuatE.UseVisualStyleBackColor = false;
             // 
             // btnSua
             // 
-            btnSua.BackColor = Color.FromArgb(0, 122, 204);
-            btnSua.FlatAppearance.BorderSize = 0;
-            btnSua.FlatStyle = FlatStyle.Flat;
-            btnSua.Font = new Font("Cascadia Code", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            btnSua.ForeColor = Color.White;
-            btnSua.Location = new Point(991, 96);
-            btnSua.Name = "btnSua";
-            btnSua.Size = new Size(150, 50);
-            btnSua.TabIndex = 13;
-            btnSua.Text = "Sửa";
-            btnSua.UseVisualStyleBackColor = false;
+            this.btnSua.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.btnSua.FlatAppearance.BorderSize = 0;
+            this.btnSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSua.Font = new System.Drawing.Font("Cascadia Code", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnSua.ForeColor = System.Drawing.Color.White;
+            this.btnSua.Location = new System.Drawing.Point(793, 77);
+            this.btnSua.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(120, 40);
+            this.btnSua.TabIndex = 13;
+            this.btnSua.Text = "Sửa";
+            this.btnSua.UseVisualStyleBackColor = false;
             // 
             // btnXoa
             // 
-            btnXoa.BackColor = Color.FromArgb(0, 122, 204);
-            btnXoa.FlatAppearance.BorderSize = 0;
-            btnXoa.FlatStyle = FlatStyle.Flat;
-            btnXoa.Font = new Font("Cascadia Code", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            btnXoa.ForeColor = Color.White;
-            btnXoa.Location = new Point(991, 162);
-            btnXoa.Name = "btnXoa";
-            btnXoa.Size = new Size(150, 50);
-            btnXoa.TabIndex = 12;
-            btnXoa.Text = "Xóa ";
-            btnXoa.UseVisualStyleBackColor = false;
+            this.btnXoa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.btnXoa.FlatAppearance.BorderSize = 0;
+            this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnXoa.Font = new System.Drawing.Font("Cascadia Code", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnXoa.ForeColor = System.Drawing.Color.White;
+            this.btnXoa.Location = new System.Drawing.Point(793, 130);
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(2);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(120, 40);
+            this.btnXoa.TabIndex = 12;
+            this.btnXoa.Text = "Xóa ";
+            this.btnXoa.UseVisualStyleBackColor = false;
             // 
             // btnReset
             // 
-            btnReset.BackColor = Color.FromArgb(0, 122, 204);
-            btnReset.FlatAppearance.BorderSize = 0;
-            btnReset.FlatStyle = FlatStyle.Flat;
-            btnReset.Font = new Font("Cascadia Code", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            btnReset.ForeColor = Color.White;
-            btnReset.Location = new Point(991, 228);
-            btnReset.Name = "btnReset";
-            btnReset.Size = new Size(150, 50);
-            btnReset.TabIndex = 11;
-            btnReset.Text = "Reset";
-            btnReset.UseVisualStyleBackColor = false;
+            this.btnReset.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.btnReset.FlatAppearance.BorderSize = 0;
+            this.btnReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReset.Font = new System.Drawing.Font("Cascadia Code", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnReset.ForeColor = System.Drawing.Color.White;
+            this.btnReset.Location = new System.Drawing.Point(793, 182);
+            this.btnReset.Margin = new System.Windows.Forms.Padding(2);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(120, 40);
+            this.btnReset.TabIndex = 11;
+            this.btnReset.Text = "Reset";
+            this.btnReset.UseVisualStyleBackColor = false;
             // 
             // btnThem
             // 
-            btnThem.BackColor = Color.FromArgb(0, 122, 204);
-            btnThem.FlatAppearance.BorderSize = 0;
-            btnThem.FlatStyle = FlatStyle.Flat;
-            btnThem.Font = new Font("Cascadia Code", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            btnThem.ForeColor = Color.White;
-            btnThem.Location = new Point(991, 31);
-            btnThem.Name = "btnThem";
-            btnThem.Size = new Size(150, 50);
-            btnThem.TabIndex = 10;
-            btnThem.Text = "Thêm ";
-            btnThem.UseVisualStyleBackColor = false;
-            btnThem.Click += btnThem_Click;
+            this.btnThem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.btnThem.FlatAppearance.BorderSize = 0;
+            this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThem.Font = new System.Drawing.Font("Cascadia Code", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnThem.ForeColor = System.Drawing.Color.White;
+            this.btnThem.Location = new System.Drawing.Point(793, 25);
+            this.btnThem.Margin = new System.Windows.Forms.Padding(2);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(120, 40);
+            this.btnThem.TabIndex = 10;
+            this.btnThem.Text = "Thêm ";
+            this.btnThem.UseVisualStyleBackColor = false;
             // 
             // btnTimKiem
             // 
-            btnTimKiem.BackColor = Color.White;
-            btnTimKiem.FlatAppearance.BorderSize = 0;
-            btnTimKiem.FlatStyle = FlatStyle.Flat;
-            btnTimKiem.Font = new Font("Century Gothic", 11F, FontStyle.Regular, GraphicsUnit.Point);
-            btnTimKiem.Image = (Image)resources.GetObject("btnTimKiem.Image");
-            btnTimKiem.Location = new Point(430, 267);
-            btnTimKiem.Name = "btnTimKiem";
-            btnTimKiem.Size = new Size(30, 30);
-            btnTimKiem.TabIndex = 9;
-            btnTimKiem.UseVisualStyleBackColor = false;
+            this.btnTimKiem.BackColor = System.Drawing.Color.White;
+            this.btnTimKiem.FlatAppearance.BorderSize = 0;
+            this.btnTimKiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTimKiem.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnTimKiem.Image = ((System.Drawing.Image)(resources.GetObject("btnTimKiem.Image")));
+            this.btnTimKiem.Location = new System.Drawing.Point(344, 214);
+            this.btnTimKiem.Margin = new System.Windows.Forms.Padding(2);
+            this.btnTimKiem.Name = "btnTimKiem";
+            this.btnTimKiem.Size = new System.Drawing.Size(24, 24);
+            this.btnTimKiem.TabIndex = 9;
+            this.btnTimKiem.UseVisualStyleBackColor = false;
             // 
             // txtTimKiem
             // 
-            txtTimKiem.BackColor = Color.White;
-            txtTimKiem.Font = new Font("Cascadia Code", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            txtTimKiem.ForeColor = SystemColors.GrayText;
-            txtTimKiem.Location = new Point(52, 254);
-            txtTimKiem.Margin = new Padding(3, 2, 3, 2);
-            txtTimKiem.Multiline = true;
-            txtTimKiem.Name = "txtTimKiem";
-            txtTimKiem.Size = new Size(421, 55);
-            txtTimKiem.TabIndex = 8;
-            txtTimKiem.Text = "Tìm kiếm  ";
+            this.txtTimKiem.BackColor = System.Drawing.Color.White;
+            this.txtTimKiem.Font = new System.Drawing.Font("Cascadia Code", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtTimKiem.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.txtTimKiem.Location = new System.Drawing.Point(42, 203);
+            this.txtTimKiem.Margin = new System.Windows.Forms.Padding(2);
+            this.txtTimKiem.Multiline = true;
+            this.txtTimKiem.Name = "txtTimKiem";
+            this.txtTimKiem.Size = new System.Drawing.Size(338, 45);
+            this.txtTimKiem.TabIndex = 8;
+            this.txtTimKiem.Text = "Tìm kiếm  ";
             // 
             // txtTenNCC
             // 
-            txtTenNCC.Location = new Point(237, 162);
-            txtTenNCC.Margin = new Padding(3, 2, 3, 2);
-            txtTenNCC.Multiline = true;
-            txtTenNCC.Name = "txtTenNCC";
-            txtTenNCC.Size = new Size(267, 41);
-            txtTenNCC.TabIndex = 7;
+            this.txtTenNCC.Location = new System.Drawing.Point(190, 130);
+            this.txtTenNCC.Margin = new System.Windows.Forms.Padding(2);
+            this.txtTenNCC.Multiline = true;
+            this.txtTenNCC.Name = "txtTenNCC";
+            this.txtTenNCC.Size = new System.Drawing.Size(214, 34);
+            this.txtTenNCC.TabIndex = 7;
             // 
             // txtSDTNCC
             // 
-            txtSDTNCC.Location = new Point(578, 74);
-            txtSDTNCC.Margin = new Padding(3, 2, 3, 2);
-            txtSDTNCC.Name = "txtSDTNCC";
-            txtSDTNCC.Size = new Size(186, 33);
-            txtSDTNCC.TabIndex = 6;
+            this.txtSDTNCC.Location = new System.Drawing.Point(462, 59);
+            this.txtSDTNCC.Margin = new System.Windows.Forms.Padding(2);
+            this.txtSDTNCC.Name = "txtSDTNCC";
+            this.txtSDTNCC.Size = new System.Drawing.Size(150, 29);
+            this.txtSDTNCC.TabIndex = 6;
             // 
             // txtDiaChiNCC
             // 
-            txtDiaChiNCC.Location = new Point(635, 163);
-            txtDiaChiNCC.Margin = new Padding(3, 2, 3, 2);
-            txtDiaChiNCC.Multiline = true;
-            txtDiaChiNCC.Name = "txtDiaChiNCC";
-            txtDiaChiNCC.Size = new Size(287, 49);
-            txtDiaChiNCC.TabIndex = 5;
+            this.txtDiaChiNCC.Location = new System.Drawing.Point(508, 130);
+            this.txtDiaChiNCC.Margin = new System.Windows.Forms.Padding(2);
+            this.txtDiaChiNCC.Multiline = true;
+            this.txtDiaChiNCC.Name = "txtDiaChiNCC";
+            this.txtDiaChiNCC.Size = new System.Drawing.Size(230, 40);
+            this.txtDiaChiNCC.TabIndex = 5;
             // 
             // txtMaNCC
             // 
-            txtMaNCC.Location = new Point(233, 74);
-            txtMaNCC.Margin = new Padding(3, 2, 3, 2);
-            txtMaNCC.Name = "txtMaNCC";
-            txtMaNCC.Size = new Size(186, 33);
-            txtMaNCC.TabIndex = 4;
+            this.txtMaNCC.Location = new System.Drawing.Point(186, 59);
+            this.txtMaNCC.Margin = new System.Windows.Forms.Padding(2);
+            this.txtMaNCC.Name = "txtMaNCC";
+            this.txtMaNCC.Size = new System.Drawing.Size(150, 29);
+            this.txtMaNCC.TabIndex = 4;
             // 
             // label4
             // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Cascadia Code", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.Location = new Point(521, 180);
-            label4.Name = "label4";
-            label4.Size = new Size(108, 27);
-            label4.TabIndex = 3;
-            label4.Text = "Địa chỉ:";
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Cascadia Code", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label4.Location = new System.Drawing.Point(417, 144);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(90, 22);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Địa chỉ:";
             // 
             // label3
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Cascadia Code", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.Location = new Point(529, 79);
-            label3.Name = "label3";
-            label3.Size = new Size(60, 27);
-            label3.TabIndex = 2;
-            label3.Text = "SDT:";
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Cascadia Code", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label3.Location = new System.Drawing.Point(423, 63);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(50, 22);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "SDT:";
             // 
             // label2
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Cascadia Code", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(36, 170);
-            label2.Name = "label2";
-            label2.Size = new Size(216, 27);
-            label2.TabIndex = 1;
-            label2.Text = "Tên Nhà cung cấp:";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Cascadia Code", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(29, 136);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(180, 22);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Tên Nhà cung cấp:";
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Cascadia Code", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(39, 79);
-            label1.Name = "label1";
-            label1.Size = new Size(204, 27);
-            label1.TabIndex = 0;
-            label1.Text = "Mã Nhà cung cấp:";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Cascadia Code", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(31, 63);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(170, 22);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Mã Nhà cung cấp:";
             // 
             // gbDanhSachNCC
             // 
-            gbDanhSachNCC.Controls.Add(dtgrDSNCC);
-            gbDanhSachNCC.Font = new Font("Cascadia Code", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            gbDanhSachNCC.Location = new Point(4, 436);
-            gbDanhSachNCC.Name = "gbDanhSachNCC";
-            gbDanhSachNCC.Size = new Size(1293, 329);
-            gbDanhSachNCC.TabIndex = 2;
-            gbDanhSachNCC.TabStop = false;
-            gbDanhSachNCC.Text = "Danh Sách Nhà cung cấp ";
+            this.gbDanhSachNCC.Controls.Add(this.dtgrDSNCC);
+            this.gbDanhSachNCC.Font = new System.Drawing.Font("Cascadia Code", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.gbDanhSachNCC.Location = new System.Drawing.Point(3, 349);
+            this.gbDanhSachNCC.Margin = new System.Windows.Forms.Padding(2);
+            this.gbDanhSachNCC.Name = "gbDanhSachNCC";
+            this.gbDanhSachNCC.Padding = new System.Windows.Forms.Padding(2);
+            this.gbDanhSachNCC.Size = new System.Drawing.Size(1034, 263);
+            this.gbDanhSachNCC.TabIndex = 2;
+            this.gbDanhSachNCC.TabStop = false;
+            this.gbDanhSachNCC.Text = "Danh Sách Nhà cung cấp ";
             // 
             // dtgrDSNCC
             // 
-            dtgrDSNCC.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dtgrDSNCC.BackgroundColor = Color.White;
-            dtgrDSNCC.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dtgrDSNCC.Columns.AddRange(new DataGridViewColumn[] { clMaNCC, clTenNCC, clSDTNCC, clDiaChiNCC });
-            dtgrDSNCC.Location = new Point(18, 31);
-            dtgrDSNCC.Name = "dtgrDSNCC";
-            dtgrDSNCC.RowHeadersWidth = 62;
-            dtgrDSNCC.RowTemplate.Height = 33;
-            dtgrDSNCC.Size = new Size(1254, 277);
-            dtgrDSNCC.TabIndex = 0;
+            this.dtgrDSNCC.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtgrDSNCC.BackgroundColor = System.Drawing.Color.White;
+            this.dtgrDSNCC.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgrDSNCC.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.clMaNCC,
+            this.clTenNCC,
+            this.clSDTNCC,
+            this.clDiaChiNCC});
+            this.dtgrDSNCC.Location = new System.Drawing.Point(14, 25);
+            this.dtgrDSNCC.Margin = new System.Windows.Forms.Padding(2);
+            this.dtgrDSNCC.Name = "dtgrDSNCC";
+            this.dtgrDSNCC.RowHeadersWidth = 62;
+            this.dtgrDSNCC.RowTemplate.Height = 33;
+            this.dtgrDSNCC.Size = new System.Drawing.Size(964, 222);
+            this.dtgrDSNCC.TabIndex = 0;
             // 
             // clMaNCC
             // 
-            clMaNCC.HeaderText = "Mã Nhà CC";
-            clMaNCC.MinimumWidth = 8;
-            clMaNCC.Name = "clMaNCC";
+            this.clMaNCC.HeaderText = "Mã Nhà CC";
+            this.clMaNCC.MinimumWidth = 8;
+            this.clMaNCC.Name = "clMaNCC";
             // 
             // clTenNCC
             // 
-            clTenNCC.HeaderText = "Tên Nhà CC";
-            clTenNCC.MinimumWidth = 8;
-            clTenNCC.Name = "clTenNCC";
+            this.clTenNCC.HeaderText = "Tên Nhà CC";
+            this.clTenNCC.MinimumWidth = 8;
+            this.clTenNCC.Name = "clTenNCC";
             // 
             // clSDTNCC
             // 
-            clSDTNCC.HeaderText = "Số Điện Thoại ";
-            clSDTNCC.MinimumWidth = 8;
-            clSDTNCC.Name = "clSDTNCC";
+            this.clSDTNCC.HeaderText = "Số Điện Thoại ";
+            this.clSDTNCC.MinimumWidth = 8;
+            this.clSDTNCC.Name = "clSDTNCC";
             // 
             // clDiaChiNCC
             // 
-            clDiaChiNCC.HeaderText = "Địa Chỉ ";
-            clDiaChiNCC.MinimumWidth = 8;
-            clDiaChiNCC.Name = "clDiaChiNCC";
+            this.clDiaChiNCC.HeaderText = "Địa Chỉ ";
+            this.clDiaChiNCC.MinimumWidth = 8;
+            this.clDiaChiNCC.Name = "clDiaChiNCC";
             // 
             // frmNhaCungCap
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1309, 796);
-            Controls.Add(gbDanhSachNCC);
-            Controls.Add(gbThongTinNCC);
-            Name = "frmNhaCungCap";
-            StartPosition = FormStartPosition.CenterScreen;
-            Text = "NhaCungCap";
-            gbThongTinNCC.ResumeLayout(false);
-            gbThongTinNCC.PerformLayout();
-            gbDanhSachNCC.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dtgrDSNCC).EndInit();
-            ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(992, 601);
+            this.Controls.Add(this.gbDanhSachNCC);
+            this.Controls.Add(this.gbThongTinNCC);
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Name = "frmNhaCungCap";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "NhaCungCap";
+            this.gbThongTinNCC.ResumeLayout(false);
+            this.gbThongTinNCC.PerformLayout();
+            this.gbDanhSachNCC.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dtgrDSNCC)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         #endregion

@@ -28,240 +28,264 @@
         /// </summary>
         private void InitializeComponent()
         {
-            lblChiTietDon = new Label();
-            label1 = new Label();
-            label4 = new Label();
-            label5 = new Label();
-            label3 = new Label();
-            gbThongTinKH = new GroupBox();
-            txtDC = new TextBox();
-            txtSDT = new TextBox();
-            txtTenKH = new TextBox();
-            txtMaKH = new TextBox();
-            label2 = new Label();
-            txtMaD = new TextBox();
-            label8 = new Label();
-            txtMaNV = new TextBox();
-            gbDSCTHD = new GroupBox();
-            dtgrvHienThiListSPChon = new DataGridView();
-            clMaSP = new DataGridViewTextBoxColumn();
-            clTenSP = new DataGridViewTextBoxColumn();
-            clSoLuong = new DataGridViewTextBoxColumn();
-            clGiaTien = new DataGridViewTextBoxColumn();
-            clThanhTien = new DataGridViewTextBoxColumn();
-            gbThongTinKH.SuspendLayout();
-            gbDSCTHD.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dtgrvHienThiListSPChon).BeginInit();
-            SuspendLayout();
+            this.lblChiTietDon = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.gbThongTinKH = new System.Windows.Forms.GroupBox();
+            this.txtDC = new System.Windows.Forms.TextBox();
+            this.txtSDT = new System.Windows.Forms.TextBox();
+            this.txtTenKH = new System.Windows.Forms.TextBox();
+            this.txtMaKH = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtMaD = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtMaNV = new System.Windows.Forms.TextBox();
+            this.gbDSCTHD = new System.Windows.Forms.GroupBox();
+            this.dtgrvHienThiListSPChon = new System.Windows.Forms.DataGridView();
+            this.clMaSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clTenSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clSoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clGiaTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gbThongTinKH.SuspendLayout();
+            this.gbDSCTHD.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgrvHienThiListSPChon)).BeginInit();
+            this.SuspendLayout();
             // 
             // lblChiTietDon
             // 
-            lblChiTietDon.AutoSize = true;
-            lblChiTietDon.Font = new Font("Cascadia Code", 14F, FontStyle.Bold, GraphicsUnit.Point);
-            lblChiTietDon.Location = new Point(431, 28);
-            lblChiTietDon.Name = "lblChiTietDon";
-            lblChiTietDon.Size = new Size(289, 37);
-            lblChiTietDon.TabIndex = 0;
-            lblChiTietDon.Text = "Chi Tiết Đơn Hàng";
+            this.lblChiTietDon.AutoSize = true;
+            this.lblChiTietDon.Font = new System.Drawing.Font("Cascadia Code", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblChiTietDon.Location = new System.Drawing.Point(345, 22);
+            this.lblChiTietDon.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblChiTietDon.Name = "lblChiTietDon";
+            this.lblChiTietDon.Size = new System.Drawing.Size(252, 32);
+            this.lblChiTietDon.TabIndex = 0;
+            this.lblChiTietDon.Text = "Chi Tiết Đơn Hàng";
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Cascadia Code", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(216, 126);
-            label1.Name = "label1";
-            label1.Size = new Size(96, 27);
-            label1.TabIndex = 1;
-            label1.Text = "Mã Đơn:";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Cascadia Code", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(173, 101);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(80, 22);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Mã Đơn:";
             // 
             // label4
             // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Cascadia Code", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.Location = new Point(361, 58);
-            label4.Name = "label4";
-            label4.Size = new Size(120, 24);
-            label4.TabIndex = 4;
-            label4.Text = "Họ và tên:";
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Cascadia Code", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label4.Location = new System.Drawing.Point(289, 46);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(99, 20);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "Họ và tên:";
             // 
             // label5
             // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Cascadia Code", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label5.Location = new Point(115, 120);
-            label5.Name = "label5";
-            label5.Size = new Size(54, 24);
-            label5.TabIndex = 5;
-            label5.Text = "SDT:";
-            label5.Click += label5_Click;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Cascadia Code", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label5.Location = new System.Drawing.Point(92, 96);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(45, 20);
+            this.label5.TabIndex = 5;
+            this.label5.Text = "SDT:";
             // 
             // label3
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Cascadia Code", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.Location = new Point(21, 58);
-            label3.Name = "label3";
-            label3.Size = new Size(164, 24);
-            label3.TabIndex = 6;
-            label3.Text = "Mã Khách Hàng:";
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Cascadia Code", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label3.Location = new System.Drawing.Point(17, 46);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(135, 20);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Mã Khách Hàng:";
             // 
             // gbThongTinKH
             // 
-            gbThongTinKH.Controls.Add(txtDC);
-            gbThongTinKH.Controls.Add(txtSDT);
-            gbThongTinKH.Controls.Add(txtTenKH);
-            gbThongTinKH.Controls.Add(txtMaKH);
-            gbThongTinKH.Controls.Add(label2);
-            gbThongTinKH.Controls.Add(label4);
-            gbThongTinKH.Controls.Add(label3);
-            gbThongTinKH.Controls.Add(label5);
-            gbThongTinKH.Font = new Font("Cascadia Code", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            gbThongTinKH.Location = new Point(112, 183);
-            gbThongTinKH.Name = "gbThongTinKH";
-            gbThongTinKH.Size = new Size(706, 202);
-            gbThongTinKH.TabIndex = 7;
-            gbThongTinKH.TabStop = false;
-            gbThongTinKH.Text = "Thông tin khách hàng:";
+            this.gbThongTinKH.Controls.Add(this.txtDC);
+            this.gbThongTinKH.Controls.Add(this.txtSDT);
+            this.gbThongTinKH.Controls.Add(this.txtTenKH);
+            this.gbThongTinKH.Controls.Add(this.txtMaKH);
+            this.gbThongTinKH.Controls.Add(this.label2);
+            this.gbThongTinKH.Controls.Add(this.label4);
+            this.gbThongTinKH.Controls.Add(this.label3);
+            this.gbThongTinKH.Controls.Add(this.label5);
+            this.gbThongTinKH.Font = new System.Drawing.Font("Cascadia Code", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.gbThongTinKH.Location = new System.Drawing.Point(90, 146);
+            this.gbThongTinKH.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbThongTinKH.Name = "gbThongTinKH";
+            this.gbThongTinKH.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbThongTinKH.Size = new System.Drawing.Size(565, 162);
+            this.gbThongTinKH.TabIndex = 7;
+            this.gbThongTinKH.TabStop = false;
+            this.gbThongTinKH.Text = "Thông tin khách hàng:";
             // 
             // txtDC
             // 
-            txtDC.Location = new Point(465, 113);
-            txtDC.Multiline = true;
-            txtDC.Name = "txtDC";
-            txtDC.Size = new Size(222, 42);
-            txtDC.TabIndex = 11;
+            this.txtDC.Location = new System.Drawing.Point(372, 90);
+            this.txtDC.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDC.Multiline = true;
+            this.txtDC.Name = "txtDC";
+            this.txtDC.Size = new System.Drawing.Size(178, 34);
+            this.txtDC.TabIndex = 11;
             // 
             // txtSDT
             // 
-            txtSDT.Location = new Point(185, 123);
-            txtSDT.Name = "txtSDT";
-            txtSDT.Size = new Size(150, 28);
-            txtSDT.TabIndex = 10;
+            this.txtSDT.Location = new System.Drawing.Point(148, 98);
+            this.txtSDT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSDT.Name = "txtSDT";
+            this.txtSDT.Size = new System.Drawing.Size(121, 25);
+            this.txtSDT.TabIndex = 10;
             // 
             // txtTenKH
             // 
-            txtTenKH.Location = new Point(478, 53);
-            txtTenKH.Multiline = true;
-            txtTenKH.Name = "txtTenKH";
-            txtTenKH.Size = new Size(222, 42);
-            txtTenKH.TabIndex = 9;
+            this.txtTenKH.Location = new System.Drawing.Point(382, 42);
+            this.txtTenKH.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTenKH.Multiline = true;
+            this.txtTenKH.Name = "txtTenKH";
+            this.txtTenKH.Size = new System.Drawing.Size(178, 34);
+            this.txtTenKH.TabIndex = 9;
             // 
             // txtMaKH
             // 
-            txtMaKH.Location = new Point(185, 53);
-            txtMaKH.Name = "txtMaKH";
-            txtMaKH.Size = new Size(150, 28);
-            txtMaKH.TabIndex = 8;
+            this.txtMaKH.Location = new System.Drawing.Point(148, 42);
+            this.txtMaKH.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMaKH.Name = "txtMaKH";
+            this.txtMaKH.Size = new System.Drawing.Size(121, 25);
+            this.txtMaKH.TabIndex = 8;
             // 
             // label2
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Cascadia Code", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(361, 120);
-            label2.Name = "label2";
-            label2.Size = new Size(98, 24);
-            label2.TabIndex = 7;
-            label2.Text = "Địa Chỉ:";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Cascadia Code", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(289, 96);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(81, 20);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Địa Chỉ:";
             // 
             // txtMaD
             // 
-            txtMaD.Location = new Point(312, 122);
-            txtMaD.Name = "txtMaD";
-            txtMaD.Size = new Size(150, 31);
-            txtMaD.TabIndex = 9;
+            this.txtMaD.Location = new System.Drawing.Point(250, 98);
+            this.txtMaD.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMaD.Name = "txtMaD";
+            this.txtMaD.Size = new System.Drawing.Size(121, 27);
+            this.txtMaD.TabIndex = 9;
             // 
             // label8
             // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Cascadia Code", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            label8.Location = new Point(592, 127);
-            label8.Name = "label8";
-            label8.Size = new Size(240, 27);
-            label8.TabIndex = 17;
-            label8.Text = "Mã Nhân Viên Xử Lí:";
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Cascadia Code", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label8.Location = new System.Drawing.Point(474, 102);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(200, 22);
+            this.label8.TabIndex = 17;
+            this.label8.Text = "Mã Nhân Viên Xử Lí:";
             // 
             // txtMaNV
             // 
-            txtMaNV.Location = new Point(838, 126);
-            txtMaNV.Name = "txtMaNV";
-            txtMaNV.Size = new Size(150, 31);
-            txtMaNV.TabIndex = 18;
+            this.txtMaNV.Location = new System.Drawing.Point(670, 101);
+            this.txtMaNV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMaNV.Name = "txtMaNV";
+            this.txtMaNV.Size = new System.Drawing.Size(121, 27);
+            this.txtMaNV.TabIndex = 18;
             // 
             // gbDSCTHD
             // 
-            gbDSCTHD.Controls.Add(dtgrvHienThiListSPChon);
-            gbDSCTHD.Font = new Font("Cascadia Code", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            gbDSCTHD.Location = new Point(59, 402);
-            gbDSCTHD.Name = "gbDSCTHD";
-            gbDSCTHD.Size = new Size(1065, 275);
-            gbDSCTHD.TabIndex = 19;
-            gbDSCTHD.TabStop = false;
-            gbDSCTHD.Text = "Dach Sách Chi tiết Hóa đơn ";
+            this.gbDSCTHD.Controls.Add(this.dtgrvHienThiListSPChon);
+            this.gbDSCTHD.Font = new System.Drawing.Font("Cascadia Code", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.gbDSCTHD.Location = new System.Drawing.Point(47, 322);
+            this.gbDSCTHD.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbDSCTHD.Name = "gbDSCTHD";
+            this.gbDSCTHD.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbDSCTHD.Size = new System.Drawing.Size(852, 220);
+            this.gbDSCTHD.TabIndex = 19;
+            this.gbDSCTHD.TabStop = false;
+            this.gbDSCTHD.Text = "Dach Sách Chi tiết Hóa đơn ";
             // 
             // dtgrvHienThiListSPChon
             // 
-            dtgrvHienThiListSPChon.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dtgrvHienThiListSPChon.BackgroundColor = SystemColors.Control;
-            dtgrvHienThiListSPChon.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dtgrvHienThiListSPChon.Columns.AddRange(new DataGridViewColumn[] { clMaSP, clTenSP, clSoLuong, clGiaTien, clThanhTien });
-            dtgrvHienThiListSPChon.Location = new Point(6, 30);
-            dtgrvHienThiListSPChon.Name = "dtgrvHienThiListSPChon";
-            dtgrvHienThiListSPChon.RowHeadersWidth = 62;
-            dtgrvHienThiListSPChon.RowTemplate.Height = 33;
-            dtgrvHienThiListSPChon.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dtgrvHienThiListSPChon.Size = new Size(1053, 239);
-            dtgrvHienThiListSPChon.TabIndex = 20;
+            this.dtgrvHienThiListSPChon.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtgrvHienThiListSPChon.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dtgrvHienThiListSPChon.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgrvHienThiListSPChon.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.clMaSP,
+            this.clTenSP,
+            this.clSoLuong,
+            this.clGiaTien,
+            this.clThanhTien});
+            this.dtgrvHienThiListSPChon.Location = new System.Drawing.Point(5, 24);
+            this.dtgrvHienThiListSPChon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtgrvHienThiListSPChon.Name = "dtgrvHienThiListSPChon";
+            this.dtgrvHienThiListSPChon.RowHeadersWidth = 62;
+            this.dtgrvHienThiListSPChon.RowTemplate.Height = 33;
+            this.dtgrvHienThiListSPChon.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dtgrvHienThiListSPChon.Size = new System.Drawing.Size(842, 191);
+            this.dtgrvHienThiListSPChon.TabIndex = 20;
             // 
             // clMaSP
             // 
-            clMaSP.HeaderText = "Mã Sản Phẩm";
-            clMaSP.MinimumWidth = 8;
-            clMaSP.Name = "clMaSP";
+            this.clMaSP.HeaderText = "Mã Sản Phẩm";
+            this.clMaSP.MinimumWidth = 8;
+            this.clMaSP.Name = "clMaSP";
             // 
             // clTenSP
             // 
-            clTenSP.HeaderText = "Tên Sản Phẩm";
-            clTenSP.MinimumWidth = 8;
-            clTenSP.Name = "clTenSP";
+            this.clTenSP.HeaderText = "Tên Sản Phẩm";
+            this.clTenSP.MinimumWidth = 8;
+            this.clTenSP.Name = "clTenSP";
             // 
             // clSoLuong
             // 
-            clSoLuong.HeaderText = "Số Lượng";
-            clSoLuong.MinimumWidth = 8;
-            clSoLuong.Name = "clSoLuong";
+            this.clSoLuong.HeaderText = "Số Lượng";
+            this.clSoLuong.MinimumWidth = 8;
+            this.clSoLuong.Name = "clSoLuong";
             // 
             // clGiaTien
             // 
-            clGiaTien.HeaderText = "Giá Tiền";
-            clGiaTien.MinimumWidth = 8;
-            clGiaTien.Name = "clGiaTien";
+            this.clGiaTien.HeaderText = "Giá Tiền";
+            this.clGiaTien.MinimumWidth = 8;
+            this.clGiaTien.Name = "clGiaTien";
             // 
             // clThanhTien
             // 
-            clThanhTien.HeaderText = "Thành Tiền";
-            clThanhTien.MinimumWidth = 8;
-            clThanhTien.Name = "clThanhTien";
+            this.clThanhTien.HeaderText = "Thành Tiền";
+            this.clThanhTien.MinimumWidth = 8;
+            this.clThanhTien.Name = "clThanhTien";
             // 
             // frmChiTietDon
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1189, 689);
-            Controls.Add(gbDSCTHD);
-            Controls.Add(txtMaNV);
-            Controls.Add(label8);
-            Controls.Add(txtMaD);
-            Controls.Add(gbThongTinKH);
-            Controls.Add(label1);
-            Controls.Add(lblChiTietDon);
-            Name = "frmChiTietDon";
-            Text = "ChiTietDon";
-            gbThongTinKH.ResumeLayout(false);
-            gbThongTinKH.PerformLayout();
-            gbDSCTHD.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dtgrvHienThiListSPChon).EndInit();
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(992, 601);
+            this.Controls.Add(this.gbDSCTHD);
+            this.Controls.Add(this.txtMaNV);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.txtMaD);
+            this.Controls.Add(this.gbThongTinKH);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblChiTietDon);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Name = "frmChiTietDon";
+            this.Text = "ChiTietDon";
+            this.gbThongTinKH.ResumeLayout(false);
+            this.gbThongTinKH.PerformLayout();
+            this.gbDSCTHD.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dtgrvHienThiListSPChon)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
