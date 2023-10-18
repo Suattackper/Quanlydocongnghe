@@ -8,20 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SaleApp
+namespace SaleApp.View
 {
-    public partial class Dashboard : Form
+    public partial class frmNhapSP : Form
     {
-        public Dashboard()
+        public frmNhapSP()
         {
             InitializeComponent();
         }
 
-        private void btnClose_Click(object sender, EventArgs e)
+        private void gbDanhSachSP_Enter(object sender, EventArgs e)
         {
-            Application.Exit();
-        }
 
-       
+        }
     }
 }
