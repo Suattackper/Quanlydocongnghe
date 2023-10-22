@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SaleApp
+namespace SaleApp.View
 {
     public partial class frmDonHang : Form
     {

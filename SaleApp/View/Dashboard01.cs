@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SaleApp.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,8 +13,16 @@ namespace SaleApp.View
 {
     public partial class frmHome : Form
     {
+        string quyen;
         public frmHome()
         {
+            InitializeComponent();
+            frmTrangChu a = new frmTrangChu();
+            LoadForm(a);
+        }
+        public frmHome(string quyen)
+        {
+            this.quyen = quyen;
             InitializeComponent();
             frmTrangChu a = new frmTrangChu();
             LoadForm(a);
@@ -86,6 +95,18 @@ namespace SaleApp.View
         {
             frmTrangChu a = new frmTrangChu();
             LoadForm(a);
+        }
+
+        private void frmHome_Load(object sender, EventArgs e)
+        {
+            lblChucVu.Text = quyen;
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            Signin signin = new Signin();
+            this.Hide();
+            signin.ShowDialog();
         }
     }
 }

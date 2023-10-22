@@ -1,5 +1,5 @@
 ﻿
-namespace SaleApp
+namespace SaleApp.View
 {
     partial class frmNhanVien
     {

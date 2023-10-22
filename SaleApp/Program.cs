@@ -1,4 +1,5 @@
-﻿using SaleApp.View;
+﻿using SaleApp.DAO;
+using SaleApp.View;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -18,7 +19,8 @@ namespace SaleApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new frmHome());
+            //Application.Run(new frmNhaCungCap());
+            Application.Run(new Signin());
         }
     }
 }

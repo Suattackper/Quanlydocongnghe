@@ -4,7 +4,6 @@ D:\c#\Quanlydocongnghe\SaleApp\bin\Debug\net6.0-windows\SaleApp.runtimeconfig.js
 D:\c#\Quanlydocongnghe\SaleApp\bin\Debug\net6.0-windows\SaleApp.dll
 D:\c#\Quanlydocongnghe\SaleApp\bin\Debug\net6.0-windows\SaleApp.pdb
 D:\c#\Quanlydocongnghe\SaleApp\obj\Debug\net6.0-windows\SaleApp.csproj.AssemblyReference.cache
-D:\c#\Quanlydocongnghe\SaleApp\obj\Debug\net6.0-windows\SaleApp.Signin.resources
 D:\c#\Quanlydocongnghe\SaleApp\obj\Debug\net6.0-windows\SaleApp.csproj.GenerateResource.cache
 D:\c#\Quanlydocongnghe\SaleApp\obj\Debug\net6.0-windows\SaleApp.GeneratedMSBuildEditorConfig.editorconfig
 D:\c#\Quanlydocongnghe\SaleApp\obj\Debug\net6.0-windows\SaleApp.AssemblyInfoInputs.cache
@@ -42,17 +41,14 @@ C:\Users\alice\source\repos\Quanlydocongnghe\SaleApp\obj\Debug\net6.0-windows\Sa
 C:\Users\alice\source\repos\Quanlydocongnghe\SaleApp\obj\Debug\net6.0-windows\SaleApp.View.frmHangTon.resources
 C:\Users\alice\source\repos\Quanlydocongnghe\SaleApp\obj\Debug\net6.0-windows\SaleApp.View.XuatKho.resources
 D:\c#\Quanlydocongnghe\SaleApp\obj\Debug\net6.0-windows\SaleApp.Properties.Resources.resources
-D:\c#\Quanlydocongnghe\SaleApp\obj\Debug\net6.0-windows\SaleApp.frmChiTietDon.resources
 D:\c#\Quanlydocongnghe\SaleApp\obj\Debug\net6.0-windows\SaleApp.View.frmHome.resources
 D:\c#\Quanlydocongnghe\SaleApp\obj\Debug\net6.0-windows\SaleApp.View.frmHangTon.resources
 D:\c#\Quanlydocongnghe\SaleApp\obj\Debug\net6.0-windows\SaleApp.View.frmKhoHang.resources
 D:\c#\Quanlydocongnghe\SaleApp\obj\Debug\net6.0-windows\SaleApp.View.frmNhaCungCap.resources
-D:\c#\Quanlydocongnghe\SaleApp\obj\Debug\net6.0-windows\SaleApp.frmNhanVien.resources
 D:\c#\Quanlydocongnghe\SaleApp\obj\Debug\net6.0-windows\SaleApp.View.frmNhapHang.resources
 D:\c#\Quanlydocongnghe\SaleApp\obj\Debug\net6.0-windows\SaleApp.View.frmNhapSP.resources
 D:\c#\Quanlydocongnghe\SaleApp\obj\Debug\net6.0-windows\SaleApp.View.XuatHoaDon.resources
 D:\c#\Quanlydocongnghe\SaleApp\obj\Debug\net6.0-windows\SaleApp.View.XuatKho.resources
-D:\c#\Quanlydocongnghe\SaleApp\obj\Debug\net6.0-windows\SaleApp.frmDonHang.resources
 D:\c#\Quanlydocongnghe\SaleApp\obj\Debug\net6.0-windows\SaleApp.View.frmTrangChu.resources
 D:\c#\Quanlydocongnghe\SaleApp\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
 D:\c#\Quanlydocongnghe\SaleApp\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
@@ -61,3 +57,7 @@ D:\c#\Quanlydocongnghe\SaleApp\bin\Debug\net6.0-windows\runtimes\win-x86\native\
 D:\c#\Quanlydocongnghe\SaleApp\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 D:\c#\Quanlydocongnghe\SaleApp\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 D:\c#\Quanlydocongnghe\SaleApp\obj\Debug\net6.0-windows\SaleApp.csproj.CopyComplete
+D:\c#\Quanlydocongnghe\SaleApp\obj\Debug\net6.0-windows\SaleApp.View.frmChiTietDon.resources
+D:\c#\Quanlydocongnghe\SaleApp\obj\Debug\net6.0-windows\SaleApp.View.frmDonHang.resources
+D:\c#\Quanlydocongnghe\SaleApp\obj\Debug\net6.0-windows\SaleApp.View.frmNhanVien.resources
+D:\c#\Quanlydocongnghe\SaleApp\obj\Debug\net6.0-windows\SaleApp.View.Signin.resources
