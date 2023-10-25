@@ -19,7 +19,7 @@ namespace SaleApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new frmNhaCungCap());
+            //Application.Run(new frmNhapSP());
             Application.Run(new Signin());
         }
     }

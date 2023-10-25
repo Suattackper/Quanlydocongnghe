@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SaleApp.Model;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -31,6 +32,12 @@ namespace SaleApp.DAO
         {
             string sql = "DELETE CHITIETPHIEUNHAP WHERE SoPhieuNhapKho = @code";
             Object[] prms = new object[] { pCode };
+            return KetNoiSql.Instance.execNonSql(sql, prms) > 0;
+        }
+        public bool Them(CHITIETPHIEUNHAP p)
+        {
+            string sql = "insert into CHITIETPHIEUNHAP (MaSanPham, SoPhieuNhapKho, SoLuongNhap, GiaNhap) values ( @ma , @sop , @sol , @gia );";
+            Object[] prms = new object[] { p.MaSanPham, p.SoPhieuNhapKho, p.SoLuongNhap, p.GiaNhap };
             return KetNoiSql.Instance.execNonSql(sql, prms) > 0;
         }
     }

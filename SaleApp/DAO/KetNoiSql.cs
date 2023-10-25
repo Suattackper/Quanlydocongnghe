@@ -29,30 +29,6 @@ namespace SaleApp.DAO
             }
         }
 
-        //Cú pháp sử dụng hàm, nhớ open() và close() khi sử dụng
-        //KetNoiSql kn = new KetNoiSql();
-        //SqlConnection conn = kn.KetNoi();
-
-        //||SqlConnection conn = KetNoiSql.Instance.ketNoi();
-
-        //public SqlConnection ketNoi()
-        //{
-        //    SqlConnection conn = null;
-        //    using (conn = new SqlConnection(connsql))
-        //    {
-        //        try
-        //        {
-        //            conn.Open();
-        //            MessageBox.Show("Kết nối thành công");
-        //        }
-        //        catch (Exception ex)
-        //        {
-        //            MessageBox.Show("Lỗi kết nối cơ sở dữ liệu: " + ex.Message);
-        //        }
-        //    }
-        //    return conn;
-        //}
-
         public List<QUYEN> getDataQuyen()
         {
             List<QUYEN> quyens = new List<QUYEN>();
@@ -75,6 +51,60 @@ namespace SaleApp.DAO
                 // Sao chép giá trị từ các cột tương ứng trong bảng QUYEN
                 quyen.TenQuyen = row["TenQuyen"].ToString();
                 quyen.MaQuyen = Convert.ToInt32(row["MaQuyen"]);
+                quyens.Add(quyen);
+            }
+
+            return quyens;
+        }
+        public List<LOAIHANG> getDataLoaiHang()
+        {
+            List<LOAIHANG> quyens = new List<LOAIHANG>();
+            DataTable dataTable = new DataTable();
+            String sql = "Select * from LOAIHANG";
+            //Kết nối sql
+            SqlConnection conn = new SqlConnection(connsql);
+            conn.Open();
+            //Truy vấn sql
+            SqlCommand command = new SqlCommand(sql, conn);
+            //Lưu dữ liệu vào adapter
+            SqlDataAdapter adapter = new SqlDataAdapter(command);
+            //Lấy dữ liệu vào datatable
+            adapter.Fill(dataTable);
+            conn.Close();
+            //Sao chép dữ liệu từ datatable vào list QUYEN
+            foreach (DataRow row in dataTable.Rows)
+            {
+                LOAIHANG quyen = new LOAIHANG();
+                // Sao chép giá trị từ các cột tương ứng trong bảng QUYEN
+                quyen.TenLoaiHang = row["TenLoaiHang"].ToString();
+                quyen.MaLoaiHang = Convert.ToInt32(row["MaLoaiHang"]);
+                quyens.Add(quyen);
+            }
+
+            return quyens;
+        }
+        public List<NHACUNGCAP> getDataNhaCungCap()
+        {
+            List<NHACUNGCAP> quyens = new List<NHACUNGCAP>();
+            DataTable dataTable = new DataTable();
+            String sql = "Select * from NHACUNGCAP";
+            //Kết nối sql
+            SqlConnection conn = new SqlConnection(connsql);
+            conn.Open();
+            //Truy vấn sql
+            SqlCommand command = new SqlCommand(sql, conn);
+            //Lưu dữ liệu vào adapter
+            SqlDataAdapter adapter = new SqlDataAdapter(command);
+            //Lấy dữ liệu vào datatable
+            adapter.Fill(dataTable);
+            conn.Close();
+            //Sao chép dữ liệu từ datatable vào list QUYEN
+            foreach (DataRow row in dataTable.Rows)
+            {
+                NHACUNGCAP quyen = new NHACUNGCAP();
+                // Sao chép giá trị từ các cột tương ứng trong bảng QUYEN
+                quyen.TenNhaCungCap = row["TenNhaCungCap"].ToString();
+                quyen.MaNhaCungCap = row["MaNhaCungCap"].ToString();
                 quyens.Add(quyen);
             }
 

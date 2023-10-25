@@ -9,6 +9,6 @@ namespace SaleApp.Model
         public string MaSanPham { get; set; }
         public int SoPhieuNhapKho { get; set; }
         public int SoLuongNhap { get; set; }
-        public decimal GiaNhap { get; set; }
+        public float GiaNhap { get; set; }
     }
 }

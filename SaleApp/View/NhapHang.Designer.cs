@@ -30,14 +30,14 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.gbTTNhapHang = new System.Windows.Forms.GroupBox();
-            this.btnSua = new System.Windows.Forms.Button();
-            this.btnXoa = new System.Windows.Forms.Button();
-            this.btnReset = new System.Windows.Forms.Button();
-            this.btnThem = new System.Windows.Forms.Button();
             this.gbTTSP = new System.Windows.Forms.GroupBox();
+            this.btnReset = new System.Windows.Forms.Button();
+            this.btnXoa = new System.Windows.Forms.Button();
+            this.btnSua = new System.Windows.Forms.Button();
             this.cbLoaiHang = new System.Windows.Forms.ComboBox();
             this.txtMaSP = new System.Windows.Forms.TextBox();
             this.txtTenSP = new System.Windows.Forms.TextBox();
+            this.btnThem = new System.Windows.Forms.Button();
             this.txtSoLuong = new System.Windows.Forms.TextBox();
             this.txtGiaNhap = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -97,69 +97,13 @@
             this.gbTTNhapHang.Controls.Add(this.label2);
             this.gbTTNhapHang.Font = new System.Drawing.Font("Cascadia Code", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.gbTTNhapHang.Location = new System.Drawing.Point(22, 44);
-            this.gbTTNhapHang.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbTTNhapHang.Margin = new System.Windows.Forms.Padding(2);
             this.gbTTNhapHang.Name = "gbTTNhapHang";
-            this.gbTTNhapHang.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.gbTTNhapHang.Size = new System.Drawing.Size(964, 287);
+            this.gbTTNhapHang.Padding = new System.Windows.Forms.Padding(2);
+            this.gbTTNhapHang.Size = new System.Drawing.Size(977, 287);
             this.gbTTNhapHang.TabIndex = 1;
             this.gbTTNhapHang.TabStop = false;
             this.gbTTNhapHang.Text = "Thông tin Nhập Hàng ";
-            // 
-            // btnSua
-            // 
-            this.btnSua.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.btnSua.FlatAppearance.BorderSize = 0;
-            this.btnSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSua.ForeColor = System.Drawing.Color.White;
-            this.btnSua.Location = new System.Drawing.Point(435, 84);
-            this.btnSua.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(90, 37);
-            this.btnSua.TabIndex = 15;
-            this.btnSua.Text = "Sửa";
-            this.btnSua.UseVisualStyleBackColor = false;
-            // 
-            // btnXoa
-            // 
-            this.btnXoa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.btnXoa.FlatAppearance.BorderSize = 0;
-            this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnXoa.ForeColor = System.Drawing.Color.White;
-            this.btnXoa.Location = new System.Drawing.Point(435, 137);
-            this.btnXoa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(90, 37);
-            this.btnXoa.TabIndex = 14;
-            this.btnXoa.Text = "Xóa";
-            this.btnXoa.UseVisualStyleBackColor = false;
-            // 
-            // btnReset
-            // 
-            this.btnReset.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.btnReset.FlatAppearance.BorderSize = 0;
-            this.btnReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReset.ForeColor = System.Drawing.Color.White;
-            this.btnReset.Location = new System.Drawing.Point(433, 190);
-            this.btnReset.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(95, 37);
-            this.btnReset.TabIndex = 13;
-            this.btnReset.Text = "Reset";
-            this.btnReset.UseVisualStyleBackColor = false;
-            // 
-            // btnThem
-            // 
-            this.btnThem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.btnThem.FlatAppearance.BorderSize = 0;
-            this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThem.ForeColor = System.Drawing.Color.White;
-            this.btnThem.Location = new System.Drawing.Point(435, 31);
-            this.btnThem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(90, 37);
-            this.btnThem.TabIndex = 11;
-            this.btnThem.Text = "Thêm";
-            this.btnThem.UseVisualStyleBackColor = false;
             // 
             // gbTTSP
             // 
@@ -178,19 +122,61 @@
             this.gbTTSP.Controls.Add(this.label8);
             this.gbTTSP.Controls.Add(this.label7);
             this.gbTTSP.Location = new System.Drawing.Point(368, 11);
-            this.gbTTSP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbTTSP.Margin = new System.Windows.Forms.Padding(2);
             this.gbTTSP.Name = "gbTTSP";
-            this.gbTTSP.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.gbTTSP.Size = new System.Drawing.Size(587, 252);
+            this.gbTTSP.Padding = new System.Windows.Forms.Padding(2);
+            this.gbTTSP.Size = new System.Drawing.Size(596, 252);
             this.gbTTSP.TabIndex = 10;
             this.gbTTSP.TabStop = false;
             this.gbTTSP.Text = "Thông tin Sản phẩm";
+            // 
+            // btnReset
+            // 
+            this.btnReset.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.btnReset.FlatAppearance.BorderSize = 0;
+            this.btnReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReset.ForeColor = System.Drawing.Color.White;
+            this.btnReset.Location = new System.Drawing.Point(433, 190);
+            this.btnReset.Margin = new System.Windows.Forms.Padding(2);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(95, 37);
+            this.btnReset.TabIndex = 13;
+            this.btnReset.Text = "Reset";
+            this.btnReset.UseVisualStyleBackColor = false;
+            // 
+            // btnXoa
+            // 
+            this.btnXoa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.btnXoa.FlatAppearance.BorderSize = 0;
+            this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnXoa.ForeColor = System.Drawing.Color.White;
+            this.btnXoa.Location = new System.Drawing.Point(435, 137);
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(2);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(90, 37);
+            this.btnXoa.TabIndex = 14;
+            this.btnXoa.Text = "Xóa";
+            this.btnXoa.UseVisualStyleBackColor = false;
+            // 
+            // btnSua
+            // 
+            this.btnSua.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.btnSua.FlatAppearance.BorderSize = 0;
+            this.btnSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSua.ForeColor = System.Drawing.Color.White;
+            this.btnSua.Location = new System.Drawing.Point(435, 84);
+            this.btnSua.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(90, 37);
+            this.btnSua.TabIndex = 15;
+            this.btnSua.Text = "Sửa";
+            this.btnSua.UseVisualStyleBackColor = false;
             // 
             // cbLoaiHang
             // 
             this.cbLoaiHang.FormattingEnabled = true;
             this.cbLoaiHang.Location = new System.Drawing.Point(132, 183);
-            this.cbLoaiHang.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbLoaiHang.Margin = new System.Windows.Forms.Padding(2);
             this.cbLoaiHang.Name = "cbLoaiHang";
             this.cbLoaiHang.Size = new System.Drawing.Size(146, 30);
             this.cbLoaiHang.TabIndex = 11;
@@ -198,7 +184,7 @@
             // txtMaSP
             // 
             this.txtMaSP.Location = new System.Drawing.Point(132, 30);
-            this.txtMaSP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMaSP.Margin = new System.Windows.Forms.Padding(2);
             this.txtMaSP.Name = "txtMaSP";
             this.txtMaSP.Size = new System.Drawing.Size(154, 27);
             this.txtMaSP.TabIndex = 10;
@@ -206,16 +192,30 @@
             // txtTenSP
             // 
             this.txtTenSP.Location = new System.Drawing.Point(132, 68);
-            this.txtTenSP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTenSP.Margin = new System.Windows.Forms.Padding(2);
             this.txtTenSP.Multiline = true;
             this.txtTenSP.Name = "txtTenSP";
             this.txtTenSP.Size = new System.Drawing.Size(154, 30);
             this.txtTenSP.TabIndex = 9;
             // 
+            // btnThem
+            // 
+            this.btnThem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.btnThem.FlatAppearance.BorderSize = 0;
+            this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThem.ForeColor = System.Drawing.Color.White;
+            this.btnThem.Location = new System.Drawing.Point(435, 31);
+            this.btnThem.Margin = new System.Windows.Forms.Padding(2);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(90, 37);
+            this.btnThem.TabIndex = 11;
+            this.btnThem.Text = "Thêm";
+            this.btnThem.UseVisualStyleBackColor = false;
+            // 
             // txtSoLuong
             // 
             this.txtSoLuong.Location = new System.Drawing.Point(132, 109);
-            this.txtSoLuong.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSoLuong.Margin = new System.Windows.Forms.Padding(2);
             this.txtSoLuong.Name = "txtSoLuong";
             this.txtSoLuong.Size = new System.Drawing.Size(154, 27);
             this.txtSoLuong.TabIndex = 8;
@@ -223,7 +223,7 @@
             // txtGiaNhap
             // 
             this.txtGiaNhap.Location = new System.Drawing.Point(132, 147);
-            this.txtGiaNhap.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtGiaNhap.Margin = new System.Windows.Forms.Padding(2);
             this.txtGiaNhap.Name = "txtGiaNhap";
             this.txtGiaNhap.Size = new System.Drawing.Size(154, 27);
             this.txtGiaNhap.TabIndex = 7;
@@ -283,7 +283,7 @@
             this.dtpNgayNhap.Font = new System.Drawing.Font("Cascadia Code", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.dtpNgayNhap.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpNgayNhap.Location = new System.Drawing.Point(159, 84);
-            this.dtpNgayNhap.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtpNgayNhap.Margin = new System.Windows.Forms.Padding(2);
             this.dtpNgayNhap.Name = "dtpNgayNhap";
             this.dtpNgayNhap.Size = new System.Drawing.Size(161, 25);
             this.dtpNgayNhap.TabIndex = 9;
@@ -291,7 +291,7 @@
             // txtMaNCC
             // 
             this.txtMaNCC.Location = new System.Drawing.Point(159, 120);
-            this.txtMaNCC.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMaNCC.Margin = new System.Windows.Forms.Padding(2);
             this.txtMaNCC.Name = "txtMaNCC";
             this.txtMaNCC.Size = new System.Drawing.Size(154, 27);
             this.txtMaNCC.TabIndex = 8;
@@ -299,7 +299,7 @@
             // txtMaNV
             // 
             this.txtMaNV.Location = new System.Drawing.Point(159, 158);
-            this.txtMaNV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMaNV.Margin = new System.Windows.Forms.Padding(2);
             this.txtMaNV.Name = "txtMaNV";
             this.txtMaNV.Size = new System.Drawing.Size(154, 27);
             this.txtMaNV.TabIndex = 7;
@@ -307,7 +307,7 @@
             // txtTamUng
             // 
             this.txtTamUng.Location = new System.Drawing.Point(159, 197);
-            this.txtTamUng.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTamUng.Margin = new System.Windows.Forms.Padding(2);
             this.txtTamUng.Name = "txtTamUng";
             this.txtTamUng.Size = new System.Drawing.Size(154, 27);
             this.txtTamUng.TabIndex = 6;
@@ -315,7 +315,7 @@
             // txtSoPhieuNhap
             // 
             this.txtSoPhieuNhap.Location = new System.Drawing.Point(159, 41);
-            this.txtSoPhieuNhap.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSoPhieuNhap.Margin = new System.Windows.Forms.Padding(2);
             this.txtSoPhieuNhap.Name = "txtSoPhieuNhap";
             this.txtSoPhieuNhap.Size = new System.Drawing.Size(154, 27);
             this.txtSoPhieuNhap.TabIndex = 5;
@@ -375,10 +375,10 @@
             this.gbDSSPNhap.Controls.Add(this.dtgvDSSPNhap);
             this.gbDSSPNhap.Font = new System.Drawing.Font("Cascadia Code", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.gbDSSPNhap.Location = new System.Drawing.Point(11, 335);
-            this.gbDSSPNhap.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbDSSPNhap.Margin = new System.Windows.Forms.Padding(2);
             this.gbDSSPNhap.Name = "gbDSSPNhap";
-            this.gbDSSPNhap.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.gbDSSPNhap.Size = new System.Drawing.Size(970, 255);
+            this.gbDSSPNhap.Padding = new System.Windows.Forms.Padding(2);
+            this.gbDSSPNhap.Size = new System.Drawing.Size(988, 302);
             this.gbDSSPNhap.TabIndex = 2;
             this.gbDSSPNhap.TabStop = false;
             this.gbDSSPNhap.Text = "Danh sách Sản phẩm nhập";
@@ -397,11 +397,11 @@
             this.clDonGia,
             this.clThanhTien});
             this.dtgvDSSPNhap.Location = new System.Drawing.Point(5, 29);
-            this.dtgvDSSPNhap.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtgvDSSPNhap.Margin = new System.Windows.Forms.Padding(2);
             this.dtgvDSSPNhap.Name = "dtgvDSSPNhap";
             this.dtgvDSSPNhap.RowHeadersWidth = 62;
             this.dtgvDSSPNhap.RowTemplate.Height = 33;
-            this.dtgvDSSPNhap.Size = new System.Drawing.Size(950, 222);
+            this.dtgvDSSPNhap.Size = new System.Drawing.Size(970, 269);
             this.dtgvDSSPNhap.TabIndex = 0;
             // 
             // clSTT
@@ -456,11 +456,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(992, 601);
+            this.ClientSize = new System.Drawing.Size(1010, 648);
             this.Controls.Add(this.gbDSSPNhap);
             this.Controls.Add(this.gbTTNhapHang);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmNhapHang";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nhập Hàng ";

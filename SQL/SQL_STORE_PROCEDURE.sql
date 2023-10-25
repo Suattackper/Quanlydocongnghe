@@ -6,3 +6,5 @@ as
 begin
 	select * from TAIKHOAN where SoDienThoai = @sodienthoai and MatKhau = @matkhau and MaQuyen = @maquyen;
 end
+
+execute sp_checkLogin 'admin','admin',1;

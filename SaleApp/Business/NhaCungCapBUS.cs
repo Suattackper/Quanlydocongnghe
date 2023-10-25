@@ -86,17 +86,8 @@ namespace SaleApp.Business
             {
                 if (existingRow["MaNhaCungCap"].ToString() == code)
                 {
-                    //hỏi xác nhận xóa các dữ liệu liên qua đến ncc này
-                    DialogResult result = MessageBox.Show("Điều này sẽ xóa các dữ liệu liên quan đến nhà cung cấp này?", "Xác nhận", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-                    if (result == DialogResult.OK)
-                    {
-                        //lấy sô phiếu nhập kho
-                        codepnk = existingRow["SoPhieuNhapKho"].ToString();
-                        //xóa
-                        ChiTietPhieuNhapDAO.Instance.Xoa(codepnk);
-                        PhieuNhapKhoDAO.Instance.Xoa(code);
-                    }
-                    else return false;
+                    MessageBox.Show("Không thể xóa nhà cung cấp này?", "Thông báo!");
+                    return false;
                     break;
                 }
             }
@@ -104,7 +95,7 @@ namespace SaleApp.Business
         }
         public string Sua(NHACUNGCAP p, string sdt)
         {
-            // kiểm tra mã ncc và sđt đã tồn tại chưa
+            // kiểm tra sđt đã tồn tại chưa
             DataTable check = NhaCungCapDAO.Instance.Xem();
             foreach (DataRow existingRow in check.Rows)
             {
@@ -124,6 +115,30 @@ namespace SaleApp.Business
             dgv.Columns[1].HeaderText = "Tên nhà cung cấp";
             dgv.Columns[2].HeaderText = "Số điện thoại";
             dgv.Columns[3].HeaderText = "Địa chỉ";
+        }
+        public void getDataNhaCungCap(ComboBox comboBoxQuyen)
+        {
+            // Sử dụng hàm getDataQuyen để lấy danh sách QUYEN từ CSDL
+            List<NHACUNGCAP> loaih = NhaCungCapDAO.Instance.getDataNhaCungCap();
+
+            // Thêm dữ liệu vào ComboBox
+            comboBoxQuyen.DataSource = loaih; //chọn nguồn dữ liệu
+            comboBoxQuyen.DisplayMember = "TenNhaCungCap"; // Hiển thị tên quyền trong ComboBox
+
+            comboBoxQuyen.SelectedIndex = 0; // Chọn mục đầu tiên
+        }
+        public string getMaNhaCungCap(string ten)
+        {
+            string ma = null;
+            DataTable check = NhaCungCapDAO.Instance.getMaNhaCungCap(ten);
+            foreach (DataRow existingRow in check.Rows)
+            {
+                if (existingRow["TenNhaCungCap"].ToString() == ten)
+                {
+                    return existingRow["MaNhaCungCap"].ToString();
+                }
+            }
+            return ma;
         }
     }
 }

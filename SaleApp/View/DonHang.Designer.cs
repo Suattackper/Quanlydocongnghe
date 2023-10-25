@@ -78,7 +78,7 @@ namespace SaleApp.View
             this.gbTTSP.Margin = new System.Windows.Forms.Padding(2);
             this.gbTTSP.Name = "gbTTSP";
             this.gbTTSP.Padding = new System.Windows.Forms.Padding(2);
-            this.gbTTSP.Size = new System.Drawing.Size(847, 267);
+            this.gbTTSP.Size = new System.Drawing.Size(963, 345);
             this.gbTTSP.TabIndex = 1;
             this.gbTTSP.TabStop = false;
             this.gbTTSP.Text = "Thông tin Sản phẩm";
@@ -100,7 +100,7 @@ namespace SaleApp.View
             this.panel1.Location = new System.Drawing.Point(22, 38);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(791, 209);
+            this.panel1.Size = new System.Drawing.Size(919, 291);
             this.panel1.TabIndex = 1;
             // 
             // btnSua
@@ -462,7 +462,7 @@ namespace SaleApp.View
             this.btnInDon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInDon.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnInDon.ForeColor = System.Drawing.Color.White;
-            this.btnInDon.Location = new System.Drawing.Point(218, 516);
+            this.btnInDon.Location = new System.Drawing.Point(650, 587);
             this.btnInDon.Margin = new System.Windows.Forms.Padding(2);
             this.btnInDon.Name = "btnInDon";
             this.btnInDon.Size = new System.Drawing.Size(195, 50);
@@ -476,7 +476,7 @@ namespace SaleApp.View
             this.btnHuyDon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHuyDon.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnHuyDon.ForeColor = System.Drawing.Color.White;
-            this.btnHuyDon.Location = new System.Drawing.Point(439, 516);
+            this.btnHuyDon.Location = new System.Drawing.Point(871, 587);
             this.btnHuyDon.Margin = new System.Windows.Forms.Padding(2);
             this.btnHuyDon.Name = "btnHuyDon";
             this.btnHuyDon.Size = new System.Drawing.Size(128, 50);
@@ -488,11 +488,12 @@ namespace SaleApp.View
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(992, 601);
+            this.ClientSize = new System.Drawing.Size(1010, 648);
             this.Controls.Add(this.btnHuyDon);
             this.Controls.Add(this.btnInDon);
             this.Controls.Add(this.txtTTKhachHang);
             this.Controls.Add(this.gbTTSP);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Name = "frmDonHang";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

@@ -54,7 +54,7 @@ namespace SaleApp.View
             }
             MessageBox.Show(cbRole.Text + " Đăng nhập thành công!", "Success");
             //Chuyển sang form Home
-            frmHome dashboard = new frmHome(cbRole.Text);
+            frmHome dashboard = new frmHome(cbRole.Text,txtUsername.Text);
             this.Hide();
             dashboard.ShowDialog();
         }

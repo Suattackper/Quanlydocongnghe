@@ -288,7 +288,7 @@
             this.gbDanhSachNCC.Margin = new System.Windows.Forms.Padding(2);
             this.gbDanhSachNCC.Name = "gbDanhSachNCC";
             this.gbDanhSachNCC.Padding = new System.Windows.Forms.Padding(2);
-            this.gbDanhSachNCC.Size = new System.Drawing.Size(1034, 263);
+            this.gbDanhSachNCC.Size = new System.Drawing.Size(996, 296);
             this.gbDanhSachNCC.TabIndex = 2;
             this.gbDanhSachNCC.TabStop = false;
             this.gbDanhSachNCC.Text = "Danh Sách Nhà cung cấp ";
@@ -306,7 +306,7 @@
             this.dtgrDSNCC.ReadOnly = true;
             this.dtgrDSNCC.RowHeadersWidth = 62;
             this.dtgrDSNCC.RowTemplate.Height = 33;
-            this.dtgrDSNCC.Size = new System.Drawing.Size(964, 222);
+            this.dtgrDSNCC.Size = new System.Drawing.Size(964, 263);
             this.dtgrDSNCC.TabIndex = 0;
             this.dtgrDSNCC.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgrDSNCC_CellClick);
             this.dtgrDSNCC.SelectionChanged += new System.EventHandler(this.dtgrDSNCC_SelectionChanged);
@@ -315,9 +315,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(992, 601);
+            this.ClientSize = new System.Drawing.Size(1010, 648);
             this.Controls.Add(this.gbDanhSachNCC);
             this.Controls.Add(this.gbThongTinNCC);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmNhaCungCap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

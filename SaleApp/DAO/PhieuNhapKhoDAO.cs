@@ -40,5 +40,11 @@ namespace SaleApp.DAO
             Object[] prms = new object[] { pnk.MaNhaCungCap, pnk.SoPhieuNhapKho };
             return KetNoiSql.Instance.execNonSql(sql, prms) > 0;
         }
+        public bool Them(PHIEUNHAPKHO p)
+        {
+            string sql = "insert into PHIEUNHAPKHO (MaNhaCungCap, TamUng, MaNhanVien, NgayThanhToan) values ( @ma, 0, @manv, GETDATE());";
+            Object[] prms = new object[] { p.MaNhaCungCap, p.MaNhanVien };
+            return KetNoiSql.Instance.execNonSql(sql, prms) > 0;
+        }
     }
 }

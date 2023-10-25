@@ -14,15 +14,17 @@ namespace SaleApp.View
     public partial class frmHome : Form
     {
         string quyen;
+        string sdt;
         public frmHome()
         {
             InitializeComponent();
             frmTrangChu a = new frmTrangChu();
             LoadForm(a);
         }
-        public frmHome(string quyen)
+        public frmHome(string quyen,string sdt)
         {
             this.quyen = quyen;
+            this.sdt = sdt;
             InitializeComponent();
             frmTrangChu a = new frmTrangChu();
             LoadForm(a);
@@ -64,7 +66,8 @@ namespace SaleApp.View
 
         private void btnSP_Click(object sender, EventArgs e)
         {
-            
+            frmNhapSP a = new frmNhapSP();
+            LoadForm(a);
         }
 
         private void btnKhoHang_Click(object sender, EventArgs e)
@@ -100,6 +103,11 @@ namespace SaleApp.View
         private void frmHome_Load(object sender, EventArgs e)
         {
             lblChucVu.Text = quyen;
+            if (quyen == "Employee")
+            {
+                btnThongKe.Visible = false;
+                btnNhanVien.Visible = false;
+            }
         }
 
         private void btnThoat_Click(object sender, EventArgs e)

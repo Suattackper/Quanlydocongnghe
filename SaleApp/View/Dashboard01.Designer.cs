@@ -111,7 +111,7 @@
             this.btnClose.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(40, 44);
-            this.btnClose.TabIndex = 2;
+            this.btnClose.TabIndex = 0;
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
@@ -131,7 +131,7 @@
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(323, 648);
-            this.panel2.TabIndex = 5;
+            this.panel2.TabIndex = 0;
             // 
             // btnThoat
             // 
@@ -144,7 +144,7 @@
             this.btnThoat.Margin = new System.Windows.Forms.Padding(2);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(52, 57);
-            this.btnThoat.TabIndex = 8;
+            this.btnThoat.TabIndex = 7;
             this.btnThoat.UseVisualStyleBackColor = true;
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
@@ -160,7 +160,7 @@
             this.btnThongKe.Margin = new System.Windows.Forms.Padding(2);
             this.btnThongKe.Name = "btnThongKe";
             this.btnThongKe.Size = new System.Drawing.Size(299, 54);
-            this.btnThongKe.TabIndex = 7;
+            this.btnThongKe.TabIndex = 6;
             this.btnThongKe.Text = "Thống kê ";
             this.btnThongKe.UseVisualStyleBackColor = true;
             // 
@@ -176,7 +176,7 @@
             this.btnNhanVien.Margin = new System.Windows.Forms.Padding(2);
             this.btnNhanVien.Name = "btnNhanVien";
             this.btnNhanVien.Size = new System.Drawing.Size(299, 54);
-            this.btnNhanVien.TabIndex = 6;
+            this.btnNhanVien.TabIndex = 5;
             this.btnNhanVien.Text = "Nhân Viên";
             this.btnNhanVien.UseVisualStyleBackColor = true;
             this.btnNhanVien.Click += new System.EventHandler(this.btnNhanVien_Click);
@@ -193,7 +193,7 @@
             this.btnKhoHang.Margin = new System.Windows.Forms.Padding(2);
             this.btnKhoHang.Name = "btnKhoHang";
             this.btnKhoHang.Size = new System.Drawing.Size(299, 54);
-            this.btnKhoHang.TabIndex = 5;
+            this.btnKhoHang.TabIndex = 4;
             this.btnKhoHang.Text = "Kho Hàng ";
             this.btnKhoHang.UseVisualStyleBackColor = true;
             this.btnKhoHang.Click += new System.EventHandler(this.btnKhoHang_Click);
@@ -210,7 +210,7 @@
             this.btnSP.Margin = new System.Windows.Forms.Padding(2);
             this.btnSP.Name = "btnSP";
             this.btnSP.Size = new System.Drawing.Size(299, 54);
-            this.btnSP.TabIndex = 4;
+            this.btnSP.TabIndex = 1;
             this.btnSP.Text = "Sản Phẩm";
             this.btnSP.UseVisualStyleBackColor = true;
             this.btnSP.Click += new System.EventHandler(this.btnSP_Click);
@@ -227,7 +227,7 @@
             this.btnNhaCC.Margin = new System.Windows.Forms.Padding(2);
             this.btnNhaCC.Name = "btnNhaCC";
             this.btnNhaCC.Size = new System.Drawing.Size(299, 54);
-            this.btnNhaCC.TabIndex = 3;
+            this.btnNhaCC.TabIndex = 2;
             this.btnNhaCC.Text = "Nhà Cung Cấp";
             this.btnNhaCC.UseVisualStyleBackColor = true;
             this.btnNhaCC.Click += new System.EventHandler(this.btnNhaCC_Click);
@@ -244,7 +244,7 @@
             this.btnTaoDon.Margin = new System.Windows.Forms.Padding(2);
             this.btnTaoDon.Name = "btnTaoDon";
             this.btnTaoDon.Size = new System.Drawing.Size(299, 54);
-            this.btnTaoDon.TabIndex = 1;
+            this.btnTaoDon.TabIndex = 3;
             this.btnTaoDon.Text = "Tạo đơn";
             this.btnTaoDon.UseVisualStyleBackColor = true;
             this.btnTaoDon.Click += new System.EventHandler(this.btnTaoDon_Click);
@@ -273,7 +273,7 @@
             this.PBody.Location = new System.Drawing.Point(323, 64);
             this.PBody.Name = "PBody";
             this.PBody.Size = new System.Drawing.Size(1010, 648);
-            this.PBody.TabIndex = 6;
+            this.PBody.TabIndex = 1;
             // 
             // frmHome
             // 

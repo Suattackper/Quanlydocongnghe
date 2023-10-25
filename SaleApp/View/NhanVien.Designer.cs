@@ -43,8 +43,6 @@ namespace SaleApp.View
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.txtDiaChi = new System.Windows.Forms.TextBox();
             this.txtCCCD = new System.Windows.Forms.TextBox();
-            this.dtpNgayVao = new System.Windows.Forms.DateTimePicker();
-            this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -226,27 +224,6 @@ namespace SaleApp.View
             this.txtCCCD.Size = new System.Drawing.Size(212, 38);
             this.txtCCCD.TabIndex = 44;
             // 
-            // dtpNgayVao
-            // 
-            this.dtpNgayVao.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.dtpNgayVao.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpNgayVao.Location = new System.Drawing.Point(551, 183);
-            this.dtpNgayVao.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.dtpNgayVao.Name = "dtpNgayVao";
-            this.dtpNgayVao.Size = new System.Drawing.Size(207, 26);
-            this.dtpNgayVao.TabIndex = 43;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Cascadia Code", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label8.Location = new System.Drawing.Point(447, 183);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(100, 22);
-            this.label8.TabIndex = 42;
-            this.label8.Text = "Ngày Vào:";
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -341,9 +318,9 @@ namespace SaleApp.View
             this.gbThongTinNV.Controls.Add(this.dtgvNhanVien);
             this.gbThongTinNV.Font = new System.Drawing.Font("Cascadia Code", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.gbThongTinNV.Location = new System.Drawing.Point(13, 305);
-            this.gbThongTinNV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbThongTinNV.Margin = new System.Windows.Forms.Padding(2);
             this.gbThongTinNV.Name = "gbThongTinNV";
-            this.gbThongTinNV.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbThongTinNV.Padding = new System.Windows.Forms.Padding(2);
             this.gbThongTinNV.Size = new System.Drawing.Size(988, 269);
             this.gbThongTinNV.TabIndex = 59;
             this.gbThongTinNV.TabStop = false;
@@ -439,8 +416,6 @@ namespace SaleApp.View
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.txtDiaChi);
             this.Controls.Add(this.txtCCCD);
-            this.Controls.Add(this.dtpNgayVao);
-            this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -477,8 +452,6 @@ namespace SaleApp.View
         private TextBox txtEmail;
         private TextBox txtDiaChi;
         private TextBox txtCCCD;
-        private DateTimePicker dtpNgayVao;
-        private Label label8;
         private Label label7;
         private Label label5;
         private Label label4;

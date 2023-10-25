@@ -33,5 +33,11 @@ namespace SaleApp.View
         {
             Application.Exit();
         }
+
+        private void dtpNgayVao_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }
