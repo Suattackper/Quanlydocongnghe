@@ -365,7 +365,7 @@
             // 
             btnTimKiem.FlatAppearance.BorderSize = 0;
             btnTimKiem.FlatStyle = FlatStyle.Flat;
-            btnTimKiem.Image = (Image)resources.GetObject("btnTimKiem.Image");
+            //btnTimKiem.Image = (frmImage)resources.GetObject("btnTimKiem.Image");
             btnTimKiem.Location = new Point(487, 457);
             btnTimKiem.Name = "btnTimKiem";
             btnTimKiem.Size = new Size(40, 40);

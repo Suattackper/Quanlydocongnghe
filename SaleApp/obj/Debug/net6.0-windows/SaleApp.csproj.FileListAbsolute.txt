@@ -61,3 +61,42 @@ D:\c#\Quanlydocongnghe\SaleApp\bin\Debug\net6.0-windows\runtimes\win-x86\native\
 D:\c#\Quanlydocongnghe\SaleApp\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 D:\c#\Quanlydocongnghe\SaleApp\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 D:\c#\Quanlydocongnghe\SaleApp\obj\Debug\net6.0-windows\SaleApp.csproj.CopyComplete
+C:\Users\Xuan Thao\Desktop\btl\SaleApp\bin\Debug\net6.0-windows\SaleApp.exe
+C:\Users\Xuan Thao\Desktop\btl\SaleApp\bin\Debug\net6.0-windows\SaleApp.deps.json
+C:\Users\Xuan Thao\Desktop\btl\SaleApp\bin\Debug\net6.0-windows\SaleApp.runtimeconfig.json
+C:\Users\Xuan Thao\Desktop\btl\SaleApp\bin\Debug\net6.0-windows\SaleApp.dll
+C:\Users\Xuan Thao\Desktop\btl\SaleApp\bin\Debug\net6.0-windows\SaleApp.pdb
+C:\Users\Xuan Thao\Desktop\btl\SaleApp\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
+C:\Users\Xuan Thao\Desktop\btl\SaleApp\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Users\Xuan Thao\Desktop\btl\SaleApp\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
+C:\Users\Xuan Thao\Desktop\btl\SaleApp\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
+C:\Users\Xuan Thao\Desktop\btl\SaleApp\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Xuan Thao\Desktop\btl\SaleApp\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Xuan Thao\Desktop\btl\SaleApp\obj\Debug\net6.0-windows\SaleApp.csproj.AssemblyReference.cache
+C:\Users\Xuan Thao\Desktop\btl\SaleApp\obj\Debug\net6.0-windows\SaleApp.Properties.Resources.resources
+C:\Users\Xuan Thao\Desktop\btl\SaleApp\obj\Debug\net6.0-windows\SaleApp.frmChiTietDon.resources
+C:\Users\Xuan Thao\Desktop\btl\SaleApp\obj\Debug\net6.0-windows\SaleApp.View.frmHome.resources
+C:\Users\Xuan Thao\Desktop\btl\SaleApp\obj\Debug\net6.0-windows\SaleApp.frmDonHang.resources
+C:\Users\Xuan Thao\Desktop\btl\SaleApp\obj\Debug\net6.0-windows\SaleApp.View.frmHangTon.resources
+C:\Users\Xuan Thao\Desktop\btl\SaleApp\obj\Debug\net6.0-windows\SaleApp.View.frmKhoHang.resources
+C:\Users\Xuan Thao\Desktop\btl\SaleApp\obj\Debug\net6.0-windows\SaleApp.View.frmNhaCungCap.resources
+C:\Users\Xuan Thao\Desktop\btl\SaleApp\obj\Debug\net6.0-windows\SaleApp.frmNhanVien.resources
+C:\Users\Xuan Thao\Desktop\btl\SaleApp\obj\Debug\net6.0-windows\SaleApp.View.frmNhapHang.resources
+C:\Users\Xuan Thao\Desktop\btl\SaleApp\obj\Debug\net6.0-windows\SaleApp.View.frmNhapSP.resources
+C:\Users\Xuan Thao\Desktop\btl\SaleApp\obj\Debug\net6.0-windows\SaleApp.Signin.resources
+C:\Users\Xuan Thao\Desktop\btl\SaleApp\obj\Debug\net6.0-windows\SaleApp.View.frmTrangChu.resources
+C:\Users\Xuan Thao\Desktop\btl\SaleApp\obj\Debug\net6.0-windows\SaleApp.View.XuatHoaDon.resources
+C:\Users\Xuan Thao\Desktop\btl\SaleApp\obj\Debug\net6.0-windows\SaleApp.View.XuatKho.resources
+C:\Users\Xuan Thao\Desktop\btl\SaleApp\obj\Debug\net6.0-windows\SaleApp.csproj.GenerateResource.cache
+C:\Users\Xuan Thao\Desktop\btl\SaleApp\obj\Debug\net6.0-windows\SaleApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Xuan Thao\Desktop\btl\SaleApp\obj\Debug\net6.0-windows\SaleApp.AssemblyInfoInputs.cache
+C:\Users\Xuan Thao\Desktop\btl\SaleApp\obj\Debug\net6.0-windows\SaleApp.AssemblyInfo.cs
+C:\Users\Xuan Thao\Desktop\btl\SaleApp\obj\Debug\net6.0-windows\SaleApp.csproj.CoreCompileInputs.cache
+C:\Users\Xuan Thao\Desktop\btl\SaleApp\obj\Debug\net6.0-windows\SaleApp.csproj.CopyComplete
+C:\Users\Xuan Thao\Desktop\btl\SaleApp\obj\Debug\net6.0-windows\SaleApp.dll
+C:\Users\Xuan Thao\Desktop\btl\SaleApp\obj\Debug\net6.0-windows\refint\SaleApp.dll
+C:\Users\Xuan Thao\Desktop\btl\SaleApp\obj\Debug\net6.0-windows\SaleApp.pdb
+C:\Users\Xuan Thao\Desktop\btl\SaleApp\obj\Debug\net6.0-windows\SaleApp.genruntimeconfig.cache
+C:\Users\Xuan Thao\Desktop\btl\SaleApp\obj\Debug\net6.0-windows\ref\SaleApp.dll
+C:\Users\Xuan Thao\Desktop\btl\SaleApp\obj\Debug\net6.0-windows\SaleApp.View.frmImage.resources
+C:\Users\Xuan Thao\Desktop\btl\SaleApp\obj\Debug\net6.0-windows\SaleApp.Model.ModelSanPham.resources

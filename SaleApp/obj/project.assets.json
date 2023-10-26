@@ -470,19 +470,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ACER\\.nuget\\packages\\": {}
+    "C:\\Users\\Xuan Thao\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\c#\\Quanlydocongnghe\\SaleApp\\SaleApp.csproj",
+      "projectUniqueName": "C:\\Users\\Xuan Thao\\Desktop\\btl\\SaleApp\\SaleApp.csproj",
       "projectName": "SaleApp",
-      "projectPath": "D:\\c#\\Quanlydocongnghe\\SaleApp\\SaleApp.csproj",
-      "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
-      "outputPath": "D:\\c#\\Quanlydocongnghe\\SaleApp\\obj\\",
+      "projectPath": "C:\\Users\\Xuan Thao\\Desktop\\btl\\SaleApp\\SaleApp.csproj",
+      "packagesPath": "C:\\Users\\Xuan Thao\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Xuan Thao\\Desktop\\btl\\SaleApp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\ACER\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Xuan Thao\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -532,7 +532,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
       }
     }
   }

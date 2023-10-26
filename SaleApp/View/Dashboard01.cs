@@ -7,17 +7,33 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace SaleApp.View
 {
     public partial class frmHome : Form
     {
+        int widthFrm = 1350;
+        int heightFrm = 640;
+        int widthTskbar = 323;
         public frmHome()
         {
             InitializeComponent();
             frmTrangChu a = new frmTrangChu();
             LoadForm(a);
+            loadFormResized();
         }
+
+        // resized frm home
+        void loadFormResized()
+        {
+            panel1.Size = new Size(widthFrm, 70);
+            //btnClose.Location = new Point(1363, 12);
+            PBody.Size = new Size(widthFrm - widthTskbar, 843);
+            taskbar.Size = new Size(widthTskbar, heightFrm);
+            this.ClientSize = new Size(widthFrm, heightFrm);
+        }
+
         // theo dõi Form hiện tại đang được hiển thị
         private Form formNow;
         private void LoadForm(Form formnew)
@@ -45,7 +61,11 @@ namespace SaleApp.View
         }
         private void btnClose_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            if (MessageBox.Show("Bạn có chắc muốn thoát chương trình", "Thông Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == System.Windows.Forms.DialogResult.OK)
+            {
+
+                Application.Exit();
+            }
         }
 
         private void btnThongKe_Click(object sender, EventArgs e)
