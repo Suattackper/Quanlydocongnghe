@@ -28,5 +28,10 @@ namespace SaleApp.DAO
         {
             return KetNoiSql.Instance.getDataQuyen();
         }
+        public DataTable getMaQuyen(string ma)
+        {
+            string sql = $"select * from QUYEN where TenQuyen = '{ma}'";
+            return KetNoiSql.Instance.execSql(sql);
+        }
     }
 }

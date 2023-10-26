@@ -2,6 +2,7 @@
 GO
 USE QUAN_LY_BAN_HANG;
 GO
+
 -- COLLATE SQL_Latin1_General_CP1_CS_AS lệnh dùng để phân biệt hoa thường trong sqlserver
 
 CREATE TABLE KHACHHANG (

@@ -52,7 +52,7 @@ namespace SaleApp.View
                     MessageBox.Show("Thông tin đăng nhập không chính xác!", "Error");
                     return;
             }
-            MessageBox.Show(cbRole.Text + " Đăng nhập thành công!", "Success");
+            MessageBox.Show(cbRole.Text + " đăng nhập thành công!", "Success");
             //Chuyển sang form Home
             frmHome dashboard = new frmHome(cbRole.Text,txtUsername.Text);
             this.Hide();

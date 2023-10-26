@@ -1,4 +1,6 @@
-﻿using SaleApp.DAO;
+﻿using SaleApp.Business;
+using SaleApp.DAO;
+using SaleApp.Model;
 using SaleApp.View;
 using System;
 using System.Collections.Generic;

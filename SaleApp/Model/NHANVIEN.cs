@@ -12,7 +12,7 @@ namespace SaleApp.Model
         public string SoDienThoai { get; set; }
         public string DiaChi { get; set; }
         public string Email { get; set; }
-        public System.DateTime NgayVao { get; set; }
+        public string NgayVao { get; set; }
         public byte[] Anh { get; set; }
         public int MaQuyen { get; set; }
     }

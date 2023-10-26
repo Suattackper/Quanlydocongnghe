@@ -88,9 +88,29 @@ namespace SaleApp.Business
         {
             //lấy dữ liệu cột đầu đang được chọn
             string code = dgv.Rows[dgv.CurrentRow.Index].Cells[0].Value + "";
-            //kiem tra xem masp có tồn tại trong chi tiet phieu nhap không
+            //kiem tra xem masp có tồn tại trong chi tiet phieu nhap, chi tiet phieu xuat hay chi tiets don mua không
             DataTable check = ChiTietPhieuNhapDAO.Instance.Xem();
             foreach (DataRow existingRow in check.Rows)
+            {
+                if (existingRow["MaSanPham"].ToString() == code)
+                {
+                    MessageBox.Show("Không thể xóa sản phẩm này này!", "Thông báo!");
+                    return false;
+                    break;
+                }
+            }
+            DataTable check1 = ChiTietPhieuXuatDAO.Instance.Xem();
+            foreach (DataRow existingRow in check1.Rows)
+            {
+                if (existingRow["MaSanPham"].ToString() == code)
+                {
+                    MessageBox.Show("Không thể xóa sản phẩm này này!", "Thông báo!");
+                    return false;
+                    break;
+                }
+            }
+            DataTable check2 = ChiTietDonMuaDAO.Instance.Xem();
+            foreach (DataRow existingRow in check2.Rows)
             {
                 if (existingRow["MaSanPham"].ToString() == code)
                 {
@@ -103,6 +123,26 @@ namespace SaleApp.Business
         }
         public string Sua(SANPHAM p)
         {
+            if (p.TenSanPham == "")
+            {
+                return "errorTen";
+            }
+            if (p.MaSanPham == "")
+            {
+                return "errorMa";
+            }
+            if (p.MaLoaiHang == null)
+            {
+                return "errorMal";
+            }
+            if (p.Anh == null)
+            {
+                return "errorAnh";
+            }
+            if (p.GiaBan == null)
+            {
+                return "errorGia";
+            }
             SanPhamDAO.Instance.Sua(p);
             return "";
         }

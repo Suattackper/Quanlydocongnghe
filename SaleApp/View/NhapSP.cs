@@ -1,4 +1,5 @@
 ﻿using DocumentFormat.OpenXml.Vml;
+using OfficeOpenXml;
 using SaleApp.Business;
 using SaleApp.Model;
 using System;
@@ -27,11 +28,52 @@ namespace SaleApp.View
             txtMaSP.Text = "";
             txtGiaBan.Text = "";
             txtTenSP.Text = "";
+            txtMaSP.Focus();
             pbHinhAnh.Image = null;
             cbLoaiSP.SelectedIndex = 0;
             SanPhamBUS.Instance.Xem(dtgvDSSP);
         }
+        private void ExportToExcel(DataGridView dataGridView, string filePath)
+        {
+            try
+            {
+                //tạo một workbook Excel mới
+                using (var package = new ExcelPackage())
+                {
+                    //tạo trang tinh sheet1 và gán chp workbook
+                    var worksheet = package.Workbook.Worksheets.Add("Sheet1");
+                    // Ghi dữ liệu từ DataGridView vào Excel worksheet
+                    for (int i = 1; i <= dataGridView.Columns.Count; i++)
+                    {
+                        // Ghi tiêu đề cột
+                        worksheet.Cells[1, i].Value = dataGridView.Columns[i - 1].HeaderText;
+                        worksheet.Cells[1, i].Style.Font.Bold = true;
+                        // Đặt độ rộng cột bằng chiều dài của tiêu đề cột
+                        worksheet.Column(i).AutoFit();
+                    }
+                    //Ghi dữ liệu vào woekbook từ datagridview
+                    for (int i = 0; i < dataGridView.Rows.Count; i++)
+                    {
+                        for (int j = 0; j < dataGridView.Columns.Count; j++)
+                        {
+                            if (dataGridView[j, i].Value != null)
+                            {
+                                worksheet.Cells[i + 2, j + 1].Value = dataGridView[j, i].Value.ToString();
+                            }
+                        }
+                    }
 
+                    // Lưu workbook ra tệp Excel
+                    package.SaveAs(new FileInfo(filePath));
+
+                    MessageBox.Show("Dữ liệu đã được xuất thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Có lỗi khi xuất dữ liệu: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
         private void frmNhapSP_Load(object sender, EventArgs e)
         {
             LoaiHangBUS.Instance.getDataLoaiHang(cbLoaiSP);
@@ -227,19 +269,34 @@ namespace SaleApp.View
                 }
             }
             sp.Anh = anh;
-
-
             // Lấy hàng hiện tại (current row)
             int rowIndex = dtgvDSSP.CurrentCell.RowIndex;
             // Lấy giá trị từ ô hiện tại
             string macuahang = dtgvDSSP.Rows[rowIndex].Cells[0].Value.ToString();
-
             if (macuahang != txtMaSP.Text)
             {
                 MessageBox.Show("Mã sản phẩm không được thay đổi!", "Error");
                 return;
             }
-            SanPhamBUS.Instance.Sua(sp);
+            string check = SanPhamBUS.Instance.Sua(sp);
+            switch (check)
+            {
+                case "errorTen":
+                    MessageBox.Show("Tên sản phẩm không được để trống!", "Error");
+                    return;
+                case "errorMa":
+                    MessageBox.Show("Mã sản phẩm không được để trống!", "Error");
+                    return;
+                case "errorMal":
+                    MessageBox.Show("Loại hàng không được để trống!", "Error");
+                    return;
+                case "errorAnh":
+                    MessageBox.Show("Ảnh không được để trống!", "Error");
+                    return;
+                case "errorGia":
+                    MessageBox.Show("Giá bán không được để trống!", "Error");
+                    return;
+            }
             MessageBox.Show("Sửa thành công!", "Thông báo");
             SanPhamBUS.Instance.Xem(dtgvDSSP);
         }
@@ -247,6 +304,24 @@ namespace SaleApp.View
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
             SanPhamBUS.Instance.Tim(dtgvDSSP, txtTimKiem.Text);
+        }
+
+        private void btnLưu_Click(object sender, EventArgs e)
+        {
+            using (SaveFileDialog saveFileDialog = new SaveFileDialog())
+            {
+                saveFileDialog.Filter = "Excel Files|*.xlsx";
+                saveFileDialog.Title = "Save an Excel File";
+                //hiển thị hộp thoại lưu cho người dùng
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    // Chọn vị trí lưu tệp Excel
+                    string filePath = saveFileDialog.FileName;
+
+                    // Viết dữ liệu vào tệp Excel
+                    ExportToExcel(dtgvDSSP, filePath);
+                }
+            }
         }
     }
 }

@@ -2,6 +2,7 @@
 using SaleApp.Model;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -33,6 +34,19 @@ namespace SaleApp.Business
             comboBoxQuyen.DisplayMember = "TenQuyen"; // Hiển thị tên quyền trong ComboBox
 
             comboBoxQuyen.SelectedIndex = 0; // Chọn mục đầu tiên là mục trống
+        }
+        public string getMaQuyen(string ten)
+        {
+            string ma = null;
+            DataTable check = QuyenDAO.Instance.getMaQuyen(ten);
+            foreach (DataRow existingRow in check.Rows)
+            {
+                if (existingRow["TenQuyen"].ToString() == ten)
+                {
+                    return existingRow["MaQuyen"].ToString();
+                }
+            }
+            return ma;
         }
     }
 }

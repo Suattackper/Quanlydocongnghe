@@ -33,6 +33,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.pbHinhAnh = new System.Windows.Forms.PictureBox();
             this.gbThongTin = new System.Windows.Forms.GroupBox();
+            this.btnLưu = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnReset = new System.Windows.Forms.Button();
@@ -93,6 +94,7 @@
             // 
             // gbThongTin
             // 
+            this.gbThongTin.Controls.Add(this.btnLưu);
             this.gbThongTin.Controls.Add(this.btnSua);
             this.gbThongTin.Controls.Add(this.btnXoa);
             this.gbThongTin.Controls.Add(this.btnReset);
@@ -116,13 +118,28 @@
             this.gbThongTin.TabStop = false;
             this.gbThongTin.Text = "Thông tin";
             // 
+            // btnLưu
+            // 
+            this.btnLưu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.btnLưu.FlatAppearance.BorderSize = 0;
+            this.btnLưu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLưu.ForeColor = System.Drawing.Color.White;
+            this.btnLưu.Location = new System.Drawing.Point(452, 269);
+            this.btnLưu.Margin = new System.Windows.Forms.Padding(2);
+            this.btnLưu.Name = "btnLưu";
+            this.btnLưu.Size = new System.Drawing.Size(105, 37);
+            this.btnLưu.TabIndex = 20;
+            this.btnLưu.Text = "Xuất Excel";
+            this.btnLưu.UseVisualStyleBackColor = false;
+            this.btnLưu.Click += new System.EventHandler(this.btnLưu_Click);
+            // 
             // btnSua
             // 
             this.btnSua.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             this.btnSua.FlatAppearance.BorderSize = 0;
             this.btnSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSua.ForeColor = System.Drawing.Color.White;
-            this.btnSua.Location = new System.Drawing.Point(180, 269);
+            this.btnSua.Location = new System.Drawing.Point(127, 269);
             this.btnSua.Margin = new System.Windows.Forms.Padding(2);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(90, 37);
@@ -137,7 +154,7 @@
             this.btnXoa.FlatAppearance.BorderSize = 0;
             this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnXoa.ForeColor = System.Drawing.Color.White;
-            this.btnXoa.Location = new System.Drawing.Point(302, 269);
+            this.btnXoa.Location = new System.Drawing.Point(238, 269);
             this.btnXoa.Margin = new System.Windows.Forms.Padding(2);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(90, 37);
@@ -152,7 +169,7 @@
             this.btnReset.FlatAppearance.BorderSize = 0;
             this.btnReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReset.ForeColor = System.Drawing.Color.White;
-            this.btnReset.Location = new System.Drawing.Point(422, 269);
+            this.btnReset.Location = new System.Drawing.Point(349, 269);
             this.btnReset.Margin = new System.Windows.Forms.Padding(2);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(82, 37);
@@ -167,7 +184,7 @@
             this.btnThem.FlatAppearance.BorderSize = 0;
             this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThem.ForeColor = System.Drawing.Color.White;
-            this.btnThem.Location = new System.Drawing.Point(66, 269);
+            this.btnThem.Location = new System.Drawing.Point(16, 269);
             this.btnThem.Margin = new System.Windows.Forms.Padding(2);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(90, 37);
@@ -390,5 +407,6 @@
         private Button btnTimKiem;
         private Label label1;
         private Button btnChon;
+        private Button btnLưu;
     }
 }
