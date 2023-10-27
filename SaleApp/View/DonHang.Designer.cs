@@ -36,7 +36,7 @@ namespace SaleApp
             this.cbxLoaiSp = new System.Windows.Forms.ComboBox();
             this.btnReset = new System.Windows.Forms.Button();
             this.btnTimKiem = new System.Windows.Forms.Button();
-            this.txtMaSP = new System.Windows.Forms.TextBox();
+            this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.txtTTKhachHang = new System.Windows.Forms.GroupBox();
@@ -48,12 +48,16 @@ namespace SaleApp
             this.label8 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnThem = new System.Windows.Forms.Button();
-            this.label9 = new System.Windows.Forms.Label();
-            this.txtTongTien = new System.Windows.Forms.TextBox();
             this.btnInDon = new System.Windows.Forms.Button();
             this.btnHuyDon = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dvgMaSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dvgTenSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dvgSoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dvgGiaBan = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dvgTong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.des = new System.Windows.Forms.DataGridViewButtonColumn();
             this.flpDanhSachSanPham = new System.Windows.Forms.FlowLayoutPanel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -68,22 +72,14 @@ namespace SaleApp
             this.label16 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label15 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dvgMaSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dvgTenSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dvgSoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dvgGiaBan = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dvgTong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbTTSP.SuspendLayout();
             this.panel1.SuspendLayout();
             this.txtTTKhachHang.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.flpDanhSachSanPham.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // gbTTSP
@@ -107,7 +103,7 @@ namespace SaleApp
             this.panel1.Controls.Add(this.cbxLoaiSp);
             this.panel1.Controls.Add(this.btnReset);
             this.panel1.Controls.Add(this.btnTimKiem);
-            this.panel1.Controls.Add(this.txtMaSP);
+            this.panel1.Controls.Add(this.txtTimKiem);
             this.panel1.Controls.Add(this.label13);
             this.panel1.Controls.Add(this.label10);
             this.panel1.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -165,6 +161,7 @@ namespace SaleApp
             this.btnReset.TabIndex = 12;
             this.btnReset.Text = "Reset";
             this.btnReset.UseVisualStyleBackColor = false;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // btnTimKiem
             // 
@@ -181,14 +178,14 @@ namespace SaleApp
             this.btnTimKiem.UseVisualStyleBackColor = false;
             this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
-            // txtMaSP
+            // txtTimKiem
             // 
-            this.txtMaSP.Location = new System.Drawing.Point(11, 31);
-            this.txtMaSP.Margin = new System.Windows.Forms.Padding(2);
-            this.txtMaSP.Multiline = true;
-            this.txtMaSP.Name = "txtMaSP";
-            this.txtMaSP.Size = new System.Drawing.Size(261, 38);
-            this.txtMaSP.TabIndex = 4;
+            this.txtTimKiem.Location = new System.Drawing.Point(11, 31);
+            this.txtTimKiem.Margin = new System.Windows.Forms.Padding(2);
+            this.txtTimKiem.Multiline = true;
+            this.txtTimKiem.Name = "txtTimKiem";
+            this.txtTimKiem.Size = new System.Drawing.Size(261, 38);
+            this.txtTimKiem.TabIndex = 4;
             // 
             // label13
             // 
@@ -313,41 +310,6 @@ namespace SaleApp
             this.label1.TabIndex = 0;
             this.label1.Text = "Mã Đơn Hàng:";
             // 
-            // btnThem
-            // 
-            this.btnThem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThem.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnThem.ForeColor = System.Drawing.Color.White;
-            this.btnThem.Location = new System.Drawing.Point(392, 517);
-            this.btnThem.Margin = new System.Windows.Forms.Padding(2);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(116, 35);
-            this.btnThem.TabIndex = 21;
-            this.btnThem.Text = "Thêm";
-            this.btnThem.UseVisualStyleBackColor = false;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label9.Location = new System.Drawing.Point(80, 536);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(77, 18);
-            this.label9.TabIndex = 20;
-            this.label9.Text = "Tổng tiền:";
-            this.label9.Click += new System.EventHandler(this.label9_Click_1);
-            // 
-            // txtTongTien
-            // 
-            this.txtTongTien.Location = new System.Drawing.Point(176, 523);
-            this.txtTongTien.Margin = new System.Windows.Forms.Padding(2);
-            this.txtTongTien.Multiline = true;
-            this.txtTongTien.Name = "txtTongTien";
-            this.txtTongTien.Size = new System.Drawing.Size(180, 31);
-            this.txtTongTien.TabIndex = 19;
-            // 
             // btnInDon
             // 
             this.btnInDon.BackColor = System.Drawing.Color.ForestGreen;
@@ -376,15 +338,88 @@ namespace SaleApp
             this.btnHuyDon.Text = "Hủy Đơn";
             this.btnHuyDon.UseVisualStyleBackColor = false;
             // 
-            // panel2
+            // dataGridView1
             // 
-            this.panel2.Controls.Add(this.btnThem);
-            this.panel2.Controls.Add(this.txtTongTien);
-            this.panel2.Controls.Add(this.label9);
-            this.panel2.Location = new System.Drawing.Point(3, 3);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(529, 480);
-            this.panel2.TabIndex = 16;
+            this.dataGridView1.AllowUserToOrderColumns = true;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dvgMaSP,
+            this.dvgTenSP,
+            this.dvgSoLuong,
+            this.dvgGiaBan,
+            this.dvgTong,
+            this.Delete,
+            this.des});
+            this.dataGridView1.Location = new System.Drawing.Point(0, 50);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 29;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(485, 338);
+            this.dataGridView1.TabIndex = 24;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.dataGridView1.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellValueChanged);
+            // 
+            // dvgMaSP
+            // 
+            this.dvgMaSP.Frozen = true;
+            this.dvgMaSP.HeaderText = "MaSP";
+            this.dvgMaSP.MinimumWidth = 40;
+            this.dvgMaSP.Name = "dvgMaSP";
+            this.dvgMaSP.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dvgMaSP.Width = 40;
+            // 
+            // dvgTenSP
+            // 
+            this.dvgTenSP.Frozen = true;
+            this.dvgTenSP.HeaderText = "Tên SP";
+            this.dvgTenSP.MinimumWidth = 85;
+            this.dvgTenSP.Name = "dvgTenSP";
+            this.dvgTenSP.Width = 85;
+            // 
+            // dvgSoLuong
+            // 
+            this.dvgSoLuong.Frozen = true;
+            this.dvgSoLuong.HeaderText = "Qty";
+            this.dvgSoLuong.MinimumWidth = 50;
+            this.dvgSoLuong.Name = "dvgSoLuong";
+            this.dvgSoLuong.Width = 50;
+            // 
+            // dvgGiaBan
+            // 
+            this.dvgGiaBan.Frozen = true;
+            this.dvgGiaBan.HeaderText = "Giá SP";
+            this.dvgGiaBan.MinimumWidth = 68;
+            this.dvgGiaBan.Name = "dvgGiaBan";
+            this.dvgGiaBan.Width = 68;
+            // 
+            // dvgTong
+            // 
+            this.dvgTong.Frozen = true;
+            this.dvgTong.HeaderText = "Tổng";
+            this.dvgTong.MinimumWidth = 80;
+            this.dvgTong.Name = "dvgTong";
+            this.dvgTong.Width = 80;
+            // 
+            // Delete
+            // 
+            this.Delete.Frozen = true;
+            this.Delete.HeaderText = "Delete";
+            this.Delete.MinimumWidth = 55;
+            this.Delete.Name = "Delete";
+            this.Delete.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Delete.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Delete.Text = "Delete";
+            this.Delete.Width = 55;
+            // 
+            // des
+            // 
+            this.des.HeaderText = "-1";
+            this.des.MinimumWidth = 40;
+            this.des.Name = "des";
+            this.des.Text = "des";
+            this.des.Width = 40;
             // 
             // flpDanhSachSanPham
             // 
@@ -393,10 +428,9 @@ namespace SaleApp
             | System.Windows.Forms.AnchorStyles.Right)));
             this.flpDanhSachSanPham.AutoScroll = true;
             this.flpDanhSachSanPham.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.flpDanhSachSanPham.Controls.Add(this.panel2);
             this.flpDanhSachSanPham.Location = new System.Drawing.Point(3, 46);
             this.flpDanhSachSanPham.Name = "flpDanhSachSanPham";
-            this.flpDanhSachSanPham.Size = new System.Drawing.Size(656, 538);
+            this.flpDanhSachSanPham.Size = new System.Drawing.Size(657, 538);
             this.flpDanhSachSanPham.TabIndex = 22;
             // 
             // panel3
@@ -406,7 +440,7 @@ namespace SaleApp
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Location = new System.Drawing.Point(-5, 156);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(666, 605);
+            this.panel3.Size = new System.Drawing.Size(667, 605);
             this.panel3.TabIndex = 24;
             // 
             // panel4
@@ -437,6 +471,7 @@ namespace SaleApp
             this.panel5.Controls.Add(this.label3);
             this.panel5.Controls.Add(this.txbTienThua);
             this.panel5.Controls.Add(this.txbKhachDua);
+            this.panel5.Controls.Add(this.dataGridView1);
             this.panel5.Controls.Add(this.txbTongBill);
             this.panel5.Controls.Add(this.label18);
             this.panel5.Controls.Add(this.btnInDon);
@@ -444,10 +479,9 @@ namespace SaleApp
             this.panel5.Controls.Add(this.label16);
             this.panel5.Controls.Add(this.btnHuyDon);
             this.panel5.Controls.Add(this.panel6);
-            this.panel5.Controls.Add(this.dataGridView1);
-            this.panel5.Location = new System.Drawing.Point(664, 157);
+            this.panel5.Location = new System.Drawing.Point(666, 157);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(517, 604);
+            this.panel5.Size = new System.Drawing.Size(492, 604);
             this.panel5.TabIndex = 26;
             // 
             // label3
@@ -464,15 +498,19 @@ namespace SaleApp
             // 
             // txbTienThua
             // 
+            this.txbTienThua.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.txbTienThua.ForeColor = System.Drawing.Color.Firebrick;
             this.txbTienThua.Location = new System.Drawing.Point(173, 494);
             this.txbTienThua.Multiline = true;
             this.txbTienThua.Name = "txbTienThua";
             this.txbTienThua.Size = new System.Drawing.Size(189, 34);
             this.txbTienThua.TabIndex = 34;
+            this.txbTienThua.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txbKhachDua
             // 
             this.txbKhachDua.Enabled = false;
+            this.txbKhachDua.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txbKhachDua.Location = new System.Drawing.Point(173, 450);
             this.txbKhachDua.Multiline = true;
             this.txbKhachDua.Name = "txbKhachDua";
@@ -545,61 +583,6 @@ namespace SaleApp
             this.label15.Text = "Thông Tin Hóa Đơn";
             this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dvgMaSP,
-            this.dvgTenSP,
-            this.dvgSoLuong,
-            this.dvgGiaBan,
-            this.dvgTong});
-            this.dataGridView1.Location = new System.Drawing.Point(5, 44);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(498, 338);
-            this.dataGridView1.TabIndex = 24;
-            // 
-            // dvgMaSP
-            // 
-            this.dvgMaSP.Frozen = true;
-            this.dvgMaSP.HeaderText = "MaSP";
-            this.dvgMaSP.MinimumWidth = 55;
-            this.dvgMaSP.Name = "dvgMaSP";
-            this.dvgMaSP.Width = 55;
-            // 
-            // dvgTenSP
-            // 
-            this.dvgTenSP.Frozen = true;
-            this.dvgTenSP.HeaderText = "Tên SP";
-            this.dvgTenSP.MinimumWidth = 120;
-            this.dvgTenSP.Name = "dvgTenSP";
-            this.dvgTenSP.Width = 120;
-            // 
-            // dvgSoLuong
-            // 
-            this.dvgSoLuong.HeaderText = "Qty";
-            this.dvgSoLuong.MinimumWidth = 50;
-            this.dvgSoLuong.Name = "dvgSoLuong";
-            this.dvgSoLuong.Width = 50;
-            // 
-            // dvgGiaBan
-            // 
-            this.dvgGiaBan.HeaderText = "Giá SP";
-            this.dvgGiaBan.MinimumWidth = 80;
-            this.dvgGiaBan.Name = "dvgGiaBan";
-            this.dvgGiaBan.Width = 80;
-            // 
-            // dvgTong
-            // 
-            this.dvgTong.HeaderText = "Tổng";
-            this.dvgTong.MinimumWidth = 130;
-            this.dvgTong.Name = "dvgTong";
-            this.dvgTong.Width = 130;
-            // 
             // frmDonHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -620,9 +603,7 @@ namespace SaleApp
             this.panel1.PerformLayout();
             this.txtTTKhachHang.ResumeLayout(false);
             this.txtTTKhachHang.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.flpDanhSachSanPham.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
@@ -630,7 +611,6 @@ namespace SaleApp
             this.panel5.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -638,18 +618,14 @@ namespace SaleApp
         #endregion
         private GroupBox gbTTSP;
         private GroupBox txtTTKhachHang;
-        private Label label9;
-        private TextBox txtTongTien;
         private TextBox txtMaNV;
         private Label label8;
         private TextBox txtSDT;
         private Label label5;
         private TextBox txtHoTen;
         private Label label4;
-        private Button btnThem;
         private Button btnInDon;
         private Button btnHuyDon;
-        private Panel panel2;
         private FlowLayoutPanel flpDanhSachSanPham;
         private Panel panel3;
         private Label label14;
@@ -658,11 +634,6 @@ namespace SaleApp
         private Panel panel6;
         private Label label15;
         private DataGridView dataGridView1;
-        private DataGridViewTextBoxColumn dvgMaSP;
-        private DataGridViewTextBoxColumn dvgTenSP;
-        private DataGridViewTextBoxColumn dvgSoLuong;
-        private DataGridViewTextBoxColumn dvgGiaBan;
-        private DataGridViewTextBoxColumn dvgTong;
         private TextBox txbTienThua;
         private TextBox txbKhachDua;
         private TextBox txbTongBill;
@@ -675,11 +646,18 @@ namespace SaleApp
         private ComboBox cbxLoaiSp;
         private Button btnReset;
         private Button btnTimKiem;
-        private TextBox txtMaSP;
+        private TextBox txtTimKiem;
         private Label label13;
         private Label label10;
         private ComboBox cbxNCC;
         private Label label2;
         private Label label3;
+        private DataGridViewTextBoxColumn dvgMaSP;
+        private DataGridViewTextBoxColumn dvgTenSP;
+        private DataGridViewTextBoxColumn dvgSoLuong;
+        private DataGridViewTextBoxColumn dvgGiaBan;
+        private DataGridViewTextBoxColumn dvgTong;
+        private DataGridViewButtonColumn Delete;
+        private DataGridViewButtonColumn des;
     }
 }

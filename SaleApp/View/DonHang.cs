@@ -20,7 +20,9 @@ namespace SaleApp
             InitializeComponent();
 
             LoadSanPham();
-            
+
+   
+
         }
 
         #region Events
@@ -128,7 +130,8 @@ namespace SaleApp
                 if (SanPhamDaTonTai == false)
                 {
                     // thêm sản phầm nếu nó chưa tồn tại
-                    dataGridView1.Rows.Add(new object[] { wdg.MaSanPham, wdg.TenSanPham, 1, wdg.GiaBan.ToString("N0"), wdg.GiaBan.ToString("N0") });
+                    dataGridView1.Rows.Add(new object[] { wdg.MaSanPham, wdg.TenSanPham, 1, wdg.GiaBan.ToString("N0"), wdg.GiaBan.ToString("N0")  });
+                   
                     GetTongBill();
                 }
 
@@ -248,9 +251,6 @@ namespace SaleApp
             TextBox txb = (TextBox)sender;
             string inputText = txb.Text;
            
-           
-          
-           
             while (!double.TryParse(inputText, out double numericValue))
             {
                 MessageBox.Show("Hãy nhập vào 1 số");
@@ -285,15 +285,69 @@ namespace SaleApp
 
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
-            string sql = "select * from dbo.LOAIHANG";
-            DataTable data = DataProvider.Instance.ExcuteQuery(sql);
-            string selectedValue = cbxLoaiSp.SelectedValue.ToString();
-            var rows = data.AsEnumerable()
-    .Where(row => row.Field<string>("tenloaihang") == selectedValue)
-    .ToList();
-         
-                MessageBox.Show(selectedValue.ToString());
+
+            foreach (var item in flpDanhSachSanPham.Controls)
+                
+            {
+                var pro = (ModelSanPham)item;
+                pro.Visible = pro.TenSanPham.ToLower().Contains(txtTimKiem.Text.Trim().ToLower());
+                
+            }
             
+        }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            // Xóa tất cả các sản phẩm hiện tại
+            flpDanhSachSanPham.Controls.Clear();
+            LoadSanPham();
+        }
+        
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+    
+            if (e.RowIndex >= 0) // người dùng đã chọn 
+            {
+                DataGridViewRow selectedRow = dataGridView1.Rows[e.RowIndex];
+
+                if (dataGridView1.Columns[e.ColumnIndex].Name == "Delete")
+                {
+                    if (MessageBox.Show("Bạn thực sự muốn xóa sản phẩm này?", "Thông Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Hand) == System.Windows.Forms.DialogResult.OK)
+                    {
+                        dataGridView1.Rows.Remove(dataGridView1.SelectedRows[0]);
+                    }
+                }
+                else if (dataGridView1.Columns[e.ColumnIndex].Name == "des")
+                {
+                    int soLuongHienTai = int.Parse(selectedRow.Cells["dvgSoLuong"].Value.ToString());
+                    selectedRow.Cells["dvgSoLuong"].Value = soLuongHienTai - 1;
+                    if (int.Parse(selectedRow.Cells["dvgSoLuong"].Value.ToString()) <= 0)
+                    {
+                       if( MessageBox.Show("Bạn thực sự muốn xóa sản phẩm này?", "Thông Báo", MessageBoxButtons.OKCancel,MessageBoxIcon.Hand) == System.Windows.Forms.DialogResult.OK)
+                        {
+                            dataGridView1.Rows.Remove(dataGridView1.SelectedRows[0]);
+                        }
+                        else
+                        {
+                            selectedRow.Cells["dvgSoLuong"].Value = 1;
+                        } 
+                    }
+                }
+            }
+        }
+
+        private void dataGridView1_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex >= 0 && dataGridView1.Columns[e.ColumnIndex].Name == "dvgSoLuong")
+            {
+                DataGridViewRow selectedRow = dataGridView1.Rows[e.RowIndex];
+                int soLuongHienTai = int.Parse(selectedRow.Cells["dvgSoLuong"].Value.ToString());
+                DataGridViewCell cellGiaBan = dataGridView1.Rows[e.RowIndex].Cells["dvgGiaBan"];
+                float giaBan = float.Parse(selectedRow.Cells["dvgGiaBan"].Value.ToString());
+                selectedRow.Cells["dvgTong"].Value = (soLuongHienTai * giaBan).ToString("N0");
+
+                GetTongBill();
+            }
         }
     }
 }
