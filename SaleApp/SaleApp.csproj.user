@@ -10,13 +10,13 @@
     <Compile Update="View\DonHang.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="View\KhoHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="View\TrangChu.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="View\HangTon.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="View\KhoHang.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="View\NhaCungCap.cs">

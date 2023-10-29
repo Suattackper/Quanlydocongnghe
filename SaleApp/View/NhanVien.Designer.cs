@@ -332,6 +332,7 @@ namespace SaleApp.View
             // 
             // cbQuyen
             // 
+            this.cbQuyen.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbQuyen.FormattingEnabled = true;
             this.cbQuyen.Location = new System.Drawing.Point(159, 80);
             this.cbQuyen.Name = "cbQuyen";

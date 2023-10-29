@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace SaleApp.Business
@@ -99,13 +100,37 @@ namespace SaleApp.Business
             {
                 return "errorCccd";
             }
-            //kiểm tra mã nv đã tồn tại chưa
+            if(!Regex.IsMatch(p.Email, @"^[\w-]+(\.[\w-]+)*@[\w-]+(\.[\w-]+)*(\.[a-z]{2,7})$", RegexOptions.IgnoreCase))
+            {
+                return "errorEmail1";
+            }
+            if(!Regex.IsMatch(p.CCCD, @"^\d+$"))
+            {
+                return "errorCccd1";
+            }
+            if (!Regex.IsMatch(p.SoDienThoai, @"^(03|07|08|09|01[2-9])[0-9]{8}$"))
+            {
+                return "errorSdt1";
+            }
+            //kiểm tra mã nv,cccd,sdt,email đã tồn tại chưa
             DataTable check = NhanVienDAO.Instance.Xem();
             foreach (DataRow existingRow in check.Rows)
             {
                 if (existingRow["MaNhanVien"].ToString() == p.MaNhanVien)
                 {
                     return "error1";
+                }
+                if (existingRow["CCCD"].ToString() == p.CCCD)
+                {
+                    return "error2";
+                }
+                if (existingRow["SoDienThoai"].ToString() == p.SoDienThoai)
+                {
+                    return "error3";
+                }
+                if (existingRow["Email"].ToString() == p.Email)
+                {
+                    return "error4";
                 }
             }
             NhanVienDAO.Instance.Them(p);
@@ -148,7 +173,7 @@ namespace SaleApp.Business
             }
             return NhanVienDAO.Instance.Xoa(code);
         }
-        public string Sua(NHANVIEN p)
+        public string Sua(NHANVIEN p,string sdt,string email,string cccd)
         {
             if (p.MaNhanVien == "")
             {
@@ -181,6 +206,35 @@ namespace SaleApp.Business
             if (p.CCCD == "")
             {
                 return "errorCccd";
+            }
+            if (!Regex.IsMatch(p.Email, @"^[\w-]+(\.[\w-]+)*@[\w-]+(\.[\w-]+)*(\.[a-z]{2,7})$", RegexOptions.IgnoreCase))
+            {
+                return "errorEmail1";
+            }
+            if (!Regex.IsMatch(p.CCCD, @"^\d+$"))
+            {
+                return "errorCccd1";
+            }
+            if (!Regex.IsMatch(p.SoDienThoai, @"^(03|07|08|09|01[2-9])[0-9]{8}$"))
+            {
+                return "errorSdt1";
+            }
+            //kiểm tra mã nv,cccd,sdt,email đã tồn tại chưa
+            DataTable check = NhanVienDAO.Instance.Xem();
+            foreach (DataRow existingRow in check.Rows)
+            {
+                if (existingRow["CCCD"].ToString() == p.CCCD && existingRow["CCCD"].ToString() != cccd)
+                {
+                    return "error2";
+                }
+                if (existingRow["SoDienThoai"].ToString() == p.SoDienThoai && existingRow["SoDienThoai"].ToString() != sdt)
+                {
+                    return "error3";
+                }
+                if (existingRow["Email"].ToString() == p.Email && existingRow["Email"].ToString() != email)
+                {
+                    return "error4";
+                }
             }
             NhanVienDAO.Instance.Sua(p);
             return "";

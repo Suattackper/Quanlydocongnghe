@@ -9,6 +9,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Net.Mime.MediaTypeNames;
@@ -137,6 +138,11 @@ namespace SaleApp.View
 
         private void btnThem_Click(object sender, EventArgs e)
         {
+            if (!Regex.IsMatch(txtGiaBan.Text, @"^\d+$"))
+            {
+                MessageBox.Show("Giá bán không hợp lệ!", "Error");
+                return;
+            }
             SANPHAM sp = new SANPHAM();
             sp.MaSanPham = txtMaSP.Text;
             sp.TenSanPham = txtTenSP.Text;
@@ -176,40 +182,16 @@ namespace SaleApp.View
                 case "errorGia":
                     MessageBox.Show("Giá bán không được để trống!", "Error");
                     return;
+                case "errorGia2":
+                    MessageBox.Show("Giá bán không hợp lệ!", "Error");
+                    return;
+                case "errorGia1":
+                    MessageBox.Show("Giá bán phải lớn hơn 0!", "Error");
+                    return;
                 case "error1":
                     MessageBox.Show("Mã sản phẩm đã tồn tại!", "Error");
                     return;
             }
-
-            //if (nccht != cbNhaCungCap.Text)
-            //{
-            //    PHIEUNHAPKHO p = new PHIEUNHAPKHO();
-            //    p.MaNhaCungCap = NhaCungCapBUS.Instance.getMaNhaCungCap(cbNhaCungCap.Text);
-            //    p.MaNhanVien = NhanVienBUS.Instance.getMaNhanVien(sdt);
-            //    PhieuNhapKhoBUS.Instance.Them(p);
-            //}
-
-            //CHITIETPHIEUNHAP c = new CHITIETPHIEUNHAP();
-            //c.MaSanPham = txtMaSP.Text;
-            //c.SoLuongNhap = int.Parse(txtSoLuong.Text);
-            //c.GiaNhap = float.Parse(txtGiaMua.Text);
-            //string checkp = ChiTietPhieuNhapBUS.Instance.Them(c);
-
-            //switch (checkp)
-            //{
-            //    case "errorSop":
-            //        MessageBox.Show("Chưa có số phiếu!", "Error");
-            //        return;
-            //    case "errorSo":
-            //        MessageBox.Show("Số lượng không được để trống!", "Error");
-            //        return;
-            //    case "errorGia":
-            //        MessageBox.Show("Giá mua không được để trống!", "Error");
-            //        return;
-            //    case "errorMa":
-            //        MessageBox.Show("Mã sản phẩm không được để trống!", "Error");
-            //        return;
-            //}
 
             MessageBox.Show("Thêm thành công!", "Thông báo");
             SanPhamBUS.Instance.Xem(dtgvDSSP);
@@ -248,6 +230,10 @@ namespace SaleApp.View
 
         private void btnSua_Click(object sender, EventArgs e)
         {
+            if(!Regex.IsMatch(txtGiaBan.Text, @"^\d+$")){
+                MessageBox.Show("Giá bán không hợp lệ!", "Error");
+                return;
+            }
             SANPHAM sp = new SANPHAM();
             sp.MaSanPham = txtMaSP.Text;
             sp.TenSanPham = txtTenSP.Text;
@@ -295,6 +281,15 @@ namespace SaleApp.View
                     return;
                 case "errorGia":
                     MessageBox.Show("Giá bán không được để trống!", "Error");
+                    return;
+                case "errorGia2":
+                    MessageBox.Show("Giá bán không hợp lệ!", "Error");
+                    return;
+                case "errorGia1":
+                    MessageBox.Show("Giá bán phải lớn hơn 0!", "Error");
+                    return;
+                case "error1":
+                    MessageBox.Show("Mã sản phẩm đã tồn tại!", "Error");
                     return;
             }
             MessageBox.Show("Sửa thành công!", "Thông báo");

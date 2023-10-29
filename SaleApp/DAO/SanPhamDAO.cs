@@ -57,5 +57,14 @@ namespace SaleApp.DAO
             Object[] prms = new object[] { "%" + name + "%" };
             return KetNoiSql.Instance.execSql(sql, prms);
         }
+        public List<SANPHAM> getDataSanPham()
+        {
+            return KetNoiSql.Instance.getDataSanPham();
+        }
+        public DataTable getMaSanPham(string masp)
+        {
+            string sql = $"select MaSanPham,TenSanPham from SANPHAM where TenSanPham = '{masp}'";
+            return KetNoiSql.Instance.execSql(sql);
+        }
     }
 }

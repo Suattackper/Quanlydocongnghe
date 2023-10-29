@@ -28,87 +28,73 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.tsdbtnKhoHang = new System.Windows.Forms.ToolStripDropDownButton();
-            this.itemDSHangTon = new System.Windows.Forms.ToolStripMenuItem();
-            this.itemDSHangNhap = new System.Windows.Forms.ToolStripMenuItem();
-            this.itemDSHangXuat = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStrip1.SuspendLayout();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tHangTon = new System.Windows.Forms.TabPage();
+            this.tNhapKho = new System.Windows.Forms.TabPage();
+            this.tXuatKho = new System.Windows.Forms.TabPage();
+            this.tabControl1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // toolStrip1
+            // tabControl1
             // 
-            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsdbtnKhoHang});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Padding = new System.Windows.Forms.Padding(0, 0, 3, 0);
-            this.toolStrip1.Size = new System.Drawing.Size(1010, 29);
-            this.toolStrip1.TabIndex = 0;
-            this.toolStrip1.Text = "toolStrip1";
+            this.tabControl1.Controls.Add(this.tHangTon);
+            this.tabControl1.Controls.Add(this.tNhapKho);
+            this.tabControl1.Controls.Add(this.tXuatKho);
+            this.tabControl1.Location = new System.Drawing.Point(-1, -1);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(1012, 651);
+            this.tabControl1.TabIndex = 0;
             // 
-            // tsdbtnKhoHang
+            // tHangTon
             // 
-            this.tsdbtnKhoHang.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.tsdbtnKhoHang.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.itemDSHangTon,
-            this.itemDSHangNhap,
-            this.itemDSHangXuat});
-            this.tsdbtnKhoHang.Font = new System.Drawing.Font("Cascadia Code", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.tsdbtnKhoHang.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.tsdbtnKhoHang.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsdbtnKhoHang.Name = "tsdbtnKhoHang";
-            this.tsdbtnKhoHang.Size = new System.Drawing.Size(104, 26);
-            this.tsdbtnKhoHang.Text = "Kho Hàng";
+            this.tHangTon.Location = new System.Drawing.Point(4, 29);
+            this.tHangTon.Name = "tHangTon";
+            this.tHangTon.Padding = new System.Windows.Forms.Padding(3);
+            this.tHangTon.Size = new System.Drawing.Size(1004, 618);
+            this.tHangTon.TabIndex = 0;
+            this.tHangTon.Text = "Hàng tồn";
+            this.tHangTon.UseVisualStyleBackColor = true;
             // 
-            // itemDSHangTon
+            // tNhapKho
             // 
-            this.itemDSHangTon.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.itemDSHangTon.Name = "itemDSHangTon";
-            this.itemDSHangTon.Size = new System.Drawing.Size(274, 26);
-            this.itemDSHangTon.Text = "Danh Sách Hàng Tồn";
+            this.tNhapKho.Location = new System.Drawing.Point(4, 29);
+            this.tNhapKho.Name = "tNhapKho";
+            this.tNhapKho.Padding = new System.Windows.Forms.Padding(3);
+            this.tNhapKho.Size = new System.Drawing.Size(1004, 618);
+            this.tNhapKho.TabIndex = 1;
+            this.tNhapKho.Text = "Nhập kho";
+            this.tNhapKho.UseVisualStyleBackColor = true;
             // 
-            // itemDSHangNhap
+            // tXuatKho
             // 
-            this.itemDSHangNhap.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.itemDSHangNhap.Name = "itemDSHangNhap";
-            this.itemDSHangNhap.Size = new System.Drawing.Size(274, 26);
-            this.itemDSHangNhap.Text = "Nhập Kho";
-            // 
-            // itemDSHangXuat
-            // 
-            this.itemDSHangXuat.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.itemDSHangXuat.Name = "itemDSHangXuat";
-            this.itemDSHangXuat.Size = new System.Drawing.Size(274, 26);
-            this.itemDSHangXuat.Text = "Xuất Kho";
+            this.tXuatKho.Location = new System.Drawing.Point(4, 29);
+            this.tXuatKho.Name = "tXuatKho";
+            this.tXuatKho.Padding = new System.Windows.Forms.Padding(3);
+            this.tXuatKho.Size = new System.Drawing.Size(1004, 618);
+            this.tXuatKho.TabIndex = 2;
+            this.tXuatKho.Text = "Xuất kho";
+            this.tXuatKho.UseVisualStyleBackColor = true;
             // 
             // frmKhoHang
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1010, 648);
-            this.Controls.Add(this.toolStrip1);
-            this.Font = new System.Drawing.Font("Cascadia Code", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.ForeColor = System.Drawing.Color.Black;
+            this.Controls.Add(this.tabControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "frmKhoHang";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "KhoHang";
-            this.toolStrip1.ResumeLayout(false);
-            this.toolStrip1.PerformLayout();
+            this.tabControl1.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private ToolStrip toolStrip1;
-        private ToolStripDropDownButton tsdbtnKhoHang;
-        private ToolStripMenuItem itemDSHangTon;
-        private ToolStripMenuItem itemDSHangNhap;
-        private ToolStripMenuItem itemDSHangXuat;
+        private TabControl tabControl1;
+        private TabPage tHangTon;
+        private TabPage tNhapKho;
+        private TabPage tXuatKho;
     }
 }

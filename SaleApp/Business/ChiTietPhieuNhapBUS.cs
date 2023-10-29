@@ -23,6 +23,15 @@ namespace SaleApp.Business
             }
         }
         private ChiTietPhieuNhapBUS() { }
+        public void XemHangTon(DataGridView dgv)
+        {
+            dgv.DataSource = ChiTietPhieuNhapDAO.Instance.XemHangTon();
+            //Đổi tên cột datafridview
+            dgv.Columns[0].HeaderText = "Mã sản phẩm";
+            dgv.Columns[1].HeaderText = "Tên sản phẩm";
+            dgv.Columns[2].HeaderText = "Loại";
+            dgv.Columns[3].HeaderText = "Số lượng tồn";
+        }
         public string Them(CHITIETPHIEUNHAP p)
         {
             if (p.SoLuongNhap == null)

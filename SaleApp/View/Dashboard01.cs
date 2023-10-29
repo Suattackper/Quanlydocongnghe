@@ -72,7 +72,7 @@ namespace SaleApp.View
 
         private void btnKhoHang_Click(object sender, EventArgs e)
         {
-            frmKhoHang a = new frmKhoHang();
+            frmKhoHang a = new frmKhoHang(sdt);
             LoadForm(a);
         }
 

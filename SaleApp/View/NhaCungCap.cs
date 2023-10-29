@@ -155,6 +155,24 @@ namespace SaleApp.View
                 case "error2":
                     MessageBox.Show("Số điện thoại đã tồn tại!", "Error");
                     return;
+                case "errorTen":
+                    MessageBox.Show("Tên nhà cung cấp không được để trống!", "Error");
+                    return;
+                case "errorMa":
+                    MessageBox.Show("Mã nhà cung cấp không được để trống!", "Error");
+                    return;
+                case "errorSdt":
+                    MessageBox.Show("Số điện thoại không được để trống!", "Error");
+                    return;
+                case "errorSdt2":
+                    MessageBox.Show("Số điện thoại không đúng!", "Error");
+                    return;
+                case "errorDiachi":
+                    MessageBox.Show("Địa chỉ không được để trống!", "Error");
+                    return;
+                case "error1":
+                    MessageBox.Show("Mã nhà cung cấp đã tồn tại!", "Error");
+                    return;
             }
             MessageBox.Show("Sửa thành công!", "Thông báo");
             NhaCungCapBUS.Instance.Xem(dtgrDSNCC);

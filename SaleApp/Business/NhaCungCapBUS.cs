@@ -49,8 +49,8 @@ namespace SaleApp.Business
             {
                 return "errorSdt";
             }
-            //Kiểm tra 1 chuỗi có phải là số điện thoại
-            if (Regex.IsMatch(p.SoDienThoai, @"^(03|07|08|09|01[2-9])[0-9]{8}$"))
+            //@"^(03|07|08|09|01[2-9])[0-9]{8}$" Kiểm tra 1 chuỗi có phải là số điện thoại @"^\d+$"
+            if (!Regex.IsMatch(p.SoDienThoai, @"^(03|07|08|09|01[2-9])[0-9]{8}$"))
             {
                 return "errorSdt2";
             }
@@ -95,6 +95,27 @@ namespace SaleApp.Business
         }
         public string Sua(NHACUNGCAP p, string sdt)
         {
+            if (p.TenNhaCungCap == "")
+            {
+                return "errorTen";
+            }
+            if (p.MaNhaCungCap == "")
+            {
+                return "errorMa";
+            }
+            if (p.SoDienThoai == "")
+            {
+                return "errorSdt";
+            }
+            //@"^(03|07|08|09|01[2-9])[0-9]{8}$" Kiểm tra 1 chuỗi có phải là số điện thoại
+            if (!Regex.IsMatch(p.SoDienThoai, @"^(03|07|08|09|01[2-9])[0-9]{8}$"))
+            {
+                return "errorSdt2";
+            }
+            if (p.DiaChi == "")
+            {
+                return "errorDiachi";
+            }
             // kiểm tra sđt đã tồn tại chưa
             DataTable check = NhaCungCapDAO.Instance.Xem();
             foreach (DataRow existingRow in check.Rows)

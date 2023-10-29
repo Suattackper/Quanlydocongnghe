@@ -25,7 +25,6 @@ D:\c#\Quanlydocongnghe\SaleApp\obj\Debug\net6.0-windows10.0.18362.0\SaleApp.View
 D:\c#\Quanlydocongnghe\SaleApp\obj\Debug\net6.0-windows10.0.18362.0\SaleApp.View.Signin.resources
 D:\c#\Quanlydocongnghe\SaleApp\obj\Debug\net6.0-windows10.0.18362.0\SaleApp.View.frmTrangChu.resources
 D:\c#\Quanlydocongnghe\SaleApp\obj\Debug\net6.0-windows10.0.18362.0\SaleApp.View.XuatHoaDon.resources
-D:\c#\Quanlydocongnghe\SaleApp\obj\Debug\net6.0-windows10.0.18362.0\SaleApp.View.XuatKho.resources
 D:\c#\Quanlydocongnghe\SaleApp\obj\Debug\net6.0-windows10.0.18362.0\SaleApp.csproj.GenerateResource.cache
 D:\c#\Quanlydocongnghe\SaleApp\obj\Debug\net6.0-windows10.0.18362.0\SaleApp.GeneratedMSBuildEditorConfig.editorconfig
 D:\c#\Quanlydocongnghe\SaleApp\obj\Debug\net6.0-windows10.0.18362.0\SaleApp.AssemblyInfoInputs.cache
@@ -57,3 +56,4 @@ D:\c#\Quanlydocongnghe\SaleApp\bin\Debug\net6.0-windows10.0.18362.0\ExcelNumberF
 D:\c#\Quanlydocongnghe\SaleApp\bin\Debug\net6.0-windows10.0.18362.0\Irony.dll
 D:\c#\Quanlydocongnghe\SaleApp\bin\Debug\net6.0-windows10.0.18362.0\SixLabors.Fonts.dll
 D:\c#\Quanlydocongnghe\SaleApp\bin\Debug\net6.0-windows10.0.18362.0\XLParser.dll
+D:\c#\Quanlydocongnghe\SaleApp\obj\Debug\net6.0-windows10.0.18362.0\SaleApp.View.frmXuatKho.resources

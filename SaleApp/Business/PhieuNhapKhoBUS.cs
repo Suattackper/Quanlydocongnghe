@@ -28,5 +28,15 @@ namespace SaleApp.Business
             PhieuNhapKhoDAO.Instance.Them(p);
             return "";
         }
+        public string getSoPhieuNhapKho()
+        {
+            string ma = null;
+            DataTable check = PhieuNhapKhoDAO.Instance.getSoPhieuNhapKho();
+            foreach (DataRow existingRow in check.Rows)
+            {
+                return existingRow["SoPhieuNhapKho"].ToString();
+            }
+            return ma;
+        }
     }
 }

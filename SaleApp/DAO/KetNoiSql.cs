@@ -83,6 +83,33 @@ namespace SaleApp.DAO
 
             return quyens;
         }
+        public List<SANPHAM> getDataSanPham()
+        {
+            List<SANPHAM> quyens = new List<SANPHAM>();
+            DataTable dataTable = new DataTable();
+            String sql = "Select * from SANPHAM";
+            //Kết nối sql
+            SqlConnection conn = new SqlConnection(connsql);
+            conn.Open();
+            //Truy vấn sql
+            SqlCommand command = new SqlCommand(sql, conn);
+            //Lưu dữ liệu vào adapter
+            SqlDataAdapter adapter = new SqlDataAdapter(command);
+            //Lấy dữ liệu vào datatable
+            adapter.Fill(dataTable);
+            conn.Close();
+            //Sao chép dữ liệu từ datatable vào list QUYEN
+            foreach (DataRow row in dataTable.Rows)
+            {
+                SANPHAM quyen = new SANPHAM();
+                // Sao chép giá trị từ các cột tương ứng trong bảng QUYEN
+                quyen.TenSanPham = row["TenSanPham"].ToString();
+                quyen.MaSanPham = row["MaLoaiHang"].ToString();
+                quyens.Add(quyen);
+            }
+
+            return quyens;
+        }
         public List<NHACUNGCAP> getDataNhaCungCap()
         {
             List<NHACUNGCAP> quyens = new List<NHACUNGCAP>();

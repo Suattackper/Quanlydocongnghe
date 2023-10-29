@@ -195,6 +195,7 @@
             // 
             // cbLoaiSP
             // 
+            this.cbLoaiSP.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbLoaiSP.FormattingEnabled = true;
             this.cbLoaiSP.Location = new System.Drawing.Point(311, 90);
             this.cbLoaiSP.Margin = new System.Windows.Forms.Padding(2);

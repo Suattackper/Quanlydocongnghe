@@ -42,9 +42,14 @@ namespace SaleApp.DAO
         }
         public bool Them(PHIEUNHAPKHO p)
         {
-            string sql = "insert into PHIEUNHAPKHO (MaNhaCungCap, TamUng, MaNhanVien, NgayThanhToan) values ( @ma, 0, @manv, GETDATE());";
-            Object[] prms = new object[] { p.MaNhaCungCap, p.MaNhanVien };
+            string sql = "insert into PHIEUNHAPKHO (MaNhaCungCap,TamUng,MaNhanVien,NgayThanhToan) values ( @ma, @tamung, @manv, @ngaytt )";
+            Object[] prms = new object[] { p.MaNhaCungCap, p.TamUng, p.MaNhanVien, p.NgayThanhToan };
             return KetNoiSql.Instance.execNonSql(sql, prms) > 0;
+        }
+        public DataTable getSoPhieuNhapKho()
+        {
+            string sql = "select * from PHIEUNHAPKHO order by SoPhieuNhapKho desc";
+            return KetNoiSql.Instance.execSql(sql);
         }
     }
 }

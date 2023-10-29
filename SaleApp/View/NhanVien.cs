@@ -214,6 +214,24 @@ namespace SaleApp.View
                 case "error1":
                     MessageBox.Show("Mã nhân viên đã tồn tại!", "Error");
                     return;
+                case "error2":
+                    MessageBox.Show("CCCD đã tồn tại!", "Error");
+                    return;
+                case "error3":
+                    MessageBox.Show("Số điện thoại đã tồn tại!", "Error");
+                    return;
+                case "error4":
+                    MessageBox.Show("Email đã tồn tại!", "Error");
+                    return;
+                case "errorEmail1":
+                    MessageBox.Show("Email không hợp lệ!", "Error");
+                    return;
+                case "errorCccd1":
+                    MessageBox.Show("CCCD không hợp lệ!", "Error");
+                    return;
+                case "errorSdt1":
+                    MessageBox.Show("Số điện thoại không hợp lệ!", "Error");
+                    return;
             }
             MessageBox.Show("Thêm thành công!", "Thông báo");
             NhanVienBUS.Instance.Xem(dtgvNhanVien);
@@ -265,7 +283,7 @@ namespace SaleApp.View
                 MessageBox.Show("Mã nhân viên không được thay đổi!", "Error");
                 return;
             }
-            string check = NhanVienBUS.Instance.Sua(nv);
+            string check = NhanVienBUS.Instance.Sua(nv,nv.SoDienThoai,nv.Email,nv.CCCD);
             switch (check)
             {
                 case "errorManv":
@@ -291,6 +309,24 @@ namespace SaleApp.View
                     return;
                 case "errorCccd":
                     MessageBox.Show("CCCD không được để trống!", "Error");
+                    return;
+                case "error2":
+                    MessageBox.Show("CCCD đã tồn tại!", "Error");
+                    return;
+                case "error3":
+                    MessageBox.Show("Số điện thoại đã tồn tại!", "Error");
+                    return;
+                case "error4":
+                    MessageBox.Show("Email đã tồn tại!", "Error");
+                    return;
+                case "errorEmail1":
+                    MessageBox.Show("Email không hợp lệ!", "Error");
+                    return;
+                case "errorCccd1":
+                    MessageBox.Show("CCCD không hợp lệ!", "Error");
+                    return;
+                case "errorSdt1":
+                    MessageBox.Show("Số điện thoại không hợp lệ!", "Error");
                     return;
             }
             MessageBox.Show("Sửa thành công!", "Thông báo");

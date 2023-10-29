@@ -72,6 +72,13 @@ namespace SaleApp.Business
             {
                 return "errorGia";
             }
+            if (!Regex.IsMatch(p.GiaBan.ToString(), @"^\d+$"))
+            {
+                return "errorGia2";
+            }
+            if (p.GiaBan <= 0){
+                return "errorGia1";
+            }
             //kiểm tra mã sp đã tồn tại chưa
             DataTable check = SanPhamDAO.Instance.Xem();
             foreach (DataRow existingRow in check.Rows)
@@ -123,6 +130,7 @@ namespace SaleApp.Business
         }
         public string Sua(SANPHAM p)
         {
+
             if (p.TenSanPham == "")
             {
                 return "errorTen";
@@ -143,6 +151,14 @@ namespace SaleApp.Business
             {
                 return "errorGia";
             }
+            if (!Regex.IsMatch(p.GiaBan.ToString(), @"^\d+$"))
+            {
+                return "errorGia2";
+            }
+            if (p.GiaBan <= 0)
+            {
+                return "errorGia1";
+            }
             SanPhamDAO.Instance.Sua(p);
             return "";
         }
@@ -154,6 +170,30 @@ namespace SaleApp.Business
             dgv.Columns[1].HeaderText = "Tên sản phẩm";
             dgv.Columns[2].HeaderText = "Loại hàng";
             dgv.Columns[3].HeaderText = "Giá bán";
+        }
+        public void getDataSanPham(ComboBox comboBoxQuyen)
+        {
+            // Sử dụng hàm getDataQuyen để lấy danh sách QUYEN từ CSDL
+            List<SANPHAM> loaih = SanPhamDAO.Instance.getDataSanPham();
+
+            // Thêm dữ liệu vào ComboBox
+            comboBoxQuyen.DataSource = loaih; //chọn nguồn dữ liệu
+            comboBoxQuyen.DisplayMember = "TenSanPham"; // Hiển thị tên quyền trong ComboBox
+
+            comboBoxQuyen.SelectedIndex = 0; // Chọn mục đầu tiên
+        }
+        public string getMaSanPham(string ten)
+        {
+            string ma = null;
+            DataTable check = SanPhamDAO.Instance.getMaSanPham(ten);
+            foreach (DataRow existingRow in check.Rows)
+            {
+                if (existingRow["TenSanPham"].ToString() == ten)
+                {
+                    return existingRow["MaSanPham"].ToString();
+                }
+            }
+            return ma;
         }
     }
 }

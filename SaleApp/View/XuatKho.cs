@@ -10,14 +10,17 @@ using System.Windows.Forms;
 
 namespace SaleApp.View
 {
-    public partial class XuatKho : Form
+    public partial class frmXuatKho : Form
     {
-        public XuatKho()
+        private string sdt;
+        public frmXuatKho()
         {
             InitializeComponent();
         }
-
-
-
+        public frmXuatKho(string sdt)
+        {
+            this.sdt = sdt;
+            InitializeComponent();
+        }
     }
 }
