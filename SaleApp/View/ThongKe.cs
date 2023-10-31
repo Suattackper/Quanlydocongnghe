@@ -1,6 +1,6 @@
 ﻿using OfficeOpenXml;
 using SaleApp.Business;
-using SaleApp.DAO;
+using SaleApp.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,12 +13,11 @@ using System.Windows.Forms;
 
 namespace SaleApp.View
 {
-    public partial class frmHangTon : Form
+    public partial class frmThongKe : Form
     {
-        public frmHangTon()
+        public frmThongKe()
         {
             InitializeComponent();
-            KhoBUS.Instance.XemHangTon(dtgvDSHangTon);
         }
         private void ExportToExcel(DataGridView dataGridView, string filePath)
         {
@@ -62,9 +61,26 @@ namespace SaleApp.View
             }
         }
 
-        private void frmHangTon_Load(object sender, EventArgs e)
+        private void frmThongKe_Load(object sender, EventArgs e)
         {
-            KhoBUS.Instance.XemHangTon(dtgvDSHangTon);
+            DonMuaBUS.Instance.ThongKe(dtgvDSDonHang);
+            float tong = 0;
+            foreach (DataGridViewRow row in dtgvDSDonHang.Rows)
+            {
+                tong = tong + float.Parse(row.Cells[4].Value.ToString());
+            }
+            laTong.Text = tong.ToString() + " VND";
+        }
+        
+        private void btnrefresh_Click(object sender, EventArgs e)
+        {
+            DonMuaBUS.Instance.ThongKe(dtgvDSDonHang);
+            float tong = 0;
+            foreach (DataGridViewRow row in dtgvDSDonHang.Rows)
+            {
+                tong = tong + float.Parse(row.Cells[4].Value.ToString());
+            }
+            laTong.Text = tong.ToString() + " VND";
         }
 
         private void btnXuatFile_Click(object sender, EventArgs e)
@@ -80,14 +96,14 @@ namespace SaleApp.View
                     string filePath = saveFileDialog.FileName;
 
                     // Viết dữ liệu vào tệp Excel
-                    ExportToExcel(dtgvDSHangTon, filePath);
+                    ExportToExcel(dtgvDSDonHang, filePath);
                 }
             }
         }
 
-        private void btnrefresh_Click(object sender, EventArgs e)
+        private void btnTimKiem_Click(object sender, EventArgs e)
         {
-            KhoBUS.Instance.XemHangTon(dtgvDSHangTon);
+            DonMuaBUS.Instance.Tim(dtgvDSDonHang, txtTimKiem.Text);
         }
     }
 }

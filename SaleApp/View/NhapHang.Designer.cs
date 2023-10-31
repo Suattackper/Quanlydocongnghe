@@ -100,11 +100,11 @@
             this.btnNhap.FlatAppearance.BorderSize = 0;
             this.btnNhap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNhap.ForeColor = System.Drawing.Color.White;
-            this.btnNhap.Location = new System.Drawing.Point(138, 226);
+            this.btnNhap.Location = new System.Drawing.Point(46, 226);
             this.btnNhap.Margin = new System.Windows.Forms.Padding(2);
             this.btnNhap.Name = "btnNhap";
             this.btnNhap.Size = new System.Drawing.Size(90, 37);
-            this.btnNhap.TabIndex = 17;
+            this.btnNhap.TabIndex = 3;
             this.btnNhap.Text = "Nhập";
             this.btnNhap.UseVisualStyleBackColor = false;
             this.btnNhap.Click += new System.EventHandler(this.btnNhap_Click);
@@ -116,7 +116,7 @@
             this.dtpNgayThanhToan.Location = new System.Drawing.Point(85, 193);
             this.dtpNgayThanhToan.Name = "dtpNgayThanhToan";
             this.dtpNgayThanhToan.Size = new System.Drawing.Size(208, 27);
-            this.dtpNgayThanhToan.TabIndex = 19;
+            this.dtpNgayThanhToan.TabIndex = 2;
             // 
             // lNgayThanhToan
             // 
@@ -135,7 +135,7 @@
             this.cbNhaCungCap.Location = new System.Drawing.Point(150, 59);
             this.cbNhaCungCap.Name = "cbNhaCungCap";
             this.cbNhaCungCap.Size = new System.Drawing.Size(154, 30);
-            this.cbNhaCungCap.TabIndex = 17;
+            this.cbNhaCungCap.TabIndex = 0;
             // 
             // txtTamUng
             // 
@@ -143,7 +143,7 @@
             this.txtTamUng.Margin = new System.Windows.Forms.Padding(2);
             this.txtTamUng.Name = "txtTamUng";
             this.txtTamUng.Size = new System.Drawing.Size(154, 27);
-            this.txtTamUng.TabIndex = 6;
+            this.txtTamUng.TabIndex = 1;
             this.txtTamUng.TextChanged += new System.EventHandler(this.txtTamUng_TextChanged);
             // 
             // label6
@@ -185,7 +185,7 @@
             this.cbSanPham.Location = new System.Drawing.Point(170, 35);
             this.cbSanPham.Name = "cbSanPham";
             this.cbSanPham.Size = new System.Drawing.Size(151, 30);
-            this.cbSanPham.TabIndex = 16;
+            this.cbSanPham.TabIndex = 0;
             // 
             // btnReset
             // 
@@ -197,7 +197,7 @@
             this.btnReset.Margin = new System.Windows.Forms.Padding(2);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(95, 37);
-            this.btnReset.TabIndex = 13;
+            this.btnReset.TabIndex = 6;
             this.btnReset.Text = "Reset";
             this.btnReset.UseVisualStyleBackColor = false;
             this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
@@ -212,7 +212,7 @@
             this.btnXoa.Margin = new System.Windows.Forms.Padding(2);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(90, 37);
-            this.btnXoa.TabIndex = 14;
+            this.btnXoa.TabIndex = 5;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = false;
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
@@ -225,7 +225,7 @@
             this.cbLoaiHang.Margin = new System.Windows.Forms.Padding(2);
             this.cbLoaiHang.Name = "cbLoaiHang";
             this.cbLoaiHang.Size = new System.Drawing.Size(154, 30);
-            this.cbLoaiHang.TabIndex = 11;
+            this.cbLoaiHang.TabIndex = 3;
             // 
             // btnThem
             // 
@@ -237,7 +237,7 @@
             this.btnThem.Margin = new System.Windows.Forms.Padding(2);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(90, 37);
-            this.btnThem.TabIndex = 11;
+            this.btnThem.TabIndex = 4;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = false;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
@@ -248,7 +248,7 @@
             this.txtSoLuong.Margin = new System.Windows.Forms.Padding(2);
             this.txtSoLuong.Name = "txtSoLuong";
             this.txtSoLuong.Size = new System.Drawing.Size(154, 27);
-            this.txtSoLuong.TabIndex = 8;
+            this.txtSoLuong.TabIndex = 1;
             // 
             // txtGiaNhap
             // 
@@ -256,7 +256,7 @@
             this.txtGiaNhap.Margin = new System.Windows.Forms.Padding(2);
             this.txtGiaNhap.Name = "txtGiaNhap";
             this.txtGiaNhap.Size = new System.Drawing.Size(154, 27);
-            this.txtGiaNhap.TabIndex = 7;
+            this.txtGiaNhap.TabIndex = 2;
             // 
             // label12
             // 
@@ -347,21 +347,21 @@
             // 
             // masp
             // 
-            this.masp.HeaderText = "Mã sp";
+            this.masp.HeaderText = "Mã SP";
             this.masp.MinimumWidth = 6;
             this.masp.Name = "masp";
             this.masp.ReadOnly = true;
             // 
             // tensp
             // 
-            this.tensp.HeaderText = "Tên sp";
+            this.tensp.HeaderText = "Tên SP";
             this.tensp.MinimumWidth = 6;
             this.tensp.Name = "tensp";
             this.tensp.ReadOnly = true;
             // 
             // loai
             // 
-            this.loai.HeaderText = "Loại";
+            this.loai.HeaderText = "Loại SP";
             this.loai.MinimumWidth = 6;
             this.loai.Name = "loai";
             this.loai.ReadOnly = true;

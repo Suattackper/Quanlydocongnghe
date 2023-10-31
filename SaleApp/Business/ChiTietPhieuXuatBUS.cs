@@ -9,27 +9,27 @@ using System.Threading.Tasks;
 
 namespace SaleApp.Business
 {
-    internal class ChiTietPhieuNhapBUS
+    internal class ChiTietPhieuXuatBUS
     {
-        private static ChiTietPhieuNhapBUS instance;
+        private static ChiTietPhieuXuatBUS instance;
 
-        internal static ChiTietPhieuNhapBUS Instance
+        internal static ChiTietPhieuXuatBUS Instance
         {
             get
             {
                 if (instance == null)
-                    instance = new ChiTietPhieuNhapBUS();
+                    instance = new ChiTietPhieuXuatBUS();
                 return instance;
             }
         }
-        private ChiTietPhieuNhapBUS() { }
-        public string Them(CHITIETPHIEUNHAP p)
+        private ChiTietPhieuXuatBUS() { }
+        public string Them(CHITIETPHIEUXUAT p)
         {
-            if (p.SoLuongNhap == null)
+            if (p.SoLuong == null)
             {
                 return "errorSo";
             }
-            if (p.GiaNhap == null)
+            if (p.DonGia == null)
             {
                 return "errorGia";
             }
@@ -37,13 +37,13 @@ namespace SaleApp.Business
             {
                 return "errorMa";
             }
-            if (p.SoPhieuNhapKho == null)
+            if (p.SoPhieuXuatKho == null)
             {
                 return "errorSop";
             }
             KHO k = new KHO();
             k.MaSanPham = p.MaSanPham;
-            k.SoLuong = p.SoLuongNhap;
+            k.SoLuong = -p.SoLuong;
             bool kt = false;
             //kiểm tra mã sp đã tồn tại chưa
             DataTable check = KhoDAO.Instance.Xem();
@@ -57,7 +57,7 @@ namespace SaleApp.Business
             }
             if (kt) KhoDAO.Instance.CatNhatThem(k);
             else KhoDAO.Instance.Them(k);
-            ChiTietPhieuNhapDAO.Instance.Them(p);
+            ChiTietPhieuXuatDAO.Instance.Them(p);
             return "";
         }
     }

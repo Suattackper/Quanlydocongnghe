@@ -28,11 +28,6 @@ namespace SaleApp.DAO
             string sql = "SELECT * FROM CHITIETPHIEUNHAP";
             return KetNoiSql.Instance.execSql(sql);
         }
-        public DataTable XemHangTon()
-        {
-            string sql = "select s.masanpham,s.tensanpham,l.tenloaihang,SUM(pn.soluongnhap) soluong from sanpham s inner join chitietphieunhap pn on s.masanpham=pn.masanpham inner join loaihang l on l.maloaihang = s.maloaihang group by s.masanpham,s.tensanpham,l.tenloaihang";
-            return KetNoiSql.Instance.execSql(sql);
-        }
         public bool Xoa(string pCode)
         {
             string sql = "DELETE CHITIETPHIEUNHAP WHERE SoPhieuNhapKho = @code";

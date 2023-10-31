@@ -57,3 +57,7 @@ D:\c#\Quanlydocongnghe\SaleApp\bin\Debug\net6.0-windows10.0.18362.0\Irony.dll
 D:\c#\Quanlydocongnghe\SaleApp\bin\Debug\net6.0-windows10.0.18362.0\SixLabors.Fonts.dll
 D:\c#\Quanlydocongnghe\SaleApp\bin\Debug\net6.0-windows10.0.18362.0\XLParser.dll
 D:\c#\Quanlydocongnghe\SaleApp\obj\Debug\net6.0-windows10.0.18362.0\SaleApp.View.frmXuatKho.resources
+D:\c#\Quanlydocongnghe\SaleApp\bin\Debug\net6.0-windows10.0.18362.0\aa-DJ\SaleApp.resources.dll
+D:\c#\Quanlydocongnghe\SaleApp\obj\Debug\net6.0-windows10.0.18362.0\SaleApp.View.frmThongKe.resources
+D:\c#\Quanlydocongnghe\SaleApp\obj\Debug\net6.0-windows10.0.18362.0\SaleApp.View.frmThongKe.aa-DJ.resources
+D:\c#\Quanlydocongnghe\SaleApp\obj\Debug\net6.0-windows10.0.18362.0\aa-DJ\SaleApp.resources.dll

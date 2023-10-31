@@ -15,6 +15,11 @@
         },
         "runtime": {
           "SaleApp.dll": {}
+        },
+        "resources": {
+          "aa-DJ/SaleApp.resources.dll": {
+            "locale": "aa-DJ"
+          }
         }
       },
       "runtimepack.Microsoft.Windows.SDK.NET.Ref/10.0.18362.26": {

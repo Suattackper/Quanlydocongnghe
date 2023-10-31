@@ -1,14 +1,14 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace SaleApp.Model
 {
-
-    internal class CHITIETPHIEUXUAT
+    internal class KHO
     {
-        public int SoPhieuXuatKho { get; set; }
         public string MaSanPham { get; set; }
         public int SoLuong { get; set; }
-        public float DonGia { get; set; }
     }
 }

@@ -62,7 +62,6 @@ namespace SaleApp.View
             // 
             this.txtPassword.Location = new System.Drawing.Point(698, 276);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.txtPassword.Multiline = true;
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(284, 27);
@@ -72,7 +71,6 @@ namespace SaleApp.View
             // 
             this.txtUsername.Location = new System.Drawing.Point(698, 168);
             this.txtUsername.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.txtUsername.Multiline = true;
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(284, 27);
             this.txtUsername.TabIndex = 25;

@@ -20,3 +20,19 @@ group by s.masanpham,s.tensanpham,l.tenloaihang
 
 select * from PHIEUNHAPKHO order by SoPhieuNhapKho desc
 
+SELECT * FROM CHITIETPHIEUNHAP where masanpham = '1' order by sophieunhapkho
+
+select k.masanpham,s.tensanpham,l.tenloaihang,k.soluong from kho k inner join sanpham s on s.masanpham = k.masanpham inner join loaihang l on l.maloaihang = s.maloaihang
+
+select * from kho
+
+update KHO set soluong = soluong+1 where masanpham = 1 ;
+
+select k.masanpham,s.tensanpham,l.tenloaihang,k.soluong from kho k 
+inner join sanpham s on s.masanpham = k.masanpham inner join loaihang l on l.maloaihang = s.maloaihang
+
+select distinct d.madonmua, k.hoten, d.ngaytao, d.manhanvien, d.tongtien from donmua d
+inner join khachhang k on d.makhachhang=k.makhachhang
+inner join chitietdonmua c on c.madonmua=d.madonmua
+
+

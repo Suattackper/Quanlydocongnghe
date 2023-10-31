@@ -28,6 +28,8 @@ namespace SaleApp.View
             txtSoLuong.Text = "";
             txtGiaNhap.Text = "";
             cbNhaCungCap.Focus();
+            cbNhaCungCap.Enabled = true;
+            txtTamUng.Enabled = true;
             dtgvDSSPNhap.Rows.Clear();
         }
         private void btnReset_Click(object sender, EventArgs e)
@@ -207,7 +209,8 @@ namespace SaleApp.View
                     c.GiaNhap = float.Parse(row.Cells[4].Value.ToString());
                     ChiTietPhieuNhapBUS.Instance.Them(c);
                 }
-                MessageBox.Show("Thêm thành công!", "Thông báo");
+                MessageBox.Show("Nhập kho thành công!", "Thông báo");
+                reset();
             }
             else
             {

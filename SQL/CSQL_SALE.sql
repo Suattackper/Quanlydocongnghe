@@ -2,7 +2,6 @@
 GO
 USE QUAN_LY_BAN_HANG;
 GO
-
 -- COLLATE SQL_Latin1_General_CP1_CS_AS lệnh dùng để phân biệt hoa thường trong sqlserver
 
 CREATE TABLE KHACHHANG (
@@ -93,8 +92,8 @@ CREATE TABLE PHIEUNHAPKHO (
 );
 
 CREATE TABLE CHITIETPHIEUNHAP (
-	MaSanPham varchar(20) not null,
 	SoPhieuNhapKho int not null,
+	MaSanPham varchar(20) not null,
 	SoLuongNhap int not null,
 	GiaNhap decimal(18,2) not null,
 	foreign key (SoPhieuNhapKho) references PHIEUNHAPKHO (SoPhieuNhapKho),
@@ -124,4 +123,10 @@ CREATE TABLE TAIKHOAN (
 	MatKhau varchar(20) COLLATE SQL_Latin1_General_CP1_CS_AS not null,
 	MaQuyen int not null,
 	foreign key (MaQuyen) references QUYEN (MaQuyen)
+);
+
+CREATE TABLE KHO (
+	MaSanPham varchar(20) not null,
+	SoLuong int not null check(SoLuong>=0),
+	foreign key (MaSanPham) references SANPHAM (MaSanPham)
 );

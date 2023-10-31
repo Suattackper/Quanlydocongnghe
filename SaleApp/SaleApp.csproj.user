@@ -13,6 +13,9 @@
     <Compile Update="View\KhoHang.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="View\ThongKe.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="View\TrangChu.cs">
       <SubType>Form</SubType>
     </Compile>
