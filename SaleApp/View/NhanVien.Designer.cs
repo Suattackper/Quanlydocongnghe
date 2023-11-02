@@ -312,6 +312,7 @@ namespace SaleApp.View
             this.dtgvNhanVien.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.dtgvNhanVien.Name = "dtgvNhanVien";
             this.dtgvNhanVien.ReadOnly = true;
+            this.dtgvNhanVien.RowHeadersVisible = false;
             this.dtgvNhanVien.RowHeadersWidth = 62;
             this.dtgvNhanVien.RowTemplate.Height = 28;
             this.dtgvNhanVien.Size = new System.Drawing.Size(973, 306);

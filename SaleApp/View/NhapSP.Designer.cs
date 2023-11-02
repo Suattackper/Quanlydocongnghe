@@ -296,6 +296,7 @@
             this.dtgvDSSP.Margin = new System.Windows.Forms.Padding(2);
             this.dtgvDSSP.Name = "dtgvDSSP";
             this.dtgvDSSP.ReadOnly = true;
+            this.dtgvDSSP.RowHeadersVisible = false;
             this.dtgvDSSP.RowHeadersWidth = 62;
             this.dtgvDSSP.RowTemplate.Height = 33;
             this.dtgvDSSP.Size = new System.Drawing.Size(952, 244);

@@ -234,7 +234,7 @@ namespace SaleApp.View
                     return;
             }
             MessageBox.Show("Thêm thành công!", "Thông báo");
-            NhanVienBUS.Instance.Xem(dtgvNhanVien);
+            reset();
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
@@ -330,7 +330,7 @@ namespace SaleApp.View
                     return;
             }
             MessageBox.Show("Sửa thành công!", "Thông báo");
-            NhanVienBUS.Instance.Xem(dtgvNhanVien);
+            reset();
         }
 
         private void btnXuatExel_Click(object sender, EventArgs e)

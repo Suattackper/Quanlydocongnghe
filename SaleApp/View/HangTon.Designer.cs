@@ -60,6 +60,7 @@
             this.dtgvDSHangTon.Margin = new System.Windows.Forms.Padding(2);
             this.dtgvDSHangTon.Name = "dtgvDSHangTon";
             this.dtgvDSHangTon.ReadOnly = true;
+            this.dtgvDSHangTon.RowHeadersVisible = false;
             this.dtgvDSHangTon.RowHeadersWidth = 62;
             this.dtgvDSHangTon.RowTemplate.Height = 33;
             this.dtgvDSHangTon.Size = new System.Drawing.Size(934, 421);

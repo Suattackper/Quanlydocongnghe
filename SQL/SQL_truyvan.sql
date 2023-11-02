@@ -1,4 +1,4 @@
-USE QUAN_LY_BAN_HANG;
+﻿USE QUAN_LY_BAN_HANG;
 GO
 
 select s.masanpham,s.tensanpham,l.tenloaihang,s.giaban
@@ -34,5 +34,17 @@ inner join sanpham s on s.masanpham = k.masanpham inner join loaihang l on l.mal
 select distinct d.madonmua, k.hoten, d.ngaytao, d.manhanvien, d.tongtien from donmua d
 inner join khachhang k on d.makhachhang=k.makhachhang
 inner join chitietdonmua c on c.madonmua=d.madonmua
+
+select sum(tongtien) tong from donmua 
+
+select count(makhachhang) tongkh from khachhang
+
+
+SELECT SUM(tong_soluong) AS tong_tat_ca
+FROM (
+    SELECT SUM(soluong) AS tong_soluong FROM chitietdonmua
+    UNION ALL -- hợp 2 bảng thảnh 1
+    SELECT SUM(soluong) AS tong_soluong FROM chitietphieuxuat
+) AS combined_data; --AS combined_data tạo bảng tạm thời để truy vấn
 
 

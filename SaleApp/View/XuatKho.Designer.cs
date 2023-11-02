@@ -197,12 +197,12 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(22, 109);
+            this.label10.Location = new System.Drawing.Point(32, 109);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(110, 22);
+            this.label10.Size = new System.Drawing.Size(100, 22);
             this.label10.TabIndex = 4;
-            this.label10.Text = "Số lượng :";
+            this.label10.Text = "Số lượng:";
             // 
             // label8
             // 
@@ -277,6 +277,7 @@
             this.dtgvDSSPXuat.Margin = new System.Windows.Forms.Padding(2);
             this.dtgvDSSPXuat.Name = "dtgvDSSPXuat";
             this.dtgvDSSPXuat.ReadOnly = true;
+            this.dtgvDSSPXuat.RowHeadersVisible = false;
             this.dtgvDSSPXuat.RowHeadersWidth = 62;
             this.dtgvDSSPXuat.RowTemplate.Height = 33;
             this.dtgvDSSPXuat.Size = new System.Drawing.Size(970, 252);

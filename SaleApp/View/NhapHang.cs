@@ -49,7 +49,7 @@ namespace SaleApp.View
         {
             if (txtTamUng.Text != "")
             {
-                if (!Regex.IsMatch(txtTamUng.Text, @"^\d+$"))
+                if (!Regex.IsMatch(txtTamUng.Text, @"^\d+(\.\d+)?$"))
                 {
                     txtTamUng.Text = "";
                     MessageBox.Show("Tạm ứng phải là số lớn hơn 0!", "Error!");
@@ -86,7 +86,7 @@ namespace SaleApp.View
                 MessageBox.Show("Giá nhập không được để trống!", "Error");
                 return;
             }
-            if (!Regex.IsMatch(txtGiaNhap.Text, @"^\d+$") || float.Parse(txtGiaNhap.Text) <= 0)
+            if (!Regex.IsMatch(txtGiaNhap.Text, @"^\d+(\.\d+)?$") || float.Parse(txtGiaNhap.Text) <= 0)
             {
                 MessageBox.Show("Giá nhập không đúng!", "Error");
                 return;
@@ -109,6 +109,11 @@ namespace SaleApp.View
                     return;
                 }
             }
+            cbSanPham.SelectedIndex = 0;
+            cbLoaiHang.SelectedIndex = 0;
+            txtSoLuong.Text = "";
+            txtGiaNhap.Text = "";
+            cbSanPham.Focus();
             dtgvDSSPNhap.Rows.Add(SanPhamBUS.Instance.getMaSanPham(cbSanPham.Text),cbSanPham.Text,cbLoaiHang.Text,txtSoLuong.Text,txtGiaNhap.Text,cbNhaCungCap.Text);
             if (dtgvDSSPNhap.Rows.Count > 0)
             {

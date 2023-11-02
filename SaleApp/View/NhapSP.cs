@@ -92,6 +92,7 @@ namespace SaleApp.View
                 txtMaSP.Text = selectedRow.Cells[0].Value.ToString();
                 txtTenSP.Text = selectedRow.Cells[1].Value.ToString();
                 cbLoaiSP.Text = selectedRow.Cells[2].Value.ToString();
+                //txtGiaBan.Text = decimal.Parse(selectedRow.Cells[3].Value.ToString()).ToString("N0") + " VND";
                 txtGiaBan.Text = selectedRow.Cells[3].Value.ToString();
                 byte[] imageData = SanPhamBUS.Instance.getAnh(selectedRow.Cells[0].Value.ToString());
                 if (imageData != null)
@@ -138,7 +139,7 @@ namespace SaleApp.View
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            if (!Regex.IsMatch(txtGiaBan.Text, @"^\d+$"))
+            if (!Regex.IsMatch(txtGiaBan.Text, @"^\d+(\.\d+)?$"))
             {
                 MessageBox.Show("Giá bán không hợp lệ!", "Error");
                 return;
@@ -194,7 +195,7 @@ namespace SaleApp.View
             }
 
             MessageBox.Show("Thêm thành công!", "Thông báo");
-            SanPhamBUS.Instance.Xem(dtgvDSSP);
+            reset();
         }
 
         private void btnChon_Click(object sender, EventArgs e)
@@ -230,7 +231,7 @@ namespace SaleApp.View
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            if(!Regex.IsMatch(txtGiaBan.Text, @"^\d+$")){
+            if(!Regex.IsMatch(txtGiaBan.Text, @"^\d+(\.\d+)?$")){
                 MessageBox.Show("Giá bán không hợp lệ!", "Error");
                 return;
             }
@@ -293,7 +294,7 @@ namespace SaleApp.View
                     return;
             }
             MessageBox.Show("Sửa thành công!", "Thông báo");
-            SanPhamBUS.Instance.Xem(dtgvDSSP);
+            reset();
         }
 
         private void btnTimKiem_Click(object sender, EventArgs e)

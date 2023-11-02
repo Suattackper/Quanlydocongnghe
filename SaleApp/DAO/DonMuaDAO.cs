@@ -38,5 +38,17 @@ namespace SaleApp.DAO
             Object[] prms = new object[] { "%" + name + "%" };
             return KetNoiSql.Instance.execSql(sql, prms);
         }
+        public DataTable TimTheoMadm(int ma)
+        {
+            string sql = "select * from donmua WHERE madonmua = @keyword ";
+            Object[] prms = new object[] { ma };
+            return KetNoiSql.Instance.execSql(sql, prms);
+        }
+        public DataTable XemChiTietDon(int ma)
+        {
+            string sql = "select c.masanpham, s.tensanpham, c.soluong, s.giaban, s.giaban*c.soluong thanhtien from chitietdonmua c inner join sanpham s on s.masanpham = c.masanpham where c.madonmua = @keyword ";
+            Object[] prms = new object[] { ma };
+            return KetNoiSql.Instance.execSql(sql, prms);
+        }
     }
 }

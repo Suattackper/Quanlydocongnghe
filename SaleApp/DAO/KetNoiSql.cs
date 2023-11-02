@@ -164,6 +164,78 @@ namespace SaleApp.DAO
             conn.Close();
             return user;
         }
+        public string getTongDoanhThu()
+        {
+            decimal tong = 0;
+            SqlConnection conn = new SqlConnection(connsql);
+            conn.Open();
+            //Tạo command tên sp_checkLogin để truy vấn csdl
+            SqlCommand command = new SqlCommand("sp_getTongDoanhThu", conn);
+            //Chọn loại command
+            command.CommandType = CommandType.StoredProcedure;
+            command.Connection = conn;
+            //Thực hiện truy vấn csdl
+            SqlDataReader reader = command.ExecuteReader();
+            if (reader.HasRows)     //có dữ liệu
+            {
+                while (reader.Read())   //đọc dữ liệu
+                {
+                    tong = reader.GetDecimal(0); //lấy dữ liệu cột đầu tiên
+                }
+            }
+            else return "0";
+            reader.Close();
+            conn.Close();
+            return tong.ToString();
+        }
+        public string getTongSanPham()
+        {
+            int tong = 0;
+            SqlConnection conn = new SqlConnection(connsql);
+            conn.Open();
+            //Tạo command tên sp_checkLogin để truy vấn csdl
+            SqlCommand command = new SqlCommand("sp_getTongSanPham", conn);
+            //Chọn loại command
+            command.CommandType = CommandType.StoredProcedure;
+            command.Connection = conn;
+            //Thực hiện truy vấn csdl
+            SqlDataReader reader = command.ExecuteReader();
+            if (reader.HasRows)     //có dữ liệu
+            {
+                while (reader.Read())   //đọc dữ liệu
+                {
+                    tong = reader.GetInt32(0); //lấy dữ liệu cột đầu tiên
+                }
+            }
+            else return "0";
+            reader.Close();
+            conn.Close();
+            return tong.ToString();
+        }
+        public string getTongKhachHang()
+        {
+            int tong = 0;
+            SqlConnection conn = new SqlConnection(connsql);
+            conn.Open();
+            //Tạo command tên sp_checkLogin để truy vấn csdl
+            SqlCommand command = new SqlCommand("sp_getTongKhachHang", conn);
+            //Chọn loại command
+            command.CommandType = CommandType.StoredProcedure;
+            command.Connection = conn;
+            //Thực hiện truy vấn csdl
+            SqlDataReader reader = command.ExecuteReader();
+            if (reader.HasRows)     //có dữ liệu
+            {
+                while (reader.Read())   //đọc dữ liệu
+                {
+                    tong = reader.GetInt32(0); //lấy dữ liệu cột đầu tiên
+                }
+            }
+            else return "0";
+            reader.Close();
+            conn.Close();
+            return tong.ToString();
+        }
         // SELECT ....
         public DataTable execSql(string sql, params Object[] args)
         {

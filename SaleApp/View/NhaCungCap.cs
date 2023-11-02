@@ -107,7 +107,7 @@ namespace SaleApp.View
                     return;
             }
             MessageBox.Show("Thêm thành công!", "Thông báo");
-            NhaCungCapBUS.Instance.Xem(dtgrDSNCC);
+            reset();
         }
 
         private void frmNhaCungCap_Load(object sender, EventArgs e)
@@ -175,7 +175,7 @@ namespace SaleApp.View
                     return;
             }
             MessageBox.Show("Sửa thành công!", "Thông báo");
-            NhaCungCapBUS.Instance.Xem(dtgrDSNCC);
+            reset();
         }
 
         private void dtgrDSNCC_SelectionChanged(object sender, EventArgs e)

@@ -72,7 +72,7 @@ namespace SaleApp.Business
             {
                 return "errorGia";
             }
-            if (!Regex.IsMatch(p.GiaBan.ToString(), @"^\d+$"))
+            if (!Regex.IsMatch(p.GiaBan.ToString(), @"^\d+(\.\d+)?$"))
             {
                 return "errorGia2";
             }
@@ -103,7 +103,6 @@ namespace SaleApp.Business
                 {
                     MessageBox.Show("Không thể xóa sản phẩm này này!", "Thông báo!");
                     return false;
-                    break;
                 }
             }
             DataTable check1 = ChiTietPhieuXuatDAO.Instance.Xem();
@@ -113,7 +112,6 @@ namespace SaleApp.Business
                 {
                     MessageBox.Show("Không thể xóa sản phẩm này này!", "Thông báo!");
                     return false;
-                    break;
                 }
             }
             DataTable check2 = ChiTietDonMuaDAO.Instance.Xem();
@@ -123,7 +121,6 @@ namespace SaleApp.Business
                 {
                     MessageBox.Show("Không thể xóa sản phẩm này này!", "Thông báo!");
                     return false;
-                    break;
                 }
             }
             return SanPhamDAO.Instance.Xoa(code);
@@ -151,7 +148,7 @@ namespace SaleApp.Business
             {
                 return "errorGia";
             }
-            if (!Regex.IsMatch(p.GiaBan.ToString(), @"^\d+$"))
+            if (!Regex.IsMatch(p.GiaBan.ToString(), @"^\d+(\.\d+)?$"))
             {
                 return "errorGia2";
             }

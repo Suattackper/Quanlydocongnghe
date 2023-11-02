@@ -15,6 +15,7 @@ namespace SaleApp.View
 {
     public partial class frmThongKe : Form
     {
+        private string madh;
         public frmThongKe()
         {
             InitializeComponent();
@@ -64,12 +65,12 @@ namespace SaleApp.View
         private void frmThongKe_Load(object sender, EventArgs e)
         {
             DonMuaBUS.Instance.ThongKe(dtgvDSDonHang);
-            float tong = 0;
+            decimal tong = 0;
             foreach (DataGridViewRow row in dtgvDSDonHang.Rows)
             {
-                tong = tong + float.Parse(row.Cells[4].Value.ToString());
+                tong = tong + decimal.Parse(row.Cells[4].Value.ToString());
             }
-            laTong.Text = tong.ToString() + " VND";
+            laTong.Text = tong.ToString("N0") + " VND";
         }
         
         private void btnrefresh_Click(object sender, EventArgs e)
@@ -104,6 +105,29 @@ namespace SaleApp.View
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
             DonMuaBUS.Instance.Tim(dtgvDSDonHang, txtTimKiem.Text);
+        }
+
+        private void dtgvDSDonHang_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            // Kiểm tra xem người dùng đã bấm vào một ô hợp lệ hay không
+            if (e.RowIndex >= 0 && e.ColumnIndex >= 0)
+            {
+                // Lấy hàng được chọn
+                DataGridViewRow selectedRow = dtgvDSDonHang.Rows[e.RowIndex];
+                // Kiểm tra xem có đủ số cột không
+                if (selectedRow.Cells.Count > 1)
+                {
+                    btnXemCTDH.Visible = true;
+                    // Lấy dữ liệu của cột thứ 1
+                    madh = selectedRow.Cells[0].Value.ToString();
+                }
+            }
+        }
+
+        private void btnXemCTDH_Click(object sender, EventArgs e)
+        {
+            frmChiTietDon a = new frmChiTietDon(madh);
+            a.ShowDialog();
         }
     }
 }

@@ -38,6 +38,7 @@
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.laTong = new System.Windows.Forms.Label();
+            this.btnXemCTDH = new System.Windows.Forms.Button();
             this.gbDSHangTon.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvDSDonHang)).BeginInit();
             this.SuspendLayout();
@@ -68,7 +69,9 @@
             resources.ApplyResources(this.dtgvDSDonHang, "dtgvDSDonHang");
             this.dtgvDSDonHang.Name = "dtgvDSDonHang";
             this.dtgvDSDonHang.ReadOnly = true;
+            this.dtgvDSDonHang.RowHeadersVisible = false;
             this.dtgvDSDonHang.RowTemplate.Height = 33;
+            this.dtgvDSDonHang.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvDSDonHang_CellClick);
             // 
             // btnrefresh
             // 
@@ -110,10 +113,20 @@
             this.laTong.ForeColor = System.Drawing.Color.Red;
             this.laTong.Name = "laTong";
             // 
+            // btnXemCTDH
+            // 
+            this.btnXemCTDH.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            resources.ApplyResources(this.btnXemCTDH, "btnXemCTDH");
+            this.btnXemCTDH.ForeColor = System.Drawing.Color.White;
+            this.btnXemCTDH.Name = "btnXemCTDH";
+            this.btnXemCTDH.UseVisualStyleBackColor = false;
+            this.btnXemCTDH.Click += new System.EventHandler(this.btnXemCTDH_Click);
+            // 
             // frmThongKe
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnXemCTDH);
             this.Controls.Add(this.laTong);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -143,5 +156,6 @@
         private TextBox txtTimKiem;
         private Label label2;
         private Label laTong;
+        private Button btnXemCTDH;
     }
 }

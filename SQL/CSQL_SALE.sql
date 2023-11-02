@@ -54,7 +54,6 @@ CREATE TABLE DONMUA (
 	MaDonMua int identity(1,1) not null,
 	MaNhanVien varchar(20) not null,
 	MaKhachHang varchar(20) not null,
-	TenDonMua nvarchar(50) not null,
 	NgayTao DATE DEFAULT GETDATE() NOT NULL CHECK (NgayTao > DATEADD(DAY, -1, GETDATE()) AND NgayTao < DATEADD(DAY, 1, GETDATE())),
 	TongTien decimal(18,2) not null,
 	primary key (MaDonMua),
@@ -67,6 +66,7 @@ CREATE TABLE CHITIETDONMUA (
 	MaDonMua int not null,
 	SoLuong int not null check(SoLuong>=0),
 	DonGia decimal(18,2) not null check(DonGia>=0),
+	primary key (MaDonMua,MaSanPham),
 	foreign key (MaSanPham) references SANPHAM(MaSanPham),
 	foreign key (MaDonMua) references DONMUA(MaDonMua)
 );
@@ -96,6 +96,7 @@ CREATE TABLE CHITIETPHIEUNHAP (
 	MaSanPham varchar(20) not null,
 	SoLuongNhap int not null,
 	GiaNhap decimal(18,2) not null,
+	primary key (SoPhieuNhapKho,MaSanPham),
 	foreign key (SoPhieuNhapKho) references PHIEUNHAPKHO (SoPhieuNhapKho),
 	foreign key (MaSanPham) references SANPHAM (MaSanPham)
 );
@@ -114,6 +115,7 @@ CREATE TABLE CHITIETPHIEUXUAT (
 	MaSanPham varchar(20) not null,
 	SoLuong int not null check(SoLuong>=0),
 	DonGia decimal(18,2) not null check(DonGia>=0),
+	primary key (SoPhieuXuatKho,MaSanPham),
 	foreign key (SoPhieuXuatKho) references PHIEUXUATKHO (SoPhieuXuatKho),
 	foreign key (MaSanPham) references SANPHAM (MaSanPham)
 );

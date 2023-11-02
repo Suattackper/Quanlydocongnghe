@@ -71,7 +71,7 @@ namespace SaleApp.View
                 MessageBox.Show("Đơn giá không được để trống!", "Error");
                 return;
             }
-            if (!Regex.IsMatch(txtDonGia.Text, @"^\d+$") || float.Parse(txtDonGia.Text) <= 0)
+            if (!Regex.IsMatch(txtDonGia.Text, @"^\d+(\.\d+)?$") || float.Parse(txtDonGia.Text) <= 0)
             {
                 MessageBox.Show("Giá nhập không đúng!", "Error");
                 return;
@@ -84,6 +84,11 @@ namespace SaleApp.View
                     return;
                 }
             }
+            cbSanPham.SelectedIndex = 0;
+            cbLoaiHang.SelectedIndex = 0;
+            txtSoLuong.Text = "";
+            txtDonGia.Text = "";
+            cbSanPham.Focus();
             dtgvDSSPXuat.Rows.Add(SanPhamBUS.Instance.getMaSanPham(cbSanPham.Text), cbSanPham.Text, cbLoaiHang.Text, txtSoLuong.Text, txtDonGia.Text);
             if (dtgvDSSPXuat.Rows.Count > 0)
             {

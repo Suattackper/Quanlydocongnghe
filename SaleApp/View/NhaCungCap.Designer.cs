@@ -304,6 +304,7 @@
             this.dtgrDSNCC.Margin = new System.Windows.Forms.Padding(2);
             this.dtgrDSNCC.Name = "dtgrDSNCC";
             this.dtgrDSNCC.ReadOnly = true;
+            this.dtgrDSNCC.RowHeadersVisible = false;
             this.dtgrDSNCC.RowHeadersWidth = 62;
             this.dtgrDSNCC.RowTemplate.Height = 33;
             this.dtgrDSNCC.Size = new System.Drawing.Size(964, 263);

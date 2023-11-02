@@ -61,7 +61,8 @@ namespace SaleApp.View
 
         private void btnThongKe_Click(object sender, EventArgs e)
         {
-            
+            frmThongKe a = new frmThongKe();
+            LoadForm(a);
         }
 
         private void btnSP_Click(object sender, EventArgs e)
@@ -116,5 +117,6 @@ namespace SaleApp.View
             this.Hide();
             signin.ShowDialog();
         }
+
     }
 }

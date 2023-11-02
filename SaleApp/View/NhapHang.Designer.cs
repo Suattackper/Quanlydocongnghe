@@ -338,6 +338,7 @@
             this.dtgvDSSPNhap.Margin = new System.Windows.Forms.Padding(2);
             this.dtgvDSSPNhap.Name = "dtgvDSSPNhap";
             this.dtgvDSSPNhap.ReadOnly = true;
+            this.dtgvDSSPNhap.RowHeadersVisible = false;
             this.dtgvDSSPNhap.RowHeadersWidth = 62;
             this.dtgvDSSPNhap.RowTemplate.Height = 33;
             this.dtgvDSSPNhap.Size = new System.Drawing.Size(970, 257);
