@@ -183,12 +183,12 @@ namespace SaleApp.View
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Cascadia Code", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(389, 698);
+            this.label3.Location = new System.Drawing.Point(370, 710);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(135, 20);
+            this.label3.Size = new System.Drawing.Size(153, 20);
             this.label3.TabIndex = 3;
-            this.label3.Text = "Developed By G";
+            this.label3.Text = "Developed By G19";
             // 
             // label2
             // 

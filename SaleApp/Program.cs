@@ -21,7 +21,7 @@ namespace SaleApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmThongKe());
+            Application.Run(new Signin());
             //Application.Run(new Signin());
         }
     }

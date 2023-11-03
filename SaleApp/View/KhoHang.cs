@@ -16,6 +16,7 @@ namespace SaleApp.View
         public frmKhoHang()
         {
             InitializeComponent();
+            LoadForm();
         }
         public frmKhoHang(string sdt)
         {
@@ -47,6 +48,7 @@ namespace SaleApp.View
             tHangTon.Controls.Add(form1);
             tNhapKho.Controls.Add(form2);
             tXuatKho.Controls.Add(form3);
+
             //Hirn thị form
             form1.Show();
             form2.Show();

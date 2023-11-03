@@ -25,7 +25,7 @@ namespace SaleApp.DAO
 
         public DataTable Xem()
         {
-            string sql = "select s.masanpham,s.tensanpham,l.tenloaihang,s.giaban from sanpham s inner join loaihang l on l.maloaihang=s.maloaihang";
+            string sql = "select s.masanpham,s.tensanpham,l.tenloaihang,s.giaban,s.mota from sanpham s inner join loaihang l on l.maloaihang=s.maloaihang";
             return KetNoiSql.Instance.execSql(sql);
         }
         public DataTable getAnh(string masp)
@@ -35,8 +35,8 @@ namespace SaleApp.DAO
         }
         public bool Them(SANPHAM p)
         {
-            string sql = "INSERT INTO SANPHAM VALUES( @masp, @tensp, @maloaihang, @gia, @anh )";
-            Object[] prms = new object[] { p.MaSanPham, p.TenSanPham, p.MaLoaiHang, p.GiaBan, p.Anh };
+            string sql = "INSERT INTO SANPHAM VALUES( @masp, @tensp, @maloaihang, @mota, @gia, @anh )";
+            Object[] prms = new object[] { p.MaSanPham, p.TenSanPham, p.MaLoaiHang, p.MoTa, p.GiaBan, p.Anh };
             return KetNoiSql.Instance.execNonSql(sql, prms) > 0;
         }
         public bool Xoa(string pCode)
@@ -47,13 +47,13 @@ namespace SaleApp.DAO
         }
         public bool Sua(SANPHAM sp)
         {
-            string sql = "UPDATE SANPHAM SET TenSanPham = @tensp, MaLoaiHang = @mal, GiaBan = @gia, Anh = @anh WHERE MaSanPham = @masp";
-            Object[] prms = new object[] { sp.TenSanPham,sp.MaLoaiHang,sp.GiaBan,sp.Anh,sp.MaSanPham };
+            string sql = "UPDATE SANPHAM SET TenSanPham = @tensp, MaLoaiHang = @mal, GiaBan = @gia, Anh = @anh, MoTa = @mota WHERE MaSanPham = @masp";
+            Object[] prms = new object[] { sp.TenSanPham,sp.MaLoaiHang,sp.GiaBan,sp.Anh, sp.MoTa, sp.MaSanPham };
             return KetNoiSql.Instance.execNonSql(sql, prms) > 0;
         }
         public DataTable Tim(string name)
         {
-            string sql = " SELECT s.masanpham,s.tensanpham,l.tenloaihang,s.giaban from sanpham s inner join loaihang l on l.maloaihang=s.maloaihang WHERE TenSanPham LIKE @keyword ";
+            string sql = " SELECT s.masanpham,s.tensanpham,l.tenloaihang,s.giaban,s.mota from sanpham s inner join loaihang l on l.maloaihang=s.maloaihang WHERE TenSanPham LIKE @keyword ";
             Object[] prms = new object[] { "%" + name + "%" };
             return KetNoiSql.Instance.execSql(sql, prms);
         }

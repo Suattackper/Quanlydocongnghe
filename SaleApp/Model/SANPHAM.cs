@@ -9,6 +9,7 @@ namespace SaleApp.Model
         public string MaSanPham { get; set; }
         public string TenSanPham { get; set; }
         public int MaLoaiHang { get; set; }
+        public string MoTa { get; set; }
         public float GiaBan { get; set; }
         public byte[] Anh { get; set; }
     }

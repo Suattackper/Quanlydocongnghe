@@ -52,6 +52,8 @@
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btnChon = new System.Windows.Forms.Button();
+            this.txtMoTa = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbHinhAnh)).BeginInit();
             this.gbThongTin.SuspendLayout();
@@ -94,6 +96,8 @@
             // 
             // gbThongTin
             // 
+            this.gbThongTin.Controls.Add(this.txtMoTa);
+            this.gbThongTin.Controls.Add(this.label2);
             this.gbThongTin.Controls.Add(this.btnLưu);
             this.gbThongTin.Controls.Add(this.btnSua);
             this.gbThongTin.Controls.Add(this.btnXoa);
@@ -197,7 +201,7 @@
             // 
             this.cbLoaiSP.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbLoaiSP.FormattingEnabled = true;
-            this.cbLoaiSP.Location = new System.Drawing.Point(311, 90);
+            this.cbLoaiSP.Location = new System.Drawing.Point(45, 175);
             this.cbLoaiSP.Margin = new System.Windows.Forms.Padding(2);
             this.cbLoaiSP.Name = "cbLoaiSP";
             this.cbLoaiSP.Size = new System.Drawing.Size(174, 30);
@@ -205,7 +209,7 @@
             // 
             // txtGiaBan
             // 
-            this.txtGiaBan.Location = new System.Drawing.Point(311, 194);
+            this.txtGiaBan.Location = new System.Drawing.Point(45, 233);
             this.txtGiaBan.Margin = new System.Windows.Forms.Padding(2);
             this.txtGiaBan.Multiline = true;
             this.txtGiaBan.Name = "txtGiaBan";
@@ -214,7 +218,7 @@
             // 
             // txtTenSP
             // 
-            this.txtTenSP.Location = new System.Drawing.Point(74, 196);
+            this.txtTenSP.Location = new System.Drawing.Point(43, 114);
             this.txtTenSP.Margin = new System.Windows.Forms.Padding(2);
             this.txtTenSP.Multiline = true;
             this.txtTenSP.Name = "txtTenSP";
@@ -223,7 +227,7 @@
             // 
             // txtMaSP
             // 
-            this.txtMaSP.Location = new System.Drawing.Point(74, 90);
+            this.txtMaSP.Location = new System.Drawing.Point(43, 54);
             this.txtMaSP.Margin = new System.Windows.Forms.Padding(2);
             this.txtMaSP.Multiline = true;
             this.txtMaSP.Name = "txtMaSP";
@@ -233,7 +237,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(353, 167);
+            this.label8.Location = new System.Drawing.Point(83, 211);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(90, 22);
@@ -243,7 +247,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(91, 172);
+            this.label7.Location = new System.Drawing.Point(60, 90);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(140, 22);
@@ -253,7 +257,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(323, 63);
+            this.label6.Location = new System.Drawing.Point(57, 148);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(150, 22);
@@ -263,7 +267,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(96, 65);
+            this.label3.Location = new System.Drawing.Point(65, 29);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(130, 22);
@@ -356,6 +360,25 @@
             this.btnChon.UseVisualStyleBackColor = false;
             this.btnChon.Click += new System.EventHandler(this.btnChon_Click);
             // 
+            // txtMoTa
+            // 
+            this.txtMoTa.Location = new System.Drawing.Point(262, 82);
+            this.txtMoTa.Margin = new System.Windows.Forms.Padding(2);
+            this.txtMoTa.Multiline = true;
+            this.txtMoTa.Name = "txtMoTa";
+            this.txtMoTa.Size = new System.Drawing.Size(279, 179);
+            this.txtMoTa.TabIndex = 22;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(361, 45);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(70, 22);
+            this.label2.TabIndex = 21;
+            this.label2.Text = "Mô tả:";
+            // 
             // frmNhapSP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -410,5 +433,7 @@
         private Label label1;
         private Button btnChon;
         private Button btnLưu;
+        private TextBox txtMoTa;
+        private Label label2;
     }
 }

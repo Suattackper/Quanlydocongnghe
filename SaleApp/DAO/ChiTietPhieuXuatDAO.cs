@@ -24,7 +24,7 @@ namespace SaleApp.DAO
         private ChiTietPhieuXuatDAO() { }
         public DataTable Xem()
         {
-            string sql = "select * from CHITIETPHIẼUUAT";
+            string sql = "select * from CHITIETPHIEUXUAT";
             return KetNoiSql.Instance.execSql(sql);
         }
         public bool Them(CHITIETPHIEUXUAT p)

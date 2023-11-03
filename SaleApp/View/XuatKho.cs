@@ -84,12 +84,12 @@ namespace SaleApp.View
                     return;
                 }
             }
+            dtgvDSSPXuat.Rows.Add(SanPhamBUS.Instance.getMaSanPham(cbSanPham.Text), cbSanPham.Text, cbLoaiHang.Text, txtSoLuong.Text, txtDonGia.Text);
             cbSanPham.SelectedIndex = 0;
             cbLoaiHang.SelectedIndex = 0;
             txtSoLuong.Text = "";
             txtDonGia.Text = "";
             cbSanPham.Focus();
-            dtgvDSSPXuat.Rows.Add(SanPhamBUS.Instance.getMaSanPham(cbSanPham.Text), cbSanPham.Text, cbLoaiHang.Text, txtSoLuong.Text, txtDonGia.Text);
             if (dtgvDSSPXuat.Rows.Count > 0)
             {
                 txtLiDo.Enabled = false;
@@ -175,9 +175,9 @@ namespace SaleApp.View
                     check = KhoDAO.Instance.XemHangTon();
                     foreach (DataRow existingRow in check.Rows)
                     {
-                        if (existingRow["MaSanPham"].ToString() == c.MaSanPham && int.Parse(existingRow["MaSanPham"].ToString()) < c.SoLuong)
+                        if (existingRow["MaSanPham"].ToString() == c.MaSanPham && int.Parse(existingRow["SoLuong"].ToString()) < c.SoLuong)
                         {
-                            MessageBox.Show($"{existingRow["TenSanPham"].ToString()} không có đủ hàng tồn trong kho!", "Error!");
+                            MessageBox.Show($"{existingRow["TenSanPham"]} không có đủ hàng tồn trong kho!", "Error!");
                             return;
                         }
                     }

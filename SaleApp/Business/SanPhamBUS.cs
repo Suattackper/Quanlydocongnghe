@@ -33,6 +33,7 @@ namespace SaleApp.Business
             dgv.Columns[1].HeaderText = "Tên sản phẩm";
             dgv.Columns[2].HeaderText = "Loại hàng";
             dgv.Columns[3].HeaderText = "Giá bán";
+            dgv.Columns[4].HeaderText = "Mô tả";
         }
         public byte[] getAnh(string masp)
         {
@@ -67,6 +68,10 @@ namespace SaleApp.Business
             if (p.Anh == null)
             {
                 return "errorAnh";
+            }
+            if (p.MoTa == "")
+            {
+                return "errorMot";
             }
             if (p.GiaBan == null)
             {
@@ -144,6 +149,10 @@ namespace SaleApp.Business
             {
                 return "errorAnh";
             }
+            if (p.MoTa == "")
+            {
+                return "errorMot";
+            }
             if (p.GiaBan == null)
             {
                 return "errorGia";
@@ -167,6 +176,7 @@ namespace SaleApp.Business
             dgv.Columns[1].HeaderText = "Tên sản phẩm";
             dgv.Columns[2].HeaderText = "Loại hàng";
             dgv.Columns[3].HeaderText = "Giá bán";
+            dgv.Columns[4].HeaderText = "Mô tả";
         }
         public void getDataSanPham(ComboBox comboBoxQuyen)
         {

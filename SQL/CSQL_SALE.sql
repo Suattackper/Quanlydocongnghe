@@ -44,6 +44,7 @@ CREATE TABLE SANPHAM (
 	MaSanPham varchar(20) not null,
 	TenSanPham nvarchar(50) not null,
 	MaLoaiHang varchar(20) not null,
+	MoTa nvarchar(500) not null,
 	GiaBan decimal(18,2) not null check(GiaBan>=0),
 	Anh image,
 	primary key (MaSanPham),

@@ -81,6 +81,11 @@ namespace SaleApp.View
                 MessageBox.Show("Số lượng không được để trống!", "Error");
                 return;
             }
+            //if (decimal.Parse(txtTamUng.Text)==int.Parse(txtSoLuong.Text)*decimal.Parse(txtGiaNhap.Text))
+            //{
+            //    MessageBox.Show("Tạm ứng phải bằng tôn!", "Error");
+            //    return;
+            //}
             if (txtGiaNhap.Text == "")
             {
                 MessageBox.Show("Giá nhập không được để trống!", "Error");
@@ -109,12 +114,12 @@ namespace SaleApp.View
                     return;
                 }
             }
+            dtgvDSSPNhap.Rows.Add(SanPhamBUS.Instance.getMaSanPham(cbSanPham.Text),cbSanPham.Text,cbLoaiHang.Text,txtSoLuong.Text,txtGiaNhap.Text,cbNhaCungCap.Text);
             cbSanPham.SelectedIndex = 0;
             cbLoaiHang.SelectedIndex = 0;
             txtSoLuong.Text = "";
             txtGiaNhap.Text = "";
             cbSanPham.Focus();
-            dtgvDSSPNhap.Rows.Add(SanPhamBUS.Instance.getMaSanPham(cbSanPham.Text),cbSanPham.Text,cbLoaiHang.Text,txtSoLuong.Text,txtGiaNhap.Text,cbNhaCungCap.Text);
             if (dtgvDSSPNhap.Rows.Count > 0)
             {
                 cbNhaCungCap.Enabled = false;

@@ -94,6 +94,7 @@ namespace SaleApp.View
                 cbLoaiSP.Text = selectedRow.Cells[2].Value.ToString();
                 //txtGiaBan.Text = decimal.Parse(selectedRow.Cells[3].Value.ToString()).ToString("N0") + " VND";
                 txtGiaBan.Text = selectedRow.Cells[3].Value.ToString();
+                txtMoTa.Text = selectedRow.Cells[4].Value.ToString();
                 byte[] imageData = SanPhamBUS.Instance.getAnh(selectedRow.Cells[0].Value.ToString());
                 if (imageData != null)
                 {
@@ -120,6 +121,7 @@ namespace SaleApp.View
                 txtTenSP.Text = selectedRow.Cells[1].Value.ToString();
                 cbLoaiSP.Text = selectedRow.Cells[2].Value.ToString();
                 txtGiaBan.Text = selectedRow.Cells[3].Value.ToString();
+                txtMoTa.Text = selectedRow.Cells[4].Value.ToString();
                 byte[] imageData = SanPhamBUS.Instance.getAnh(selectedRow.Cells[0].Value.ToString());
                 if (imageData != null)
                 {
@@ -149,6 +151,7 @@ namespace SaleApp.View
             sp.TenSanPham = txtTenSP.Text;
             sp.MaLoaiHang = int.Parse(LoaiHangBUS.Instance.getMaLoaiHang(cbLoaiSP.Text));
             sp.GiaBan = float.Parse(txtGiaBan.Text);
+            sp.MoTa = txtMoTa.Text;
             byte[] anh = null;
             //Chuyển ảnh thành mảng byte
             using (MemoryStream memoryStream = new MemoryStream())
@@ -179,6 +182,9 @@ namespace SaleApp.View
                     return;
                 case "errorAnh":
                     MessageBox.Show("Ảnh không được để trống!", "Error");
+                    return;
+                case "errorMot":
+                    MessageBox.Show("Mô tả không được để trống!", "Error");
                     return;
                 case "errorGia":
                     MessageBox.Show("Giá bán không được để trống!", "Error");
@@ -226,6 +232,7 @@ namespace SaleApp.View
                 MessageBox.Show("Xóa thành công", "Thông báo");
                 SanPhamBUS.Instance.Xem(dtgvDSSP);
             }
+
             else MessageBox.Show("Xóa không thành công", "Thông báo");
         }
 
@@ -240,6 +247,7 @@ namespace SaleApp.View
             sp.TenSanPham = txtTenSP.Text;
             sp.MaLoaiHang = int.Parse(LoaiHangBUS.Instance.getMaLoaiHang(cbLoaiSP.Text));
             sp.GiaBan = float.Parse(txtGiaBan.Text);
+            sp.MoTa = txtMoTa.Text;
             byte[] anh = null;
             //Chuyển ảnh thành mảng byte
             using (MemoryStream memoryStream = new MemoryStream())
@@ -279,6 +287,9 @@ namespace SaleApp.View
                     return;
                 case "errorAnh":
                     MessageBox.Show("Ảnh không được để trống!", "Error");
+                    return;
+                case "errorMot":
+                    MessageBox.Show("Mô tả không được để trống!", "Error");
                     return;
                 case "errorGia":
                     MessageBox.Show("Giá bán không được để trống!", "Error");

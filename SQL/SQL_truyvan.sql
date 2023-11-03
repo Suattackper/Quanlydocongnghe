@@ -47,4 +47,10 @@ FROM (
     SELECT SUM(soluong) AS tong_soluong FROM chitietphieuxuat
 ) AS combined_data; --AS combined_data tạo bảng tạm thời để truy vấn
 
+select * from donmua WHERE madonmua = 1
 
+select * from khachhang WHERE makhachhang = '15'
+
+select c.masanpham, s.tensanpham, c.soluong, s.giaban, s.giaban*c.soluong thanhtien from chitietdonmua c
+inner join sanpham s on s.masanpham = c.masanpham
+where c.madonmua = 2

@@ -122,60 +122,73 @@ namespace SaleApp.View
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            if (NhaCungCapBUS.Instance.Xoa(dtgrDSNCC))
+            if (dtgrDSNCC.SelectedCells.Count > 0)
             {
-                MessageBox.Show("Xóa thành công", "Thông báo");
-                NhaCungCapBUS.Instance.Xem(dtgrDSNCC);
+                if (NhaCungCapBUS.Instance.Xoa(dtgrDSNCC))
+                {
+                    MessageBox.Show("Xóa thành công", "Thông báo");
+                    NhaCungCapBUS.Instance.Xem(dtgrDSNCC);
+                }
+                else MessageBox.Show("Xóa không thành công", "Thông báo");
             }
-            else MessageBox.Show("Xóa không thành công", "Thông báo");
+            else
+            {
+                MessageBox.Show("Hãy chọn dòng bạn muốn xóa!", "Error!");
+            }
         }
 
         private void btnSua_Click(object sender, EventArgs e)
-        {
-            NHACUNGCAP ncc = new NHACUNGCAP();
-            ncc.MaNhaCungCap = txtMaNCC.Text;
-            ncc.TenNhaCungCap = txtTenNCC.Text;
-            ncc.SoDienThoai = txtSDTNCC.Text;
-            ncc.DiaChi = txtDiaChiNCC.Text;
-
-            // Lấy hàng hiện tại (current row)
-            int rowIndex = dtgrDSNCC.CurrentCell.RowIndex;
-            // Lấy giá trị từ ô hiện tại
-            string macuahang = dtgrDSNCC.Rows[rowIndex].Cells[0].Value.ToString();
-            string sdtcuahang = dtgrDSNCC.Rows[rowIndex].Cells[2].Value.ToString();
-
-            if (macuahang != txtMaNCC.Text)
+        {            if (dtgrDSNCC.SelectedCells.Count > 0)
             {
-                MessageBox.Show("Mã nhà cung cấp không được thay đổi!", "Error");
-                return;
+                NHACUNGCAP ncc = new NHACUNGCAP();
+                ncc.MaNhaCungCap = txtMaNCC.Text;
+                ncc.TenNhaCungCap = txtTenNCC.Text;
+                ncc.SoDienThoai = txtSDTNCC.Text;
+                ncc.DiaChi = txtDiaChiNCC.Text;
+
+                // Lấy hàng hiện tại (current row)
+                int rowIndex = dtgrDSNCC.CurrentCell.RowIndex;
+                // Lấy giá trị từ ô hiện tại
+                string macuahang = dtgrDSNCC.Rows[rowIndex].Cells[0].Value.ToString();
+                string sdtcuahang = dtgrDSNCC.Rows[rowIndex].Cells[2].Value.ToString();
+
+                if (macuahang != txtMaNCC.Text)
+                {
+                    MessageBox.Show("Mã nhà cung cấp không được thay đổi!", "Error");
+                    return;
+                }
+                string check = NhaCungCapBUS.Instance.Sua(ncc, sdtcuahang);
+                switch (check)
+                {
+                    case "error2":
+                        MessageBox.Show("Số điện thoại đã tồn tại!", "Error");
+                        return;
+                    case "errorTen":
+                        MessageBox.Show("Tên nhà cung cấp không được để trống!", "Error");
+                        return;
+                    case "errorMa":
+                        MessageBox.Show("Mã nhà cung cấp không được để trống!", "Error");
+                        return;
+                    case "errorSdt":
+                        MessageBox.Show("Số điện thoại không được để trống!", "Error");
+                        return;
+                    case "errorSdt2":
+                        MessageBox.Show("Số điện thoại không đúng!", "Error");
+                        return;
+                    case "errorDiachi":
+                        MessageBox.Show("Địa chỉ không được để trống!", "Error");
+                        return;
+                    case "error1":
+                        MessageBox.Show("Mã nhà cung cấp đã tồn tại!", "Error");
+                        return;
+                }
+                MessageBox.Show("Sửa thành công!", "Thông báo");
+                reset();
             }
-            string check = NhaCungCapBUS.Instance.Sua(ncc, sdtcuahang);
-            switch (check)
+            else
             {
-                case "error2":
-                    MessageBox.Show("Số điện thoại đã tồn tại!", "Error");
-                    return;
-                case "errorTen":
-                    MessageBox.Show("Tên nhà cung cấp không được để trống!", "Error");
-                    return;
-                case "errorMa":
-                    MessageBox.Show("Mã nhà cung cấp không được để trống!", "Error");
-                    return;
-                case "errorSdt":
-                    MessageBox.Show("Số điện thoại không được để trống!", "Error");
-                    return;
-                case "errorSdt2":
-                    MessageBox.Show("Số điện thoại không đúng!", "Error");
-                    return;
-                case "errorDiachi":
-                    MessageBox.Show("Địa chỉ không được để trống!", "Error");
-                    return;
-                case "error1":
-                    MessageBox.Show("Mã nhà cung cấp đã tồn tại!", "Error");
-                    return;
+                MessageBox.Show("Hãy chọn dòng bạn muốn sửa!", "Error!");
             }
-            MessageBox.Show("Sửa thành công!", "Thông báo");
-            reset();
         }
 
         private void dtgrDSNCC_SelectionChanged(object sender, EventArgs e)
