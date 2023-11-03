@@ -40,6 +40,8 @@ namespace SaleApp
             this.label13 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.txtTTKhachHang = new System.Windows.Forms.GroupBox();
+            this.txbMaKH = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.txtMaNV = new System.Windows.Forms.TextBox();
             this.txtSDT = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -212,6 +214,8 @@ namespace SaleApp
             // txtTTKhachHang
             // 
             this.txtTTKhachHang.BackColor = System.Drawing.SystemColors.Control;
+            this.txtTTKhachHang.Controls.Add(this.txbMaKH);
+            this.txtTTKhachHang.Controls.Add(this.label6);
             this.txtTTKhachHang.Controls.Add(this.txtMaNV);
             this.txtTTKhachHang.Controls.Add(this.txtSDT);
             this.txtTTKhachHang.Controls.Add(this.label5);
@@ -230,6 +234,26 @@ namespace SaleApp
             this.txtTTKhachHang.TabStop = false;
             this.txtTTKhachHang.Text = "Thông tin Khách hàng ";
             // 
+            // txbMaKH
+            // 
+            this.txbMaKH.Location = new System.Drawing.Point(9, 43);
+            this.txbMaKH.Margin = new System.Windows.Forms.Padding(2);
+            this.txbMaKH.Multiline = true;
+            this.txbMaKH.Name = "txbMaKH";
+            this.txbMaKH.Size = new System.Drawing.Size(213, 34);
+            this.txbMaKH.TabIndex = 20;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label6.Location = new System.Drawing.Point(9, 19);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(130, 18);
+            this.label6.TabIndex = 19;
+            this.label6.Text = "Mã Khách Hàng:";
+            // 
             // txtMaNV
             // 
             this.txtMaNV.Location = new System.Drawing.Point(240, 108);
@@ -241,7 +265,7 @@ namespace SaleApp
             // 
             // txtSDT
             // 
-            this.txtSDT.Location = new System.Drawing.Point(240, 41);
+            this.txtSDT.Location = new System.Drawing.Point(443, 43);
             this.txtSDT.Margin = new System.Windows.Forms.Padding(2);
             this.txtSDT.Multiline = true;
             this.txtSDT.Name = "txtSDT";
@@ -252,7 +276,7 @@ namespace SaleApp
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(240, 21);
+            this.label5.Location = new System.Drawing.Point(443, 21);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(37, 18);
@@ -261,7 +285,7 @@ namespace SaleApp
             // 
             // txtHoTen
             // 
-            this.txtHoTen.Location = new System.Drawing.Point(6, 43);
+            this.txtHoTen.Location = new System.Drawing.Point(226, 45);
             this.txtHoTen.Margin = new System.Windows.Forms.Padding(2);
             this.txtHoTen.Multiline = true;
             this.txtHoTen.Name = "txtHoTen";
@@ -292,7 +316,7 @@ namespace SaleApp
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(6, 21);
+            this.label4.Location = new System.Drawing.Point(226, 21);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(131, 18);
@@ -323,6 +347,7 @@ namespace SaleApp
             this.btnInDon.TabIndex = 11;
             this.btnInDon.Text = "Thanh Toán";
             this.btnInDon.UseVisualStyleBackColor = false;
+            this.btnInDon.Click += new System.EventHandler(this.btnInDon_Click);
             // 
             // btnHuyDon
             // 
@@ -340,7 +365,8 @@ namespace SaleApp
             // 
             // dataGridView1
             // 
-            this.dataGridView1.AllowUserToOrderColumns = true;
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dvgMaSP,
@@ -352,11 +378,12 @@ namespace SaleApp
             this.des});
             this.dataGridView1.Location = new System.Drawing.Point(0, 50);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 29;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(485, 338);
+            this.dataGridView1.Size = new System.Drawing.Size(486, 338);
             this.dataGridView1.TabIndex = 24;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellValueChanged);
@@ -367,6 +394,7 @@ namespace SaleApp
             this.dvgMaSP.HeaderText = "MaSP";
             this.dvgMaSP.MinimumWidth = 40;
             this.dvgMaSP.Name = "dvgMaSP";
+            this.dvgMaSP.ReadOnly = true;
             this.dvgMaSP.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.dvgMaSP.Width = 40;
             // 
@@ -376,6 +404,7 @@ namespace SaleApp
             this.dvgTenSP.HeaderText = "Tên SP";
             this.dvgTenSP.MinimumWidth = 85;
             this.dvgTenSP.Name = "dvgTenSP";
+            this.dvgTenSP.ReadOnly = true;
             this.dvgTenSP.Width = 85;
             // 
             // dvgSoLuong
@@ -384,6 +413,7 @@ namespace SaleApp
             this.dvgSoLuong.HeaderText = "Qty";
             this.dvgSoLuong.MinimumWidth = 50;
             this.dvgSoLuong.Name = "dvgSoLuong";
+            this.dvgSoLuong.ReadOnly = true;
             this.dvgSoLuong.Width = 50;
             // 
             // dvgGiaBan
@@ -392,6 +422,7 @@ namespace SaleApp
             this.dvgGiaBan.HeaderText = "Giá SP";
             this.dvgGiaBan.MinimumWidth = 68;
             this.dvgGiaBan.Name = "dvgGiaBan";
+            this.dvgGiaBan.ReadOnly = true;
             this.dvgGiaBan.Width = 68;
             // 
             // dvgTong
@@ -400,6 +431,7 @@ namespace SaleApp
             this.dvgTong.HeaderText = "Tổng";
             this.dvgTong.MinimumWidth = 80;
             this.dvgTong.Name = "dvgTong";
+            this.dvgTong.ReadOnly = true;
             this.dvgTong.Width = 80;
             // 
             // Delete
@@ -408,6 +440,7 @@ namespace SaleApp
             this.Delete.HeaderText = "Delete";
             this.Delete.MinimumWidth = 55;
             this.Delete.Name = "Delete";
+            this.Delete.ReadOnly = true;
             this.Delete.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Delete.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.Delete.Text = "Delete";
@@ -418,6 +451,7 @@ namespace SaleApp
             this.des.HeaderText = "-1";
             this.des.MinimumWidth = 40;
             this.des.Name = "des";
+            this.des.ReadOnly = true;
             this.des.Text = "des";
             this.des.Width = 40;
             // 
@@ -498,6 +532,7 @@ namespace SaleApp
             // 
             // txbTienThua
             // 
+            this.txbTienThua.Enabled = false;
             this.txbTienThua.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.txbTienThua.ForeColor = System.Drawing.Color.Firebrick;
             this.txbTienThua.Location = new System.Drawing.Point(173, 494);
@@ -528,8 +563,9 @@ namespace SaleApp
             this.txbTongBill.Name = "txbTongBill";
             this.txbTongBill.Size = new System.Drawing.Size(189, 38);
             this.txbTongBill.TabIndex = 32;
-            this.txbTongBill.Text = "0.00";
+            this.txbTongBill.Text = "0";
             this.txbTongBill.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txbTongBill.TextChanged += new System.EventHandler(this.txbTongBill_TextChanged);
             // 
             // label18
             // 
@@ -659,5 +695,7 @@ namespace SaleApp
         private DataGridViewTextBoxColumn dvgTong;
         private DataGridViewButtonColumn Delete;
         private DataGridViewButtonColumn des;
+        private TextBox txbMaKH;
+        private Label label6;
     }
 }

@@ -1,5 +1,7 @@
-﻿using SaleApp.DAO;
+﻿using SaleApp.Business;
+using SaleApp.DAO;
 using SaleApp.Model;
+using SaleApp.View;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,86 +15,69 @@ using System.Windows.Forms;
 
 namespace SaleApp
 {
+  
     public partial class frmDonHang : Form
     {
+
+        DataTable dt = new DataTable();
         public frmDonHang()
         {
             InitializeComponent();
-
             LoadSanPham();
-
-   
-
+            //LoadData();
         }
 
         #region Events
-        void loadNhanVien()
+
+       
+
+        //void loadNhanVien()
+        //{
+        //    List<ModelSanPham> listmodel = DanhSachSPDAO.Instance.loadDanhSachSP();
+        //    foreach (ModelSanPham item in listmodel)
+        //    {
+        //        ModelSanPham model = new ModelSanPham();
+        //        flpDanhSachSanPham.Controls.Add(model);
+        //    }
+        //}
+
+        void InsertInforKhachHang()
         {
-            List<ModelSanPham> listmodel = DanhSachSPDAO.Instance.loadDanhSachSP();
+            string sql = "insert into KHACHHANG (makhachhang,hoten,sodienthoai) values ( @makh, @hoten, @sodienthoai ) ";
 
-            foreach (ModelSanPham item in listmodel)
-            {
-                ModelSanPham model = new ModelSanPham();
-                flpDanhSachSanPham.Controls.Add(model);
-            }
-        }
-
-        void LoadListKhachHang()
-        {
-            string query = "exec USP_GetSanPhamByMaHang @mahang";
-
-
-            //dataGridView1.DataSource = DataProvider.Instance.ExcuteQuery(query, new object[] { "1" });
-        }
-        public string getMaLoai(string tenloai)
-        {
-            string sql = $"select MaLoaiHang,TenLoaiHang from LOAIHANG where TenLoaiHang = '{tenloai}'";
-            string ma = null;
-            DataTable check = DataProvider.Instance.ExcuteQuery(sql);
-            foreach (DataRow existingRow in check.Rows)
-            {
-                if (existingRow["TenLoaiHang"].ToString() == tenloai)
-                {
-                    return existingRow["MaLoaiHang"].ToString();
-                }
-            }
-            return ma;
+            KhachHang kh = new KhachHang();
+            kh.Makh = txbMaKH.Text.Trim();
+            kh.Hoten = txtHoTen.Text.Trim();
+            kh.Sdt = txtSDT.Text.Trim();
+            Object[] p = new object[] { kh.Makh, kh.Hoten, kh.Sdt };
+            DataProvider.Instance.execNonSql(sql, p);
         }
         void LoadSanPham()
         {
-            SetCbxLoaiSP();
-            SetCbxNCC();
-            //SqlConnection conn = new SqlConnection(STRconn);
-            string query = "select s.masanpham,s.tensanpham,l.tenloaihang,s.giaban, s.anh from sanpham s inner join loaihang l on l.maloaihang=s.maloaihang";
-            //SqlCommand cmd = new SqlCommand(query, conn);
-            //SqlDataAdapter da = new SqlDataAdapter(cmd);
-            //DataTable dt = new DataTable();
-            //da.Fill(dt);
-            DataTable data = DataProvider.Instance.ExcuteQuery(query);
 
-            //foreach (DataRow item in data.Rows)
-            //{
-            //    ModelSanPham model = new ModelSanPham(item);
-            //    listModel.Add(model);
-            //}
+            SanPhamDAO.Instance.SetCbx(cbxLoaiSp, "LOAIHANG", "tenloaihang");
+            SanPhamDAO.Instance.SetCbx(cbxNCC, "NHACUNGCAP" ,"tennhacungcap");
+            string query = "select s.masanpham,s.tensanpham,l.tenloaihang,s.giaban, s.anh from sanpham s inner join loaihang l on l.maloaihang=s.maloaihang";
+           
+            DataTable data = DataProvider.Instance.ExcuteQuery(query);
             foreach (DataRow item in data.Rows)
             {
-                byte[] imagearray = (byte[])getAnh(item["MaSanPham"].ToString());
-                //byte[] imagebytearray = imagearray; Image.FromStream(new MemoryStream(getAnh(item["MaSanPham"].ToString())))
-                //Image anh = Image.FromStream(new MemoryStrec
+                byte[] imagearray = (byte[]) SanPhamDAO.Instance.getAnh(item["MaSanPham"].ToString());
+           
                 AddSanPham(item["MaSanPham"].ToString(), item["TenLoaiHang"].ToString(), item["TenSanPham"].ToString(), float.Parse(item["GiaBan"].ToString()), imagearray);
-                //flpDanhSachSanPham.Controls.Add(AddSanPham(item));
+                
             }
+            
         }
 
         void AddSanPham(string MaSP, string tenloai, string TenSP, float GiaSP, byte[] AnhSP)
         {
             bool productExists = false;
             var S = new ModelSanPham()
-            {
+            { 
 
                 TenSanPham = TenSP,
-                MaLoaiHang = int.Parse(getMaLoai(tenloai)),
+                MaLoaiHang = int.Parse(SanPhamDAO.Instance.getMaLoai(tenloai)),
                 GiaBan = GiaSP,
                 Anh = AnhSP,
                 MaSanPham = MaSP
@@ -101,201 +86,39 @@ namespace SaleApp
             flpDanhSachSanPham.Controls.Add(S);
 
 
-
-            S.onSelect += (ss, ee) =>
-            {
-
-                var wdg = (ModelSanPham)ss;
-
-                bool SanPhamDaTonTai = false;
-                foreach (DataGridViewRow item in dataGridView1.Rows)
-                {
-
-
-
-                    if (item.Cells["dvgMaSP"].Value != null && item.Cells["dvgMaSP"].Value.ToString() == wdg.MaSanPham.ToString())
-                    {
-                        // Sản phẩm đã tồn tại trong DataGridView, tăng số lượng và cập nhật tổng tiền
-                        int soLuongHienTai = int.Parse(item.Cells["dvgSoLuong"].Value.ToString());
-                        item.Cells["dvgSoLuong"].Value = soLuongHienTai + 1;
-
-                        float giaBan = float.Parse(item.Cells["dvgGiaBan"].Value.ToString());
-                        item.Cells["dvgTong"].Value = (giaBan * (soLuongHienTai + 1)).ToString("N0");
-                        GetTongBill();
-                        SanPhamDaTonTai = true;
-                        break; // thoát khỏi vòng lặp vì sản phẩm đã tồn tại
-                    }
-                }
-
-                if (SanPhamDaTonTai == false)
-                {
-                    // thêm sản phầm nếu nó chưa tồn tại
-                    dataGridView1.Rows.Add(new object[] { wdg.MaSanPham, wdg.TenSanPham, 1, wdg.GiaBan.ToString("N0"), wdg.GiaBan.ToString("N0")  });
-                   
-                    GetTongBill();
-                }
-
-            };
-
-
-
-
+            SanPhamBUS.Instance.ActionModelSanPham(S,dataGridView1,txbTongBill,dt);
+         
         }
         #endregion
 
 
-
-
-
-
-
-
-        public void SetCbxLoaiSP()
-        {
-            string sql = "select * from dbo.LOAIHANG";
-           DataTable data = DataProvider.Instance.ExcuteQuery(sql);
-            cbxLoaiSp.DataSource = data;
-            cbxLoaiSp.DisplayMember = "tenloaihang";
-         
-        }
-            
-        public void SetCbxNCC()
-        {
-            string sql = "select * from dbo.NHACUNGCAP";
-            DataTable data = DataProvider.Instance.ExcuteQuery(sql);
-            cbxNCC.DataSource = data;
-            cbxNCC.DisplayMember = "TenNhaCungCap";
-        }
-
-
-
-        //public DataTable getAnh(string masp)
-        //{
-        //    string sql = $"select MaSanPham,Anh from SANPHAM where MaSanPham = '{masp}'";
-        //    return DataProvider.Instance.ExcuteQuery(sql);
-        //}
-        public byte[] getAnh(string masp)
-        {
-            string sql = $"select MaSanPham,Anh from SANPHAM where MaSanPham = '{masp}'";
-            byte[] image = null;
-            DataTable check = DataProvider.Instance.ExcuteQuery(sql);
-            if (check.Rows.Count > 0)
-            {
-                // Kiểm tra xem có dữ liệu hình ảnh trong bảng
-                DataRow row = check.Rows[0];
-                if (row["Anh"] != DBNull.Value)
-                {
-                    // Lấy dữ liệu hình ảnh từ cơ sở dữ liệu
-                    image = (byte[])row["Anh"];
-                }
-            }
-            return image;
-        }
-        public void GetTongBill()
-        {
-            double tong = 0;
-            txbTongBill.Text = "";
-
-            foreach (DataGridViewRow item in dataGridView1.Rows)
-            {
-                if (item.Cells["dvgTong"].Value != null)
-                {
-                    double giaTriTong;
-                    if (double.TryParse(item.Cells["dvgTong"].Value.ToString(), out giaTriTong))
-                    {
-                        tong += giaTriTong;
-                    }
-                }
-            }
-
-            txbTongBill.Text = tong.ToString("N0" ) ;
-            txbKhachDua.Enabled = true;
-            
-        }
-        private void label9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label12_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnXoa_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label9_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
+        
         private void frmDonHang_Load(object sender, EventArgs e)
         {
             flpDanhSachSanPham.Controls.Clear();
             LoadSanPham();
         }
-
- 
-
         private void txbKhachDua_TextChanged(object sender, EventArgs e)
         {
-           
-            TextBox txb = (TextBox)sender;
-            string inputText = txb.Text;
-           
-            while (!double.TryParse(inputText, out double numericValue))
-            {
-                MessageBox.Show("Hãy nhập vào 1 số");
-                break;
-
-            }
-            if (double.TryParse(inputText, out double numericValue1))
-            {
-                string formattedText = numericValue1.ToString("N0"); // Format as numeric with thousands separators
-                txb.Text = formattedText;
-            
-            
-                double khachdua = double.Parse(txbKhachDua.Text);
-                double tong = double.Parse(txbTongBill.Text);
-                double calc;
-                if (khachdua < tong)
-                {
-                    txbTienThua.Text = "Không đủ";
-                }
-                else if (khachdua > tong)
-                {
-                    calc = khachdua - tong;
-                    txbTienThua.Text = calc.ToString("N0");
-                }
-                else
-                {
-                    txbTienThua.Text = "";
-                }
-            }
-          
+            // tính tiền thừa
+            txbTienThua.Text = SanPhamBUS.Instance.CalcTienThua(sender, txbKhachDua, txbTongBill);
         }
-
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
-
+            // tim kiem
+            int flag = 0;
             foreach (var item in flpDanhSachSanPham.Controls)
-                
-            {
-                var pro = (ModelSanPham)item;
+            {                var pro = (ModelSanPham)item;
                 pro.Visible = pro.TenSanPham.ToLower().Contains(txtTimKiem.Text.Trim().ToLower());
-                
+                flag++;
+                if (flag == 0)
+                {
+                    Label lb = new Label();
+                    lb.Text = "Sản phầm không tồn tại";
+                    flpDanhSachSanPham.Controls.Add(lb);
+                }
             }
-            
         }
-
         private void btnReset_Click(object sender, EventArgs e)
         {
             // Xóa tất cả các sản phẩm hiện tại
@@ -305,49 +128,54 @@ namespace SaleApp
         
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-    
-            if (e.RowIndex >= 0) // người dùng đã chọn 
-            {
-                DataGridViewRow selectedRow = dataGridView1.Rows[e.RowIndex];
 
-                if (dataGridView1.Columns[e.ColumnIndex].Name == "Delete")
-                {
-                    if (MessageBox.Show("Bạn thực sự muốn xóa sản phẩm này?", "Thông Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Hand) == System.Windows.Forms.DialogResult.OK)
-                    {
-                        dataGridView1.Rows.Remove(dataGridView1.SelectedRows[0]);
-                    }
-                }
-                else if (dataGridView1.Columns[e.ColumnIndex].Name == "des")
-                {
-                    int soLuongHienTai = int.Parse(selectedRow.Cells["dvgSoLuong"].Value.ToString());
-                    selectedRow.Cells["dvgSoLuong"].Value = soLuongHienTai - 1;
-                    if (int.Parse(selectedRow.Cells["dvgSoLuong"].Value.ToString()) <= 0)
-                    {
-                       if( MessageBox.Show("Bạn thực sự muốn xóa sản phẩm này?", "Thông Báo", MessageBoxButtons.OKCancel,MessageBoxIcon.Hand) == System.Windows.Forms.DialogResult.OK)
-                        {
-                            dataGridView1.Rows.Remove(dataGridView1.SelectedRows[0]);
-                        }
-                        else
-                        {
-                            selectedRow.Cells["dvgSoLuong"].Value = 1;
-                        } 
-                    }
-                }
-            }
+            SanPhamBUS.Instance.ActionWithDVG(dataGridView1, e);
         }
 
         private void dataGridView1_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex >= 0 && dataGridView1.Columns[e.ColumnIndex].Name == "dvgSoLuong")
-            {
-                DataGridViewRow selectedRow = dataGridView1.Rows[e.RowIndex];
-                int soLuongHienTai = int.Parse(selectedRow.Cells["dvgSoLuong"].Value.ToString());
-                DataGridViewCell cellGiaBan = dataGridView1.Rows[e.RowIndex].Cells["dvgGiaBan"];
-                float giaBan = float.Parse(selectedRow.Cells["dvgGiaBan"].Value.ToString());
-                selectedRow.Cells["dvgTong"].Value = (soLuongHienTai * giaBan).ToString("N0");
+            //txbKhachDua.Enabled = true;
+            SanPhamBUS.Instance.CalcTongTien(dataGridView1,e);
+            SanPhamBUS.Instance.GetTongBill(txbTongBill, dataGridView1);
+               
+        }
 
-                GetTongBill();
+       
+        private void btnInDon_Click(object sender, EventArgs e)
+        {
+           
+            XuatHoaDon a = new(txbTongBill.Text, txbKhachDua.Text, txbTienThua.Text, txbMaKH.Text, txtHoTen.Text, txtSDT.Text ,dt);
+            if (txtHoTen.Text == "" || txtSDT.Text == "" || txbMaKH.Text == "")
+            {
+                MessageBox.Show("vui lòng nhập đầy đủ thông tin");
             }
+            else
+            {
+                SanPhamBUS.Instance.LoadData(dt,dataGridView1);
+                a.ShowDialog();
+
+            }
+            InsertInforKhachHang();
+            string sql = "insert into DONMUA (makhachhang,manhanvien,tongtien) values ( @makh, @manv, @tong ) ";
+
+            Object[] p = new object[] { txbMaKH.Text, "11", decimal.Parse(txbTongBill.Text) };
+            DataProvider.Instance.execNonSql(sql, p);
+
+
+        }
+
+            private void txbTongBill_TextChanged(object sender, EventArgs e)
+        {
+            TextBox txb = (TextBox)sender;
+            if(txb.Text != "0")
+            {
+                txbKhachDua.Enabled = true;
+            }
+            else
+            {
+                txbKhachDua.Enabled = false;
+            }
+           
         }
     }
 }

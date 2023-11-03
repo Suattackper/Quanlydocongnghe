@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SaleApp
+namespace SaleApp.Model
 {
     internal class HinhAnh
     {
@@ -18,11 +18,11 @@ namespace SaleApp
         public HinhAnh(string tenhinhanh, byte[] anh)
         {
             this.tenhinhanh = tenhinhanh;
-            this.Anh = anh;
+            Anh = anh;
         }
 
-      
-        public string Tenhinhanh { get => this.tenhinhanh; set => this.tenhinhanh = value; }
+
+        public string Tenhinhanh { get => tenhinhanh; set => tenhinhanh = value; }
         public byte[] Anh { get => anh; set => anh = value; }
     }
 }

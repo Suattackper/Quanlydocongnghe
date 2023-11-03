@@ -120,11 +120,11 @@
             this.gbThongTinKH.Controls.Add(this.label3);
             this.gbThongTinKH.Controls.Add(this.label5);
             this.gbThongTinKH.Font = new System.Drawing.Font("Cascadia Code", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.gbThongTinKH.Location = new System.Drawing.Point(90, 146);
-            this.gbThongTinKH.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbThongTinKH.Location = new System.Drawing.Point(90, 154);
+            this.gbThongTinKH.Margin = new System.Windows.Forms.Padding(2);
             this.gbThongTinKH.Name = "gbThongTinKH";
-            this.gbThongTinKH.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.gbThongTinKH.Size = new System.Drawing.Size(565, 162);
+            this.gbThongTinKH.Padding = new System.Windows.Forms.Padding(2);
+            this.gbThongTinKH.Size = new System.Drawing.Size(780, 154);
             this.gbThongTinKH.TabIndex = 7;
             this.gbThongTinKH.TabStop = false;
             this.gbThongTinKH.Text = "Thông tin khách hàng:";
@@ -132,7 +132,7 @@
             // txtDC
             // 
             this.txtDC.Location = new System.Drawing.Point(372, 90);
-            this.txtDC.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDC.Margin = new System.Windows.Forms.Padding(2);
             this.txtDC.Multiline = true;
             this.txtDC.Name = "txtDC";
             this.txtDC.Size = new System.Drawing.Size(178, 34);
@@ -141,7 +141,7 @@
             // txtSDT
             // 
             this.txtSDT.Location = new System.Drawing.Point(148, 98);
-            this.txtSDT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSDT.Margin = new System.Windows.Forms.Padding(2);
             this.txtSDT.Name = "txtSDT";
             this.txtSDT.Size = new System.Drawing.Size(121, 25);
             this.txtSDT.TabIndex = 10;
@@ -149,7 +149,7 @@
             // txtTenKH
             // 
             this.txtTenKH.Location = new System.Drawing.Point(382, 42);
-            this.txtTenKH.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTenKH.Margin = new System.Windows.Forms.Padding(2);
             this.txtTenKH.Multiline = true;
             this.txtTenKH.Name = "txtTenKH";
             this.txtTenKH.Size = new System.Drawing.Size(178, 34);
@@ -158,7 +158,7 @@
             // txtMaKH
             // 
             this.txtMaKH.Location = new System.Drawing.Point(148, 42);
-            this.txtMaKH.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMaKH.Margin = new System.Windows.Forms.Padding(2);
             this.txtMaKH.Name = "txtMaKH";
             this.txtMaKH.Size = new System.Drawing.Size(121, 25);
             this.txtMaKH.TabIndex = 8;
@@ -177,7 +177,7 @@
             // txtMaD
             // 
             this.txtMaD.Location = new System.Drawing.Point(250, 98);
-            this.txtMaD.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMaD.Margin = new System.Windows.Forms.Padding(2);
             this.txtMaD.Name = "txtMaD";
             this.txtMaD.Size = new System.Drawing.Size(121, 27);
             this.txtMaD.TabIndex = 9;
@@ -196,7 +196,7 @@
             // txtMaNV
             // 
             this.txtMaNV.Location = new System.Drawing.Point(670, 101);
-            this.txtMaNV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMaNV.Margin = new System.Windows.Forms.Padding(2);
             this.txtMaNV.Name = "txtMaNV";
             this.txtMaNV.Size = new System.Drawing.Size(121, 27);
             this.txtMaNV.TabIndex = 18;
@@ -206,9 +206,9 @@
             this.gbDSCTHD.Controls.Add(this.dtgrvHienThiListSPChon);
             this.gbDSCTHD.Font = new System.Drawing.Font("Cascadia Code", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.gbDSCTHD.Location = new System.Drawing.Point(47, 322);
-            this.gbDSCTHD.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbDSCTHD.Margin = new System.Windows.Forms.Padding(2);
             this.gbDSCTHD.Name = "gbDSCTHD";
-            this.gbDSCTHD.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbDSCTHD.Padding = new System.Windows.Forms.Padding(2);
             this.gbDSCTHD.Size = new System.Drawing.Size(852, 220);
             this.gbDSCTHD.TabIndex = 19;
             this.gbDSCTHD.TabStop = false;
@@ -226,7 +226,7 @@
             this.clGiaTien,
             this.clThanhTien});
             this.dtgrvHienThiListSPChon.Location = new System.Drawing.Point(5, 24);
-            this.dtgrvHienThiListSPChon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtgrvHienThiListSPChon.Margin = new System.Windows.Forms.Padding(2);
             this.dtgrvHienThiListSPChon.Name = "dtgrvHienThiListSPChon";
             this.dtgrvHienThiListSPChon.RowHeadersWidth = 62;
             this.dtgrvHienThiListSPChon.RowTemplate.Height = 33;
@@ -268,7 +268,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(992, 601);
+            this.ClientSize = new System.Drawing.Size(937, 601);
             this.Controls.Add(this.gbDSCTHD);
             this.Controls.Add(this.txtMaNV);
             this.Controls.Add(this.label8);
@@ -276,7 +276,7 @@
             this.Controls.Add(this.gbThongTinKH);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblChiTietDon);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmChiTietDon";
             this.Text = "ChiTietDon";
             this.gbThongTinKH.ResumeLayout(false);

@@ -41,7 +41,13 @@ namespace SaleApp.Model
             //Byte[] imagearray = (byte[])row["Anh"];
             //byte[] imagebytearray = imagearray;
             this.Anh = (byte[])row["anh"];
+            //this.SoLuong =
         }
+
+        //public GetSoLuong()
+        //{
+
+        //}
 
         public event EventHandler onSelect = null;
         public string MaSanPham { get; set; }
@@ -69,7 +75,7 @@ namespace SaleApp.Model
 
         public string DanhSachSanPham { get; set; }
 
-        public int SoLuong { get; set; }
+        public int SoLuong { get; set; }    
         public string TenSanPham
         {
             //get; set;

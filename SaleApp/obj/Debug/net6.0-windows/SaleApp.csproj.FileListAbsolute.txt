@@ -100,3 +100,5 @@ C:\Users\Xuan Thao\Desktop\btl\SaleApp\obj\Debug\net6.0-windows\SaleApp.genrunti
 C:\Users\Xuan Thao\Desktop\btl\SaleApp\obj\Debug\net6.0-windows\ref\SaleApp.dll
 C:\Users\Xuan Thao\Desktop\btl\SaleApp\obj\Debug\net6.0-windows\SaleApp.View.frmImage.resources
 C:\Users\Xuan Thao\Desktop\btl\SaleApp\obj\Debug\net6.0-windows\SaleApp.Model.ModelSanPham.resources
+C:\Users\Xuan Thao\Desktop\btl\SaleApp\obj\Debug\net6.0-windows\Interop.Microsoft.Office.Interop.Excel.dll
+C:\Users\Xuan Thao\Desktop\btl\SaleApp\obj\Debug\net6.0-windows\SaleApp.csproj.ResolveComReference.cache
