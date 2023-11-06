@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SaleApp.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,45 +8,27 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace SaleApp.View
 {
-    public partial class frmHome : Form
+    public partial class frmHome2 : Form
     {
         string quyen;
         string sdt;
-
-        int widthFrm = 1350;
-        int heightFrm = 640;
-        int widthTskbar = 323;
-        public frmHome()
+        public frmHome2()
         {
             InitializeComponent();
             frmTrangChu a = new frmTrangChu();
             LoadForm(a);
-            loadFormResized();
         }
-        public frmHome(string quyen, string sdt)
+        public frmHome2(string quyen,string sdt)
         {
             this.quyen = quyen;
             this.sdt = sdt;
             InitializeComponent();
             frmTrangChu a = new frmTrangChu();
             LoadForm(a);
-            loadFormResized();
         }
-
-        // resized frm home
-        void loadFormResized()
-        {
-            panel1.Size = new Size(widthFrm, 70);
-            //btnClose.Location = new Point(1363, 12);
-            PBody.Size = new Size(widthFrm - widthTskbar, 843);
-            taskbar.Size = new Size(widthTskbar, heightFrm);
-            this.ClientSize = new Size(widthFrm, heightFrm);
-        }
-
         // theo dõi Form hiện tại đang được hiển thị
         private Form formNow;
         private void LoadForm(Form formnew)
@@ -73,11 +56,13 @@ namespace SaleApp.View
         }
         private void btnClose_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Bạn có chắc muốn thoát chương trình", "Thông Báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == System.Windows.Forms.DialogResult.OK)
-            {
+            Application.Exit();
+        }
 
-                Application.Exit();
-            }
+        private void btnThongKe_Click(object sender, EventArgs e)
+        {
+            frmThongKe a = new frmThongKe();
+            LoadForm(a);
         }
 
         private void btnSP_Click(object sender, EventArgs e)
@@ -133,10 +118,5 @@ namespace SaleApp.View
             signin.ShowDialog();
         }
 
-        private void btnThongKe_Click_1(object sender, EventArgs e)
-        {
-            frmThongKe a = new frmThongKe();
-            LoadForm(a);
-        }
     }
 }

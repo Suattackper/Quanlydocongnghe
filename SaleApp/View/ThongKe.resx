@@ -66,7 +66,7 @@
     <value>Cascadia Code, 11pt, style=Bold</value>
   </data>
   <data name="btnXuatFile.Location" type="System.Drawing.Point, System.Drawing">
-    <value>833, 586</value>
+    <value>977, 705</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="btnXuatFile.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
@@ -94,6 +94,21 @@
   <data name="&gt;&gt;btnXuatFile.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
+  <data name="dtgvDSDonHang.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 27</value>
+  </data>
+  <data name="dtgvDSDonHang.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="dtgvDSDonHang.RowHeadersWidth" type="System.Int32, mscorlib">
+    <value>62</value>
+  </data>
+  <data name="dtgvDSDonHang.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1137, 589</value>
+  </data>
+  <data name="dtgvDSDonHang.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
   <data name="&gt;&gt;dtgvDSDonHang.Name" xml:space="preserve">
     <value>dtgvDSDonHang</value>
   </data>
@@ -119,7 +134,7 @@
     <value>2, 2, 2, 2</value>
   </data>
   <data name="gbDSHangTon.Size" type="System.Drawing.Size, System.Drawing">
-    <value>988, 516</value>
+    <value>1146, 620</value>
   </data>
   <data name="gbDSHangTon.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -139,33 +154,6 @@
   <data name="&gt;&gt;gbDSHangTon.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
-  <data name="dtgvDSDonHang.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 27</value>
-  </data>
-  <data name="dtgvDSDonHang.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="dtgvDSDonHang.RowHeadersWidth" type="System.Int32, mscorlib">
-    <value>62</value>
-  </data>
-  <data name="dtgvDSDonHang.Size" type="System.Drawing.Size, System.Drawing">
-    <value>979, 485</value>
-  </data>
-  <data name="dtgvDSDonHang.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;dtgvDSDonHang.Name" xml:space="preserve">
-    <value>dtgvDSDonHang</value>
-  </data>
-  <data name="&gt;&gt;dtgvDSDonHang.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dtgvDSDonHang.Parent" xml:space="preserve">
-    <value>gbDSHangTon</value>
-  </data>
-  <data name="&gt;&gt;dtgvDSDonHang.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="btnrefresh.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
@@ -173,7 +161,7 @@
     <value>Cascadia Code, 11pt, style=Bold</value>
   </data>
   <data name="btnrefresh.Location" type="System.Drawing.Point, System.Drawing">
-    <value>833, 531</value>
+    <value>977, 650</value>
   </data>
   <data name="btnrefresh.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
@@ -206,7 +194,7 @@
     <value>Segoe UI, 10.8pt, style=Bold</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>27, 547</value>
+    <value>21, 663</value>
   </data>
   <data name="label1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 0, 2, 0</value>
@@ -249,7 +237,7 @@
 </value>
   </data>
   <data name="btnTimKiem.Location" type="System.Drawing.Point, System.Drawing">
-    <value>480, 541</value>
+    <value>474, 657</value>
   </data>
   <data name="btnTimKiem.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
@@ -276,7 +264,7 @@
     <value>Cascadia Code Light, 8pt</value>
   </data>
   <data name="txtTimKiem.Location" type="System.Drawing.Point, System.Drawing">
-    <value>231, 547</value>
+    <value>225, 663</value>
   </data>
   <data name="txtTimKiem.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
@@ -312,7 +300,7 @@
     <value>NoControl</value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>27, 609</value>
+    <value>21, 725</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
     <value>165, 28</value>
@@ -345,7 +333,7 @@
     <value>NoControl</value>
   </data>
   <data name="laTong.Location" type="System.Drawing.Point, System.Drawing">
-    <value>198, 609</value>
+    <value>192, 725</value>
   </data>
   <data name="laTong.Size" type="System.Drawing.Size, System.Drawing">
     <value>42, 28</value>
@@ -378,7 +366,7 @@
     <value>NoControl</value>
   </data>
   <data name="btnXemCTDH.Location" type="System.Drawing.Point, System.Drawing">
-    <value>609, 531</value>
+    <value>753, 650</value>
   </data>
   <data name="btnXemCTDH.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>2, 2, 2, 2</value>
@@ -414,7 +402,7 @@
     <value>8, 20</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1010, 648</value>
+    <value>1168, 770</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>ThongKe</value>

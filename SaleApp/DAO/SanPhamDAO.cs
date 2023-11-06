@@ -66,5 +66,14 @@ namespace SaleApp.DAO
             string sql = $"select MaSanPham,TenSanPham from SANPHAM where TenSanPham = '{masp}'";
             return KetNoiSql.Instance.execSql(sql);
         }
+        public void SetCbx(ComboBox b, string table, string mb)
+        {
+
+            string sql = "select * from " + table;
+            DataTable data = DataProvider.Instance.ExcuteQuery(sql);
+            b.DataSource = data;
+            b.DisplayMember = mb;
+
+        }
     }
 }

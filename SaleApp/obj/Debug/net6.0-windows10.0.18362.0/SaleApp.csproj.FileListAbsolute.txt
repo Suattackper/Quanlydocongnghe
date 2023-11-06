@@ -15,7 +15,6 @@ D:\c#\Quanlydocongnghe\SaleApp\obj\Debug\net6.0-windows10.0.18362.0\SaleApp.cspr
 D:\c#\Quanlydocongnghe\SaleApp\obj\Debug\net6.0-windows10.0.18362.0\SaleApp.Properties.Resources.resources
 D:\c#\Quanlydocongnghe\SaleApp\obj\Debug\net6.0-windows10.0.18362.0\SaleApp.View.frmChiTietDon.resources
 D:\c#\Quanlydocongnghe\SaleApp\obj\Debug\net6.0-windows10.0.18362.0\SaleApp.View.frmHome.resources
-D:\c#\Quanlydocongnghe\SaleApp\obj\Debug\net6.0-windows10.0.18362.0\SaleApp.View.frmDonHang.resources
 D:\c#\Quanlydocongnghe\SaleApp\obj\Debug\net6.0-windows10.0.18362.0\SaleApp.View.frmHangTon.resources
 D:\c#\Quanlydocongnghe\SaleApp\obj\Debug\net6.0-windows10.0.18362.0\SaleApp.View.frmKhoHang.resources
 D:\c#\Quanlydocongnghe\SaleApp\obj\Debug\net6.0-windows10.0.18362.0\SaleApp.View.frmNhaCungCap.resources
@@ -61,3 +60,6 @@ D:\c#\Quanlydocongnghe\SaleApp\bin\Debug\net6.0-windows10.0.18362.0\aa-DJ\SaleAp
 D:\c#\Quanlydocongnghe\SaleApp\obj\Debug\net6.0-windows10.0.18362.0\SaleApp.View.frmThongKe.resources
 D:\c#\Quanlydocongnghe\SaleApp\obj\Debug\net6.0-windows10.0.18362.0\SaleApp.View.frmThongKe.aa-DJ.resources
 D:\c#\Quanlydocongnghe\SaleApp\obj\Debug\net6.0-windows10.0.18362.0\aa-DJ\SaleApp.resources.dll
+D:\c#\Quanlydocongnghe\SaleApp\obj\Debug\net6.0-windows10.0.18362.0\SaleApp.Model.ModelSanPham.resources
+D:\c#\Quanlydocongnghe\SaleApp\obj\Debug\net6.0-windows10.0.18362.0\SaleApp.View.frmHome2.resources
+D:\c#\Quanlydocongnghe\SaleApp\obj\Debug\net6.0-windows10.0.18362.0\SaleApp.frmDonHang.resources

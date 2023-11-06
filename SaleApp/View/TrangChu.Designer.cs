@@ -57,7 +57,7 @@
             this.panel4.Controls.Add(this.pictureBox2);
             this.panel4.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.panel4.ForeColor = System.Drawing.Color.Black;
-            this.panel4.Location = new System.Drawing.Point(671, 252);
+            this.panel4.Location = new System.Drawing.Point(825, 252);
             this.panel4.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(312, 162);
@@ -157,7 +157,7 @@
             this.panel6.Controls.Add(this.pictureBox11);
             this.panel6.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.panel6.ForeColor = System.Drawing.Color.Black;
-            this.panel6.Location = new System.Drawing.Point(351, 252);
+            this.panel6.Location = new System.Drawing.Point(428, 252);
             this.panel6.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(312, 162);
@@ -203,13 +203,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1010, 648);
+            this.ClientSize = new System.Drawing.Size(1168, 770);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel6);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmTrangChu";
-            this.Text = "TrangChu";
+            this.Text = "s";
             this.Load += new System.EventHandler(this.frmTrangChu_Load);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();

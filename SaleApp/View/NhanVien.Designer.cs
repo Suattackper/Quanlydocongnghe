@@ -147,7 +147,7 @@ namespace SaleApp.View
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Cascadia Code", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(472, 86);
+            this.label6.Location = new System.Drawing.Point(506, 86);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(70, 22);
@@ -174,7 +174,7 @@ namespace SaleApp.View
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(546, 80);
+            this.txtEmail.Location = new System.Drawing.Point(580, 80);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtEmail.Multiline = true;
             this.txtEmail.Name = "txtEmail";
@@ -183,7 +183,7 @@ namespace SaleApp.View
             // 
             // txtDiaChi
             // 
-            this.txtDiaChi.Location = new System.Drawing.Point(546, 29);
+            this.txtDiaChi.Location = new System.Drawing.Point(580, 29);
             this.txtDiaChi.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtDiaChi.Multiline = true;
             this.txtDiaChi.Name = "txtDiaChi";
@@ -192,7 +192,7 @@ namespace SaleApp.View
             // 
             // txtCCCD
             // 
-            this.txtCCCD.Location = new System.Drawing.Point(546, 131);
+            this.txtCCCD.Location = new System.Drawing.Point(580, 131);
             this.txtCCCD.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtCCCD.Multiline = true;
             this.txtCCCD.Name = "txtCCCD";
@@ -203,7 +203,7 @@ namespace SaleApp.View
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Cascadia Code", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label7.Location = new System.Drawing.Point(432, 137);
+            this.label7.Location = new System.Drawing.Point(466, 137);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(110, 22);
@@ -247,7 +247,7 @@ namespace SaleApp.View
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Cascadia Code", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(452, 35);
+            this.label2.Location = new System.Drawing.Point(486, 35);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(90, 22);
@@ -271,7 +271,7 @@ namespace SaleApp.View
             this.btnUpload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpload.Font = new System.Drawing.Font("Cascadia Code", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnUpload.ForeColor = System.Drawing.Color.White;
-            this.btnUpload.Location = new System.Drawing.Point(835, 246);
+            this.btnUpload.Location = new System.Drawing.Point(947, 246);
             this.btnUpload.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btnUpload.Name = "btnUpload";
             this.btnUpload.Size = new System.Drawing.Size(125, 45);
@@ -297,7 +297,7 @@ namespace SaleApp.View
             this.gbThongTinNV.Margin = new System.Windows.Forms.Padding(2);
             this.gbThongTinNV.Name = "gbThongTinNV";
             this.gbThongTinNV.Padding = new System.Windows.Forms.Padding(2);
-            this.gbThongTinNV.Size = new System.Drawing.Size(988, 336);
+            this.gbThongTinNV.Size = new System.Drawing.Size(1144, 430);
             this.gbThongTinNV.TabIndex = 59;
             this.gbThongTinNV.TabStop = false;
             this.gbThongTinNV.Text = "Thông Tin Nhân Viên";
@@ -315,7 +315,7 @@ namespace SaleApp.View
             this.dtgvNhanVien.RowHeadersVisible = false;
             this.dtgvNhanVien.RowHeadersWidth = 62;
             this.dtgvNhanVien.RowTemplate.Height = 28;
-            this.dtgvNhanVien.Size = new System.Drawing.Size(973, 306);
+            this.dtgvNhanVien.Size = new System.Drawing.Size(1136, 397);
             this.dtgvNhanVien.TabIndex = 53;
             this.dtgvNhanVien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvNhanVien_CellClick);
             this.dtgvNhanVien.SelectionChanged += new System.EventHandler(this.dtgvNhanVien_SelectionChanged);
@@ -324,7 +324,7 @@ namespace SaleApp.View
             // 
             this.groupBox1.Controls.Add(this.pbAvatar);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.groupBox1.Location = new System.Drawing.Point(790, 12);
+            this.groupBox1.Location = new System.Drawing.Point(902, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(211, 207);
             this.groupBox1.TabIndex = 60;
@@ -345,7 +345,7 @@ namespace SaleApp.View
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.ClientSize = new System.Drawing.Size(1010, 648);
+            this.ClientSize = new System.Drawing.Size(1168, 770);
             this.Controls.Add(this.cbQuyen);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.gbThongTinNV);

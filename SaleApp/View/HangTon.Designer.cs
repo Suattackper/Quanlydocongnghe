@@ -44,7 +44,7 @@
             this.gbDSHangTon.Margin = new System.Windows.Forms.Padding(2);
             this.gbDSHangTon.Name = "gbDSHangTon";
             this.gbDSHangTon.Padding = new System.Windows.Forms.Padding(2);
-            this.gbDSHangTon.Size = new System.Drawing.Size(954, 453);
+            this.gbDSHangTon.Size = new System.Drawing.Size(1106, 601);
             this.gbDSHangTon.TabIndex = 0;
             this.gbDSHangTon.TabStop = false;
             this.gbDSHangTon.Text = "Danh sách hàng tồn";
@@ -63,7 +63,7 @@
             this.dtgvDSHangTon.RowHeadersVisible = false;
             this.dtgvDSHangTon.RowHeadersWidth = 62;
             this.dtgvDSHangTon.RowTemplate.Height = 33;
-            this.dtgvDSHangTon.Size = new System.Drawing.Size(934, 421);
+            this.dtgvDSHangTon.Size = new System.Drawing.Size(1097, 567);
             this.dtgvDSHangTon.TabIndex = 0;
             // 
             // btnXuatFile
@@ -72,7 +72,7 @@
             this.btnXuatFile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnXuatFile.Font = new System.Drawing.Font("Cascadia Code", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnXuatFile.ForeColor = System.Drawing.Color.White;
-            this.btnXuatFile.Location = new System.Drawing.Point(302, 529);
+            this.btnXuatFile.Location = new System.Drawing.Point(407, 667);
             this.btnXuatFile.Margin = new System.Windows.Forms.Padding(2);
             this.btnXuatFile.Name = "btnXuatFile";
             this.btnXuatFile.Size = new System.Drawing.Size(166, 51);
@@ -87,7 +87,7 @@
             this.btnrefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnrefresh.Font = new System.Drawing.Font("Cascadia Code", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnrefresh.ForeColor = System.Drawing.Color.White;
-            this.btnrefresh.Location = new System.Drawing.Point(502, 529);
+            this.btnrefresh.Location = new System.Drawing.Point(607, 667);
             this.btnrefresh.Margin = new System.Windows.Forms.Padding(2);
             this.btnrefresh.Name = "btnrefresh";
             this.btnrefresh.Size = new System.Drawing.Size(166, 51);
@@ -101,7 +101,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1004, 618);
+            this.ClientSize = new System.Drawing.Size(1159, 740);
             this.Controls.Add(this.btnrefresh);
             this.Controls.Add(this.btnXuatFile);
             this.Controls.Add(this.gbDSHangTon);

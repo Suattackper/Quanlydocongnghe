@@ -43,7 +43,7 @@
             this.tabControl1.Location = new System.Drawing.Point(-1, -1);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1012, 651);
+            this.tabControl1.Size = new System.Drawing.Size(1167, 773);
             this.tabControl1.TabIndex = 0;
             // 
             // tHangTon
@@ -51,7 +51,7 @@
             this.tHangTon.Location = new System.Drawing.Point(4, 29);
             this.tHangTon.Name = "tHangTon";
             this.tHangTon.Padding = new System.Windows.Forms.Padding(3);
-            this.tHangTon.Size = new System.Drawing.Size(1004, 618);
+            this.tHangTon.Size = new System.Drawing.Size(1159, 740);
             this.tHangTon.TabIndex = 0;
             this.tHangTon.Text = "Hàng tồn";
             this.tHangTon.UseVisualStyleBackColor = true;
@@ -61,7 +61,7 @@
             this.tNhapKho.Location = new System.Drawing.Point(4, 29);
             this.tNhapKho.Name = "tNhapKho";
             this.tNhapKho.Padding = new System.Windows.Forms.Padding(3);
-            this.tNhapKho.Size = new System.Drawing.Size(1004, 618);
+            this.tNhapKho.Size = new System.Drawing.Size(1186, 793);
             this.tNhapKho.TabIndex = 1;
             this.tNhapKho.Text = "Nhập kho";
             this.tNhapKho.UseVisualStyleBackColor = true;
@@ -71,7 +71,7 @@
             this.tXuatKho.Location = new System.Drawing.Point(4, 29);
             this.tXuatKho.Name = "tXuatKho";
             this.tXuatKho.Padding = new System.Windows.Forms.Padding(3);
-            this.tXuatKho.Size = new System.Drawing.Size(1004, 618);
+            this.tXuatKho.Size = new System.Drawing.Size(1186, 793);
             this.tXuatKho.TabIndex = 2;
             this.tXuatKho.Text = "Xuất kho";
             this.tXuatKho.UseVisualStyleBackColor = true;
@@ -80,7 +80,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1010, 648);
+            this.ClientSize = new System.Drawing.Size(1168, 770);
             this.Controls.Add(this.tabControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmKhoHang";

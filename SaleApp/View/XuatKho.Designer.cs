@@ -68,7 +68,7 @@
             this.gbTTNhapHang.Margin = new System.Windows.Forms.Padding(2);
             this.gbTTNhapHang.Name = "gbTTNhapHang";
             this.gbTTNhapHang.Padding = new System.Windows.Forms.Padding(2);
-            this.gbTTNhapHang.Size = new System.Drawing.Size(979, 315);
+            this.gbTTNhapHang.Size = new System.Drawing.Size(1133, 315);
             this.gbTTNhapHang.TabIndex = 2;
             this.gbTTNhapHang.TabStop = false;
             this.gbTTNhapHang.Text = "Thông tin Xuất kho ";
@@ -86,11 +86,11 @@
             this.gbTTSP.Controls.Add(this.label12);
             this.gbTTSP.Controls.Add(this.label10);
             this.gbTTSP.Controls.Add(this.label8);
-            this.gbTTSP.Location = new System.Drawing.Point(416, 24);
+            this.gbTTSP.Location = new System.Drawing.Point(514, 24);
             this.gbTTSP.Margin = new System.Windows.Forms.Padding(2);
             this.gbTTSP.Name = "gbTTSP";
             this.gbTTSP.Padding = new System.Windows.Forms.Padding(2);
-            this.gbTTSP.Size = new System.Drawing.Size(546, 284);
+            this.gbTTSP.Size = new System.Drawing.Size(588, 284);
             this.gbTTSP.TabIndex = 17;
             this.gbTTSP.TabStop = false;
             this.gbTTSP.Text = "Thông tin Sản phẩm";
@@ -129,10 +129,10 @@
             this.btnReset.FlatAppearance.BorderSize = 0;
             this.btnReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReset.ForeColor = System.Drawing.Color.White;
-            this.btnReset.Location = new System.Drawing.Point(396, 207);
+            this.btnReset.Location = new System.Drawing.Point(451, 206);
             this.btnReset.Margin = new System.Windows.Forms.Padding(2);
             this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(95, 37);
+            this.btnReset.Size = new System.Drawing.Size(90, 37);
             this.btnReset.TabIndex = 2;
             this.btnReset.Text = "Reset";
             this.btnReset.UseVisualStyleBackColor = false;
@@ -144,7 +144,7 @@
             this.btnXoa.FlatAppearance.BorderSize = 0;
             this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnXoa.ForeColor = System.Drawing.Color.White;
-            this.btnXoa.Location = new System.Drawing.Point(396, 140);
+            this.btnXoa.Location = new System.Drawing.Point(451, 139);
             this.btnXoa.Margin = new System.Windows.Forms.Padding(2);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(90, 37);
@@ -175,7 +175,7 @@
             this.btnThem.FlatAppearance.BorderSize = 0;
             this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThem.ForeColor = System.Drawing.Color.White;
-            this.btnThem.Location = new System.Drawing.Point(396, 78);
+            this.btnThem.Location = new System.Drawing.Point(451, 77);
             this.btnThem.Margin = new System.Windows.Forms.Padding(2);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(90, 37);
@@ -216,7 +216,7 @@
             // 
             // txtLiDo
             // 
-            this.txtLiDo.Location = new System.Drawing.Point(44, 81);
+            this.txtLiDo.Location = new System.Drawing.Point(91, 78);
             this.txtLiDo.Margin = new System.Windows.Forms.Padding(2);
             this.txtLiDo.Multiline = true;
             this.txtLiDo.Name = "txtLiDo";
@@ -229,7 +229,7 @@
             this.btnXuat.FlatAppearance.BorderSize = 0;
             this.btnXuat.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnXuat.ForeColor = System.Drawing.Color.White;
-            this.btnXuat.Location = new System.Drawing.Point(92, 258);
+            this.btnXuat.Location = new System.Drawing.Point(194, 259);
             this.btnXuat.Margin = new System.Windows.Forms.Padding(2);
             this.btnXuat.Name = "btnXuat";
             this.btnXuat.Size = new System.Drawing.Size(90, 37);
@@ -241,7 +241,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(167, 47);
+            this.label6.Location = new System.Drawing.Point(214, 44);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(70, 22);
@@ -256,7 +256,7 @@
             this.gbDSSPNhap.Margin = new System.Windows.Forms.Padding(2);
             this.gbDSSPNhap.Name = "gbDSSPNhap";
             this.gbDSSPNhap.Padding = new System.Windows.Forms.Padding(2);
-            this.gbDSSPNhap.Size = new System.Drawing.Size(979, 285);
+            this.gbDSSPNhap.Size = new System.Drawing.Size(1137, 380);
             this.gbDSSPNhap.TabIndex = 3;
             this.gbDSSPNhap.TabStop = false;
             this.gbDSSPNhap.Text = "Danh sách Sản phẩm xuất ";
@@ -280,7 +280,7 @@
             this.dtgvDSSPXuat.RowHeadersVisible = false;
             this.dtgvDSSPXuat.RowHeadersWidth = 62;
             this.dtgvDSSPXuat.RowTemplate.Height = 33;
-            this.dtgvDSSPXuat.Size = new System.Drawing.Size(970, 252);
+            this.dtgvDSSPXuat.Size = new System.Drawing.Size(1128, 342);
             this.dtgvDSSPXuat.TabIndex = 0;
             this.dtgvDSSPXuat.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvDSSPXuat_CellClick);
             this.dtgvDSSPXuat.SelectionChanged += new System.EventHandler(this.dtgvDSSPXuat_SelectionChanged);
@@ -324,7 +324,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1004, 618);
+            this.ClientSize = new System.Drawing.Size(1159, 740);
             this.Controls.Add(this.gbDSSPNhap);
             this.Controls.Add(this.gbTTNhapHang);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

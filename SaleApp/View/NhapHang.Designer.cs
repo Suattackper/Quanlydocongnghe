@@ -67,7 +67,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Cascadia Code", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(390, 7);
+            this.label1.Location = new System.Drawing.Point(486, 9);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(175, 35);
@@ -89,7 +89,7 @@
             this.gbTTNhapHang.Margin = new System.Windows.Forms.Padding(2);
             this.gbTTNhapHang.Name = "gbTTNhapHang";
             this.gbTTNhapHang.Padding = new System.Windows.Forms.Padding(2);
-            this.gbTTNhapHang.Size = new System.Drawing.Size(982, 274);
+            this.gbTTNhapHang.Size = new System.Drawing.Size(1137, 274);
             this.gbTTNhapHang.TabIndex = 1;
             this.gbTTNhapHang.TabStop = false;
             this.gbTTNhapHang.Text = "Thông tin Nhập Hàng ";
@@ -100,7 +100,7 @@
             this.btnNhap.FlatAppearance.BorderSize = 0;
             this.btnNhap.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNhap.ForeColor = System.Drawing.Color.White;
-            this.btnNhap.Location = new System.Drawing.Point(46, 226);
+            this.btnNhap.Location = new System.Drawing.Point(200, 225);
             this.btnNhap.Margin = new System.Windows.Forms.Padding(2);
             this.btnNhap.Name = "btnNhap";
             this.btnNhap.Size = new System.Drawing.Size(90, 37);
@@ -113,7 +113,7 @@
             // 
             this.dtpNgayThanhToan.Enabled = false;
             this.dtpNgayThanhToan.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpNgayThanhToan.Location = new System.Drawing.Point(85, 193);
+            this.dtpNgayThanhToan.Location = new System.Drawing.Point(153, 193);
             this.dtpNgayThanhToan.Name = "dtpNgayThanhToan";
             this.dtpNgayThanhToan.Size = new System.Drawing.Size(208, 27);
             this.dtpNgayThanhToan.TabIndex = 2;
@@ -121,7 +121,7 @@
             // lNgayThanhToan
             // 
             this.lNgayThanhToan.AutoSize = true;
-            this.lNgayThanhToan.Location = new System.Drawing.Point(102, 168);
+            this.lNgayThanhToan.Location = new System.Drawing.Point(170, 168);
             this.lNgayThanhToan.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lNgayThanhToan.Name = "lNgayThanhToan";
             this.lNgayThanhToan.Size = new System.Drawing.Size(170, 22);
@@ -132,14 +132,14 @@
             // 
             this.cbNhaCungCap.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbNhaCungCap.FormattingEnabled = true;
-            this.cbNhaCungCap.Location = new System.Drawing.Point(150, 59);
+            this.cbNhaCungCap.Location = new System.Drawing.Point(218, 59);
             this.cbNhaCungCap.Name = "cbNhaCungCap";
             this.cbNhaCungCap.Size = new System.Drawing.Size(154, 30);
             this.cbNhaCungCap.TabIndex = 0;
             // 
             // txtTamUng
             // 
-            this.txtTamUng.Location = new System.Drawing.Point(150, 116);
+            this.txtTamUng.Location = new System.Drawing.Point(218, 116);
             this.txtTamUng.Margin = new System.Windows.Forms.Padding(2);
             this.txtTamUng.Name = "txtTamUng";
             this.txtTamUng.Size = new System.Drawing.Size(154, 27);
@@ -149,7 +149,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(46, 119);
+            this.label6.Location = new System.Drawing.Point(114, 119);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(90, 22);
@@ -169,7 +169,7 @@
             this.gbTTSP.Controls.Add(this.label10);
             this.gbTTSP.Controls.Add(this.label8);
             this.gbTTSP.Controls.Add(this.label7);
-            this.gbTTSP.Location = new System.Drawing.Point(379, 24);
+            this.gbTTSP.Location = new System.Drawing.Point(528, 24);
             this.gbTTSP.Margin = new System.Windows.Forms.Padding(2);
             this.gbTTSP.Name = "gbTTSP";
             this.gbTTSP.Padding = new System.Windows.Forms.Padding(2);
@@ -301,7 +301,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(86, 67);
+            this.label4.Location = new System.Drawing.Point(154, 67);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(50, 22);
@@ -316,7 +316,7 @@
             this.gbDSSPNhap.Margin = new System.Windows.Forms.Padding(2);
             this.gbDSSPNhap.Name = "gbDSSPNhap";
             this.gbDSSPNhap.Padding = new System.Windows.Forms.Padding(2);
-            this.gbDSSPNhap.Size = new System.Drawing.Size(982, 294);
+            this.gbDSSPNhap.Size = new System.Drawing.Size(1137, 389);
             this.gbDSSPNhap.TabIndex = 2;
             this.gbDSSPNhap.TabStop = false;
             this.gbDSSPNhap.Text = "Danh sách Sản phẩm nhập";
@@ -334,14 +334,14 @@
             this.soluong,
             this.gianhap,
             this.ncc});
-            this.dtgvDSSPNhap.Location = new System.Drawing.Point(5, 29);
+            this.dtgvDSSPNhap.Location = new System.Drawing.Point(9, 0);
             this.dtgvDSSPNhap.Margin = new System.Windows.Forms.Padding(2);
             this.dtgvDSSPNhap.Name = "dtgvDSSPNhap";
             this.dtgvDSSPNhap.ReadOnly = true;
             this.dtgvDSSPNhap.RowHeadersVisible = false;
             this.dtgvDSSPNhap.RowHeadersWidth = 62;
             this.dtgvDSSPNhap.RowTemplate.Height = 33;
-            this.dtgvDSSPNhap.Size = new System.Drawing.Size(970, 257);
+            this.dtgvDSSPNhap.Size = new System.Drawing.Size(1115, 379);
             this.dtgvDSSPNhap.TabIndex = 0;
             this.dtgvDSSPNhap.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvDSSPNhap_CellClick);
             this.dtgvDSSPNhap.SelectionChanged += new System.EventHandler(this.dtgvDSSPNhap_SelectionChanged);
@@ -392,7 +392,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1004, 618);
+            this.ClientSize = new System.Drawing.Size(1159, 740);
             this.Controls.Add(this.gbDSSPNhap);
             this.Controls.Add(this.gbTTNhapHang);
             this.Controls.Add(this.label1);
