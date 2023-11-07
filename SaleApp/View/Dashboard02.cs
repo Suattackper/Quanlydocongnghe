@@ -85,7 +85,7 @@ namespace SaleApp.View
 
         private void btnTaoDon_Click(object sender, EventArgs e)
         {
-            frmDonHang a = new frmDonHang();
+            frmDonHang a = new frmDonHang(sdt);
             LoadForm(a);
         }
 

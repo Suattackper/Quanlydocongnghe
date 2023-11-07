@@ -38,6 +38,8 @@ namespace SaleApp.Model
             //this.MaLoaiHang = int.Parse(row["maloaihang"].ToString());
             this.TenSanPham = row["tensanpham"].ToString();
             this.GiaBan = float.Parse(row["giaban"].ToString());
+
+            this.SoLuong = int.Parse(row["soluong"].ToString());
             //Byte[] imagearray = (byte[])row["Anh"];
             //byte[] imagebytearray = imagearray;
             this.Anh = (byte[])row["anh"];
@@ -52,7 +54,7 @@ namespace SaleApp.Model
         public event EventHandler onSelect = null;
         public string MaSanPham { get; set; }
 
-        public int MaLoaiHang { get; set; }
+        public string MaLoaiHang { get; set; }
 
         private float giaBan;
 
@@ -75,7 +77,11 @@ namespace SaleApp.Model
 
         public string DanhSachSanPham { get; set; }
 
-        public int SoLuong { get; set; }    
+        public int SoLuong 
+        {
+            get { return int.Parse(lbHienCo.Text); }
+            set { lbHienCo.Text = value.ToString(); }
+        }    
         public string TenSanPham
         {
             //get; set;

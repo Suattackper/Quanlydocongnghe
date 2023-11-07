@@ -149,7 +149,7 @@ namespace SaleApp.View
             SANPHAM sp = new SANPHAM();
             sp.MaSanPham = txtMaSP.Text;
             sp.TenSanPham = txtTenSP.Text;
-            sp.MaLoaiHang = int.Parse(LoaiHangBUS.Instance.getMaLoaiHang(cbLoaiSP.Text));
+            sp.MaLoaiHang = LoaiHangBUS.Instance.getMaLoaiHang(cbLoaiSP.Text);
             sp.GiaBan = float.Parse(txtGiaBan.Text);
             sp.MoTa = txtMoTa.Text;
             byte[] anh = null;
@@ -245,7 +245,7 @@ namespace SaleApp.View
             SANPHAM sp = new SANPHAM();
             sp.MaSanPham = txtMaSP.Text;
             sp.TenSanPham = txtTenSP.Text;
-            sp.MaLoaiHang = int.Parse(LoaiHangBUS.Instance.getMaLoaiHang(cbLoaiSP.Text));
+            sp.MaLoaiHang = LoaiHangBUS.Instance.getMaLoaiHang(cbLoaiSP.Text);
             sp.GiaBan = float.Parse(txtGiaBan.Text);
             sp.MoTa = txtMoTa.Text;
             byte[] anh = null;

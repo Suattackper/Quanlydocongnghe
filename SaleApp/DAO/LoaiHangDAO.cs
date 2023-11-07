@@ -29,7 +29,7 @@ namespace SaleApp.DAO
         }
         public DataTable getMaLoaiHang(string masp)
         {
-            string sql = $"select MaLoaiHang,TenLoaiHang from LOAIHANG where TenLoaiHang = '{masp}'";
+            string sql = $"select MaLoaiHang,TenLoaiHang from LOAIHANG where TenLoaiHang = N'{masp}'";
             return KetNoiSql.Instance.execSql(sql);
         }
     }

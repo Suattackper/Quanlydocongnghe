@@ -23,7 +23,6 @@ namespace SaleApp.View
         {
             cbNhaCungCap.SelectedIndex = 0;
             cbSanPham.SelectedIndex = 0;
-            cbLoaiHang.SelectedIndex = 0;
             txtTamUng.Text = "";
             txtSoLuong.Text = "";
             txtGiaNhap.Text = "";
@@ -40,7 +39,6 @@ namespace SaleApp.View
         private void frmNhapHang_Load(object sender, EventArgs e)
         {
             NhaCungCapBUS.Instance.getDataNhaCungCap(cbNhaCungCap);
-            LoaiHangBUS.Instance.getDataLoaiHang(cbLoaiHang);
             SanPhamBUS.Instance.getDataSanPham(cbSanPham);
             
         }
@@ -81,11 +79,6 @@ namespace SaleApp.View
                 MessageBox.Show("Số lượng không được để trống!", "Error");
                 return;
             }
-            //if (decimal.Parse(txtTamUng.Text)==int.Parse(txtSoLuong.Text)*decimal.Parse(txtGiaNhap.Text))
-            //{
-            //    MessageBox.Show("Tạm ứng phải bằng tôn!", "Error");
-            //    return;
-            //}
             if (txtGiaNhap.Text == "")
             {
                 MessageBox.Show("Giá nhập không được để trống!", "Error");
@@ -114,23 +107,11 @@ namespace SaleApp.View
                     return;
                 }
             }
-            dtgvDSSPNhap.Rows.Add(SanPhamBUS.Instance.getMaSanPham(cbSanPham.Text),cbSanPham.Text,cbLoaiHang.Text,txtSoLuong.Text,txtGiaNhap.Text,cbNhaCungCap.Text);
+            dtgvDSSPNhap.Rows.Add(SanPhamBUS.Instance.getMaSanPham(cbSanPham.Text),cbSanPham.Text,txtSoLuong.Text,txtGiaNhap.Text,cbNhaCungCap.Text);
             cbSanPham.SelectedIndex = 0;
-            cbLoaiHang.SelectedIndex = 0;
             txtSoLuong.Text = "";
             txtGiaNhap.Text = "";
             cbSanPham.Focus();
-            if (dtgvDSSPNhap.Rows.Count > 0)
-            {
-                cbNhaCungCap.Enabled = false;
-                txtTamUng.Enabled = false;
-                dtpNgayThanhToan.Enabled = false;
-            }
-            else
-            {
-                cbNhaCungCap.Enabled = true;
-                txtTamUng.Enabled = true;
-            }
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
@@ -154,17 +135,6 @@ namespace SaleApp.View
             {
                 MessageBox.Show("Hãy chọn dòng bạn muốn xóa!", "Error!");
             }
-            if (dtgvDSSPNhap.Rows.Count > 0)
-            {
-                cbNhaCungCap.Enabled = false;
-                txtTamUng.Enabled = false;
-                dtpNgayThanhToan.Enabled = false;
-            }
-            else
-            {
-                cbNhaCungCap.Enabled = true;
-                txtTamUng.Enabled = true;
-            }
         }
 
         private void dtgvDSSPNhap_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -176,10 +146,9 @@ namespace SaleApp.View
                 DataGridViewRow selectedRow = dtgvDSSPNhap.Rows[e.RowIndex];
                 // Lấy giá trị từ cột của hàng được chọn và hiển thị nó trong các TextBox
                 cbSanPham.Text = selectedRow.Cells[1].Value.ToString();
-                cbLoaiHang.Text = selectedRow.Cells[2].Value.ToString();
-                txtSoLuong.Text = selectedRow.Cells[3].Value.ToString();
-                txtGiaNhap.Text = selectedRow.Cells[4].Value.ToString();
-                cbNhaCungCap.Text = selectedRow.Cells[5].Value.ToString();
+                txtSoLuong.Text = selectedRow.Cells[2].Value.ToString();
+                txtGiaNhap.Text = selectedRow.Cells[3].Value.ToString();
+                cbNhaCungCap.Text = selectedRow.Cells[4].Value.ToString();
             }
         }
 
@@ -192,10 +161,9 @@ namespace SaleApp.View
                 DataGridViewRow selectedRow = dtgvDSSPNhap.SelectedRows[0];
                 // Lấy giá trị từ cột của hàng được chọn và hiển thị nó trong các TextBox
                 cbSanPham.Text = selectedRow.Cells[1].Value.ToString();
-                cbLoaiHang.Text = selectedRow.Cells[2].Value.ToString();
-                txtSoLuong.Text = selectedRow.Cells[3].Value.ToString();
-                txtGiaNhap.Text = selectedRow.Cells[4].Value.ToString();
-                cbNhaCungCap.Text = selectedRow.Cells[5].Value.ToString();
+                txtSoLuong.Text = selectedRow.Cells[2].Value.ToString();
+                txtGiaNhap.Text = selectedRow.Cells[3].Value.ToString();
+                cbNhaCungCap.Text = selectedRow.Cells[4].Value.ToString();
             }
         }
 
@@ -203,6 +171,19 @@ namespace SaleApp.View
         {
             if (dtgvDSSPNhap.Rows.Count > 0)
             {
+                if (float.Parse(txtTamUng.Text) != 0)
+                {
+                    float tamung = 0;
+                    foreach (DataGridViewRow row in dtgvDSSPNhap.Rows)
+                    {
+                        tamung += float.Parse(row.Cells[3].Value.ToString())*int.Parse(row.Cells[2].Value.ToString());
+                    }
+                    if (float.Parse(txtTamUng.Text) != tamung)
+                    {
+                        MessageBox.Show("Tạm ứng phải bằng tổng tiền hàng nhập hoặc bằng 0!", "Thông báo");
+                        return;
+                    }
+                }
                 PHIEUNHAPKHO p = new PHIEUNHAPKHO();
                 p.MaNhaCungCap = NhaCungCapBUS.Instance.getMaNhaCungCap(cbNhaCungCap.Text);
                 p.TamUng = float.Parse(txtTamUng.Text);
@@ -213,10 +194,10 @@ namespace SaleApp.View
                 foreach (DataGridViewRow row in dtgvDSSPNhap.Rows)
                 {
                     CHITIETPHIEUNHAP c = new CHITIETPHIEUNHAP();
-                    c.MaSanPham = SanPhamBUS.Instance.getMaSanPham(row.Cells[1].Value.ToString());
-                    c.SoLuongNhap = int.Parse(row.Cells[3].Value.ToString());
+                    c.MaSanPham = row.Cells[0].Value.ToString();
+                    c.SoLuongNhap = int.Parse(row.Cells[2].Value.ToString());
                     c.SoPhieuNhapKho = int.Parse(sop);
-                    c.GiaNhap = float.Parse(row.Cells[4].Value.ToString());
+                    c.GiaNhap = float.Parse(row.Cells[3].Value.ToString());
                     ChiTietPhieuNhapBUS.Instance.Them(c);
                 }
                 MessageBox.Show("Nhập kho thành công!", "Thông báo");

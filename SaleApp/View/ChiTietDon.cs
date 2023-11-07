@@ -30,7 +30,7 @@ namespace SaleApp.View
             d = DonMuaBUS.Instance.TimTheoMadm(ma);
             lMaDon.Text = d.MaDonMua.ToString();
             lMaNV.Text = d.MaNhanVien;
-            lTong.Text = d.TongTien.ToString();
+            lTong.Text = d.TongTien.ToString("N0").Replace(",",".") +" VND";
             lMaKH.Text = d.MaKhachHang;
             lNgayMua.Text = d.NgayTao.ToString("dd/MM/yyyy");
             KHACHHANG k = new KHACHHANG();

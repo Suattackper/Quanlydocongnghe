@@ -34,6 +34,26 @@ namespace SaleApp.Business
             dgv.Columns[3].HeaderText = "Mã nhân viên";
             dgv.Columns[4].HeaderText = "Tổng tiền";
         }
+        public void ThongKeTheoNam(DataGridView dgv, int nam)
+        {
+            dgv.DataSource = DonMuaDAO.Instance.ThongKeTheoNam(nam);
+            //Đổi tên cột datafridview
+            dgv.Columns[0].HeaderText = "Mã đơn mua";
+            dgv.Columns[1].HeaderText = "Tên khách hàng";
+            dgv.Columns[2].HeaderText = "Ngày mua";
+            dgv.Columns[3].HeaderText = "Mã nhân viên";
+            dgv.Columns[4].HeaderText = "Tổng tiền";
+        }
+        public void ThongKeTheoNamThang(DataGridView dgv, int nam, int thang)
+        {
+            dgv.DataSource = DonMuaDAO.Instance.ThongKeTheoNamThang(nam,thang);
+            //Đổi tên cột datafridview
+            dgv.Columns[0].HeaderText = "Mã đơn mua";
+            dgv.Columns[1].HeaderText = "Tên khách hàng";
+            dgv.Columns[2].HeaderText = "Ngày mua";
+            dgv.Columns[3].HeaderText = "Mã nhân viên";
+            dgv.Columns[4].HeaderText = "Tổng tiền";
+        }
         public void Tim(DataGridView dgv, string tenkh)
         {
             dgv.DataSource = DonMuaDAO.Instance.Tim(tenkh);
@@ -69,6 +89,16 @@ namespace SaleApp.Business
             dgv.Columns[2].HeaderText = "Số lượng";
             dgv.Columns[3].HeaderText = "Giá bán";
             dgv.Columns[4].HeaderText = "Thành tiền";
+        }
+        public string getMaDonMua()
+        {
+            string ma = null;
+            DataTable check = DonMuaDAO.Instance.getMaDonMua();
+            foreach (DataRow existingRow in check.Rows)
+            {
+                return existingRow["MaDonMua"].ToString();
+            }
+            return ma;
         }
     }
 }

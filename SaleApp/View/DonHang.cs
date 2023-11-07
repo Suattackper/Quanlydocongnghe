@@ -10,6 +10,7 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -18,7 +19,7 @@ namespace SaleApp
   
     public partial class frmDonHang : Form
     {
-
+        private string sdt;
         DataTable dt = new DataTable();
         public frmDonHang()
         {
@@ -26,10 +27,17 @@ namespace SaleApp
             LoadSanPham();
             //LoadData();
         }
+        public frmDonHang(string sdt)
+        {
+            this.sdt = sdt;
+            InitializeComponent();
+            LoadSanPham();
+            //LoadData();
+        }
 
         #region Events
 
-       
+
 
         //void loadNhanVien()
         //{
@@ -54,34 +62,31 @@ namespace SaleApp
         }
         void LoadSanPham()
         {
-
-            SanPhamDAO.Instance.SetCbx(cbxLoaiSp, "LOAIHANG", "tenloaihang");
-            SanPhamDAO.Instance.SetCbx(cbxNCC, "NHACUNGCAP" ,"tennhacungcap");
-            string query = "select s.masanpham,s.tensanpham,l.tenloaihang,s.giaban, s.anh from sanpham s inner join loaihang l on l.maloaihang=s.maloaihang";
+            string query = "select s.masanpham,s.tensanpham,l.tenloaihang,k.soluong,s.giaban, s.anh \r\nfrom sanpham s \r\ninner join loaihang l on l.maloaihang=s.maloaihang\r\ninner join kho k on k.masanpham=s.masanpham where k.soluong>0";
            
             DataTable data = DataProvider.Instance.ExcuteQuery(query);
             foreach (DataRow item in data.Rows)
             {
                 byte[] imagearray = SanPhamBUS.Instance.getAnh(item["MaSanPham"].ToString());
            
-                AddSanPham(item["MaSanPham"].ToString(), item["TenLoaiHang"].ToString(), item["TenSanPham"].ToString(), float.Parse(item["GiaBan"].ToString()), imagearray);
+                AddSanPham(item["MaSanPham"].ToString(), item["TenLoaiHang"].ToString(), item["TenSanPham"].ToString(), float.Parse(item["GiaBan"].ToString()), imagearray, int.Parse(item["SoLuong"].ToString()));
                 
             }
             
         }
 
-        void AddSanPham(string MaSP, string tenloai, string TenSP, float GiaSP, byte[] AnhSP)
+        void AddSanPham(string MaSP, string tenloai, string TenSP, float GiaSP, byte[] AnhSP,int sl)
         {
             bool productExists = false;
             var S = new ModelSanPham()
-            { 
+            {
 
                 TenSanPham = TenSP,
-                MaLoaiHang = int.Parse(LoaiHangBUS.Instance.getMaLoaiHang(tenloai)),
+                MaLoaiHang = LoaiHangBUS.Instance.getMaLoaiHang(tenloai),
                 GiaBan = GiaSP,
                 Anh = AnhSP,
-                MaSanPham = MaSP
-
+                MaSanPham = MaSP,
+                SoLuong = sl
             };
             flpDanhSachSanPham.Controls.Add(S);
 
@@ -128,7 +133,6 @@ namespace SaleApp
         
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-
             SanPhamBUS.Instance.ActionWithDVG(dataGridView1, e);
         }
 
@@ -137,35 +141,59 @@ namespace SaleApp
             //txbKhachDua.Enabled = true;
             SanPhamBUS.Instance.CalcTongTien(dataGridView1,e);
             SanPhamBUS.Instance.GetTongBill(txbTongBill, dataGridView1);
-               
         }
 
        
         private void btnInDon_Click(object sender, EventArgs e)
         {
-           
-            XuatHoaDon a = new(txbTongBill.Text, txbKhachDua.Text, txbTienThua.Text, txbMaKH.Text, txtHoTen.Text, txtSDT.Text ,dt);
-            if (txtHoTen.Text == "" || txtSDT.Text == "" || txbMaKH.Text == "")
+            if (dataGridView1.Rows.Count > 0)
             {
-                MessageBox.Show("vui lòng nhập đầy đủ thông tin");
-                return;
+                if (txtHoTen.Text == "" || txtSDT.Text == "" || txbMaKH.Text == "" || txbKhachDua.Text == "")
+                {
+                    MessageBox.Show("vui lòng nhập đầy đủ thông tin");
+                    return;
+                }
+                //@"^(03|07|08|09|01[2-9])[0-9]{8}$" Kiểm tra 1 chuỗi có phải là số điện thoại @"^\d+$"
+                if (!Regex.IsMatch(txtSDT.Text, @"^(03|07|08|09|01[2-9])[0-9]{8}$"))
+                {
+                    MessageBox.Show("Số điện thoại không đúng");
+                    return;
+                }
+                InsertInforKhachHang();
+                string sql = "insert into DONMUA (makhachhang,manhanvien,tongtien) values ( @makh, @manv, @tong ) ";
+                Object[] p = new object[] { txbMaKH.Text, NhanVienBUS.Instance.getMaNhanVien(sdt), decimal.Parse(txbTongBill.Text) };
+                DataProvider.Instance.execNonSql(sql, p);
+
+                string madm = DonMuaBUS.Instance.getMaDonMua();
+                foreach (DataGridViewRow row in dataGridView1.Rows)
+                {
+                    CHITIETDONMUA c = new CHITIETDONMUA();
+                    c.MaDonMua = int.Parse(madm);
+                    c.MaSanPham = row.Cells[0].Value.ToString();
+                    c.SoLuong = int.Parse(row.Cells[2].Value.ToString());
+                    c.DonGia = decimal.Parse(row.Cells[3].Value.ToString());
+                    ChiTietDonMuaBUS.Instance.Them(c);
+                }
+                SanPhamBUS.Instance.LoadData(dt, dataGridView1);
+                XuatHoaDon a = new XuatHoaDon(txbTongBill.Text, txbKhachDua.Text, txbTienThua.Text, txbMaKH.Text, txtHoTen.Text, txtSDT.Text, dt, NhanVienBUS.Instance.getMaNhanVien(sdt), madm, DateTime.Now.ToString());
+                a.ShowDialog();
+                dataGridView1.Rows.Clear();
+                txbTienThua.Text = "";
+                txbTongBill.Text = "0";
+                txbKhachDua.Text = " ";
+                txtHoTen.Text = "";
+                txtSDT.Text = "";
+                txbMaKH.Text = "";
             }
             else
             {
-                SanPhamBUS.Instance.LoadData(dt,dataGridView1);
-                a.ShowDialog();
-
+                MessageBox.Show("Vui lòng thêm sản phẩm vào danh sách!", "Error!");
             }
-            InsertInforKhachHang();
-            string sql = "insert into DONMUA (makhachhang,manhanvien,tongtien) values ( @makh, @manv, @tong ) ";
 
-            Object[] p = new object[] { txbMaKH.Text, "11", decimal.Parse(txbTongBill.Text) };
-            DataProvider.Instance.execNonSql(sql, p);
-
-
+            
         }
 
-            private void txbTongBill_TextChanged(object sender, EventArgs e)
+        private void txbTongBill_TextChanged(object sender, EventArgs e)
         {
             TextBox txb = (TextBox)sender;
             if(txb.Text != "0")
@@ -176,7 +204,6 @@ namespace SaleApp
             {
                 txbKhachDua.Enabled = false;
             }
-           
         }
     }
 }

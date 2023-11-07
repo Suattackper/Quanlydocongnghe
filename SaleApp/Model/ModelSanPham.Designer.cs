@@ -70,11 +70,11 @@
             // 
             // label2
             // 
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.label2.Location = new System.Drawing.Point(138, 33);
+            this.label2.Location = new System.Drawing.Point(141, 34);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(49, 26);
+            this.label2.Size = new System.Drawing.Size(46, 26);
             this.label2.TabIndex = 5;
             this.label2.Text = "vnd";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -102,11 +102,11 @@
             // 
             // lbGia
             // 
-            this.lbGia.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbGia.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lbGia.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.lbGia.Location = new System.Drawing.Point(57, 34);
+            this.lbGia.Location = new System.Drawing.Point(42, 35);
             this.lbGia.Name = "lbGia";
-            this.lbGia.Size = new System.Drawing.Size(87, 26);
+            this.lbGia.Size = new System.Drawing.Size(103, 26);
             this.lbGia.TabIndex = 2;
             this.lbGia.Text = "20.000";
             this.lbGia.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -126,7 +126,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(14, 37);
+            this.label1.Location = new System.Drawing.Point(0, 36);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(46, 25);
             this.label1.TabIndex = 0;

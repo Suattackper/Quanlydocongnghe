@@ -281,6 +281,11 @@ namespace SaleApp.Business
 
                         // Sản phẩm đã tồn tại trong DataGridView, tăng số lượng và cập nhật tổng tiền
                         int soLuongHienTai = int.Parse(item.Cells["dvgSoLuong"].Value.ToString());
+                        if (soLuongHienTai+1 > S.SoLuong)
+                        {
+                            MessageBox.Show("Không đủ số lượng trong kho!", "Error!");
+                            return;
+                        }
                         item.Cells["dvgSoLuong"].Value = soLuongHienTai + 1;
 
                         float giaBan = float.Parse(item.Cells["dvgGiaBan"].Value.ToString());
@@ -353,7 +358,7 @@ namespace SaleApp.Business
             string inputText = txb.Text;
             string kq = " ";
 
-            while (!double.TryParse(inputText, out double numericValue))
+            while (!double.TryParse(inputText, out double numericValue) &&txbKhachDua.Text=="")
             {
                 MessageBox.Show("Hãy nhập vào 1 số");
                 break;

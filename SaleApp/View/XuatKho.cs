@@ -31,7 +31,6 @@ namespace SaleApp.View
         {
             txtLiDo.Text = "";
             cbSanPham.SelectedIndex = 0;
-            cbLoaiHang.SelectedIndex = 0;
             txtSoLuong.Text = "";
             txtDonGia.Text = "";
             txtLiDo.Focus();
@@ -40,7 +39,6 @@ namespace SaleApp.View
 
         private void frmXuatKho_Load(object sender, EventArgs e)
         {
-            LoaiHangBUS.Instance.getDataLoaiHang(cbLoaiHang);
             SanPhamBUS.Instance.getDataSanPham(cbSanPham);
         }
 
@@ -84,20 +82,11 @@ namespace SaleApp.View
                     return;
                 }
             }
-            dtgvDSSPXuat.Rows.Add(SanPhamBUS.Instance.getMaSanPham(cbSanPham.Text), cbSanPham.Text, cbLoaiHang.Text, txtSoLuong.Text, txtDonGia.Text);
+            dtgvDSSPXuat.Rows.Add(SanPhamBUS.Instance.getMaSanPham(cbSanPham.Text), cbSanPham.Text, txtSoLuong.Text, txtDonGia.Text);
             cbSanPham.SelectedIndex = 0;
-            cbLoaiHang.SelectedIndex = 0;
             txtSoLuong.Text = "";
             txtDonGia.Text = "";
             cbSanPham.Focus();
-            if (dtgvDSSPXuat.Rows.Count > 0)
-            {
-                txtLiDo.Enabled = false;
-            }
-            else
-            {
-                txtLiDo.Enabled = true;
-            }
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
@@ -121,14 +110,6 @@ namespace SaleApp.View
             {
                 MessageBox.Show("Hãy chọn dòng bạn muốn xóa!", "Error!");
             }
-            if (dtgvDSSPXuat.Rows.Count > 0)
-            {
-                txtLiDo.Enabled = false;
-            }
-            else
-            {
-                txtLiDo.Enabled = true;
-            }
         }
 
         private void dtgvDSSPXuat_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -140,9 +121,8 @@ namespace SaleApp.View
                 DataGridViewRow selectedRow = dtgvDSSPXuat.Rows[e.RowIndex];
                 // Lấy giá trị từ cột của hàng được chọn và hiển thị nó trong các TextBox
                 cbSanPham.Text = selectedRow.Cells[1].Value.ToString();
-                cbLoaiHang.Text = selectedRow.Cells[2].Value.ToString();
-                txtSoLuong.Text = selectedRow.Cells[3].Value.ToString();
-                txtDonGia.Text = selectedRow.Cells[4].Value.ToString();
+                txtSoLuong.Text = selectedRow.Cells[2].Value.ToString();
+                txtDonGia.Text = selectedRow.Cells[3].Value.ToString();
             }
         }
 
@@ -155,9 +135,8 @@ namespace SaleApp.View
                 DataGridViewRow selectedRow = dtgvDSSPXuat.SelectedRows[0];
                 // Lấy giá trị từ cột của hàng được chọn và hiển thị nó trong các TextBox
                 cbSanPham.Text = selectedRow.Cells[1].Value.ToString();
-                cbLoaiHang.Text = selectedRow.Cells[2].Value.ToString();
-                txtSoLuong.Text = selectedRow.Cells[3].Value.ToString();
-                txtDonGia.Text = selectedRow.Cells[4].Value.ToString();
+                txtSoLuong.Text = selectedRow.Cells[2].Value.ToString();
+                txtDonGia.Text = selectedRow.Cells[3].Value.ToString();
             }
         }
 
@@ -168,8 +147,8 @@ namespace SaleApp.View
                 foreach (DataGridViewRow row in dtgvDSSPXuat.Rows)
                 {
                     CHITIETPHIEUXUAT c = new CHITIETPHIEUXUAT();
-                    c.MaSanPham = SanPhamBUS.Instance.getMaSanPham(row.Cells[1].Value.ToString());
-                    c.SoLuong = int.Parse(row.Cells[3].Value.ToString());
+                    c.MaSanPham = row.Cells[0].Value.ToString();
+                    c.SoLuong = int.Parse(row.Cells[2].Value.ToString());
                     //kiểm tra mã sp đã tồn tại chưa
                     DataTable check = new DataTable();
                     check = KhoDAO.Instance.XemHangTon();
@@ -191,10 +170,10 @@ namespace SaleApp.View
                 foreach (DataGridViewRow row in dtgvDSSPXuat.Rows)
                 {
                     CHITIETPHIEUXUAT c = new CHITIETPHIEUXUAT();
-                    c.MaSanPham = SanPhamBUS.Instance.getMaSanPham(row.Cells[1].Value.ToString());
-                    c.SoLuong = int.Parse(row.Cells[3].Value.ToString());
+                    c.MaSanPham = row.Cells[0].Value.ToString();
+                    c.SoLuong = int.Parse(row.Cells[2].Value.ToString());
                     c.SoPhieuXuatKho = int.Parse(sop);
-                    c.DonGia = float.Parse(row.Cells[4].Value.ToString());
+                    c.DonGia = float.Parse(row.Cells[3].Value.ToString());
                     ChiTietPhieuXuatBUS.Instance.Them(c);
                 }
                 MessageBox.Show("Xuất kho thành công!", "Thông báo");

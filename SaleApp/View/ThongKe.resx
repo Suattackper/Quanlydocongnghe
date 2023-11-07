@@ -92,7 +92,367 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnXuatFile.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="btnTim.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnTim.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cascadia Code, 11pt, style=Bold</value>
+  </data>
+  <data name="btnTim.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnTim.Location" type="System.Drawing.Point, System.Drawing">
+    <value>990, 166</value>
+  </data>
+  <data name="btnTim.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="btnTim.Size" type="System.Drawing.Size, System.Drawing">
+    <value>87, 36</value>
+  </data>
+  <data name="btnTim.TabIndex" type="System.Int32, mscorlib">
+    <value>27</value>
+  </data>
+  <data name="btnTim.Text" xml:space="preserve">
+    <value>Tìm</value>
+  </data>
+  <data name="&gt;&gt;btnTim.Name" xml:space="preserve">
+    <value>btnTim</value>
+  </data>
+  <data name="&gt;&gt;btnTim.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnTim.Parent" xml:space="preserve">
+    <value>gbDSHangTon</value>
+  </data>
+  <data name="&gt;&gt;btnTim.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="laTongDon.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="laTongDon.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Semibold, 12pt, style=Bold</value>
+  </data>
+  <data name="laTongDon.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="laTongDon.Location" type="System.Drawing.Point, System.Drawing">
+    <value>945, 538</value>
+  </data>
+  <data name="laTongDon.Size" type="System.Drawing.Size, System.Drawing">
+    <value>42, 28</value>
+  </data>
+  <data name="laTongDon.TabIndex" type="System.Int32, mscorlib">
+    <value>28</value>
+  </data>
+  <data name="laTongDon.Text" xml:space="preserve">
+    <value>xxx</value>
+  </data>
+  <data name="&gt;&gt;laTongDon.Name" xml:space="preserve">
+    <value>laTongDon</value>
+  </data>
+  <data name="&gt;&gt;laTongDon.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;laTongDon.Parent" xml:space="preserve">
+    <value>gbDSHangTon</value>
+  </data>
+  <data name="&gt;&gt;laTongDon.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="laTongkh.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="laTongkh.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Semibold, 12pt, style=Bold</value>
+  </data>
+  <data name="laTongkh.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="laTongkh.Location" type="System.Drawing.Point, System.Drawing">
+    <value>945, 406</value>
+  </data>
+  <data name="laTongkh.Size" type="System.Drawing.Size, System.Drawing">
+    <value>42, 28</value>
+  </data>
+  <data name="laTongkh.TabIndex" type="System.Int32, mscorlib">
+    <value>27</value>
+  </data>
+  <data name="laTongkh.Text" xml:space="preserve">
+    <value>xxx</value>
+  </data>
+  <data name="&gt;&gt;laTongkh.Name" xml:space="preserve">
+    <value>laTongkh</value>
+  </data>
+  <data name="&gt;&gt;laTongkh.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;laTongkh.Parent" xml:space="preserve">
+    <value>gbDSHangTon</value>
+  </data>
+  <data name="&gt;&gt;laTongkh.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="laTongsp.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="laTongsp.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Semibold, 12pt, style=Bold</value>
+  </data>
+  <data name="laTongsp.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="laTongsp.Location" type="System.Drawing.Point, System.Drawing">
+    <value>945, 279</value>
+  </data>
+  <data name="laTongsp.Size" type="System.Drawing.Size, System.Drawing">
+    <value>42, 28</value>
+  </data>
+  <data name="laTongsp.TabIndex" type="System.Int32, mscorlib">
+    <value>26</value>
+  </data>
+  <data name="laTongsp.Text" xml:space="preserve">
+    <value>xxx</value>
+  </data>
+  <data name="&gt;&gt;laTongsp.Name" xml:space="preserve">
+    <value>laTongsp</value>
+  </data>
+  <data name="&gt;&gt;laTongsp.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;laTongsp.Parent" xml:space="preserve">
+    <value>gbDSHangTon</value>
+  </data>
+  <data name="&gt;&gt;laTongsp.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="label7.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label7.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>945, 488</value>
+  </data>
+  <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>132, 27</value>
+  </data>
+  <data name="label7.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="label7.Text" xml:space="preserve">
+    <value>Số đơn mua</value>
+  </data>
+  <data name="&gt;&gt;label7.Name" xml:space="preserve">
+    <value>label7</value>
+  </data>
+  <data name="&gt;&gt;label7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label7.Parent" xml:space="preserve">
+    <value>gbDSHangTon</value>
+  </data>
+  <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="label6.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label6.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>945, 360</value>
+  </data>
+  <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>168, 27</value>
+  </data>
+  <data name="label6.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
+  </data>
+  <data name="label6.Text" xml:space="preserve">
+    <value>Số khách hàng</value>
+  </data>
+  <data name="&gt;&gt;label6.Name" xml:space="preserve">
+    <value>label6</value>
+  </data>
+  <data name="&gt;&gt;label6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label6.Parent" xml:space="preserve">
+    <value>gbDSHangTon</value>
+  </data>
+  <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="label5.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>945, 233</value>
+  </data>
+  <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>156, 27</value>
+  </data>
+  <data name="label5.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="label5.Text" xml:space="preserve">
+    <value>Số SP đã bán</value>
+  </data>
+  <data name="&gt;&gt;label5.Name" xml:space="preserve">
+    <value>label5</value>
+  </data>
+  <data name="&gt;&gt;label5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label5.Parent" xml:space="preserve">
+    <value>gbDSHangTon</value>
+  </data>
+  <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="txtNam.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1011, 114</value>
+  </data>
+  <data name="txtNam.Size" type="System.Drawing.Size, System.Drawing">
+    <value>119, 31</value>
+  </data>
+  <data name="txtNam.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;txtNam.Name" xml:space="preserve">
+    <value>txtNam</value>
+  </data>
+  <data name="&gt;&gt;txtNam.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtNam.Parent" xml:space="preserve">
+    <value>gbDSHangTon</value>
+  </data>
+  <data name="&gt;&gt;txtNam.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="label4.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>945, 118</value>
+  </data>
+  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>60, 27</value>
+  </data>
+  <data name="label4.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="label4.Text" xml:space="preserve">
+    <value>Năm:</value>
+  </data>
+  <data name="&gt;&gt;label4.Name" xml:space="preserve">
+    <value>label4</value>
+  </data>
+  <data name="&gt;&gt;label4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
+    <value>gbDSHangTon</value>
+  </data>
+  <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="label3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>921, 55</value>
+  </data>
+  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>84, 27</value>
+  </data>
+  <data name="label3.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>Tháng:</value>
+  </data>
+  <data name="&gt;&gt;label3.Name" xml:space="preserve">
+    <value>label3</value>
+  </data>
+  <data name="&gt;&gt;label3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
+    <value>gbDSHangTon</value>
+  </data>
+  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="cbThang.Items" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="cbThang.Items1" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="cbThang.Items2" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="cbThang.Items3" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="cbThang.Items4" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="cbThang.Items5" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="cbThang.Items6" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="cbThang.Items7" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="cbThang.Items8" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="cbThang.Items9" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="cbThang.Items10" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="cbThang.Items11" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="cbThang.Items12" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="cbThang.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1011, 47</value>
+  </data>
+  <data name="cbThang.Size" type="System.Drawing.Size, System.Drawing">
+    <value>119, 35</value>
+  </data>
+  <data name="cbThang.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;cbThang.Name" xml:space="preserve">
+    <value>cbThang</value>
+  </data>
+  <data name="&gt;&gt;cbThang.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cbThang.Parent" xml:space="preserve">
+    <value>gbDSHangTon</value>
+  </data>
+  <data name="&gt;&gt;cbThang.ZOrder" xml:space="preserve">
+    <value>10</value>
   </data>
   <data name="dtgvDSDonHang.Location" type="System.Drawing.Point, System.Drawing">
     <value>5, 27</value>
@@ -104,7 +464,7 @@
     <value>62</value>
   </data>
   <data name="dtgvDSDonHang.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1137, 589</value>
+    <value>911, 589</value>
   </data>
   <data name="dtgvDSDonHang.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -119,7 +479,7 @@
     <value>gbDSHangTon</value>
   </data>
   <data name="&gt;&gt;dtgvDSDonHang.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>11</value>
   </data>
   <data name="gbDSHangTon.Font" type="System.Drawing.Font, System.Drawing">
     <value>Cascadia Code, 12pt, style=Bold</value>
@@ -152,7 +512,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;gbDSHangTon.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>5</value>
   </data>
   <data name="btnrefresh.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
@@ -185,110 +545,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnrefresh.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 10.8pt, style=Bold</value>
-  </data>
-  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>21, 663</value>
-  </data>
-  <data name="label1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 0, 2, 0</value>
-  </data>
-  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>200, 25</value>
-  </data>
-  <data name="label1.TabIndex" type="System.Int32, mscorlib">
-    <value>23</value>
-  </data>
-  <data name="label1.Text" xml:space="preserve">
-    <value>Nhập tên khách hàng:</value>
-  </data>
-  <data name="&gt;&gt;label1.Name" xml:space="preserve">
-    <value>label1</value>
-  </data>
-  <data name="&gt;&gt;label1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
     <value>3</value>
-  </data>
-  <data name="btnTimKiem.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="btnTimKiem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DAAACwwBP0AiyAAAAZJJREFUSEvtlskuBFEUhjumjWFH4hXwDthbIHgFIbThKcRrmB5FIjaGBDHsrVmw
-        4vsqfZLeNLduV4pF/8mX9L11zzl9p7+q0dN/0hCswSncw3sLf5+AzxxTqZbhGb5+4QmWoGv1wSFE4ito
-        whQMt5iGHbiGGHcAxmYrin7AOvyUzGcb4NgoniWXN4rO2pGoOYjii3aUkYck9tSZltUmGPsIg3akyhNq
-        oHuas1f9cAPmWLEjVWdg0HbRytMumOO4aCXqAQzy9ObK024O73my3sCgkaKVp1Ewh7mSVUXhMShduIql
-        ngFzeLKTpfcapCPlah/McVS0EhXXSRvMvU63YI5VO1KlgWj4BmqDZbUFxr7AgB1l5FvGYO1PG0zVPHyC
-        sQt25Eijj+LaoEvYST5zplH0FcYhS+5vFBdtUEfSHLxq4undg9jTKBrjJyBbvmW8FpG4E+6py+tMw6u7
-        Lu5bRsPXe+9AY/DTxz/klfH0th8ki1VWvKyceXyZ+GcnoTb9afH2Zb+wo05Z/BLOi1ZP9arR+AbdcoIl
-        +BmBRAAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="btnTimKiem.Location" type="System.Drawing.Point, System.Drawing">
-    <value>474, 657</value>
-  </data>
-  <data name="btnTimKiem.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="btnTimKiem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>34, 40</value>
-  </data>
-  <data name="btnTimKiem.TabIndex" type="System.Int32, mscorlib">
-    <value>22</value>
-  </data>
-  <data name="&gt;&gt;btnTimKiem.Name" xml:space="preserve">
-    <value>btnTimKiem</value>
-  </data>
-  <data name="&gt;&gt;btnTimKiem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnTimKiem.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;btnTimKiem.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="txtTimKiem.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Cascadia Code Light, 8pt</value>
-  </data>
-  <data name="txtTimKiem.Location" type="System.Drawing.Point, System.Drawing">
-    <value>225, 663</value>
-  </data>
-  <data name="txtTimKiem.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
-  <data name="txtTimKiem.Multiline" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="txtTimKiem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>245, 25</value>
-  </data>
-  <data name="txtTimKiem.TabIndex" type="System.Int32, mscorlib">
-    <value>21</value>
-  </data>
-  <data name="&gt;&gt;txtTimKiem.Name" xml:space="preserve">
-    <value>txtTimKiem</value>
-  </data>
-  <data name="&gt;&gt;txtTimKiem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtTimKiem.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;txtTimKiem.ZOrder" xml:space="preserve">
-    <value>5</value>
   </data>
   <data name="label2.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>

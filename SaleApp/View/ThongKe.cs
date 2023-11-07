@@ -1,5 +1,6 @@
 ﻿using OfficeOpenXml;
 using SaleApp.Business;
+using SaleApp.DAO;
 using SaleApp.Model;
 using System;
 using System.Collections.Generic;
@@ -8,6 +9,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -65,23 +67,24 @@ namespace SaleApp.View
         private void frmThongKe_Load(object sender, EventArgs e)
         {
             DonMuaBUS.Instance.ThongKe(dtgvDSDonHang);
-            decimal tong = 0;
-            foreach (DataGridViewRow row in dtgvDSDonHang.Rows)
-            {
-                tong = tong + decimal.Parse(row.Cells[4].Value.ToString());
-            }
-            laTong.Text = tong.ToString("N0") + " VND";
+            cbThang.SelectedIndex = 0;
+            laTong.Text = KetNoiSql.Instance.getTongDoanhThu().ToString("N0").Replace(",", ".") + " VND";
+            laTongkh.Text = KetNoiSql.Instance.getTongKhachHang() + " Người";
+            laTongDon.Text = KetNoiSql.Instance.getTongDonMua() + " Đơn";
+            laTongsp.Text = KetNoiSql.Instance.getTongSanPham() + " SP";
         }
         
         private void btnrefresh_Click(object sender, EventArgs e)
         {
+
             DonMuaBUS.Instance.ThongKe(dtgvDSDonHang);
-            float tong = 0;
-            foreach (DataGridViewRow row in dtgvDSDonHang.Rows)
-            {
-                tong = tong + float.Parse(row.Cells[4].Value.ToString());
-            }
-            laTong.Text = tong.ToString() + " VND";
+            cbThang.SelectedIndex = 0;
+            laTong.Text = KetNoiSql.Instance.getTongDoanhThu().ToString("N0").Replace(",", ".") + " VND";
+            laTongkh.Text = KetNoiSql.Instance.getTongKhachHang() + " Người";
+            laTongDon.Text = KetNoiSql.Instance.getTongDonMua() + " Đơn";
+            laTongsp.Text = KetNoiSql.Instance.getTongSanPham() + " SP";
+            txtNam.Text = "";
+            txtNam.Focus();
         }
 
         private void btnXuatFile_Click(object sender, EventArgs e)
@@ -102,10 +105,10 @@ namespace SaleApp.View
             }
         }
 
-        private void btnTimKiem_Click(object sender, EventArgs e)
-        {
-            DonMuaBUS.Instance.Tim(dtgvDSDonHang, txtTimKiem.Text);
-        }
+        //private void btnTimKiem_Click(object sender, EventArgs e)
+        //{
+        //    DonMuaBUS.Instance.Tim(dtgvDSDonHang, txtTimKiem.Text);
+        //}
 
         private void dtgvDSDonHang_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -128,6 +131,43 @@ namespace SaleApp.View
         {
             frmChiTietDon a = new frmChiTietDon(madh);
             a.ShowDialog();
+        }
+
+        private void btnTim_Click(object sender, EventArgs e)
+        {
+            if (txtNam.Text == "")
+            {
+                MessageBox.Show("Năm không được để trống!", "Error");
+                return;
+            }
+            int currentYear = DateTime.Now.Year;
+            if (!Regex.IsMatch(txtNam.Text, @"^\d+(\.\d+)?$") || int.Parse(txtNam.Text)>currentYear)
+            {
+                MessageBox.Show("Năm phải nhỏ hơn hoặc bằng năm hiện tại!", "Error");
+                return;
+            }
+            if (cbThang.Text == "All")
+            {
+                DonMuaBUS.Instance.ThongKeTheoNam(dtgvDSDonHang,int.Parse(txtNam.Text));
+                laTong.Text = KetNoiSql.Instance.getTongDoanhThuTheoNam(int.Parse(txtNam.Text)).ToString("N0").Replace(",", ".") + " VND";
+                laTongkh.Text = KetNoiSql.Instance.getTongKhachHangTheoNam(int.Parse(txtNam.Text)) + " Người";
+                laTongDon.Text = KetNoiSql.Instance.getTongDonMuaTheoNam(int.Parse(txtNam.Text)) + " Đơn";
+                laTongsp.Text = KetNoiSql.Instance.getTongSanPhamTheoNam(int.Parse(txtNam.Text)) + " SP";
+                cbThang.SelectedIndex = 0;
+                txtNam.Text = "";
+                txtNam.Focus();
+            }
+            else
+            {
+                DonMuaBUS.Instance.ThongKeTheoNamThang(dtgvDSDonHang, int.Parse(txtNam.Text), int.Parse(cbThang.Text));
+                laTong.Text = KetNoiSql.Instance.getTongDoanhThuTheoNamThang(int.Parse(txtNam.Text), int.Parse(cbThang.Text)).ToString("N0") + " VND";
+                laTongkh.Text = KetNoiSql.Instance.getTongKhachHangTheoNamThang(int.Parse(txtNam.Text), int.Parse(cbThang.Text)) + " Người";
+                laTongDon.Text = KetNoiSql.Instance.getTongDonMuaTheoNamThang(int.Parse(txtNam.Text), int.Parse(cbThang.Text)) + " Đơn";
+                laTongsp.Text = KetNoiSql.Instance.getTongSanPhamTheoNamThang(int.Parse(txtNam.Text), int.Parse(cbThang.Text)) + " SP";
+                cbThang.SelectedIndex = 0;
+                txtNam.Text = "";
+                txtNam.Focus();
+            }
         }
     }
 }

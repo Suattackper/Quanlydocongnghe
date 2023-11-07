@@ -63,7 +63,7 @@ namespace SaleApp.DAO
         }
         public DataTable getMaSanPham(string masp)
         {
-            string sql = $"select MaSanPham,TenSanPham from SANPHAM where TenSanPham = '{masp}'";
+            string sql = $"select MaSanPham,TenSanPham from SANPHAM where TenSanPham = N'{masp}'";
             return KetNoiSql.Instance.execSql(sql);
         }
         public void SetCbx(ComboBox b, string table, string mb)

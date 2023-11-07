@@ -21,7 +21,7 @@ namespace SaleApp.View
 
         private void frmTrangChu_Load(object sender, EventArgs e)
         {
-            lblTongDoanhThu.Text = decimal.Parse(KetNoiSql.Instance.getTongDoanhThu()).ToString("N0") + " VND";
+            lblTongDoanhThu.Text = KetNoiSql.Instance.getTongDoanhThu().ToString("N0").Replace(",", ".") + " VND";
             //lblTongDoanhThu.Text = KetNoiSql.Instance.getTongDoanhThu() + " VND";
             lblTongSPDaBan.Text = KetNoiSql.Instance.getTongSanPham() + " SP";
             lblTongKH.Text = KetNoiSql.Instance.getTongKhachHang() + " Người";

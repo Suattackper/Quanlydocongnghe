@@ -7,16 +7,16 @@ GO
 CREATE TABLE KHACHHANG (
 	MaKhachHang varchar(20) not null,
 	HoTen nvarchar(50) not null,
-	Email varchar(30) COLLATE SQL_Latin1_General_CP1_CS_AS unique not null,
+	Email varchar(30) COLLATE SQL_Latin1_General_CP1_CS_AS unique,
 	NgayVao DATE DEFAULT GETDATE() NOT NULL CHECK (NgayVao > DATEADD(DAY, -1, GETDATE()) AND NgayVao < DATEADD(DAY, 1, GETDATE())),
 	SoDienThoai varchar(15) unique not null,
-	DiaChi nvarchar(50) not null,
+	DiaChi nvarchar(50),
 	primary key (MaKhachHang)
 );
 
 CREATE TABLE QUYEN (
 	MaQuyen int identity(1,1) not null,
-	TenQuyen VARCHAR(50)
+	TenQuyen nVARCHAR(50)
 	primary key (MaQuyen)
 );
 
@@ -96,7 +96,7 @@ CREATE TABLE CHITIETPHIEUNHAP (
 	SoPhieuNhapKho int not null,
 	MaSanPham varchar(20) not null,
 	SoLuongNhap int not null,
-	GiaNhap decimal(18,2) not null,
+	GiaNhap decimal(18,2) not null check(GiaNhap > 0),
 	primary key (SoPhieuNhapKho,MaSanPham),
 	foreign key (SoPhieuNhapKho) references PHIEUNHAPKHO (SoPhieuNhapKho),
 	foreign key (MaSanPham) references SANPHAM (MaSanPham)

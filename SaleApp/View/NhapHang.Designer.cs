@@ -40,11 +40,9 @@
             this.cbSanPham = new System.Windows.Forms.ComboBox();
             this.btnReset = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
-            this.cbLoaiHang = new System.Windows.Forms.ComboBox();
             this.btnThem = new System.Windows.Forms.Button();
             this.txtSoLuong = new System.Windows.Forms.TextBox();
             this.txtGiaNhap = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -53,7 +51,6 @@
             this.dtgvDSSPNhap = new System.Windows.Forms.DataGridView();
             this.masp = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tensp = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.loai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.soluong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gianhap = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ncc = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -161,11 +158,9 @@
             this.gbTTSP.Controls.Add(this.cbSanPham);
             this.gbTTSP.Controls.Add(this.btnReset);
             this.gbTTSP.Controls.Add(this.btnXoa);
-            this.gbTTSP.Controls.Add(this.cbLoaiHang);
             this.gbTTSP.Controls.Add(this.btnThem);
             this.gbTTSP.Controls.Add(this.txtSoLuong);
             this.gbTTSP.Controls.Add(this.txtGiaNhap);
-            this.gbTTSP.Controls.Add(this.label12);
             this.gbTTSP.Controls.Add(this.label10);
             this.gbTTSP.Controls.Add(this.label8);
             this.gbTTSP.Controls.Add(this.label7);
@@ -182,7 +177,7 @@
             // 
             this.cbSanPham.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbSanPham.FormattingEnabled = true;
-            this.cbSanPham.Location = new System.Drawing.Point(170, 35);
+            this.cbSanPham.Location = new System.Drawing.Point(173, 67);
             this.cbSanPham.Name = "cbSanPham";
             this.cbSanPham.Size = new System.Drawing.Size(151, 30);
             this.cbSanPham.TabIndex = 0;
@@ -217,16 +212,6 @@
             this.btnXoa.UseVisualStyleBackColor = false;
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
-            // cbLoaiHang
-            // 
-            this.cbLoaiHang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbLoaiHang.FormattingEnabled = true;
-            this.cbLoaiHang.Location = new System.Drawing.Point(170, 188);
-            this.cbLoaiHang.Margin = new System.Windows.Forms.Padding(2);
-            this.cbLoaiHang.Name = "cbLoaiHang";
-            this.cbLoaiHang.Size = new System.Drawing.Size(154, 30);
-            this.cbLoaiHang.TabIndex = 3;
-            // 
             // btnThem
             // 
             this.btnThem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
@@ -244,7 +229,7 @@
             // 
             // txtSoLuong
             // 
-            this.txtSoLuong.Location = new System.Drawing.Point(170, 88);
+            this.txtSoLuong.Location = new System.Drawing.Point(173, 120);
             this.txtSoLuong.Margin = new System.Windows.Forms.Padding(2);
             this.txtSoLuong.Name = "txtSoLuong";
             this.txtSoLuong.Size = new System.Drawing.Size(154, 27);
@@ -252,26 +237,16 @@
             // 
             // txtGiaNhap
             // 
-            this.txtGiaNhap.Location = new System.Drawing.Point(170, 138);
+            this.txtGiaNhap.Location = new System.Drawing.Point(173, 170);
             this.txtGiaNhap.Margin = new System.Windows.Forms.Padding(2);
             this.txtGiaNhap.Name = "txtGiaNhap";
             this.txtGiaNhap.Size = new System.Drawing.Size(154, 27);
             this.txtGiaNhap.TabIndex = 2;
             // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(55, 196);
-            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(110, 22);
-            this.label12.TabIndex = 6;
-            this.label12.Text = "Loại hàng:";
-            // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(65, 93);
+            this.label10.Location = new System.Drawing.Point(68, 125);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(100, 22);
@@ -281,7 +256,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(65, 143);
+            this.label8.Location = new System.Drawing.Point(68, 175);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(100, 22);
@@ -291,7 +266,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(65, 43);
+            this.label7.Location = new System.Drawing.Point(68, 75);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(100, 22);
@@ -330,7 +305,6 @@
             this.dtgvDSSPNhap.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.masp,
             this.tensp,
-            this.loai,
             this.soluong,
             this.gianhap,
             this.ncc});
@@ -359,13 +333,6 @@
             this.tensp.MinimumWidth = 6;
             this.tensp.Name = "tensp";
             this.tensp.ReadOnly = true;
-            // 
-            // loai
-            // 
-            this.loai.HeaderText = "Loại SP";
-            this.loai.MinimumWidth = 6;
-            this.loai.Name = "loai";
-            this.loai.ReadOnly = true;
             // 
             // soluong
             // 
@@ -421,14 +388,12 @@
         private Label label4;
         private TextBox txtTamUng;
         private GroupBox gbTTSP;
-        private Label label12;
         private Label label10;
         private Label label8;
         private Label label7;
         private Button btnXoa;
         private Button btnReset;
         private Button btnThem;
-        private ComboBox cbLoaiHang;
         private TextBox txtSoLuong;
         private TextBox txtGiaNhap;
         private GroupBox gbDSSPNhap;
@@ -440,7 +405,6 @@
         private Button btnNhap;
         private DataGridViewTextBoxColumn masp;
         private DataGridViewTextBoxColumn tensp;
-        private DataGridViewTextBoxColumn loai;
         private DataGridViewTextBoxColumn soluong;
         private DataGridViewTextBoxColumn gianhap;
         private DataGridViewTextBoxColumn ncc;

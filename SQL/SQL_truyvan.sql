@@ -1,6 +1,18 @@
 ﻿USE QUAN_LY_BAN_HANG;
 GO
 
+insert into quyen values('Admin')
+insert into quyen values('Employee')
+insert into taikhoan values('0369787811','0369787811',1)
+insert into taikhoan values('0369787822','0369787822',2)
+insert into loaihang values('lh1','Smarthome')
+insert into loaihang values('lh2','Gaming Gear')
+insert into loaihang values('lh3','Thiết bị mạng')
+insert into loaihang values('lh4','Phụ kiện laptop - máy tính')
+
+alter table khachhang 
+--alter column Email varchar(30) null
+alter column DiaChi nvarchar(50) null
 select s.masanpham,s.tensanpham,l.tenloaihang,s.giaban
 from sanpham s
 inner join loaihang l on l.maloaihang=s.maloaihang
@@ -22,8 +34,6 @@ select * from PHIEUNHAPKHO order by SoPhieuNhapKho desc
 
 SELECT * FROM CHITIETPHIEUNHAP where masanpham = '1' order by sophieunhapkho
 
-select k.masanpham,s.tensanpham,l.tenloaihang,k.soluong from kho k inner join sanpham s on s.masanpham = k.masanpham inner join loaihang l on l.maloaihang = s.maloaihang
-
 select * from kho
 
 update KHO set soluong = soluong+1 where masanpham = 1 ;
@@ -36,6 +46,7 @@ inner join khachhang k on d.makhachhang=k.makhachhang
 inner join chitietdonmua c on c.madonmua=d.madonmua
 
 select sum(tongtien) tong from donmua 
+select sum(tongtien),count(madonmua) from donmua 
 
 select count(makhachhang) tongkh from khachhang
 
@@ -54,3 +65,15 @@ select * from khachhang WHERE makhachhang = '15'
 select c.masanpham, s.tensanpham, c.soluong, s.giaban, s.giaban*c.soluong thanhtien from chitietdonmua c
 inner join sanpham s on s.masanpham = c.masanpham
 where c.madonmua = 2
+
+select distinct d.madonmua, k.hoten, d.ngaytao, d.manhanvien, d.tongtien 
+from donmua d 
+inner join khachhang k on d.makhachhang=k.makhachhang 
+inner join chitietdonmua c on c.madonmua=d.madonmua
+where year(d.ngaytao)=2023 and month(d.ngaytao)=10
+
+select s.masanpham,s.tensanpham,l.tenloaihang,k.soluong,s.giaban, s.anh 
+from sanpham s 
+inner join loaihang l on l.maloaihang=s.maloaihang
+inner join kho k on k.masanpham=s.masanpham
+where k.soluong>0
