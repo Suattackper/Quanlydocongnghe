@@ -57,7 +57,7 @@
             this.panel4.Controls.Add(this.pictureBox2);
             this.panel4.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.panel4.ForeColor = System.Drawing.Color.Black;
-            this.panel4.Location = new System.Drawing.Point(670, 219);
+            this.panel4.Location = new System.Drawing.Point(825, 252);
             this.panel4.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(312, 162);
@@ -107,7 +107,7 @@
             this.panel5.Controls.Add(this.pictureBox1);
             this.panel5.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.panel5.ForeColor = System.Drawing.Color.Black;
-            this.panel5.Location = new System.Drawing.Point(343, 219);
+            this.panel5.Location = new System.Drawing.Point(31, 252);
             this.panel5.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(312, 162);
@@ -157,7 +157,7 @@
             this.panel6.Controls.Add(this.pictureBox11);
             this.panel6.Font = new System.Drawing.Font("Cascadia Code", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.panel6.ForeColor = System.Drawing.Color.Black;
-            this.panel6.Location = new System.Drawing.Point(11, 219);
+            this.panel6.Location = new System.Drawing.Point(428, 252);
             this.panel6.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(312, 162);
@@ -168,7 +168,7 @@
             this.lblTongDoanhThu.AutoSize = true;
             this.lblTongDoanhThu.Font = new System.Drawing.Font("Cascadia Code", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblTongDoanhThu.ForeColor = System.Drawing.Color.White;
-            this.lblTongDoanhThu.Location = new System.Drawing.Point(48, 98);
+            this.lblTongDoanhThu.Location = new System.Drawing.Point(25, 109);
             this.lblTongDoanhThu.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTongDoanhThu.Name = "lblTongDoanhThu";
             this.lblTongDoanhThu.Size = new System.Drawing.Size(79, 35);
@@ -191,7 +191,7 @@
             // pictureBox11
             // 
             this.pictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox11.Image")));
-            this.pictureBox11.Location = new System.Drawing.Point(193, 45);
+            this.pictureBox11.Location = new System.Drawing.Point(194, 31);
             this.pictureBox11.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.pictureBox11.Name = "pictureBox11";
             this.pictureBox11.Size = new System.Drawing.Size(73, 71);
@@ -203,12 +203,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(992, 601);
+            this.ClientSize = new System.Drawing.Size(1168, 770);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel6);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmTrangChu";
-            this.Text = "TrangChu";
+            this.Text = "s";
+            this.Load += new System.EventHandler(this.frmTrangChu_Load);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

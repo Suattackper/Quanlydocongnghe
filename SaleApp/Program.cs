@@ -1,6 +1,10 @@
-﻿using SaleApp.View;
+﻿using SaleApp.Business;
+using SaleApp.DAO;
+using SaleApp.Model;
+using SaleApp.View;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -17,7 +21,8 @@ namespace SaleApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmHome());
+            Application.Run(new Signin());
+            //Application.Run(new Signin());
         }
     }
 }

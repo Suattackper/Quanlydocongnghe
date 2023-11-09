@@ -102,6 +102,7 @@ insert into NHACUNGCAP (MaNhaCungCap, TenNhaCungCap, SoDienThoai, DiaChi) values
 insert into NHACUNGCAP (MaNhaCungCap, TenNhaCungCap, SoDienThoai, DiaChi) values (20, 'Rannigan', '3803313633', 'PO Box 47028');
 
 insert into PHIEUNHAPKHO (MaNhaCungCap, TamUng, MaNhanVien, NgayThanhToan) values (1, 0, 1, GETDATE());
+insert into PHIEUNHAPKHO (MaNhaCungCap, TamUng, MaNhanVien, NgayThanhToan) values (2, 0, 3, '2023-10-28');
 insert into PHIEUNHAPKHO (MaNhaCungCap, TamUng, MaNhanVien) values (2, 4500000, 2);
 
 insert into CHITIETPHIEUNHAP (MaSanPham, SoPhieuNhapKho, SoLuongNhap, GiaNhap) values (1, 1, 7, 200000);
@@ -116,3 +117,7 @@ insert into CHITIETPHIEUXUAT (SoPhieuXuatKho, MaSanPham, SoLuong, DonGia) values
 insert into CHITIETPHIEUXUAT (SoPhieuXuatKho, MaSanPham, SoLuong, DonGia) values (2, 1, 2, 968544);
 insert into CHITIETPHIEUXUAT (SoPhieuXuatKho, MaSanPham, SoLuong, DonGia) values (2, 2, 2, 340072);
 insert into CHITIETPHIEUXUAT (SoPhieuXuatKho, MaSanPham, SoLuong, DonGia) values (2, 7, 6, 1990560);
+
+insert into TAIKHOAN (SoDienThoai, MatKhau, MaQuyen) values ('admin','admin',1);
+insert into TAIKHOAN (SoDienThoai, MatKhau, MaQuyen) values ('employee','employee',3);
+
