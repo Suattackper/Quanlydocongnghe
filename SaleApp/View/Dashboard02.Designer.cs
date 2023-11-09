@@ -140,11 +140,13 @@
             this.btnThoat.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnThoat.ForeColor = System.Drawing.Color.White;
             this.btnThoat.Image = ((System.Drawing.Image)(resources.GetObject("btnThoat.Image")));
-            this.btnThoat.Location = new System.Drawing.Point(271, 724);
+            this.btnThoat.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnThoat.Location = new System.Drawing.Point(2, 700);
             this.btnThoat.Margin = new System.Windows.Forms.Padding(2);
             this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(52, 44);
+            this.btnThoat.Size = new System.Drawing.Size(321, 68);
             this.btnThoat.TabIndex = 7;
+            this.btnThoat.Text = "Đăng xuất";
             this.btnThoat.UseVisualStyleBackColor = true;
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
@@ -156,7 +158,7 @@
             this.btnThongKe.ForeColor = System.Drawing.Color.White;
             this.btnThongKe.Image = ((System.Drawing.Image)(resources.GetObject("btnThongKe.Image")));
             this.btnThongKe.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThongKe.Location = new System.Drawing.Point(1, 623);
+            this.btnThongKe.Location = new System.Drawing.Point(1, 599);
             this.btnThongKe.Margin = new System.Windows.Forms.Padding(2);
             this.btnThongKe.Name = "btnThongKe";
             this.btnThongKe.Size = new System.Drawing.Size(323, 97);
@@ -173,7 +175,7 @@
             this.btnNhanVien.ForeColor = System.Drawing.Color.White;
             this.btnNhanVien.Image = ((System.Drawing.Image)(resources.GetObject("btnNhanVien.Image")));
             this.btnNhanVien.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNhanVien.Location = new System.Drawing.Point(0, 520);
+            this.btnNhanVien.Location = new System.Drawing.Point(0, 500);
             this.btnNhanVien.Margin = new System.Windows.Forms.Padding(2);
             this.btnNhanVien.Name = "btnNhanVien";
             this.btnNhanVien.Size = new System.Drawing.Size(323, 99);
@@ -190,7 +192,7 @@
             this.btnKhoHang.ForeColor = System.Drawing.Color.White;
             this.btnKhoHang.Image = ((System.Drawing.Image)(resources.GetObject("btnKhoHang.Image")));
             this.btnKhoHang.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnKhoHang.Location = new System.Drawing.Point(0, 417);
+            this.btnKhoHang.Location = new System.Drawing.Point(0, 401);
             this.btnKhoHang.Margin = new System.Windows.Forms.Padding(2);
             this.btnKhoHang.Name = "btnKhoHang";
             this.btnKhoHang.Size = new System.Drawing.Size(323, 99);
@@ -207,7 +209,7 @@
             this.btnSP.ForeColor = System.Drawing.Color.White;
             this.btnSP.Image = ((System.Drawing.Image)(resources.GetObject("btnSP.Image")));
             this.btnSP.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSP.Location = new System.Drawing.Point(0, 108);
+            this.btnSP.Location = new System.Drawing.Point(0, 104);
             this.btnSP.Margin = new System.Windows.Forms.Padding(2);
             this.btnSP.Name = "btnSP";
             this.btnSP.Size = new System.Drawing.Size(323, 99);
@@ -224,7 +226,7 @@
             this.btnNhaCC.ForeColor = System.Drawing.Color.White;
             this.btnNhaCC.Image = ((System.Drawing.Image)(resources.GetObject("btnNhaCC.Image")));
             this.btnNhaCC.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNhaCC.Location = new System.Drawing.Point(0, 211);
+            this.btnNhaCC.Location = new System.Drawing.Point(0, 203);
             this.btnNhaCC.Margin = new System.Windows.Forms.Padding(2);
             this.btnNhaCC.Name = "btnNhaCC";
             this.btnNhaCC.Size = new System.Drawing.Size(323, 99);
@@ -241,7 +243,7 @@
             this.btnTaoDon.ForeColor = System.Drawing.Color.White;
             this.btnTaoDon.Image = ((System.Drawing.Image)(resources.GetObject("btnTaoDon.Image")));
             this.btnTaoDon.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTaoDon.Location = new System.Drawing.Point(0, 314);
+            this.btnTaoDon.Location = new System.Drawing.Point(0, 302);
             this.btnTaoDon.Margin = new System.Windows.Forms.Padding(2);
             this.btnTaoDon.Name = "btnTaoDon";
             this.btnTaoDon.Size = new System.Drawing.Size(323, 99);

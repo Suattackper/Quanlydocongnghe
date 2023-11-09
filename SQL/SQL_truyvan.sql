@@ -7,8 +7,9 @@ insert into taikhoan values('0369787811','0369787811',1)
 insert into taikhoan values('0369787822','0369787822',2)
 insert into loaihang values('lh1','Smarthome')
 insert into loaihang values('lh2','Gaming Gear')
-insert into loaihang values('lh3','Thiết bị mạng')
-insert into loaihang values('lh4','Phụ kiện laptop - máy tính')
+insert into loaihang values('lh3',N'Thiết bị mạng')
+insert into loaihang values('lh4',N'Phụ kiện laptop - máy tính')
+
 
 alter table khachhang 
 --alter column Email varchar(30) null

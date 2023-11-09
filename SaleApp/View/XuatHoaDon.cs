@@ -12,6 +12,7 @@ using System.Windows.Forms;
 //using _Excel = Microsoft.Office.Interop.Excel;
 using DataTable = System.Data.DataTable;
 
+
 namespace SaleApp.View
 {
     public partial class XuatHoaDon : Form
@@ -19,12 +20,15 @@ namespace SaleApp.View
         private string Tong, KhachDua, Thua,MaKH,HoTen,SDT,manv,madonmua,ngaymua;
 
      
-  
+
 
         private DataTable data;
 
         private void btnXuat_Click(object sender, EventArgs e)
         {
+            //Microsoft.Office.Interop.Excel.Application excelApp = new Microsoft.Office.Interop.Excel.Application();
+           
+
             //// Khởi động chương trình Excel
             //_Excel.Application exApp = new _Excel.Application();
             //_Excel.Workbook exBook; //Trong 1 chương trình Excel có nhiều Workbook
@@ -149,7 +153,7 @@ namespace SaleApp.View
             //exRange.Range["A6:C6"].HorizontalAlignment = _Excel.XlHAlign.xlHAlignCenter;
             //exRange.Range["A6:C6"].Value = " ";// tên nhân viên
             //exSheet.Name = "Hóa đơn nhập";
-            //exApp.Visible = true;
+            ////exApp.Visible = true;
         }
 
         //private DataTable data = new DataTable();

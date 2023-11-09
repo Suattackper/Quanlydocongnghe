@@ -66,13 +66,7 @@ exec sp_getTongKhachHangTheoNamThang 2023,10
 create or alter proc sp_getTongSanPham
 as
 begin
-	SELECT SUM(tong_soluong) AS tong_tat_ca
-	FROM (
-		SELECT SUM(soluong) AS tong_soluong FROM chitietdonmua
-		UNION ALL -- hợp 2 bảng thảnh 1
-		SELECT SUM(soluong) AS tong_soluong FROM chitietphieuxuat
-	) AS combined_data --AS combined_data tạo bảng tạm thời để truy vấn
-	
+	SELECT SUM(soluong) AS tong_soluong FROM chitietdonmua
 end
 go 
 exec sp_getTongSanPham 
@@ -81,13 +75,8 @@ create or alter proc sp_getTongSanPhamTheoNam
 @n int
 as
 begin
-	SELECT SUM(tong_soluong) AS tong_tat_ca
-	FROM (
-		SELECT SUM(soluong) AS tong_soluong FROM chitietdonmua c inner join donmua d on d.madonmua=c.madonmua where year(d.ngaytao)=@n
-		UNION ALL -- hợp 2 bảng thảnh 1
-		SELECT SUM(soluong) AS tong_soluong FROM chitietphieuxuat c inner join phieuxuatkho d on d.SoPhieuXuatKho=c.SoLuong where year(d.NgayXuat)=@n
-	) AS combined_data --AS combined_data tạo bảng tạm thời để truy vấn
-	
+	SELECT SUM(soluong) AS tong_soluong FROM chitietdonmua c inner join donmua d on d.madonmua=c.madonmua where year(d.ngaytao)=@n
+		
 end
 go 
 exec sp_getTongSanPhamTheoNam 2023 
@@ -96,16 +85,11 @@ create or alter proc sp_getTongSanPhamTheoNamThang
 @n int,@t int
 as
 begin
-	SELECT SUM(tong_soluong) AS tong_tat_ca
-	FROM (
-		SELECT SUM(soluong) AS tong_soluong FROM chitietdonmua c inner join donmua d on d.madonmua=c.madonmua where year(d.ngaytao)=@n and month(d.ngaytao)=@t
-		UNION ALL -- hợp 2 bảng thảnh 1
-		SELECT SUM(soluong) AS tong_soluong FROM chitietphieuxuat c inner join phieuxuatkho d on d.SoPhieuXuatKho=c.SoLuong where year(d.NgayXuat)=@n and month(d.NgayXuat)=@t
-	) AS combined_data --AS combined_data tạo bảng tạm thời để truy vấn
-	
+	SELECT SUM(soluong) AS tong_soluong FROM chitietdonmua c inner join donmua d on d.madonmua=c.madonmua where year(d.ngaytao)=@n and month(d.ngaytao)=@t
+		
 end
 go 
-exec sp_getTongSanPhamTheoNamThang 2023,10
+exec sp_getTongSanPhamTheoNamThang 2023,11
 
 create or alter proc sp_getTongDonMua
 as
