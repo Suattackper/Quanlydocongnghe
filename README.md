@@ -47,4 +47,185 @@ Huỳnh Phạm Quỳnh Như: </br>
 - Biểu đồ phân rã chức năng (BFD - Business Function Diagram)
  ![image](https://github.com/user-attachments/assets/fedd05a8-5a35-4bb5-83de-686eeaf784a4)
 
+- Xác định tác nhân, hồ sơ và tiến trình
+Tiến Trình 	Tác Nhân	Hồ sơ liên quan
+Đăng Nhập
+
+Đăng ký
+
+
+Cập nhật dữ liệu 	Quản trị viên
+
+Quản trị viên 
+
+Quản trị viên 
+Hệ thống
+	Trang quản trị
+
+Trang quản trị
+
+
+Dữ liệu của hệ thống
+
+Phân quyền nhóm	
+Quản trị viên 
+Nhân Viên
+	
+Thay đổi các quyền 
+Phân quyền
+
+Quản lý cơ sở 
+
+
+
+
+
+Quản lý danh mục 
+
+
+
+Quản lý kho	
+Quản trị viên
+
+Nhân Viên 
+
+
+
+Quản trị viên
+
+
+
+Quản trị viên
+ Nhân Viên
+	
+Thông tin cơ sở
+
+
+
+
+
+Thông tin danh mục của sản phẩm
+
+
+Thông tin kho
+Thêm, xóa, sửa sản phẩm
+
+
+Tìm kiếm sản phẩm
+
+
+
+Điền thông tin khách hàng
+
+
+Điền thông tin nhà cung cấp
+
+Xác nhận đơn hàng
+
+
+
+Thanh toán
+
+
+
+Kiểm tra thông tin đơn hàng
+
+
+Xác nhận thanh toán
+
+
+
+Xuất hóa đơn
+
+
+
+	Quản trị viên
+Nhân Viên 
+
+Khách Hàng
+Quản trị viên 
+
+
+Nhân Viên
+
+
+
+Nhân Viên 
+
+
+Hệ Thống
+
+
+
+Nhân Viên
+
+
+
+Khách Hàng 
+Nhà Cung Cấp
+
+
+Nhân Viên
+Khách Hàng 
+Nhà Cung Cấp
+
+Nhân Viên
+Khách Hàng
+Nhà Cung Cấp
+
+ 	Thông tin sản phẩm
+
+
+Thông tin sản phẩm
+
+
+
+Thông tin khách hàng
+
+
+
+Thông tin nhà cung cấp
+
+
+Thông tin đơn hàng
+Khách Hàng
+Nhà cung cấp
+
+Thông tin khách hàng
+Thông tin hóa đơn
+Thông tin hóa đơn 
+
+Thông tin khách hàng
+Thông tin hóa đơn
+Thông tin hóa đơn 
+
+Thông tin khách hàng
+Thông tin hóa đơn
+Thông tin hóa đơn
+
+
+Lịch sử giao dịch
+Lịch sử giao dịch
+
+
+Tìm kiếm nhân viên
+
+
+Cập nhật nhân viên 	Quản trị viên 
+
+
+Quản trị viên 	Thông tin nhân viên
+
+
+Thông tin nhân viên
+
+Phân công công việc
+
+Tìm kiếm đơn hàng	
+Quản trị viên 	
+Dữ liệu khách hàng
+Dữ liệu nhân viên
+Dữ liệu đơn hàng
+
+
 
