@@ -43,3 +43,8 @@ Huỳnh Phạm Quỳnh Như: </br>
 - Thiết kế giao diện, CSDL
 - Front-End
 
+## Phân tích
+- Biểu đồ phân rã chức năng (BFD - Business Function Diagram)
+ ![image](https://github.com/user-attachments/assets/fedd05a8-5a35-4bb5-83de-686eeaf784a4)
+
+
