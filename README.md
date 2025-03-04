@@ -11,13 +11,13 @@ Thống kê số lượng hàng tồn, doanh thu theo tháng, năm, tổng sản
 
 ## Thời gian thực hiện
 
-Hoàn thành: ⚡ Thời gian thực hiện **1/10/2023 - 8/11/2023**
+Hoàn thành: ⚡ Thời gian thực hiện **01/10/2023 -26/12/2023**
 
 ## Thành viên
 
 - Nguyễn Trần Anh Tân
 - Trần Xuân Thao
-- Huỳnh Thị Quỳnh Như
+- Huỳnh Phạm Quỳnh Như
   
 ## Ngôn ngữ lập trình, công nghệ sử dụng
 
@@ -39,6 +39,7 @@ Trần Xuân Thao: </br>
 - Back-End
   
 Huỳnh Thị Quỳnh Như: </br>
+- Phân tích nghiệp vụ, báo cáo 
 - Thiết kế giao diện, CSDL
 - Front-End
 
