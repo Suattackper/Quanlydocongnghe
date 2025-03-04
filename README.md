@@ -10,7 +10,8 @@ Besnik – Tech store là cửa hàng chuyên bán các sản phẩm về công 
 - Thống kê số lượng hàng tồn, doanh thu theo tháng, năm, tổng sản phẩm bán được trong tháng, trong năm và số lượng khách hàng
 ## Thời gian thực hiện
 
-Hoàn thành: ⚡ Thời gian thực hiện **01/10/2023 -26/12/2023**
+Hoàn thành: 
+</br>⚡ Thời gian thực hiện **01/10/2023 -26/12/2023**
 
 ## Thành viên
 
