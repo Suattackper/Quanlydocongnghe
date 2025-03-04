@@ -22,7 +22,7 @@ Hoàn thành:
 ## Ngôn ngữ lập trình, công nghệ sử dụng
 
 - Ngôn ngữ lập trình: C#
-- Công nghệ sử dụng: Visual Studio 2022, SQL Server, ASP.NET MVC
+- Công nghệ sử dụng: Visual Studio 2022, SQL Server, Winform 
   
 ## Đóng góp
 
