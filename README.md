@@ -48,10 +48,10 @@ Huỳnh Phạm Quỳnh Như: </br>
  ![image](https://github.com/user-attachments/assets/fedd05a8-5a35-4bb5-83de-686eeaf784a4)
 - Biểu đồ luồng dữ liệu
   + Mức ngữ cảnh
-    ![image](https://github.com/user-attachments/assets/91e5278f-8041-42be-8043-60151d01705b)
+    ![Picture3](https://github.com/user-attachments/assets/b35b395e-4e2d-4d98-bfed-62243dcab11e)
 
   + Mức đỉnh
-    ![image](https://github.com/user-attachments/assets/c1613ddf-32f7-461d-9583-69a70efbbff5)
+    ![Picture2](https://github.com/user-attachments/assets/5fd3fe21-fa36-4f07-9514-5c14c12eecd0)
 
   + Mức dưới đỉnh
     
