@@ -22,7 +22,7 @@ Hoàn thành:
 ## Ngôn ngữ lập trình, công nghệ sử dụng
 
 - Ngôn ngữ lập trình: C#
-- Công nghệ sử dụng: Visual Studio 2022, SQL Server
+- Công nghệ sử dụng: Visual Studio 2022, SQL Server, ASP.NET MVC
   
 ## Đóng góp
 
@@ -38,7 +38,7 @@ Trần Xuân Thao: </br>
 - Thiết kế CSDL
 - Back-End
   
-Huỳnh Thị Quỳnh Như: </br>
+Huỳnh Phạm Quỳnh Như: </br>
 - Phân tích nghiệp vụ, báo cáo 
 - Thiết kế giao diện, CSDL
 - Front-End
